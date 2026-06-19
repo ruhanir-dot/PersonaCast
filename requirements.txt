@@ -1,0 +1,14 @@
+pydantic>=2.6         
+openai>=1.30      
+python-dotenv>=1.0    
+
+tavily-python>=0.3    
+arxiv>=2.1         
+
+streamlit>=1.33
+
+# Audio Generation Packages
+
+# kokoro>=0.3         
+# piper-tts>=1.2   
+# pydub>=0.25         
