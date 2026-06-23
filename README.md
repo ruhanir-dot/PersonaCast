@@ -2,3 +2,5 @@
 
 AI system that generates a personalized ~20-minute "news podcast" about topics a user cares about. 
  Phase 1: RAG Implementation
+
+Note: no Reddit in implementation as reddit api needs approval before usage
