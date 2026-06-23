@@ -1,0 +1,10 @@
+{
+  "persona_id": "ruhani",
+  "interests": [
+    {"topic": "recommender systems", "expertise": "advanced"},
+    {"topic": "agentic AI", "expertise": "intermediate"},
+    {"topic": "RAG", "expertise": "intermediate"}
+  ],
+  "tone": "technical but conversational, like talking to a peer researcher",
+  "avoid": ["basic ML 101 explanations"]
+}

@@ -1,0 +1,10 @@
+{
+  "persona_id": "hobbyist",
+  "interests": [
+    {"topic": "basketball", "expertise": "advanced"},
+    {"topic": "pottery", "expertise": "beginner"},
+    {"topic": "fashion", "expertise": "intermediate"}
+  ],
+  "tone": "casual and fun, like chatting with a friend who shares the hobby",
+  "avoid": ["celebrity gossip"]
+}

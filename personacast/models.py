@@ -5,7 +5,7 @@ from pathlib import Path
 from pydantic import BaseModel, Field
 
 # Persona Object Construction and others
-class Expertise(Enum, str):
+class Expertise(str, Enum):
     beginner = 'beginner'
     intermediate = 'intermediate'
     advanced = 'advanced'
@@ -66,8 +66,8 @@ class TopicSegment(BaseModel):
     """
     for each topic, the seperate generated segments
     """
-    topic: str 
-    segment: str
+    topic: str
+    text: str
 
 # growing state object
 

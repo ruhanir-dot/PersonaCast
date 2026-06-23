@@ -56,5 +56,6 @@ STEM_HINT_KEYWORDS = (
 ### output/tts config 
 RUNS_DIR = os.getenv("PERSONACAST_RUNS_DIR", "runs")
 TTS_VOICE = "af_heart"
-KOKORO_MODEL_PATH = os.getenv("KOKORO_MODEL_PATH", "tts/kokoro-v1.0.onnx")
-KOKORO_VOICES_PATH = os.getenv("KOKORO_VOICES_PATH", "tts/voices-v1.0.bin")
+KOKORO_MODEL_PATH = os.getenv("KOKORO_MODEL_PATH", "models/kokoro-v1.0.onnx")
+KOKORO_VOICES_PATH = os.getenv("KOKORO_VOICES_PATH", "models/voices-v1.0.bin")
+TTS_CHUNK_CHARS = 1500  # max chars per synth call; kokoro-onnx has a per-call token limit
