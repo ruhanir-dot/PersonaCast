@@ -42,7 +42,7 @@ with st.sidebar:
     avoid = [line.strip() for line in avoid_raw.splitlines() if line.strip()]
 
     st.divider()
-    st.caption("Generate makes real API calls and takes ~1-3 minutes.")
+    st.caption("Generate makes real API calls — the full script run takes about 6-7 minutes.")
     go = st.button("Generate script", type="primary")
 
 
@@ -86,7 +86,13 @@ if result is not None:
 
     # --- Audio: a separate, explicit step (local TTS is slow) ---
     st.header("Audio")
-    st.caption("Optional — renders the script above with Kokoro TTS. Slow (a few minutes on CPU).")
+    st.caption(
+        "Optional — renders the script above with Kokoro TTS, about 3 minutes extra on CPU. "
+        "✅ This works when you run the app locally (`streamlit run app.py`). "
+        "It can't be deployed on Streamlit Community Cloud, though, because the ~350 MB voice model "
+        "exceeds GitHub's 100 MB file limit and Kokoro needs the espeak-ng system package, which the "
+        "free tier doesn't provide."
+    )
     if st.button("Generate audio from this script"):
         try:
             with st.spinner("Rendering audio… (this can take a few minutes)"):
