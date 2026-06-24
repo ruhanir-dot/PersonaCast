@@ -122,4 +122,4 @@ def curate_topic( plan, items, persona, llm ) -> list[CuratedItem]:
             CuratedItem(source=item.source, title=item.title, url=item.url, summary=summary)
         )
 
-        return kept
+    return kept
