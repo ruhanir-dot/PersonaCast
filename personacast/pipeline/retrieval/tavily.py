@@ -1,22 +1,31 @@
 
-
+"""
+change for naive qa implementation make the topic, and days overridable so our search fallback can do a general search that isn't biased towards news 
+and recent results
+"""
 from __future__ import annotations
 from ... import config as cfg
 from ...models import RetrievedItem
 
-
-def search_web(query, max_results = None) -> list[RetrievedItem]:
+### from v2 naive implementation we turn topic and days into keyword arguements
+def search_web(query, max_results = None, *, topic = "news", days = cfg.SEARCH_RECENCY_DAYS) -> list[RetrievedItem]:
     from tavily import TavilyClient
 
     client = TavilyClient(api_key = cfg.TAVILY_API_KEY)
 
-    responses = client.search(
-        query=query,
-        max_results=max_results or cfg.RESULTS_PER_QUERY,
-        include_raw_content=True,
-        topic="news", # focus on news
-        days=cfg.SEARCH_RECENCY_DAYS, # last N days for recenct
-    )
+    ## pipeline retrieval keeps the news + recency defaults
+    ## midpodcast fallback retrieval overrided wuth topic = general, days = None
+    kwargs = {
+        "query": query,
+        "max_results": max_results or cfg.RESULTS_PER_QUERY,
+        "include_raw_content": True,
+        "topic": topic,
+    }
+
+    if days is not None: # set days
+        kwargs["days"] = days
+
+    responses = client.search(**kwargs)
 
     items = []
     for response in responses.get('results', []): 

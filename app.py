@@ -14,9 +14,11 @@ from __future__ import annotations
 
 import streamlit as st
 
+from personacast.llm.client import LLMClient
 from personacast.models import Expertise, Interest, Persona
 from personacast.pipeline import state as state_mod
 from personacast.pipeline import tts
+from personacast.pipeline.qa import answer_question, flatten_curated
 from personacast.pipeline.run import run_pipeline
 
 st.set_page_config(page_title="PersonaCast", layout="wide")
@@ -64,6 +66,7 @@ if go:
             st.session_state["result"] = result
             st.session_state["persona_id"] = persona_id
             st.session_state.pop("audio_path", None)  # new script => any old audio is stale
+            st.session_state.pop("qa_answer", None)  # new episode => any old answer is stale
             status.update(label=f"Done — run {result.run_id}", state="complete")
     except Exception as err:  # noqa: BLE001 — surface failures in the UI, don't crash
         st.error(f"Pipeline failed: {type(err).__name__}: {err}")
@@ -83,6 +86,44 @@ if result is not None:
             file_name=f"{st.session_state.get('persona_id', 'persona')}_script.txt",
             mime="text/plain",
         )
+
+    # --- Mid-podcast Q&A: ask a question against this episode's curated sources ---
+    st.header("Ask a question")
+    st.caption(
+        "Type a question as if you paused the episode. It's answered from this episode's "
+        "curated sources; if they don't cover it (and web fallback is on), it searches the web."
+    )
+    question = st.text_input("Your question", key="qa_question")
+    allow_web = st.checkbox(
+        "Search the web if the sources don't cover it", value=True, key="qa_allow_web"
+    )
+    if st.button("Ask") and question.strip():
+        try:
+            with st.spinner("Answering…"):
+                st.session_state["qa_answer"] = answer_question(
+                    question.strip(), result.persona,
+                    flatten_curated(result.curated), LLMClient(),
+                    allow_web=allow_web,
+                )
+        except Exception as err:  # noqa: BLE001 — surface failures in the UI
+            st.error(f"Q&A failed: {type(err).__name__}: {err}")
+
+    # render the stored answer (survives reruns from other buttons until a new run)
+    ans = st.session_state.get("qa_answer")
+    if ans is not None:
+        if ans.answered:
+            st.markdown(ans.answer)
+            st.caption(
+                "↳ answered from a web search"
+                if ans.used_web
+                else "↳ answered from this episode's curated sources"
+            )
+            if ans.sources_used:
+                st.markdown("**Sources**")
+                for src in ans.sources_used:
+                    st.markdown(f"- [{src.title}]({src.url})")
+        else:
+            st.warning(ans.answer)
 
     # --- Audio: a separate, explicit step (local TTS is slow) ---
     st.header("Audio")
