@@ -1,0 +1,106 @@
+{
+  "machine learning": [
+    {
+      "source": "arxiv",
+      "title": "Causal Connections: Leveraging Multilingual Fine-Tuning for Financial QA@FinCausal 2026",
+      "url": "http://arxiv.org/abs/2606.27446v1",
+      "summary": "The paper compares encoder\u2011only token tagging with multilingual BERT, encoder\u2011decoder generation with multilingual BART, and decoder\u2011only LLMs such as Llama\u202f3.1 and GPT variants. Prompting and few\u2011shot examples achieved competitive performance, while supervised fine\u2011tuning gave the largest gains. GPT\u20114.1\u202fMini fine\u2011tuned on combined English and Spanish data tied for the highest score on the English subtask (4.8140) and ranked third on the Spanish subtask (4.7753)."
+    },
+    {
+      "source": "web",
+      "title": "NVIDIA Doubles Down on DLSS 4.5 With Smarter Ray Reconstruction at Computex, But DLSS 5 Is a No-Show - Wccftech",
+      "url": "https://wccftech.com/nvidia-dlss-4-5-smarter-ray-reconstruction-computex-dlss-5-no-show/",
+      "summary": "NVIDIA unveiled DLSS 4.5 Ray Reconstruction, a second\u2011generation transformer model that promises to improve ray traced and path traced image quality across supported PC games. DLSS 4.5 Ray Reconstruction will be available in August. The new model delivers 35% more compute capability and processes 20% more parameters while maintaining similar performance to the previous model. The model offers developers greater control over temporal accumulation, enabling precise tuning of model response for better image quality."
+    },
+    {
+      "source": "arxiv",
+      "title": "PSK@EEUCA 2026: Fine-Tuning Large Language Models with Synthetic Data Augmentation for Multi-Class Toxicity Detection in Gaming Chat",
+      "url": "http://arxiv.org/abs/2605.07201v1",
+      "summary": "The best system combined Llama\u202f3.1\u202f8B with 5\u202f% synthetic data augmentation. This system achieved an F1\u2011macro score of 0.6234 on the test set, placing fourth out of 35 teams in the EEUCA\u202f2026 Toxicity Detection task. The authors observed a \u201cvalidation trap\u201d where high validation performance correlated with poor test transfer."
+    },
+    {
+      "source": "arxiv",
+      "title": "BITS Pilani at SemEval-2026 Task 9: Structured Supervised Fine-Tuning with DPO Refinement for Polarization Detection",
+      "url": "http://arxiv.org/abs/2604.11121v2",
+      "summary": "The team fine\u2011tuned Qwen\u202f2.5\u20117B\u2011Instruct with LoRA using an interpretable slot\u2011filling template and then applied Direct Preference Optimization (DPO) with automatically generated preference pairs. Their submitted system reached 0.7664 Macro\u2011F1 on the English test set, and post\u2011submission experiments with Mistral\u2011Nemo\u2011Instruct\u20112407 and LLM\u2011judge\u2011filtered pairs improved performance to 0.8162 Macro\u2011F1. This performance surpassed the organiser baseline of 0.7802."
+    },
+    {
+      "source": "web",
+      "title": "Dual swin transformer for assisting in the diagnosis and surgical prediction of necrotizing enterocolitis - Nature",
+      "url": "https://www.nature.com/articles/s41390-026-05145-7",
+      "summary": "The study developed a dual Swin Transformer integrating abdominal X\u2011rays (2D branch) and laboratory parameters (1D branch) via late fusion. The optimized multimodal model achieved an AUC of 0.915 for NEC diagnosis on the internal test set. On the independent external test set, the model achieved an AUC of 0.903 for NEC diagnosis. Interpretability analyses highlighted intestinal pneumatosis and C\u2011reactive protein as key predictive factors."
+    },
+    {
+      "source": "arxiv",
+      "title": "NTIRE 2026 Rip Current Detection and Segmentation (RipDetSeg) Challenge Report",
+      "url": "http://arxiv.org/abs/2604.17070v2",
+      "summary": "The NTIRE\u202f2026 Rip Current Detection and Segmentation Challenge attracted 159 registered participants and received 9 valid test submissions across detection and segmentation tasks. Most participant solutions relied on pretrained models combined with strong augmentation and post\u2011processing designs. The results indicate that rip\u2011current understanding benefits strongly from the progress of robust general\u2011purpose vision models."
+    },
+    {
+      "source": "arxiv",
+      "title": "SelfMatch: Combining Contrastive Self-Supervision and Consistency for Semi-Supervised Learning",
+      "url": "http://arxiv.org/abs/2101.06480v1",
+      "summary": "SelfMatch combines contrastive self-supervised pretraining with augmentation consistency regularization for semi-supervised learning. On CIFAR-10 with 40 labeled examples, SelfMatch achieves 93.19% accuracy, outperforming MixMatch (52.46%), UDA (70.95%), ReMixMatch (80.9%), and FixMatch (86.19%). The method narrows the gap between supervised learning (95.87%) and semi-supervised learning (93.19%) using only a few labels per class."
+    },
+    {
+      "source": "web",
+      "title": "Self-supervised multimodal transformer for fine-grained detection of controlled perturbation events in piano performance - Nature",
+      "url": "https://www.nature.com/articles/s41598-026-45945-9",
+      "summary": "The paper proposes a self\u2011supervised multimodal Transformer framework that fuses audio spectral features, symbolic MIDI representations, and a MIDI\u2011derived spatial/kinematic proxy. The two\u2011stage training strategy uses contrastive learning, masked prediction, and temporal reconstruction objectives during pre\u2011training. Fine\u2011tuning optimizes detection of five error categories\u2014pitch, timing, dynamics, touch, and pedal\u2014in piano performance. Experiments on the public MAESTRO dataset show that multimodal fusion outperforms unimodal approaches."
+    },
+    {
+      "source": "web",
+      "title": "Generalizable self-supervised learning for imaging flow cytometry on multi-dataset leukocyte differential - Nature",
+      "url": "https://www.nature.com/articles/s41378-026-01236-x",
+      "summary": "The authors propose a self\u2011supervised contrastive learning framework pretrained on a non\u2011annotated dataset of bright\u2011field leukocyte images. When frozen and combined with lightweight linear or multilayer perceptron heads, the method achieves classification accuracies of 96.16%, 96.68%, and 92.24% on three independent leukocyte datasets. The performance is comparable to supervised baselines despite using no annotated training data."
+    },
+    {
+      "source": "arxiv",
+      "title": "Elastic Weight Consolidation Improves the Robustness of Self-Supervised Learning Methods under Transfer",
+      "url": "http://arxiv.org/abs/2210.16365v1",
+      "summary": "The work re-interprets SSL fine-tuning through Bayesian continual learning and applies Elastic Weight Consolidation regularization. Using EWC with SSL improves worst sub-group performance by 5% on Waterbirds and 2% on Celeb-A when using the ViT-B/16 architecture. The authors pre-compute and publicly release the Fisher Information Matrix evaluated with 10,000 ImageNet-1K variates on modern SSL architectures including ViT-B/16 and ResNet50 trained with DINO."
+    },
+    {
+      "source": "arxiv",
+      "title": "MEMe: An Accurate Maximum Entropy Method for Efficient Approximations in Large-Scale Machine Learning",
+      "url": "http://arxiv.org/abs/1906.01101v1",
+      "summary": "MEMe is a novel robust maximum entropy algorithm capable of handling hundreds of moments for computationally efficient approximations. The method is equivalent to constrained Bayesian variational inference. MEMe outperforms existing approaches in fast log determinant estimation and information-theoretic Bayesian optimisation."
+    },
+    {
+      "source": "web",
+      "title": "Kirkland Hints It Could Fine-Tune LLMs For Own Legal AI Model - Artificial Lawyer",
+      "url": "https://www.artificiallawyer.com/2026/06/01/kirkland-hints-it-could-fine-tune-llms-for-own-legal-ai-model/",
+      "summary": "Kirkland & Ellis\u2019s $500\u202fmillion technology project could involve fine\u2011tuning open\u2011source large language models to create their own legal AI model. Two new AI Infrastructure Director positions at Kirkland require experience with on\u2011premise GPU environments. The job adverts mention experience with existing legal AI platforms such as Harvey, Legora, CoCounsel, and Lexis+\u202fAI."
+    },
+    {
+      "source": "web",
+      "title": "Snowflake and Anthropic Accelerate Enterprise AI Adoption Driven by Rising Demand for Governed AI - Financial Times",
+      "url": "https://markets.ft.com/data/announce/detail?dockey=600-202606012000BIZWIRE_USPRX____20260601_BW623088-1",
+      "summary": "Snowflake Cortex AI adds governance, security, observability, and scale to Anthropic models that run directly on data within Snowflake. Snowflake and Anthropic cite enterprise customers such as Basis, Block, Carvana, eSentire, Indeed, and Notion. The partnership aims to accelerate enterprise AI adoption driven by rising demand for governed AI."
+    },
+    {
+      "source": "arxiv",
+      "title": "Self-Supervised Learning for Large-Scale Unsupervised Image Clustering",
+      "url": "http://arxiv.org/abs/2008.10312v2",
+      "summary": "The paper proposes a simple scheme for unsupervised classification based on self-supervised representations. It achieves 39% accuracy on ImageNet with 1000 clusters and 46% accuracy with overclustering. The authors suggest adding the unsupervised evaluation to a set of standard benchmarks for self-supervised learning. The code for the method is available at https://github.com/Randl/kmeans_selfsuper."
+    },
+    {
+      "source": "arxiv",
+      "title": "MerLin: A Discovery Engine for Photonic and Hybrid Quantum Machine Learning",
+      "url": "http://arxiv.org/abs/2602.11092v2",
+      "summary": "MerLin is an open-source framework that integrates optimized strong simulation of linear optical circuits into PyTorch and scikit-learn workflows for differentiable training of quantum layers. The framework reproduces eighteen state-of-the-art photonic and hybrid quantum machine learning works spanning kernel methods, reservoir computing, convolutional and recurrent architectures, generative models, and modern training paradigms. MerLin enables systematic benchmarking, reproducibility, and hardware-aware testing on available quantum hardware while allowing exploration beyond current capabilities."
+    },
+    {
+      "source": "web",
+      "title": "Sensitive Enterprise Data Uploads to AI Models Double in a Year - Infosecurity Magazine",
+      "url": "https://www.infosecurity-magazine.com/news/sensitive-ai-data-upload-doubles/",
+      "summary": "The Zscaler 2026 AI Threat Report found a 93% year\u2011over\u2011year increase in employees transferring enterprise data to AI and machine learning applications. Employees transferred a total of 18,033\u202fTB of data to AI tools in the last year, equivalent to about 3.6\u202fbillion digital photos. Over half of the data transfers were driven by Grammarly (38%) and ChatGPT (21%), and Zscaler identified 410\u202fmillion DLP violations related to ChatGPT."
+    },
+    {
+      "source": "arxiv",
+      "title": "Changing Data Sources in the Age of Machine Learning for Official Statistics",
+      "url": "http://arxiv.org/abs/2306.04338v1",
+      "summary": "The paper outlines the main risks, liabilities, and uncertainties associated with changing data sources in machine learning for official statistics. It provides a checklist of prevalent origins and causes of changing data sources, covering technical, ownership, ethics, regulation, and public perception aspects. Repercussions highlighted include concept drift, bias, availability, validity, accuracy, completeness, neutrality, and potential discontinuation of statistical offerings. Precautionary measures recommended include enhancing robustness in data sourcing and statistical techniques and conducting thorough monitoring."
+    }
+  ]
+}

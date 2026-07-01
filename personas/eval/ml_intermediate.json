@@ -1,0 +1,6 @@
+{
+  "persona_id": "eval_ml_intermediate",
+  "interests": [{"topic": "machine learning", "expertise": "intermediate"}],
+  "tone": "technical but conversational, like talking to a peer",
+  "avoid": ["gossip"]
+}

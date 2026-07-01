@@ -1,0 +1,168 @@
+[
+  {
+    "persona_id": "eval_ml_beginner",
+    "expertise": "beginner",
+    "question": "Explain what self-supervised learning is.",
+    "run_index": 0,
+    "answered": true,
+    "used_web": false,
+    "answer": "Self\u2011supervised learning (SSL) is a way of teaching a model to understand data without any human\u2011provided labels. Instead of relying on a curated set of \"correct\" answers, the model creates its own supervision signals from the raw data itself. Typical SSL strategies turn the data into a pretext task \u2013 for example, the model might be asked to predict missing parts of an image (masked prediction), to bring different views of the same sample closer together (contrastive learning), or to reconstruct a sequence of audio frames (temporal reconstruction). By solving these proxy problems, the model learns useful representations that capture the underlying structure of the data (SelfMatch combines contrastive self\u2011supervised pretraining; the piano\u2011performance transformer uses contrastive learning, masked prediction, and temporal reconstruction; the imaging\u2011flow cytometry work also relies on a contrastive framework). \n\nOnce the model has learned these generic features, it can be fine\u2011tuned on a much smaller labeled set for a downstream task such as classification or detection. This fine\u2011tuning step often benefits from techniques like Elastic Weight Consolidation, which helps preserve the knowledge gained during SSL when adapting to new tasks. In practice, SSL can close the gap to fully supervised learning: the SelfMatch method reaches 93.19% accuracy on CIFAR\u201110 with only 40 labeled examples, and the imaging\u2011flow cytometry approach attains over 96% accuracy on several leukocyte datasets despite using no annotations at all. These results show that SSL provides a powerful, label\u2011efficient route to high\u2011performing models.",
+    "sources_used": [
+      {
+        "title": "SelfMatch: Combining Contrastive Self-Supervision and Consistency for Semi-Supervised Learning",
+        "url": "http://arxiv.org/abs/2101.06480v1"
+      },
+      {
+        "title": "Self-supervised multimodal transformer for fine-grained detection of controlled perturbation events in piano performance - Nature",
+        "url": "https://www.nature.com/articles/s41598-026-45945-9"
+      },
+      {
+        "title": "Generalizable self-supervised learning for imaging flow cytometry on multi-dataset leukocyte differential - Nature",
+        "url": "https://www.nature.com/articles/s41378-026-01236-x"
+      },
+      {
+        "title": "Elastic Weight Consolidation Improves the Robustness of Self-Supervised Learning Methods under Transfer",
+        "url": "http://arxiv.org/abs/2210.16365v1"
+      },
+      {
+        "title": "Self-Supervised Learning for Large-Scale Unsupervised Image Clustering",
+        "url": "http://arxiv.org/abs/2008.10312v2"
+      }
+    ]
+  },
+  {
+    "persona_id": "eval_ml_beginner",
+    "expertise": "beginner",
+    "question": "How are recent results fine-tuning large language models, and which techniques stand out?",
+    "run_index": 0,
+    "answered": true,
+    "used_web": false,
+    "answer": "Recent work shows that the biggest performance jumps still come from supervised fine\u2011tuning, where a pre\u2011trained LLM is further trained on task\u2011specific data. In the multilingual financial\u2011QA study, researchers compared several model families (encoder\u2011only BERT, encoder\u2011decoder BART, and decoder\u2011only Llama\u202f3.1/GPT variants) and found that prompting or few\u2011shot examples were useful, but a full supervised fine\u2011tune on combined English\u2011Spanish data gave the highest scores \u2013 GPT\u20114.1\u202fMini fine\u2011tuned on the bilingual set tied for first on the English subtask and placed third on Spanish. \n\nOther techniques that are starting to stand out are lightweight parameter\u2011efficient methods and data\u2011augmentation tricks. One team combined a Llama\u202f3.1\u202f8B model with only 5\u202f% synthetic data added to the training set and achieved a solid F1\u2011macro score on a gaming\u2011chat toxicity task, though they warned about a \u201cvalidation trap\u201d where strong validation results did not always transfer to the test set. Another approach used LoRA (low\u2011rank adaptation) to fine\u2011tune Qwen\u202f2.5\u20117B\u2011Instruct, then applied Direct Preference Optimization (DPO) with automatically generated preference pairs, pushing macro\u2011F1 up to 0.7664 and, after post\u2011submission tweaks with Mistral\u2011Nemo\u2011Instruct\u20112407 and LLM\u2011judge\u2011filtered pairs, to 0.8162. Together these studies suggest that supervised fine\u2011tuning remains the workhorse, while parameter\u2011efficient adapters (LoRA) and smart data augmentation (synthetic examples, preference\u2011based refinement) are the most promising add\u2011ons for squeezing extra performance out of large language models.",
+    "sources_used": [
+      {
+        "title": "Causal Connections: Leveraging Multilingual Fine-Tuning for Financial QA@FinCausal 2026",
+        "url": "http://arxiv.org/abs/2606.27446v1"
+      },
+      {
+        "title": "PSK@EEUCA 2026: Fine-Tuning Large Language Models with Synthetic Data Augmentation for Multi-Class Toxicity Detection in Gaming Chat",
+        "url": "http://arxiv.org/abs/2605.07201v1"
+      },
+      {
+        "title": "BITS Pilani at SemEval-2026 Task 9: Structured Supervised Fine-Tuning with DPO Refinement for Polarization Detection",
+        "url": "http://arxiv.org/abs/2604.11121v2"
+      }
+    ]
+  },
+  {
+    "persona_id": "eval_ml_intermediate",
+    "expertise": "intermediate",
+    "question": "Explain what self-supervised learning is.",
+    "run_index": 0,
+    "answered": true,
+    "used_web": false,
+    "answer": "Self\u2011supervised learning (SSL) is a way to train models on raw, unlabeled data by creating an auxiliary \u201cpretext\u201d task that generates its own supervision signals. In practice, the model predicts some part of the input from another part, or it learns to bring different augmented views of the same sample together (contrastive learning). For example, the SelfMatch work combines contrastive self\u2011supervised pretraining with augmentation\u2011consistency regularization, letting a network learn useful visual features from CIFAR\u201110 images before only a handful of labels are added\u202f[SelfMatch: Combining Contrastive Self\u2011Supervision and Consistency for Semi\u2011Supervised Learning](http://arxiv.org/abs/2101.06480v1). Similarly, a multimodal Transformer for piano performance uses contrastive learning, masked prediction, and temporal reconstruction objectives during pre\u2011training, showing how SSL can fuse audio, symbolic, and kinematic cues without any manual annotation\u202f[Self\u2011supervised multimodal transformer for fine\u2011grained detection of controlled perturbation events in piano performance](https://www.nature.com/articles/s41598-026-45945-9).",
+    "sources_used": [
+      {
+        "title": "SelfMatch: Combining Contrastive Self-Supervision and Consistency for Semi-Supervised Learning",
+        "url": "http://arxiv.org/abs/2101.06480v1"
+      },
+      {
+        "title": "Self-supervised multimodal transformer for fine-grained detection of controlled perturbation events in piano performance - Nature",
+        "url": "https://www.nature.com/articles/s41598-026-45945-9"
+      },
+      {
+        "title": "Generalizable self-supervised learning for imaging flow cytometry on multi-dataset leukocyte differential - Nature",
+        "url": "https://www.nature.com/articles/s41378-026-01236-x"
+      },
+      {
+        "title": "Elastic Weight Consolidation Improves the Robustness of Self-Supervised Learning Methods under Transfer",
+        "url": "http://arxiv.org/abs/2210.16365v1"
+      },
+      {
+        "title": "Self-Supervised Learning for Large-Scale Unsupervised Image Clustering",
+        "url": "http://arxiv.org/abs/2008.10312v2"
+      }
+    ]
+  },
+  {
+    "persona_id": "eval_ml_intermediate",
+    "expertise": "intermediate",
+    "question": "How are recent results fine-tuning large language models, and which techniques stand out?",
+    "run_index": 0,
+    "answered": true,
+    "used_web": false,
+    "answer": "Recent benchmark papers show that supervised fine\u2011tuning still delivers the biggest jumps in performance for LLMs, even when strong few\u2011shot prompting is available. In the multilingual financial QA task, a GPT\u20114.1\u202fMini model that was fine\u2011tuned on a mix of English and Spanish data achieved the top English score (4.8140) and a strong Spanish ranking (4.7753), confirming that joint multilingual fine\u2011tuning can boost cross\u2011lingual robustness beyond prompt\u2011only baselines. A complementary line of work on toxicity detection in gaming chat demonstrated that adding a modest amount of synthetic data (5\u202f% of the training set) to a Llama\u202f3.1\u202f8B fine\u2011tune raised the macro\u2011F1 to 0.6234, though the authors warned about a \u201cvalidation trap\u201d where high validation scores did not always translate to test\u2011set gains.\n\nTwo techniques that stand out across these studies are parameter\u2011efficient adapters and preference\u2011based refinement. The SemEval\u20112026 polarization detection team applied LoRA to Qwen\u202f2.5\u20117B\u2011Instruct, then used Direct Preference Optimization (DPO) with automatically generated preference pairs, pushing Macro\u2011F1 from 0.7664 to 0.8162 after further experiments with Mistral\u2011Nemo\u2011Instruct\u20112407 and LLM\u2011judge\u2011filtered pairs. This combination of lightweight fine\u2011tuning (LoRA) and post\u2011hoc alignment (DPO) consistently outperformed the organizer\u2019s baseline, suggesting that adapter\u2011based fine\u2011tuning coupled with preference learning is a powerful recipe for squeezing extra performance out of large models.",
+    "sources_used": [
+      {
+        "title": "Causal Connections: Leveraging Multilingual Fine-Tuning for Financial QA@FinCausal 2026",
+        "url": "http://arxiv.org/abs/2606.27446v1"
+      },
+      {
+        "title": "PSK@EEUCA 2026: Fine-Tuning Large Language Models with Synthetic Data Augmentation for Multi-Class Toxicity Detection in Gaming Chat",
+        "url": "http://arxiv.org/abs/2605.07201v1"
+      },
+      {
+        "title": "BITS Pilani at SemEval-2026 Task 9: Structured Supervised Fine-Tuning with DPO Refinement for Polarization Detection",
+        "url": "http://arxiv.org/abs/2604.11121v2"
+      }
+    ]
+  },
+  {
+    "persona_id": "eval_ml_advanced",
+    "expertise": "advanced",
+    "question": "Explain what self-supervised learning is.",
+    "run_index": 0,
+    "answered": true,
+    "used_web": false,
+    "answer": "Self\u2011supervised learning (SSL) is a training paradigm that extracts supervisory signals directly from the raw data itself, eliminating the need for explicit human\u2011provided labels.  In practice a model is given a pretext task\u2014such as predicting a masked portion of an input, distinguishing between differently augmented views of the same sample, or aligning representations across modalities\u2014and learns to solve it by exploiting the inherent structure of the data.  For example, SelfMatch combines contrastive self\u2011supervised pretraining with augmentation\u2011consistency regularisation, letting a network learn discriminative features from unlabeled images before a tiny labeled set is introduced (SelfMatch, arXiv\u00a02101.06480).  Similarly, a multimodal Transformer for piano performance learns joint audio\u2011MIDI representations through contrastive learning, masked prediction, and temporal reconstruction objectives, all without any annotated error labels (Self\u2011supervised multimodal transformer, Nature). \n\nThe payoff of SSL is that the learned representations can be fine\u2011tuned on downstream tasks with far fewer annotations while still approaching fully supervised performance.  Unsupervised image clustering built on SSL representations reaches 39\u202f% accuracy on ImageNet with 1,000 clusters, and over\u2011clustering pushes that to 46\u202f% (Self\u2011Supervised Learning for Large\u2011Scale Unsupervised Image Clustering, arXiv\u00a02008.10312).  In biomedical imaging, a contrastive SSL framework pretrained on unlabeled bright\u2011field leukocyte images attains classification accuracies above 96\u202f% on three independent datasets, rivaling supervised baselines (Generalizable self\u2011supervised learning for imaging flow cytometry, Nature).  Moreover, regularising SSL fine\u2011tuning with Elastic Weight Consolidation improves robustness across sub\u2011populations, demonstrating that SSL can be made more reliable for transfer learning (Elastic Weight Consolidation Improves the Robustness of Self\u2011Supervised Learning Methods under Transfer, arXiv\u00a02210.16365).",
+    "sources_used": [
+      {
+        "title": "SelfMatch: Combining Contrastive Self-Supervision and Consistency for Semi-Supervised Learning",
+        "url": "http://arxiv.org/abs/2101.06480v1"
+      },
+      {
+        "title": "Self-supervised multimodal transformer for fine-grained detection of controlled perturbation events in piano performance - Nature",
+        "url": "https://www.nature.com/articles/s41598-026-45945-9"
+      },
+      {
+        "title": "Self-Supervised Learning for Large-Scale Unsupervised Image Clustering",
+        "url": "http://arxiv.org/abs/2008.10312v2"
+      },
+      {
+        "title": "Generalizable self-supervised learning for imaging flow cytometry on multi-dataset leukocyte differential - Nature",
+        "url": "https://www.nature.com/articles/s41378-026-01236-x"
+      },
+      {
+        "title": "Elastic Weight Consolidation Improves the Robustness of Self-Supervised Learning Methods under Transfer",
+        "url": "http://arxiv.org/abs/2210.16365v1"
+      }
+    ]
+  },
+  {
+    "persona_id": "eval_ml_advanced",
+    "expertise": "advanced",
+    "question": "How are recent results fine-tuning large language models, and which techniques stand out?",
+    "run_index": 0,
+    "answered": true,
+    "used_web": false,
+    "answer": "Recent benchmark papers show that supervised fine\u2011tuning still provides the biggest jump in performance over pure prompting. In the multilingual financial QA task, a supervised fine\u2011tune of GPT\u20114.1\u202fMini on a combined English\u2011Spanish corpus outperformed few\u2011shot prompting and tied for the top English score (4.8140) while also ranking highly on the Spanish subtask (4.7753)\u202f[1]. A similar pattern emerges in toxicity detection for gaming chat: the winning entry paired Llama\u202f3.1\u202f8B with a modest 5\u202f% of synthetic data generated by a language model, which lifted the macro\u2011F1 to 0.6234\u202f[2]. However, the authors warned of a \u201cvalidation trap\u201d where strong validation metrics did not translate to test\u2011set gains, underscoring the need for careful data\u2011splitting.\n\nAmong the techniques that stand out, parameter\u2011efficient adapters such as LoRA combined with structured prompts and a second\u2011stage Direct Preference Optimization (DPO) refinement proved especially effective. Fine\u2011tuning Qwen\u202f2.5\u20117B\u2011Instruct with LoRA on a slot\u2011filling template achieved a 0.7664 Macro\u2011F1, and adding DPO with automatically generated preference pairs pushed performance to 0.8162\u202f[3]. Post\u2011submission experiments showed that swapping in Mistral\u2011Nemo\u2011Instruct\u20112407 and filtering preference pairs with an LLM\u2011judge further improved results. Outside academia, firms like Kirkland & Ellis are already planning to fine\u2011tune open\u2011source LLMs on proprietary legal data, indicating that these methods are moving from research labs into production pipelines\u202f[4].",
+    "sources_used": [
+      {
+        "title": "Causal Connections: Leveraging Multilingual Fine-Tuning for Financial QA@FinCausal 2026",
+        "url": "http://arxiv.org/abs/2606.27446v1"
+      },
+      {
+        "title": "PSK@EEUCA 2026: Fine-Tuning Large Language Models with Synthetic Data Augmentation for Multi-Class Toxicity Detection in Gaming Chat",
+        "url": "http://arxiv.org/abs/2605.07201v1"
+      },
+      {
+        "title": "BITS Pilani at SemEval-2026 Task 9: Structured Supervised Fine-Tuning with DPO Refinement for Polarization Detection",
+        "url": "http://arxiv.org/abs/2604.11121v2"
+      },
+      {
+        "title": "Kirkland Hints It Could Fine-Tune LLMs For Own Legal AI Model - Artificial Lawyer",
+        "url": "https://www.artificiallawyer.com/2026/06/01/kirkland-hints-it-could-fine-tune-llms-for-own-legal-ai-model/"
+      }
+    ]
+  }
+]
