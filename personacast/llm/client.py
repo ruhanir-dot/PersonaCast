@@ -33,14 +33,29 @@ def _retry_after_seconds(error: Exception | None) -> float | None:
             except ValueError: 
                 pass 
         
-    body = getattr(error,"body", None) 
+    body = getattr(error,"body", None)
 
-    if isinstance(body, dict): 
+    # gemini wraps error body in a list so need to extract from list  
+    if isinstance(body, list) and body:
+        body = body[0]
+
+    if isinstance(body, dict):
         metadata  = body.get("metadata") or {}
 
-        if "retry_after_seconds" in metadata: 
-            return float(metadata["retry_after_seconds"]) 
-    
+        if "retry_after_seconds" in metadata:
+            return float(metadata["retry_after_seconds"])
+
+        # gemini nests the hint as error.details[].retryDelay = "55s"
+        error_obj = body.get("error") or {} # get error object from body object
+        
+        for detail in error_obj.get("details", []): # iterate through details provided
+            delay = detail.get("retryDelay") if isinstance(detail, dict) else None # if the detail is a dict, grab retry delay
+            if delay:
+                try:
+                    return float(str(delay).rstrip("s")) # strip s 
+                except ValueError:
+                    pass
+
     return None
 
 def _extract_json(text): 
@@ -144,7 +159,7 @@ class LLMClient:
             try:
                 return schema.model_validate_json(_extract_json(raw)) # strip md blocks or conversational text
             except (ValidationError, json.JSONDecodeError) as err:
-                last_err = err 
+                last_err = err
                 nudge = (
                     f"\n\nYour previous reply did not validate: {err}\n"
                     "Return ONLY the corrected JSON."
