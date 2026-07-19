@@ -15,8 +15,9 @@ import re
 
 from pydantic import BaseModel
 
+from .. import config
 from ..llm.client import LLMClient
-from ..models import CuratedItem, Persona, TopicSegment
+from ..models import CuratedItem, Persona, PersonaMemory, Reaction, ReactionType, TopicSegment
 
 _SEGMENT_SYSTEM = (
     "You write ONE spoken-podcast segment that SYNTHESIZES the given sources into a single "
@@ -145,4 +146,132 @@ def stitch(segments: list[TopicSegment], persona: Persona, llm: LLMClient) -> st
     pieces.append(parts.outro.strip()) # end with outro
     return "\n\n".join(p for p in pieces if p) # join everything
 
+
+### Interactive turn generation
+
+## Turn generation system prompt
+_TURN_SYSTEM = (
+    "You are voicing ONE short spoken-podcast turn — about {budget} words, roughly 60 seconds — in an "
+    "ONGOING, interactive session with a single listener. This is NOT a full episode; it is one live "
+    "beat that continues from what came before and will be followed by more.\n\n"
+    "SYNTHESIS & DEPTH — synthesize the given sources into a single clear throughline calibrated to the "
+    "listener's expertise (advanced: precise domain terms, assume fundamentals; intermediate: what's "
+    "new and why it matters; beginner: intuition over technical detail). Respect the AVOID list as "
+    "STYLE guidance.\n\n"
+    "FACTUAL FIDELITY — use ONLY what the sources actually state. Never invent a name, number, date, "
+    "statistic, or mechanism to fill a gap, and never transfer a fact from one context to another. A "
+    "generic-but-true reference beats a specific-but-invented one.\n\n"
+    "SITUATION — the listener's current situation is: {context}. Match your energy and pacing to it.\n\n"
+    "CONTINUITY — you are given short gists of the most recent turns and a running summary of the "
+    "session. Do NOT repeat what was already covered; move the conversation forward.\n\n"
+    "{reaction_instr}\n\n"
+    "{mode_instr}\n\n"
+    "Start directly in the substance — no 'welcome back', no meta narration, no sign-off. Output spoken "
+    "prose only: no headings, no bullet points. Hard ceiling: never exceed {budget} words."
+)
+
+## At a turn after a user reaction, prompt on how to reac on this turn to users reaction to last turn 
+# used as dictionary so reaction prompt is keyed by reaction type based on the reaction user gave
+_REACTION_INSTR = {
+    None: "This is the OPENING turn of the session — set the scene in a sentence, then dive in.",
+    ReactionType.none: (
+        "The listener did NOT react to your last turn — treat that as mild disengagement. Open with a "
+        "fresh hook or a different angle to re-earn their attention."
+    ),
+    ReactionType.comment: (
+        "The listener just commented: \"{text}\". Acknowledge or adapt to it naturally, then continue."
+    ),
+    ReactionType.question: (
+        "The listener just asked: \"{text}\". OPEN this turn by answering it directly in your own "
+        "spoken voice — a brief, natural acknowledgement (e.g. 'Good question —') then the answer — "
+        "grounded in the retrieved answer below. Weave it into the narration; do NOT read it verbatim, "
+        "label it 'Answer:', or dump it as a Q&A block. After addressing it, continue the episode.\n"
+        "Retrieved answer to ground your response in: {answer}"
+    ),
+}
+
+###  turn generation style just an idea to make it more personalized to kind of adjust on making it variety focused, versus deep dove in one topic
+_MODE_INSTR = {
+    "variety": (
+        "STYLE: prefer VARIETY — bring a fresh angle and keep the session feeling wide-ranging rather "
+        "than dwelling."
+    ),
+    "consistent": (
+        "STYLE: the listener has shown strong interest in this topic — LEAN IN and go a level deeper "
+        "rather than broadening."
+    ),
+}
+
+def _expertise_for(topic: str, persona: Persona) -> str: 
+    """
+    method to look up listeners expertise level for a certain topic
+    """
+
+    for interest in persona.interests: 
+        if interest.topic == topic: 
+            return interest.expertise.value
+    return "intermediate" # default value
+
+def generate_turn(topic: str, 
+                  sources: list[CuratedItem], 
+                  persona: Persona, 
+                  memory: PersonaMemory,
+                  recent_gists: list[str], 
+                  llm: LLMClient, 
+                  *,
+                  last_reaction: Reaction | None = None,
+                  mode: str | None = None,
+                  target_words: int | None = None, ): 
+    
+    """
+    Method to generate oen around 60s turn on `topic`, grounded in `sources` based on 
+    inputted `persona` similar logic to write segment 
+        - add persona.additional _context attribute
+        - continuity across sessions recent gists from past turns past 4 gists, rolling memory.summary past 12 gists 
+        - variety and consistency toggle 
+    Returns text for the turn, later will wrap into InteractiveTurn object 
+    """
+
+    budget = target_words or config.WORDS_PER_TURN # word budget set in method, or config if not entered 
+    mode = mode or config.TURN_MODE
+
+    if last_reaction is None: 
+        reaction_instr = _REACTION_INSTR[None] # opening turn bc no reaction recorded ye 
+    elif last_reaction.type == ReactionType.question: 
+        reaction_instr = _REACTION_INSTR[ReactionType.question].format(
+            text = last_reaction.text, # inject text of reaction into prompt
+            answer = last_reaction.answer or "no answer found")
+        
+    else: 
+        reaction_instr = _REACTION_INSTR[last_reaction.type].format(text = last_reaction.text)
+
+    system = _TURN_SYSTEM.format( 
+        budget=budget,
+        context=persona.additional_context or "(not specified)",
+        reaction_instr=reaction_instr,
+        mode_instr=_MODE_INSTR.get(mode, _MODE_INSTR["variety"]),
+    ) # inject and enter into system prompt 
+
+    sources_block = "\n\n".join(
+        f"[{c.source}] {c.title} ({c.url})\n{c.summary}" for c in sources
+    ) or "(no sources available for this topic)" # formatting text block of sources iterating through curated items 
+
+
+    gists_block = "\n".join(f"- {g}" for g in recent_gists) or "(none yet — this is the first turn)" # creating recent gists block so past 4 turn gists as text block 
+
+    ### user prompt construction 
+
+    user = (
+        f"Topic: {topic}\n"
+        f"Listener expertise: {_expertise_for(topic, persona)}\n" # pull expertise for topic 
+        f"Listener tone: {persona.tone}\n"
+        f"AVOID (style): {persona.avoid}\n"
+        f"Session summary so far: {memory.summary or '(just starting)'}\n"
+        f"Recent turn gists:\n{gists_block}\n\n" # input gist block
+        f"Sources to draw on:\n{sources_block}" #sources block
+    )
+
+    text = llm.complete(system, user, temperature=0.4) # generate
+
+    return _trim_to_budget(text,budget) # trim to budget
 

@@ -106,7 +106,7 @@ class Reaction(BaseModel):
     topic: str 
     type: ReactionType
     text: str = "" # actual comment and question text
-    answer: str # when a question is asked we use the qa.answer_question method, store in here
+    answer: str | None # when a question is asked we use the qa.answer_question method, store in here
     #this is downstream injected into prompt as context to seamlessly answer question and move on
     requested_topic: str | None = None # we set this to a requested topic when user asks to switch
     ## current logic for this it looks at the active topics in the session and fires if reaction names other topic, could do an LLM call for this maybe

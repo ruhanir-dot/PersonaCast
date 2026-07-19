@@ -33,6 +33,15 @@ def log_stage(state, stage ) -> None:
     path = run_dir(state.run_id) / f"{n}_{stage}.json"
     path.write_text(state.model_dump_json(indent=2))
 
+def log_turn(session_state, iteration: int): 
+    """
+    snapshot sessionstate after turn `iteration` write to 
+    runs/<run_id>/turn_{iteration}.json
+    """
+    path = run_dir(session_state.run_id) / f"turn_{iteration}.json"
+    path.write_text(session_state.model_dump_json(indent=2))
+
+
 def save_outputs(state) -> Path:
     """
     write script.txt and sources.json . returns the run directory.

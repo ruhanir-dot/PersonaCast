@@ -1,13 +1,38 @@
+"""
+text to speech using gemini live api through google-genai sdk 
+replaces the old local kokora backend, model using: gemini-3.1-flash-live-preview
+
+we synthesize as a .wav 
+
+the live api is a streaming websocket session through async 
+    - open connection 
+    - send generated turn text
+    - collect streamed audio chunks (16kHz 16-bit mono PCM)
+
+- later we could stream text token by toke into persistent socket for realtime audio
+
+"""
+
 from __future__ import annotations
 
+import asyncio
 import re
+import wave
 from pathlib import Path
 
 from .. import config
 
+### prommpt for TTS model, so it reads as narrotor and not react to it or answer
+_NARRATOR_SYSTEM = (
+    "You are a text-to-speech narrator. Read the user's text aloud EXACTLY as written, "
+    "verbatim, with natural spoken delivery. Do not greet, summarize, answer, add commentary, "
+    "or say anything that is not in the provided text."
+)
+
+
 def _chunk(text, max_chars) -> list[str]:
     """
-    split within less thank max character chunks on paragraph, and then sentence    
+    split within less than max character chunks on paragraph, and then sentence    
     """
     chunks = [] # list of strings
 
@@ -36,27 +61,54 @@ def _chunk(text, max_chars) -> list[str]:
     return chunks
 
 
+async def _synthesize_live(chunks: list[str], out_path: Path):
+    """
+    open live session, send each text chunk, stream generated audio back into wav
+    """
+
+    from google import genai 
+    from google.genai import types
+
+    client = genai.Client(api_key= config.TTS_API_KEY)
+    live_config = types.LiveConnectConfig( # set up config
+        response_modalities= ['AUDIO'],
+        system_instruction=types.Content(parts=[types.Part(text=_NARRATOR_SYSTEM)]),
+        speech_config=types.SpeechConfig(
+            voice_config=types.VoiceConfig(
+                prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name=config.TTS_VOICE)
+            )
+        ),
+    )
+
+    with wave.open(str(out_path), "wb") as wav: 
+        wav.setnchannels(1) # setting mono
+        wav.setsampwidth(2) # 16 bit 2 bytes per sample 
+        wav.setframerate(config.TTS_SAMPLE_RATE) # 16kHz
+
+        async with client.aio.live.connect(model= config.TTS_MODEL, config=live_config) as session:
+            for i, chunk in enumerate(chunks,1): 
+                await session.send_realtime_input(text = chunk)
+                got = 0 # byte counter 
+
+                async for response in session.receive(): # read audio till turn complete 
+                    if response.data: 
+                        wav.writeframes(response.data)
+                        got += len(response.data)
+                    server = response.server_content
+                    if server is not None and server.turn_complete:
+                        break
+                seconds = got / 2 / config.TTS_SAMPLE_RATE
+                print(f"  tts chunk {i}/{len(chunks)} -> {seconds:.1f}s", flush=True)
+
+
+
+
 def synthesize(script: str, out_path: str | Path) -> Path:
     """
-    stream wroitten audio chunk by chunk to output file, interrupted run has partial file
+    stream written audio chunk by chunk to output file, interrupted run has partial file
     """
-    import soundfile as sf
-    from kokoro_onnx import Kokoro
-
     # config
     out_path = Path(out_path)
-    kokoro = Kokoro(config.KOKORO_MODEL_PATH, config.KOKORO_VOICES_PATH)
     chunks = _chunk(script, config.TTS_CHUNK_CHARS)
-
-    # get the first chunk to learn the sample rate, then open the file and stream the rest
-    first, sample_rate = kokoro.create(chunks[0], voice=config.TTS_VOICE, speed=1.0, lang="en-us")
-
-    with sf.SoundFile(str(out_path), mode="w", samplerate=sample_rate, channels=1) as f:
-        f.write(first)
-        print(f"  tts chunk 1/{len(chunks)} -> {len(first)/sample_rate:.1f}s", flush=True)
-        for i, chunk in enumerate(chunks[1:], 2):
-            samples, _ = kokoro.create(chunk, voice=config.TTS_VOICE, speed=1.0, lang="en-us")
-            f.write(samples)
-            print(f"  tts chunk {i}/{len(chunks)} -> {len(samples)/sample_rate:.1f}s", flush=True)
-   
+    asyncio.run(_synthesize_live(chunks, out_path))
     return out_path

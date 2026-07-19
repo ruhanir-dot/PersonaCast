@@ -1,7 +1,7 @@
 """
 persistent per persona memory, this is keyed by persona id and stored at personas/memory/<personaid>.json
 as mentioned prior the persona details for that session like interests, and tone, avoid and per sessio additional context are re-entered every session
-The persistent memor file carries the users across session interaction histoy ry, and their accumulated per topic engagment points 
+The persistent memory file carries the users across session interaction history , and their accumulated per topic engagment points 
 
 load_memory(persona) -> load or initialize peristed memory for user, then merge memory with entered persona details fror current session
 save_memory(memory) -> put in when last updated and write json to disk 
