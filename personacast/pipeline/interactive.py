@@ -129,7 +129,17 @@ class InteractiveSession: # interactive session object
             return memory.next_topic(session_state.memory, self._active_topics)
         
         if last_reaction and last_reaction.type == ReactionType.none: 
-            return memory.next_topic(session_state.memory, self._active_topics)
+            # round robin next listed topic when everything is at 0 
+            # find next highest engagment topic if exist 
+            best = memory.next_topic(session_state.memory, self._active_topics)
+
+            if session_state.memory.engagement.get(best, config.ENGAGE_BASE)  > session_state.memory.engagement.get(session_state.current_topic, config.ENGAGE_BASE):
+                # if there is a more engaging topic than current topic
+                return best 
+            
+            #none past conditions are met then we are in a tie in engagement so we round robin
+            i = self._active_topics.index(session_state.current_topic) # get position of current topic in list 
+            return self._active_topics[(i + 1) % len(self._active_topics)]
         
         return session_state.current_topic
     
