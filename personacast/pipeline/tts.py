@@ -112,3 +112,12 @@ def synthesize(script: str, out_path: str | Path) -> Path:
     chunks = _chunk(script, config.TTS_CHUNK_CHARS)
     asyncio.run(_synthesize_live(chunks, out_path))
     return out_path
+
+def wav_duration(path: str| Path) -> float: 
+    """ 
+    playback length of the wav file, use to map audio pause time to a certain sentence 
+    """
+    with wave.open(str(path), "rb") as w: # read wav file w/ open rb mode
+        rate = w.getframerate() # get audio file framerate, how many audio frames recorded pers second 
+        return w.getnframes() / float(rate) if rate else 0.0 # total number of frames in file/ by frames per second to get seconds of playback 
+
