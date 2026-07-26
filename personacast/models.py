@@ -112,6 +112,9 @@ class Reaction(BaseModel):
     ## current logic for this it looks at the active topics in the session and fires if reaction names other topic, could do an LLM call for this maybe
     ## additionally we will use requested topic on next score, do -2 switch penalty on current topic
 
+    anchor_snippet: str = "" # the specific sentence listener interrupted and reacted at 
+    anchor_source: str = "" # title of the curated source that the sentence interrupted at is attached to ,  "" if no confident match, found out through LLM call!
+
 class PersonaMemory(BaseModel): 
     """
     persistent persona memory keyed by the persona_id, for now is stored on disk looking at ideas to extend for deployed vesion 
