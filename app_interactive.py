@@ -1,25 +1,35 @@
 """
-PersonaCast — Interactive session frontend (v4).
+PersonaCast — Interactive session frontend (v5).
 
-Build a persona + this-session context, then generate ~60s turns one at a time. After each
-turn you type a reaction; its TYPE is inferred (text ending in '?' -> question and gets an
+Build a persona + this-session context, then generate ~60s turns one at a time. Each turn is
+voiced (audix player). You can PAUSE mid-turn and react: the sentence playing at the pause point
+becomes the anchor, which is linked back to the source it came from so the NEXT turn goes deeper
+on exactly that source. Reaction TYPE is still inferred (text ending in '?' -> question with an
 inline grounded answer; empty -> no reaction; otherwise -> comment) and folded into the
-persistent per-persona memory, which steers the next turn. A live memory panel shows the
-engagement points growing.
+persistent per-persona memory, which steers the next turn.
 
 Run:  streamlit run app_interactive.py
 """
 
 from __future__ import annotations
 
+import re
+
 import streamlit as st
+from streamlit_advanced_audio import audix
 
 from personacast import config
 from personacast.models import Expertise, Interest, Persona, ReactionType
+from personacast.pipeline import interactive as interactive_mod
 from personacast.pipeline import state as state_mod
 from personacast.pipeline import stt
 from personacast.pipeline import tts
 from personacast.pipeline.interactive import InteractiveSession
+
+
+def _split_sentences(text: str) -> list[str]:
+    """Split a turn into the sentences the listener can pin a reaction to."""
+    return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text.strip()) if s.strip()]
 
 st.set_page_config(page_title="PersonaCast — Interactive", layout="wide")
 st.title("PersonaCast — Interactive")
@@ -97,9 +107,11 @@ _SPEAKER_HTML = """
 
 def _play_turn(sess: InteractiveSession, turn) -> None:
     """
-    Voice this turn with the Live-API TTS, show a talking character, and autoplay the audio.
-    Synthesized audio is cached per iteration so incidental reruns don't re-synth, and
-    autoplay only fires on a NEW turn (guarded by last_played_iter) so reruns don't replay.
+    Voice this turn with the Live-API TTS, show a talking character, and autoplay the audio via
+    the audix player. Synthesized audio is cached per iteration so incidental reruns don't
+    re-synth, and autoplay only fires on a NEW turn (guarded by last_played_iter) so reruns
+    don't replay. audix reports the real playback currentTime on pause/scrub — we stash the
+    latest so a mid-turn pause can anchor the reaction to the sentence being spoken.
     """
     cache = st.session_state.setdefault("turn_audio", {})
     if turn.iteration not in cache:
@@ -115,8 +127,10 @@ def _play_turn(sess: InteractiveSession, turn) -> None:
         return
     st.markdown(_SPEAKER_HTML, unsafe_allow_html=True)
     autoplay = st.session_state.get("last_played_iter") != turn.iteration
-    st.audio(path, autoplay=autoplay)
+    result = audix(path, key=f"audix_{turn.iteration}", autoplay=autoplay)
     st.session_state["last_played_iter"] = turn.iteration
+    if result and result.get("currentTime") is not None:
+        st.session_state[f"pos_{turn.iteration}"] = result.get("currentTime")
 
 
 def _render_memory(sess: InteractiveSession) -> None:
@@ -133,7 +147,8 @@ def _render_memory(sess: InteractiveSession) -> None:
         with st.expander(f"Reaction history ({len(mem.reactions)})", expanded=False):
             for r in mem.reactions[-12:]:
                 icon = {ReactionType.question: "❓", ReactionType.comment: "💬", ReactionType.none: "·"}[r.type]
-                st.markdown(f"{icon} **{r.topic}** — {r.text or '(no reaction)'}")
+                pin = f" · 📍→ {r.anchor_source}" if r.anchor_source else (" · 📍" if r.anchor_snippet else "")
+                st.markdown(f"{icon} **{r.topic}**{pin} — {r.text or '(no reaction)'}")
 
 
 # --------------------------------------------------------------------------- main: turn + reaction
@@ -164,6 +179,34 @@ if session is not None:
             if speak:
                 _play_turn(session, turn)
 
+            # --- pause-driven anchor: the sentence playing when the listener paused ----------
+            # audix reports the real pause currentTime; map it (linearly) to a sentence. Any
+            # pause auto-selects that sentence (the anchor only actually drives a deep-dive if a
+            # reaction is typed/spoken — a bare pause is dropped in submit_reaction).
+            path = st.session_state.get("turn_audio", {}).get(turn.iteration)
+            pos = st.session_state.get(f"pos_{turn.iteration}")
+            dur = tts.wav_duration(path) if path else 0.0
+            sentences = _split_sentences(turn.text)
+            _whole = "(react to the whole turn)"
+            options = [_whole] + sentences
+            akey = f"anchor_{turn.iteration}"
+            # a NEW pause writes the detected sentence straight into the widget's state — we can't
+            # use index= because Streamlit ignores it once a keyed widget exists. Guarded on the
+            # position so a manual override afterwards sticks until the listener pauses again.
+            if pos and dur:
+                detected = interactive_mod.locate_snippet(turn.text, pos, dur)
+                if detected in sentences and st.session_state.get(f"anchored_pos_{turn.iteration}") != pos:
+                    st.session_state[akey] = detected
+                    st.session_state[f"anchored_pos_{turn.iteration}"] = pos
+            anchor_choice = st.selectbox(
+                "⏸ You interrupted around here — adjust if needed:",
+                options,
+                key=akey,
+            )
+            anchor_snippet = "" if anchor_choice == _whole else anchor_choice
+            if pos:
+                st.caption(f"paused at ~{pos:.0f}s")
+
             react = st.text_input(
                 "Type a reaction (end with '?' to ask · leave empty for no reaction)",
                 key=f"react_{turn.iteration}",
@@ -179,7 +222,9 @@ if session is not None:
                         with st.spinner("Transcribing your voice…"):
                             reaction_text = stt.transcribe(audio.getvalue())
                         st.session_state["heard"] = reaction_text
-                    done_turn = session.submit_reaction(reaction_text)
+                    # pass the pinned sentence (if any) so the reaction is anchored to that exact
+                    # point, driving the next turn's deep-dive
+                    done_turn = session.submit_reaction(reaction_text, anchor_snippet=anchor_snippet)
                     st.session_state["last_answer"] = (
                         done_turn.reaction.answer
                         if done_turn.reaction and done_turn.reaction.type == ReactionType.question

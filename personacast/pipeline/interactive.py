@@ -8,6 +8,7 @@ retrieve + curate ipelie runs once, we synthesize from the resulting pool
 from __future__ import annotations
 
 import re
+from pydantic import BaseModel
 
 from .. import config
 from ..llm.client import LLMClient
@@ -80,6 +81,64 @@ def _update_summary(summary:str, turn: InteractiveTurn):
     lines.append(f"- [{turn.topic}] {turn.gist}")
     return "\n".join(lines[-_SUMMARY_MAX_LINES:])
 
+### mapping pause time to sentence being spoken
+
+def locate_snippet(text, seconds:float, total_seconds:float) -> str: 
+    """
+    given the audio pause time, find the sentence podcast was at
+    seconds/total -> word index -> sentence containing word returns "" if nothing
+    """
+
+    text = (text or "").strip() # given full turn text  remove surrounding whitespace 
+    if not text or total_seconds <= 0: #if no text return nothing
+            return ""
+
+    sentences = [sentence for sentence in re.split(r"(?<=[.!?])\s+", text) if sentence.strip()] # split sentences into list elements
+
+    if not sentences: # another guard if splitting created nothing
+        return ""
+
+    fraction = min(max(seconds / total_seconds, 0.0), 1.0) # how far through audio the pause has happened as fraction if halfway through text 0.5
+
+    target_word_position = fraction * len(text.split()) #estimated word number position 
+
+    seen_word_count = 0 # accumulating word count
+    ## logic: target word is at 5 word ocount psition, sentence A -> 4 words seen = 4, 5< 4 dalse move sentence B -> 3 words seen = 7 5 <7  true in sentence B!
+
+    for sentence in sentences: 
+        seen_word_count += len(sentence.split())
+        if target_word_position < seen_word_count: 
+            return sentence.strip()
+
+    return sentences[-1].strip() # return sentence target word is in so we know sentence interrupted at 
+
+
+### given the anchoring sentence make llm call to find the curated source that is associated with what that sentence is talking abt
+_LINK_SYSTEM = (
+    "You are given ONE sentence from a podcast turn and a numbered list of the source summaries "
+    "that turn was synthesized from. Return the index of the single source that sentence is most "
+    "directly based on. If no source clearly supports it, return -1."
+)
+
+class _SourceLink(BaseModel):
+    index: int
+
+def link_source(snippet: str, sources: list[CuratedItem], llm: LLMClient) -> CuratedItem | None: 
+    """
+    recover curated source from pinned sentence, returns None if nothing is surfaced
+    the llm returns as an index so we can directly index the sources!
+    """
+    if not snippet.strip() or not sources: 
+        return None 
+
+    listing = "\n".join(f"[{i}] {s.title} — {s.summary}" for i, s in enumerate(sources)) # using enumerate give index to source [0] Attention Is All You Need — Introduces the transformer architecture...
+    user = f"Sentence:\n{snippet}\n\nSources:\n{listing}" # user prompt
+
+    try:
+        link = llm.structured(_LINK_SYSTEM, user, _SourceLink, temperature=0.0)
+    except Exception:
+            return None
+    return sources[link.index] if 0 <= link.index < len(sources) else None
 
 
 ### session step object 
@@ -161,15 +220,21 @@ class InteractiveSession: # interactive session object
         session_state.current_topic = topic # set sesion state current topic 
         recent_gists = [turn.gist for turn in session_state.turns[-config.RECENT_TURNS_CONTEXT:] if turn.gist] # iterate for 4 turn defuault, and return the most 4 recent turn gists config sets default 4
 
+        ## if listener interrupted at a certain sentence, link back to source so turn expands on that source specifically
+        focus_source = None 
+        if last_reaction and last_reaction.anchor_snippet:
+            focus_source = link_source(last_reaction.anchor_snippet, session_state.pool.get(last_reaction.topic, []), self.llm,)
+            last_reaction.anchor_source = focus_source.title if focus_source else ""
+
         text = script.generate_turn(
             topic, session_state.pool.get(topic, []), self.persona, session_state.memory, recent_gists, self.llm,
-            last_reaction=last_reaction,
+            last_reaction=last_reaction, focus_source= focus_source,
         ) # generate turn text
         turn = InteractiveTurn(iteration=len(session_state.turns) + 1, topic=topic, text=text)
         session_state.turns.append(turn)
         return turn
     
-    def submit_reaction(self, reaction_text: str) : 
+    def submit_reaction(self, reaction_text: str, *, anchor_snippet: str = "") : 
         """
         attach the listern reaction to the current turn object, type of reaction inferred from text
         question is answered through qa function , web_fallback if not in sources, memory updated and turn summarized
@@ -180,12 +245,16 @@ class InteractiveSession: # interactive session object
         
         if not session_state.turns: # raise error in order
             raise RuntimeError("submit_reaction called before next_segment")
-        
+
         turn = session_state.turns[-1] # pull recent turn
 
         reaction_type = memory.classify_reaction(reaction_text)
         requested = memory.detect_requested_topic(reaction_text, self._active_topics, exclude=turn.topic)
-        reaction = Reaction( iteration=turn.iteration, topic=turn.topic, type=reaction_type, text=reaction_text.strip(), requested_topic=requested,answer=None)   
+
+        ## only honor the anchoring if there is a reaction if no reaction its treated as just a pause!
+        anchor = "" if reaction_type == ReactionType.none else anchor_snippet.strip()
+        reaction = Reaction( iteration=turn.iteration, topic=turn.topic, type=reaction_type, text=reaction_text.strip(), requested_topic=requested,answer=None, anchor_snippet= anchor)
+
 
         if reaction_type == ReactionType.question:
             answer = qa.answer_question( # answer question using qa utility
