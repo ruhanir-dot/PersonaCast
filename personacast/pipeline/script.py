@@ -220,6 +220,7 @@ def generate_turn(topic: str,
                   llm: LLMClient, 
                   *,
                   last_reaction: Reaction | None = None,
+                  focus_source: CuratedItem | None = None,
                   mode: str | None = None,
                   target_words: int | None = None, ): 
     
@@ -241,9 +242,26 @@ def generate_turn(topic: str,
         reaction_instr = _REACTION_INSTR[ReactionType.question].format(
             text = last_reaction.text, # inject text of reaction into prompt
             answer = last_reaction.answer or "no answer found")
-        
     else: 
         reaction_instr = _REACTION_INSTR[last_reaction.type].format(text = last_reaction.text)
+
+    ### anchor mechanism when user interrupts podcast (pauses at a segment and says a comment) the listener has puinned reaction to that sentence 
+    ### we dont replace reaction handling and focus it at that point , and also make sure to answer question if that was the reaction  
+    ### goal is that given an ambiguos response like 'woah thats cool', at a certain point we can treat interruption as oppurtunity to go deeper on a topic 
+
+    if last_reaction is not None and last_reaction.anchor_snippet: # if last reaction exists, and has an anchored snippet
+        reaction_instr += (
+            "\nANCHOR: the listener singled out this exact point of your last turn as what caught "
+                        f"their interest: \"{last_reaction.anchor_snippet}\". Treat it as the anchor: respond "
+                        "to their reaction above in direct relation to this point"
+                        + (
+                            " — answer their question as it applies HERE"
+                            if last_reaction.type == ReactionType.question
+                            else ""
+                        )
+                        + ", then go a level deeper on this specific point using the sources rather than "
+                        "skipping past it to new material."
+        )
 
     system = _TURN_SYSTEM.format( 
         budget=budget,
@@ -259,8 +277,17 @@ def generate_turn(topic: str,
 
     gists_block = "\n".join(f"- {g}" for g in recent_gists) or "(none yet — this is the first turn)" # creating recent gists block so past 4 turn gists as text block 
 
-    ### user prompt construction 
+    ### focus block: if listener interrupted at a pinned point, we try to find the source the interrupted sentence pertains to 
+    ### focus source will be created in interactive.py (next_segment() where we generate the 60s turn), a function will make a llm call to find the source
+    focus_block = ""
+    if focus_source is not None: 
+        focus_block = (
+          "\n\nFOCUS SOURCE — the listener pinned a point drawn from THIS source; go deeper on "
+          "it, surfacing concrete detail from it you have not said yet:\n"
+          f"[{focus_source.source}] {focus_source.title} ({focus_source.url})\n{focus_source.summary}"  
+        )
 
+    ### user prompt construction 
     user = (
         f"Topic: {topic}\n"
         f"Listener expertise: {_expertise_for(topic, persona)}\n" # pull expertise for topic 
@@ -269,6 +296,7 @@ def generate_turn(topic: str,
         f"Session summary so far: {memory.summary or '(just starting)'}\n"
         f"Recent turn gists:\n{gists_block}\n\n" # input gist block
         f"Sources to draw on:\n{sources_block}" #sources block
+        f"{focus_block}" # add socus block to the user prompt
     )
 
     text = llm.complete(system, user, temperature=0.4) # generate
