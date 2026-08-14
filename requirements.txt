@@ -14,5 +14,13 @@ streamlit-advanced-audio>=0.1
 # kokoro-onnx>=0.4
 # soundfile>=0.12
 
+# faster tts not reliant on api, locally held much faster
+## voice file not shipped download once for local usahe 
+piper-tts >= 1.16 # TTS
+faster-whisper >= 1.1 #STT
+
 google-genai>=1.0
+
+# agentic orchestration, no langchain bc we handle throttling by parsing gemini error messages!
+langgraph >=0.6
 
