@@ -57,6 +57,7 @@ SEARCH_RECENCY_DAYS = 30
 ARXIV_RATE_LIMIT_SECONDS = 3.0 
 
 ### Keywords to know when to use Arxiv, later have agent autonomously decide
+### this is now stale(ish) just a fallback whaen the agentic retrieval is off or planning agent has an error
 STEM_HINT_KEYWORDS = (
     "artificial intelligence", "machine learning", "deep learning",
     "neural network", "large language model", "computer vision",
@@ -73,6 +74,21 @@ STEM_HINT_KEYWORDS = (
 ### output/tts config 
 RUNS_DIR = os.getenv("PERSONACAST_RUNS_DIR", "runs")
 
+### TTS backend, local piper much faster than using gemini live api! 
+TTS_BACKEND = os.getenv("PERSONACAST_TTS_BACKEND", 'piper')
+PIPER_VOICE_PATH = os.getenv("PERSONACAST_PIPER_VOICE")
+
+### STT backend, using whisper, local as well
+STT_BACKEND = os.getenv("PERSONACAST_STT_BACKEND", 'whisper') # engine
+STT_MODEL_SIZE = os.getenv("PERSONACAST_STT_MODEL_SIZE", "tiny.en") # whisper setting, picks what model file whisper is loading 
+## can bump to base.en, if tinyen is to inaccurate in STT
+
+STT_INPUT_SAMPLE_RATE = 16000
+
+
+# ----------------------    STALE     -------------------------------
+
+# STALE - OLD API USAGE (still here if want to revert back to it)
 ### changing TTS config to Gemini Live API, future work would be realtime streaming using websocket 
 TTS_API_KEY = os.getenv("GEMINI_API_KEY", "") or LLM_API_KEY
 TTS_MODEL = os.getenv("PERSONACAST_TTS_MODEL", "gemini-3.1-flash-live-preview")
@@ -81,7 +97,7 @@ TTS_SAMPLE_RATE = 24000 # dictating live api output audio to be at 24khz
 TTS_CHUNK_CHARS = 10000 # maximum number of character of text sent to TTS model in one go 
 
 
+# STALE - OLD API USAGE (still here if want to revert back to it)
 ### stremalit records wav clip, normalize to 16khz resampling it through a function, send to gemini live and grab its text transcription
 STT_API_KEY = TTS_API_KEY
 STT_MODEL = os.getenv("PERSONACAST_STT_MODEL", TTS_MODEL) # using the same gemini-3.1-flash-live-preview
-STT_INPUT_SAMPLE_RATE = 16000
