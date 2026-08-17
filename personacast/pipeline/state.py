@@ -59,3 +59,21 @@ def save_outputs(state) -> Path:
     }
     (directory / "sources.json").write_text(json.dumps(sources, indent=2))
     return directory
+
+def log_retrieval(run_id: str, trace: dict) -> Path: # log for retrieval.json
+    path = run_dir(run_id) / "retrieval.json"
+    path.write_text(json.dumps(trace, indent=2, default=str))
+    return path
+
+
+
+def log_retrieval(run_id: str, trace: dict) -> Path:
+    """
+    dump what the retrieval agent decided per topic to runs/<run_id>/retrieval.json
+    separate from log_stage since that dumps a whole PipelineState and this is a plain dict
+    without this the only artifact is the pool itself, and a pool with no arxiv items is
+    ambiguous, could be the agent deciding against arxiv or arxiv erroring out silently
+    """
+    path = run_dir(run_id) / "retrieval.json"
+    path.write_text(json.dumps(trace, indent=2, default=str))
+    return path

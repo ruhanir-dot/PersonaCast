@@ -12,6 +12,7 @@ import audioop
 import wave
 import io
 from .. import config
+import numpy as np
 
 def _to_pcm16k_mono(wav_bytes: bytes) -> bytes:
     """
@@ -32,33 +33,35 @@ def _to_pcm16k_mono(wav_bytes: bytes) -> bytes:
     
     return frames
 
-async def _transcribe_live(pcm:bytes) -> str:
-    from google import genai
-    from google.genai import types
 
-    client = genai.Client(api_key=config.STT_API_KEY) # setup client
-    ## live model oly supports audio output but we just read back the input audio trnascription of what user said 
+_model = None
 
-    live_config = types.LiveConnectConfig(
-        response_modalities=["AUDIO"],
-        input_audio_transcription=types.AudioTranscriptionConfig(),
-    )
+def _get_model(): 
+   """
+   load whisper model once per process and reuse it same cache in TTS as well
+   """
+   global _model
 
-    parts: list[str] = []
-    async with client.aio.live.connect(model=config.STT_MODEL, config=live_config) as session:
-        await session.send_realtime_input(
-            audio=types.Blob(data=pcm, mime_type=f"audio/pcm;rate={config.STT_INPUT_SAMPLE_RATE}")
-        )
-        await session.send_realtime_input(audio_stream_end=True)   # finalize the clip
-        async for response in session.receive():
-            server = response.server_content
-            if server is None:
-                continue
-            if server.input_transcription and server.input_transcription.text:
-                parts.append(server.input_transcription.text)
-            if server.turn_complete:
-                break
-    return "".join(parts).strip()
+   if _model is None:
+    from faster_whisper import WhisperModel
+    _model = WhisperModel(config.STT_MODEL_SIZE, device="cpu", compute_type="int8")
+
+   return _model 
+
+def _transcribe_whisper(pcm: bytes) -> str: 
+    """
+    transcribe 16kHz mono int16 PCM locally
+    """
+    audio = np.frombuffer(pcm, dtype = np.int16).astype(np.float32) / 32768 # turn butes into 16bit signed integers --> 32 bit float --> normalize to -1 to 1 
+
+    if audio.size == 0:
+            return ""
+
+    segments, _info = _get_model().transcribe(audio, language= 'en') # load in cached whispermodel and get text from wav
+
+    return "".join(segment.text for segment in segments).strip()
+
+
 
 def transcribe(wav_bytes: bytes) -> str:
     """
@@ -66,5 +69,4 @@ def transcribe(wav_bytes: bytes) -> str:
     """
     if not wav_bytes:
         return ""
-    pcm = _to_pcm16k_mono(wav_bytes)
-    return asyncio.run(_transcribe_live(pcm))
+    return _transcribe_whisper(_to_pcm16k_mono(wav_bytes))

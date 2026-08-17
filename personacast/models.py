@@ -105,15 +105,28 @@ class Reaction(BaseModel):
     iteration: int 
     topic: str 
     type: ReactionType
-    text: str = "" # actual comment and question text
+    text: str = "" 
     answer: str | None # when a question is asked we use the qa.answer_question method, store in here
     #this is downstream injected into prompt as context to seamlessly answer question and move on
     requested_topic: str | None = None # we set this to a requested topic when user asks to switch
     ## current logic for this it looks at the active topics in the session and fires if reaction names other topic, could do an LLM call for this maybe
     ## additionally we will use requested topic on next score, do -2 switch penalty on current topic
 
-    anchor_snippet: str = "" # the specific sentence listener interrupted and reacted at 
+    anchor_snippet: str = "" # the specific sentence listener interrupted and reacted at
     anchor_source: str = "" # title of the curated source that the sentence interrupted at is attached to ,  "" if no confident match, found out through LLM call!
+
+    intent: str = ""            
+    sentiment: float | None = None      
+    engagement_delta: float | None = None  
+
+
+class CoveredSource(BaseModel): 
+    """
+    a source that the listener has already covered cross session happens at the search node
+    filter by url, title what we show plan node to see covered titles, and url is hat we show the search node to not get already seen sources
+    """
+    url: str 
+    title: str
 
 class PersonaMemory(BaseModel): 
     """
@@ -126,6 +139,9 @@ class PersonaMemory(BaseModel):
     engagement: dict[str, float] = Field(default_factory= dict) # engagement points keyed for each topic
     reactions: list[Reaction] = Field(default_factory= list)  #list of Reaction Objects across sessions we have stored to see reactions of user
     summary: str = "" # concatenates each interactie turn gist, cross session log of what we have covered with user
+
+    ### NEW ADDITION: sources already shon to listener keyed by topic
+    covered: dict[str, list[CoveredSource]] = Field(default_factory= dict)
     updated_at: str = "" # just a straight datetime log 
 
 class InteractiveTurn(BaseModel): 

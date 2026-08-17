@@ -94,13 +94,14 @@ def _bump(memory: PersonaMemory, topic : str, points: float) -> None:
     memory.engagement[topic] = max(0.0, memory.engagement.get(topic, config.ENGAGE_BASE) + points)
 
 
-def apply_reaction(memory: PersonaMemory, reaction: Reaction): 
+def apply_reaction(memory: PersonaMemory, reaction: Reaction, *, delta: float | None = None):
     """
     apply reaction to memory by appending it to history and then bumping engagment points
-    reacted to topic moves by the specific reaction points and in an explicit switch the requested topic gets the points and the 
-    topic teh user wants to move away from takes switch away penalty  
+    reacted to topic moves by the specific reaction points and in an explicit switch the requested topic gets the points and the
+    topic teh user wants to move away from takes switch away penalty
     """
-    points = REACTION_POINTS[reaction.type] # retrieve point value for specific reaction from config dict 
+    # agent supplied score if we got one, otherwise the original fixed table
+    points = REACTION_POINTS[reaction.type] if delta is None else delta
 
     if reaction.requested_topic: # if reaction request topic switch 
         _bump(memory, reaction.requested_topic, points) # based on reaction to requested topic bump points respectively

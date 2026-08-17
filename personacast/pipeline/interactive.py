@@ -19,15 +19,26 @@ from ..models import (
     Reaction,
     ReactionType,
     SessionState,
+    PersonaMemory,
+    CoveredSource
 )
 from . import curation, dedup, memory, qa, queries, script, state, topics
 from .retrieval import retrieve
 
-def build_source_pool(persona: Persona, llm: LLMClient, on_stage = None) -> dict[str, list[CuratedItem]]: 
+def build_source_pool(persona: Persona, llm: LLMClient, on_stage = None,
+                       *, memory: PersonaMemory | None = None, on_topic_done = None) -> dict[str, list[CuratedItem]]: 
     """
     plan_topics -> for each topic (generate query -> retrieve -> curate sources) -> deduplicate and return curated pool 
     keyed by topic
+    memory --> read only , used for agentic method to not reshow sources listener has already seen/discussed 
+    on_topic_done --> can see what agent decided
     """
+
+    if config.AGENTIC_RETRIEVAL: 
+        from ..agents.graph import build_source_pool_agentic
+        return build_source_pool_agentic( # build source pool using retrieval agent node pipeline
+                    persona, llm, on_stage=on_stage, memory=memory, on_topic_done=on_topic_done
+                )
 
     def stage(label): # for cli usage and streamlit so u pass the onstage as a callback function defined as inline labmda, so it preints updates in particular way 
         if on_stage: 
@@ -141,6 +152,21 @@ def link_source(snippet: str, sources: list[CuratedItem], llm: LLMClient) -> Cur
     return sources[link.index] if 0 <= link.index < len(sources) else None
 
 
+### recording what sources listener has been shown, for cross session memory
+def  _record_covered(session_state: SessionState, topic: str) -> None:
+    """
+    remember sources of this turn, turn in particular rather than source pool because there might be some items in source pool never seen by user
+    this is to make sure a future session can filter these seen sources out
+    """
+    shown_sources_memory = session_state.memory.covered.setdefault(topic, []) # get shown sources 
+    seen = {source.url for source in shown_sources_memory} # recover url for each shhown source
+    
+    for item in session_state.pool.get(topic, []):
+        if item.url not in seen:
+            seen.add(item.url) # add in seen if not already 
+            shown_sources_memory.append(CoveredSource(url= item.url, title= item.title)) # append in covered source model 
+
+
 ### session step object 
 
 class InteractiveSession: # interactive session object
@@ -152,17 +178,39 @@ class InteractiveSession: # interactive session object
         self.state: SessionState | None = None
         ## topics that steer current session order is the tie breaker 
         self._active_topics = [interest.topic for interest in persona.interests]
+
+        ## what retrieval agent decided per topic and filled in at start() 
+        self.retrieval_trace: dict[str, dict] = {}
+
+    def _note_topic(self, topic: str, final_state: dict) -> None:
+        """
+        compact record of one topic's graph run, for the UI
+        """
+        self.retrieval_trace[topic] = {
+            "sources": final_state.get("sources", []),
+            "queries": final_state.get("search_queries", []),
+            "arxiv_queries": final_state.get("arxiv_queries", []),
+            "retrieved": len(final_state.get("raw_items", [])),
+            "kept": len(final_state.get("curated", [])),
+            "notes": final_state.get("notes", []),
+        }
+    
+
     
     def start(self) -> SessionState: 
         """
         load/ merge memory, build the source pool 
         """
         mem = memory.load_memory(self.persona)
-        pool = build_source_pool(self.persona, self.llm, on_stage= self.on_stage)
+        pool = build_source_pool(self.persona, self.llm, on_stage= self.on_stage, memory = mem, on_topic_done= self._note_topic)
 
         self.state = SessionState(
             run_id = state.new_run_id(), persona = self.persona, memory = mem, pool = pool
         )
+
+        ## snapshot of choices of retrieval agent
+        if self.retrieval_trace:
+            state.log_retrieval(self.state.run_id, self.retrieval_trace)
 
         return self.state 
     
@@ -232,7 +280,39 @@ class InteractiveSession: # interactive session object
         ) # generate turn text
         turn = InteractiveTurn(iteration=len(session_state.turns) + 1, topic=topic, text=text)
         session_state.turns.append(turn)
+        _record_covered(session_state, topic) # note sources feeding this turn so a future session filters them out
         return turn
+
+    def _read_reaction(self, reaction_text, turn, session_state, anchor_snippet):
+        """
+        semantic read of reaction 
+        """
+        if not config.AGENTIC_INTERACTION:
+            return None, None
+        
+        from ..agents import interaction 
+        try:
+            read = interaction.read_reaction( # have llm read reaction and interpret 
+                reaction_text, turn, session_state, self.persona, self.llm,
+                active_topics=self._active_topics, anchor_snippet=anchor_snippet.strip(),
+            )
+        except Exception:
+            return None, None
+
+        #  switch only if requested topic is in topic list/ not this topic
+        requested = (read.requested_topic or "").strip() or None
+        if requested == turn.topic or requested not in self._active_topics:
+            requested = None
+        is_switch = requested is not None
+
+        # returns reaction read 
+        return read, {
+            "type": interaction.to_reaction_type(read.intent),
+            "delta": interaction.clamp_delta(read.engagement_delta, is_switch=is_switch),
+            "requested": requested,
+            "needs_answer": read.needs_answer,
+        }
+
     
     def submit_reaction(self, reaction_text: str, *, anchor_snippet: str = "") : 
         """
@@ -248,15 +328,31 @@ class InteractiveSession: # interactive session object
 
         turn = session_state.turns[-1] # pull recent turn
 
-        reaction_type = memory.classify_reaction(reaction_text)
-        requested = memory.detect_requested_topic(reaction_text, self._active_topics, exclude=turn.topic)
+        # read the reaction either with llm agentic method or original method
+        read, norm = self._read_reaction(reaction_text, turn, session_state, anchor_snippet)
+
+        if read is not None and norm is not None: # fill in details 
+            reaction_type = norm["type"]
+            delta = norm["delta"]
+            requested = norm["requested"]
+            needs_answer = norm["needs_answer"]
+        else:
+            reaction_type = memory.classify_reaction(reaction_text)
+            requested = memory.detect_requested_topic(reaction_text, self._active_topics, exclude=turn.topic)
+            delta = None 
+            needs_answer = reaction_type == ReactionType.question
 
         ## only honor the anchoring if there is a reaction if no reaction its treated as just a pause!
         anchor = "" if reaction_type == ReactionType.none else anchor_snippet.strip()
         reaction = Reaction( iteration=turn.iteration, topic=turn.topic, type=reaction_type, text=reaction_text.strip(), requested_topic=requested,answer=None, anchor_snippet= anchor)
 
+        if read is not None:
+            # persist what the agent read memory.reactions accumulates labelled behaviour over time
+            reaction.intent = read.intent
+            reaction.sentiment = read.sentiment
+            reaction.engagement_delta = delta
 
-        if reaction_type == ReactionType.question:
+        if needs_answer:
             answer = qa.answer_question( # answer question using qa utility
                 reaction.text, self.persona, qa.flatten_curated(session_state.pool), self.llm, allow_web=True,
             )
@@ -265,10 +361,10 @@ class InteractiveSession: # interactive session object
         turn.reaction = reaction
 
         # add to memory
-        memory.apply_reaction(session_state.memory, reaction)
+        memory.apply_reaction(session_state.memory, reaction, delta=delta)
 
-        # create gist and add to cross session summary gists
-        turn.gist = summarize_turn(turn.text, self.llm)
+        # gist for the cross session summary. the agent already produced one as part of the same call above
+        turn.gist = read.gist.strip() if read is not None and read.gist.strip() else summarize_turn(turn.text, self.llm)
         session_state.memory.summary = _update_summary(session_state.memory.summary, turn)
 
         # persist memory to disk and snapshot the growing session

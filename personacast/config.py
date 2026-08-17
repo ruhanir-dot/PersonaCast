@@ -56,6 +56,15 @@ RESULTS_PER_QUERY = 4
 SEARCH_RECENCY_DAYS = 30
 ARXIV_RATE_LIMIT_SECONDS = 3.0 
 
+### agentic retrieval LangGraph can flag off 
+AGENTIC_RETRIEVAL = os.getenv("PERSONACAST_AGENTIC_RETRIEVAL", "0") in ("1", "true", "yes")
+RETRIEVAL_MAX_CANDIDATES = 40
+RETRIEVAL_SOURCES = ("web", "arxiv") # what the planning agent is allowed to choose from
+
+### Agentic Interaction Can flag off
+AGENTIC_INTERACTION = os.getenv("PERSONACAST_AGENTIC_INTERACTION", "0") in ("1", "true", "yes")
+
+
 ### Keywords to know when to use Arxiv, later have agent autonomously decide
 ### this is now stale(ish) just a fallback whaen the agentic retrieval is off or planning agent has an error
 STEM_HINT_KEYWORDS = (
@@ -76,7 +85,7 @@ RUNS_DIR = os.getenv("PERSONACAST_RUNS_DIR", "runs")
 
 ### TTS backend, local piper much faster than using gemini live api! 
 TTS_BACKEND = os.getenv("PERSONACAST_TTS_BACKEND", 'piper')
-PIPER_VOICE_PATH = os.getenv("PERSONACAST_PIPER_VOICE")
+PIPER_VOICE_PATH = os.getenv("PERSONACAST_PIPER_VOICE", "models/piper/en_US-lessac-low.onnx")
 
 ### STT backend, using whisper, local as well
 STT_BACKEND = os.getenv("PERSONACAST_STT_BACKEND", 'whisper') # engine
