@@ -1,27 +1,14 @@
-<img width="1920" height="510" alt="personaCast" src="https://github.com/user-attachments/assets/6c9774f7-c810-4b71-99a2-3249f5eac3c1" />
-
 # PersonaCast
 
-An AI system that generates a personalized ~20-minute "news podcast" about the topics a user cares about, then lets the listener pause and ask follow-up questions grounded in the same sources.
+Personalized spoken news, generated from a listener profile and interruptible mid-episode.
 
-A user persona  constructed of topics, per-topic expertise level, tone, and an "avoid" list is the explicit feedbck we take as input. From that persona the pipeline retrieves recent material from the web and arXiv, curates, and writes a single flowing episode tailored to the listener persona profile. The listener can then interrupt with a question (an overarching goal for the future is using these questions and evaluate them as a source of implicit feedback) and get a short, source-grounded answer.
+## Overview
 
-> Note: Reddit is intentionally not a source in this implementation, API requires manual approval
+A persona — topics, per-topic expertise, tone, and an avoid list — drives retrieval of recent material from the web and arXiv. Retrieved sources are scored and curated per topic, then written into spoken host turns calibrated to the listener's expertise.
 
----
+Interactive version creates short turns delivered one at a time. The listener can pause mid-turn, react, or ask a question answered from the episode's own sources. Reactions update a per-persona memory that persists across sessions and steers subsequent turns.
 
-## Project status
-
-**Phase 1 — RAG pipeline & generation: complete and deployed.**
-Persona → topic planning → per-topic query generation → retrieval (web + conditional arXiv) → extractive map-reduce curation → per-topic segment writing → stitch into one episode → optional local audio. Runnable via CLI and a Streamlit app.
-
-**Phase 2 — interactivity & evaluation: in progress.**
-- **Mid-podcast Q&A** (`personacast/pipeline/qa.py`, wired into the app): the listener "pauses" and asks a question. It's answered first from the episode's curated sources; if those don't cover it, it falls back to a fresh web search. "Pause and ask" not real time where user can enter questions about script.
-- **Expertise-injection evaluation** (`eval/eval.py`): holds a persona constant and varies only the expertise level, asking the same questions over the same frozen sources to test whether personalization actually changes the answer.
-
-### What we can focus on
-- **Novel interaction.** Ideas about personalization methods that can be used for more peronalized and tailored answers for users, detailed in a seperate writeup with an idea had and abalation studies that could be done, also detailing similar work I read pertaining to personalized LLM usage and what their task setup and ground truth was looking like!
----
+Speech synthesis and transcription run locally. 
 
 ## Setup
 
@@ -29,59 +16,52 @@ Persona → topic planning → per-topic query generation → retrieval (web + c
 pip install -r requirements.txt
 ```
 
-Create a `.env` file in the project root with your keys (any OpenAI-compatible LLM provider works):
+`.env` in the project root — any OpenAI-compatible provider:
 
 ```bash
 LLM_BASE_URL=https://api.cerebras.ai/v1
-LLM_API_KEY=your-llm-key
+LLM_API_KEY=...
 PERSONACAST_MODEL=gpt-oss-120b
-TAVILY_API_KEY=your-tavily-key
+TAVILY_API_KEY=...
 ```
 
----
-
-## CLI usage
-
-Runs the full generation pipeline and writes outputs to `runs/<timestamp>/` (script text + per-topic sources + per-stage state).
+Text-to-speech needs its voice file fetched once (~60 MB, gitignored). Transcription downloads its model on first use.
 
 ```bash
-python run.py                      # full pipeline on personas/ruhani.json, script only
-python run.py --audio              # also render audio narration (local TTS)
-python run.py --persona path.json  # use a different persona file
+export SSL_CERT_FILE=$(python -c "import certifi;print(certifi.where())")
+python -m piper.download_voices en_US-lessac-low
+mkdir -p models/piper && mv en_US-lessac-low.onnx* models/piper/
 ```
 
-## Local app (Streamlit)
+## Usage
 
 ```bash
-streamlit run app.py
+python run.py [--persona path.json] [--audio]        # baseline episode
+python run_interactive.py [--persona path.json]      # interactive, terminal
+streamlit run app.py                                 # baseline, browser
+streamlit run app_interactive.py                     # interactive, browser
 ```
 
-Enter a persona in the sidebar and click **Generate script** — a run takes ~6–7 minutes (live retrieval + LLM calls), with a live stage ticker. Then you can:
-- **Ask a question** against the episode's sources (with optional web fallback).
-- **Generate audio** as a separate, local-only step.
+Outputs are written to `runs/<timestamp>/`: script text, per-topic sources, per-stage state, and per-turn snapshots.
 
-### Audio (local only)
+## Configuration
 
-Audio narration uses Kokoro TTS and runs only locally — the ~350 MB voice model can't be deployed on Streamlit Cloud. To enable it:
+Both flags default off; the system runs its original path unless enabled. The interactive app exposes them as sidebar toggles. (Mostly used for debugging on my side to see if the agentic version is faster than our previous version)
 
-1. Install [espeak-ng](https://github.com/espeak-ng/espeak-ng) (macOS: `brew install espeak-ng`).
-2. Download the model files into a `models/` folder:
-   - [`kokoro-v1.0.onnx`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx)
-   - [`voices-v1.0.bin`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin)
-3. Install the audio packages: `pip install kokoro-onnx soundfile`.
+| Variable | Effect |
+| --- | --- |
+| `PERSONACAST_AGENTIC_RETRIEVAL=1` | Query construction and source selection (web / arXiv) are decided per topic by a LangGraph agent rather than a keyword heuristic. Sources previously shown to the listener are excluded. Writes `runs/<id>/retrieval.json`. |
+| `PERSONACAST_AGENTIC_INTERACTION=1` | Listener reactions are interpreted by a single structured LLM call — intent, sentiment, engagement, topic-switch requests — rather than punctuation and regex rules. |
 
-Then run `python run.py --audio` or use the audio button in the app.
 
----
+## Structure
 
-## Evaluation
-
-The expertise-injection eval asks the same questions over a **frozen** set of sources, changing only the listener's expertise level, to check that personalization actually changes the answer (web fallback is off so the sources can't vary).
-
-```bash
-python eval/eval.py
 ```
-
-- **Personas:** `personas/eval/ml_{beginner,intermediate,advanced}.json` (identical except expertise)
-- **Sources:** `eval/frozen_sources.json`
-- **Output:** `eval/results/<timestamp>/answers.md` (side-by-side table) + `interactions.json` (raw log)
+personacast/
+  agents/     retrieval graph, reaction interpretation
+  pipeline/   topics, queries, retrieval, curation, script, memory, tts, stt
+  llm/        rate-limited OpenAI-compatible client
+personas/     persona definitions; memory/ holds persistent per-persona state
+eval/         expertise-injection evaluation
+runs/         per-run outputs
+```
