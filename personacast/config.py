@@ -1,3 +1,13 @@
+"""
+main changes is that we enforce a sliding window of 60s where  there can be 15 calls done within a minute of first call  of those 60 sec if 
+but main point I was conccerned about was that the background calls shouldnt take the sapace of critical calls 
+do deal with this we determine the type  of call if its abackgrojnd call and theres more than 2 slots left 
+we allow the calls to happen and burst the calls 
+
+"""
+
+
+
 
 from __future__ import annotations
 import os
@@ -30,6 +40,12 @@ ENGAGE_SWITCH_AWAY = -2.0
 ENGAGE_BASE = 1.0 # for a new topic automatically given 1 point 
 
 SUMMARIZE_TURNS = os.getenv("PERSONACAST_SUMMARIZE_TURNS", "1") in ("1", "true", "yes")# flag to basically say to use LLM call to get gist, presents options that work any otherwise considered flag off 
+
+### how long web search is allowed to still be running
+WEB_FALLBACK_TIMEOUT_SECONDS = float(os.getenv("PERSONACAST_WEB_TIMEOUT", "6.0"))
+
+### length of pregenerated opener
+OPENER_WORDS = int(os.getenv('PERSONACAST_OPENER_WORDS', '25'))
 RECENT_TURNS_CONTEXT = int(os.getenv("PERSONACAST_RECENT_TURNS", "4")) # determined how many of the most recent turn gists to feed into next generation turns[-4]
 TURN_MODE = os.getenv("PERSONACST_TURN_MODE", "variety") # set default witin turn style to variety
 
@@ -38,11 +54,19 @@ TURN_MODE = os.getenv("PERSONACST_TURN_MODE", "variety") # set default witin tur
 LLM_BASE_URL = os.getenv("LLM_BASE_URL", "")
 LLM_API_KEY = os.getenv("LLM_API_KEY", "")
 MODEL = os.getenv("PERSONACAST_MODEL", "")
+
 # free tier rate limit adherence 
 LLM_MAX_RETRIES = 6
-LLM_BACKOFF_BASE_SECONDS = 2.0 #
+LLM_BACKOFF_BASE_SECONDS = 2.0
 LLM_REQUEST_TIMEOUT_SECONDS = 60.0
-LLM_MIN_INTERVAL_SECONDS = float(os.getenv("LLM_MIN_INTERVAL_SECONDS", "4.5")) # interval betwtween requests
+LLM_MIN_INTERVAL_SECONDS = float(os.getenv("LLM_MIN_INTERVAL_SECONDS", "0.2")) # interval betwtween requests, reducing throttle time, for request bursting
+LLM_MAX_RPM = int(os.getenv('LLM_MAX_RPM', '15')) # max requests per minute for geminie free tier
+LLM_RPM_WINDOW_SECONDS = float(os.getenv('LLM_RPM_WINDOW_SECONDS', '60.0')) # sliding window of 60 seconds at first request 60 seconds starts 15 spots allotted, once 60 sec up can make anotehr 15 calls. 
+
+### slotting system for the 15 requsts that can be made in the minute some calls more critical than other  
+## distinctevely a opener generating call is less important than an interruption interpretation call/turn generation so we give those priority  
+LLM_BACKGROUND_RESERVE = int(os.getenv("LLM_BACKGROUND_RESERVE", "2"))
+
 
 ### Retrieval config 
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY", "")
@@ -56,13 +80,12 @@ RESULTS_PER_QUERY = 4
 SEARCH_RECENCY_DAYS = 30
 ARXIV_RATE_LIMIT_SECONDS = 3.0 
 
-### agentic retrieval LangGraph can flag off 
-AGENTIC_RETRIEVAL = os.getenv("PERSONACAST_AGENTIC_RETRIEVAL", "0") in ("1", "true", "yes")
+### source retrieval via api
 RETRIEVAL_MAX_CANDIDATES = 40
 RETRIEVAL_SOURCES = ("web", "arxiv") # what the planning agent is allowed to choose from
 
-### Agentic Interaction Can flag off
-AGENTIC_INTERACTION = os.getenv("PERSONACAST_AGENTIC_INTERACTION", "0") in ("1", "true", "yes")
+### flag for faster interaction mostly for just my checking to see if its actually workig faster
+FAST_INTERACTION = os.getenv("PERSONACAST_FAST_INTERACTION", "1") in ("1", "true", "yes")
 
 
 ### Keywords to know when to use Arxiv, later have agent autonomously decide
@@ -79,6 +102,11 @@ STEM_HINT_KEYWORDS = (
     "mathematics", "statistics", "genetics", "geology", "climatology",
     "oceanography", "programming", "coding",
 )
+
+### source pool cache because don't want to consue calls just on building the pool as thats the offline generation part 
+POOL_CACHE = os.getenv("PERSONACAST_POOL_CACHE", "1") in ("1", "true", "yes")
+POOL_CACHE_DIR = os.getenv("PERSONACAST_POOL_CACHE_DIR", "personas/pool")
+POOL_CACHE_TTL_HOURS = float(os.getenv("PERSONACAST_POOL_CACHE_TTL", "24"))
 
 ### output/tts config 
 RUNS_DIR = os.getenv("PERSONACAST_RUNS_DIR", "runs")
