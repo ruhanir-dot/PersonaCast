@@ -106,14 +106,18 @@ class Reaction(BaseModel):
     topic: str 
     type: ReactionType
     text: str = "" 
-    answer: str | None # when a question is asked we use the qa.answer_question method, store in here
+    answer: str | None = None # when a question is asked we use the qa.answer_question method, store in here
     #this is downstream injected into prompt as context to seamlessly answer question and move on
     requested_topic: str | None = None # we set this to a requested topic when user asks to switch
     ## current logic for this it looks at the active topics in the session and fires if reaction names other topic, could do an LLM call for this maybe
     ## additionally we will use requested topic on next score, do -2 switch penalty on current topic
 
+    ## did answer come from web fallback rather than the pool 
+    used_web: bool = False
+
     anchor_snippet: str = "" # the specific sentence listener interrupted and reacted at
     anchor_source: str = "" # title of the curated source that the sentence interrupted at is attached to ,  "" if no confident match, found out through LLM call!
+    anchor_source_index: int = -1 # source index that we can access for given topic in pool, if nothing return -1 --> none, we check against this down the line making sure value returned is greater than 0 
 
     intent: str = ""            
     sentiment: float | None = None      

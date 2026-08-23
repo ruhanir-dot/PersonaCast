@@ -9,10 +9,36 @@ from __future__ import annotations
 
 import time
 
+import requests
+
 from ... import config as cfg
 from ...models import RetrievedItem
 from .clean import clean_query
 import arxiv
+
+
+class _TimeoutSession(requests.Session):
+
+    def request(self, *args, **kwargs):
+        kwargs.setdefault("timeout", cfg.ARXIV_REQUEST_TIMEOUT_SECONDS)
+        return super().request(*args, **kwargs)
+
+
+_client = None
+
+
+def _get_client() -> arxiv.Client:
+    global _client
+
+    if _client is None:
+        _client = arxiv.Client(
+            page_size=max(1, cfg.RESULTS_PER_QUERY),
+            delay_seconds=cfg.ARXIV_RATE_LIMIT_SECONDS,
+            num_retries=cfg.ARXIV_MAX_RETRIES,
+        )
+        _client._session = _TimeoutSession()
+
+    return _client
 
 
 def search_arxiv(query: str, max_results: int | None = None) -> list[RetrievedItem]:
@@ -26,16 +52,19 @@ def search_arxiv(query: str, max_results: int | None = None) -> list[RetrievedIt
     )
     items = [] # list of retrieved items
 
-    for result in arxiv.Client().results(search): #initialize api client, function call with search params
-        items.append( # add into items retrieveditem structure
-            RetrievedItem(
-                source="arxiv",
-                title=result.title,
-                url=result.entry_id,
-                content=result.summary,  #summary gives us the abstract
-                published=result.published.date().isoformat() if result.published else None,
+    try:
+        for result in _get_client().results(search):
+            items.append( # add into items retrieveditem structure
+                RetrievedItem(
+                    source="arxiv",
+                    title=result.title,
+                    url=result.entry_id,
+                    content=result.summary,  #summary gives us the abstract
+                    published=result.published.date().isoformat() if result.published else None,
+                )
             )
-        )
+    except Exception:
+        time.sleep(cfg.ARXIV_RATE_LIMIT_SECONDS)
+        raise
 
-    time.sleep(cfg.ARXIV_RATE_LIMIT_SECONDS) #abide to rate limit
     return items

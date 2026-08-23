@@ -42,6 +42,12 @@ def log_turn(session_state, iteration: int):
     path.write_text(session_state.model_dump_json(indent=2))
 
 
+def log_timings(run_id: str, timings: dict) -> Path:
+    path = run_dir(run_id) / "timings.json"
+    path.write_text(json.dumps(timings, indent=2))
+    return path
+
+
 def save_outputs(state) -> Path:
     """
     write script.txt and sources.json . returns the run directory.
@@ -59,13 +65,6 @@ def save_outputs(state) -> Path:
     }
     (directory / "sources.json").write_text(json.dumps(sources, indent=2))
     return directory
-
-def log_retrieval(run_id: str, trace: dict) -> Path: # log for retrieval.json
-    path = run_dir(run_id) / "retrieval.json"
-    path.write_text(json.dumps(trace, indent=2, default=str))
-    return path
-
-
 
 def log_retrieval(run_id: str, trace: dict) -> Path:
     """

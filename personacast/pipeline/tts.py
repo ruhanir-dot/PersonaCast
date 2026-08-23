@@ -5,9 +5,6 @@ replaces old kokoro, and gemini live api
 
 from __future__ import annotations
 
-import time
-import asyncio
-import re
 import wave
 from pathlib import Path
 
@@ -51,7 +48,6 @@ def synthesize(script: str, out_path: str | Path) -> Path:
         voice.synthesize_wav(script, wav) # given script write into wav
 
     return out_path
-
 
 
 def wav_duration(path: str| Path) -> float: 

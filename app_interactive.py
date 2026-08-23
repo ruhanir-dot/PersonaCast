@@ -1,37 +1,8 @@
-"""
-PersonaCast — Interactive session frontend (v6, agentic retrieval).
-
-Build a persona + this-session context, then generate ~60s turns one at a time. Each turn is
-voiced (audix player). You can PAUSE mid-turn and react: the sentence playing at the pause point
-becomes the anchor, which is linked back to the source it came from so the NEXT turn goes deeper
-on exactly that source. Reaction TYPE is still inferred (text ending in '?' -> question with an
-inline grounded answer; empty -> no reaction; otherwise -> comment) and folded into the
-persistent per-persona memory, which steers the next turn.
-
-WHAT CHANGED IN v6
-------------------
-The source pool can now be built by a LangGraph agent instead of the fixed linear loop, and
-this frontend exposes that:
-
-  * Retrieval mode toggle in the sidebar. It writes config.AGENTIC_RETRIEVAL at runtime rather
-    than requiring an env var, which works because build_source_pool reads the flag at CALL
-    time, not at import time. Flipping it to Linear gives you the exact pre-v6 behaviour, so
-    you can A/B the two on the same persona in one sitting.
-  * A "What the agent decided" panel, rendered from InteractiveSession.retrieval_trace: which
-    sources it chose per topic and why, how many it kept, and its full notes trail. Without
-    this the agent is a black box, because build_source_pool only returns the pool.
-  * The memory panel now shows `covered` — how many sources this listener has already been
-    shown per topic. That is the cross-session novelty mechanism: on the NEXT session the
-    search node drops those URLs for free, before anything spends an LLM call on them.
-
-Nothing about turn generation, reactions, anchoring, TTS or STT changed.
-
-Run:  streamlit run app_interactive.py
-"""
 
 from __future__ import annotations
 
 import re
+import time
 
 import streamlit as st
 from streamlit_advanced_audio import audix
@@ -41,12 +12,12 @@ from personacast.models import Expertise, Interest, Persona, ReactionType
 from personacast.pipeline import interactive as interactive_mod
 from personacast.pipeline import state as state_mod
 from personacast.pipeline import stt
+from personacast.pipeline import timing
 from personacast.pipeline import tts
 from personacast.pipeline.interactive import InteractiveSession
 
 
 def _split_sentences(text: str) -> list[str]:
-    """Split a turn into the sentences the listener can pin a reaction to."""
     return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text.strip()) if s.strip()]
 
 
@@ -55,7 +26,6 @@ st.title("PersonaCast — Interactive")
 st.caption("Generate ~60s turns, react, and watch the persona's memory adapt.")
 
 
-# --------------------------------------------------------------------------- sidebar: persona
 with st.sidebar:
     st.header("Persona")
     persona_id = st.text_input("Name (memory is keyed to this)", value="ruhani1")
@@ -75,56 +45,31 @@ with st.sidebar:
     avoid = [line.strip() for line in avoid_raw.splitlines() if line.strip()]
     context = st.text_input("This session's context / vibe", value="walking in the park, relaxed")
 
-    # ----------------------------------------------------------------- retrieval mode (new)
     st.divider()
-    st.subheader("Retrieval")
-    mode = st.radio(
-        "How to build the source pool",
-        ["Agentic (LangGraph)", "Linear (original)"],
-        index=0,
+    st.subheader("Source pool")
+    rebuild = st.checkbox(
+        "Rebuild from scratch", value=False,
         help=(
-            "Agentic: a model picks web vs arXiv per topic and writes the queries, primed with "
-            "what you've already been told, and skips links you were shown in a past session.\n\n"
-            "Linear: the original fixed loop. Sources are chosen by a keyword scan over the "
-            "topic string."
-        ),
-    )
-    agentic = mode.startswith("Agentic")
-
-    if agentic:
-        st.caption(
-            "Same number of LLM calls as Linear — the model just picks the sources instead of "
-            "a keyword scan, and skips links you were shown in a past session."
-        )
-
-    st.subheader("Interaction")
-    agentic_interaction = st.checkbox(
-        "Read reactions semantically", value=config.AGENTIC_INTERACTION,
-        help=(
-            "On: one LLM call reads each reaction for intent, sentiment, a continuous "
-            "engagement score, and topic-switch requests by MEANING. Costs no extra time — the "
-            "same call also returns the turn gist, replacing a call already being made.\n\n"
-            "Off: reaction type is decided by whether the text ends in '?', topic switches by a "
-            "whole-word regex, and engagement by four fixed constants."
+            "The pool is cached to disk per persona and reused for "
+            f"{config.POOL_CACHE_TTL_HOURS:.0f}h. It is the biggest consumer of the daily "
+            "request cap and takes 1-3 minutes, and none of that work is about the "
+            "interruption path — so by default we skip it and spend the budget on the session. "
+            "Tick this when you actually want fresh material."
         ),
     )
 
     st.divider()
     speak = st.checkbox("🔊 Speak each turn (local TTS)", value=True)
-    st.caption("Start builds the source pool once, with real API calls. ~1-3 min.")
+    st.caption(
+        "Cached pool: start is instant. Rebuilding: ~1-3 min of real API calls."
+    )
     start = st.button("Start session", type="primary")
 
 
-# --------------------------------------------------------------------------- start a session
 if start:
     if not interests:
         st.error("Add at least one topic.")
         st.stop()
-
-    # set the flag BEFORE start(), since build_source_pool reads config at call time.
-    # this is what lets the sidebar toggle work without restarting streamlit.
-    config.AGENTIC_RETRIEVAL = agentic
-    config.AGENTIC_INTERACTION = agentic_interaction
 
     persona = Persona(
         persona_id=persona_id, interests=interests, tone=tone, avoid=avoid,
@@ -133,18 +78,20 @@ if start:
     try:
         session = InteractiveSession(persona, on_stage=lambda label: st.write(f"→ {label}"))
         with st.status("Building the source pool…", expanded=True) as status:
-            session.start()
+            session.start(rebuild_pool=rebuild)
             label = f"Pool ready — run {session.state.run_id}"
+            if session.pool_from_cache:
+                total = sum(len(v) for v in session.state.pool.values())
+                label += f" · {total} sources from cache, 0 retrieval calls"
             if session.retrieval_trace:
                 kept = sum(t["kept"] for t in session.retrieval_trace.values())
                 label += f" · {kept} sources across {len(session.retrieval_trace)} topics"
             status.update(label=label, state="complete")
         st.session_state["session"] = session
-        st.session_state["agentic"] = agentic
         st.session_state["current_turn"] = session.next_segment()
         st.session_state.pop("last_answer", None)
         st.session_state.pop("audio_path", None)
-    except Exception as err:  # noqa: BLE001 — surface failures in the UI
+    except Exception as err:
         st.error(f"Failed to start: {type(err).__name__}: {err}")
         st.stop()
 
@@ -152,7 +99,6 @@ if start:
 session: InteractiveSession | None = st.session_state.get("session")
 
 
-# a cute character that "talks" (bobs/pulses) while a turn is playing
 _SPEAKER_HTML = """
 <style>
 @keyframes pc-talk {
@@ -169,56 +115,10 @@ _SPEAKER_HTML = """
 """
 
 
-def _play_turn(sess: InteractiveSession, turn) -> None:
-    """
-    Voice this turn with the local piper TTS, show a talking character, and autoplay the audio via
-    the audix player. Synthesized audio is cached per iteration so incidental reruns don't
-    re-synth, and autoplay only fires on a NEW turn (guarded by last_played_iter) so reruns
-    don't replay. audix reports the real playback currentTime on pause/scrub — we stash the
-    latest so a mid-turn pause can anchor the reaction to the sentence being spoken.
-    """
-    cache = st.session_state.setdefault("turn_audio", {})
-    if turn.iteration not in cache:
-        try:
-            with st.spinner("Voicing this turn…"):
-                out = state_mod.run_dir(sess.state.run_id) / f"turn_{turn.iteration}.wav"
-                cache[turn.iteration] = str(tts.synthesize(turn.text, out))
-        except Exception as err:  # noqa: BLE001 — audio is best-effort; never block the turn
-            st.warning(f"TTS failed: {type(err).__name__}: {err}")
-            cache[turn.iteration] = None
-    path = cache.get(turn.iteration)
-    if not path:
-        return
-    st.markdown(_SPEAKER_HTML, unsafe_allow_html=True)
-    autoplay = st.session_state.get("last_played_iter") != turn.iteration
-    result = audix(path, key=f"audix_{turn.iteration}", autoplay=autoplay)
-    st.session_state["last_played_iter"] = turn.iteration
-    if result and result.get("currentTime") is not None:
-        st.session_state[f"pos_{turn.iteration}"] = result.get("currentTime")
-
-
 def _render_retrieval(sess: InteractiveSession) -> None:
-    """
-    What the retrieval agent decided, per topic.
-
-    Everything here comes from InteractiveSession.retrieval_trace, which is filled by the
-    on_topic_done hook during start(). It is empty on the linear path, because the linear path
-    makes no decisions worth reporting — the source choice there is a substring scan.
-
-    The number to watch is `kept` — a topic with 2 or 3 sources will run dry after a couple of
-    turns, and this is the only place that is visible before it happens.
-
-    Deliberately NOT shown here: a comparison against retrieve._wants_arxiv. Whether the agent
-    disagrees with the keyword scan is a one-off evaluation question, not a per-render one, and
-    it lives in the smoke test (`python -m personacast.agents.graph`). Re-running the scan in
-    the UI would imply it is still a reference answer, which is exactly what it is not.
-    """
     trace = sess.retrieval_trace
     if not trace:
-        if st.session_state.get("agentic"):
-            st.caption("No retrieval trace — the agent fell back to the linear path.")
-        else:
-            st.caption("Linear retrieval — sources chosen by keyword scan, no agent trace.")
+        st.caption("No retrieval trace — the planning agent errored out and fell back to keywords.")
         return
 
     st.subheader("Retrieval — what the agent decided")
@@ -243,7 +143,6 @@ def _render_retrieval(sess: InteractiveSession) -> None:
 
 
 def _render_memory(sess: InteractiveSession) -> None:
-    """live engagement panel + what's already been covered + reaction log."""
     mem = sess.state.memory
     active = [i.topic for i in sess.persona.interests]
     scores = {t: mem.engagement.get(t, 0.0) for t in active}
@@ -254,8 +153,6 @@ def _render_memory(sess: InteractiveSession) -> None:
         st.caption(f"{topic} · {pts:g} pts")
         st.progress(min(pts / peak, 1.0))
 
-    # cross-session source history. this is what the retrieval agent reads NEXT session to
-    # avoid re-serving the same links, so it is worth being able to see it accumulate.
     covered = {t: mem.covered.get(t, []) for t in active if mem.covered.get(t)}
     if covered:
         total = sum(len(v) for v in covered.values())
@@ -268,9 +165,6 @@ def _render_memory(sess: InteractiveSession) -> None:
 
     if mem.reactions:
         with st.expander(f"Reaction history ({len(mem.reactions)})", expanded=False):
-            # when the interaction agent is on, show what it READ, not just the enum it mapped
-            # to. the spread of engagement_delta is the thing to watch: if every value is
-            # +2/+1/-1 the agent is just reproducing the heuristic table it replaced.
             for r in mem.reactions[-12:]:
                 icon = {ReactionType.question: "❓", ReactionType.comment: "💬", ReactionType.none: "·"}[r.type]
                 pin = f" · 📍→ {r.anchor_source}" if r.anchor_source else (" · 📍" if r.anchor_snippet else "")
@@ -284,7 +178,105 @@ def _render_memory(sess: InteractiveSession) -> None:
                     st.caption(" · ".join(bits))
 
 
-# --------------------------------------------------------------------------- main: turn + reaction
+def _bridge_remaining() -> float:
+    started = st.session_state.get("bridge_started_at")
+    if started is None:
+        return 0.0
+    return max(0.0, st.session_state.get("bridge_duration", 0.0) - (time.monotonic() - started))
+
+
+def _play(path: str | None, key: str, label: str, *, track_pos: str | None = None) -> None:
+    if not path:
+        return
+    st.caption(label)
+    fresh = st.session_state.get("last_autoplayed") != key
+    result = audix(path, key=f"aud_{key}", autoplay=fresh)
+    if fresh:
+        st.session_state["last_autoplayed"] = key
+    if track_pos and result and result.get("currentTime") is not None:
+        st.session_state[track_pos] = result["currentTime"]
+
+
+@st.fragment(run_every=1.0)
+def _playback_tick(sess: InteractiveSession) -> None:
+    future = st.session_state.get("pending_future")
+    if future is None:
+        return
+
+    if not future.done():
+        st.caption("✍️ writing and voicing the response…")
+        return
+
+    remaining = _bridge_remaining()
+    if remaining > 0.05:
+        st.caption(f"✅ response ready — playing after the bridge, {remaining:.0f}s")
+        return
+
+    try:
+        nxt = future.result()
+    except Exception as err:
+        st.session_state["pending_future"] = None
+        st.error(f"Turn failed: {type(err).__name__}: {err}")
+        st.rerun(scope="app")
+        return
+
+    parts = [c["path"] for c in sess.audio_chunks if c["path"]]
+    st.session_state["response_audio"] = parts[0] if parts else None
+    st.session_state["pending_future"] = None
+    st.session_state["bridge_started_at"] = None
+    st.session_state["current_turn"] = nxt
+    reaction = sess.state.turns[-2].reaction if nxt and len(sess.state.turns) > 1 else None
+    st.session_state["last_answer"] = (
+        reaction.answer if reaction and reaction.type == ReactionType.question else None
+    )
+    st.rerun(scope="app")
+
+
+def _start_reaction(sess: InteractiveSession, reaction_text: str, anchor_snippet: str) -> None:
+    st.session_state.pop("response_audio", None)
+    st.session_state.pop("turn_pos", None)
+
+    opener, future = sess.begin_reaction(reaction_text, anchor_snippet=anchor_snippet)
+
+    st.session_state["bridge_audio"] = opener["audio"]
+    st.session_state["bridge_started_at"] = time.monotonic()
+    st.session_state["bridge_duration"] = (
+        tts.wav_duration(opener["audio"]) if opener["audio"] else 0.0
+    )
+    st.session_state["pending_future"] = future
+    st.session_state["opener"] = opener
+
+
+def _start_reaction_baseline(sess: InteractiveSession, reaction_text: str, anchor_snippet: str) -> None:
+    reacted_to = sess.state.turns[-1].iteration
+    timer = timing.Timer()
+    done_turn = sess.submit_reaction(reaction_text, anchor_snippet=anchor_snippet, timer=timer)
+    st.session_state["last_answer"] = (
+        done_turn.reaction.answer
+        if done_turn.reaction and done_turn.reaction.type == ReactionType.question
+        else None
+    )
+    st.session_state.pop("response_audio", None)
+    if sess.done:
+        sess.finish()
+        st.session_state["current_turn"] = None
+        return
+
+    with timer.stage(timing.GENERATE):
+        nxt = sess.next_segment()
+    try:
+        with timer.stage(timing.TTS):
+            out = state_mod.run_dir(sess.state.run_id) / f"turn_{nxt.iteration}.wav"
+            path = str(tts.synthesize(nxt.text, out))
+        st.session_state["response_audio"] = path
+        timer.mark(timing.FIRST_AUDIO)
+    except Exception as err:
+        st.warning(f"TTS failed: {type(err).__name__}: {err}")
+
+    sess.timings[reacted_to] = timer.as_dict()
+    st.session_state["current_turn"] = nxt
+
+
 if session is not None:
     left, right = st.columns([2, 1])
 
@@ -298,40 +290,88 @@ if session is not None:
         if heard:
             st.caption(f"🎤 heard: \"{heard}\"")
 
-        last_answer = st.session_state.get("last_answer")
-        if last_answer:
-            st.caption("↳ Your question is answered inside this turn.")
-            with st.expander("grounded answer used (provenance)", expanded=False):
-                st.write(last_answer)
+        if session.timings:
+            last_iter = max(session.timings)
+            marks = session.timings[last_iter].get("marks", {})
+            stages = session.timings[last_iter].get("stages", {})
+            first = marks.get("time_to_first_audio")
+            if first is not None:
+                mode = "fast" if config.FAST_INTERACTION else "baseline"
+                detail = " · ".join(f"{k} {v:.1f}s" for k, v in
+                                    sorted(stages.items(), key=lambda kv: -kv[1]) if v >= 0.05)
+                work = marks.get("continuation_ready")
+                head = f"⏱ **{first:.2f}s to first audio**"
+                if work:
+                    head += f" · continuation ready at {work:.1f}s"
+                st.success(f"{head} — {detail}")
+
+                if marks.get("llm_calls"):
+                    bits = [f"{marks['llm_calls']:.0f} HTTP calls",
+                            f"api {marks.get('llm_api_time', 0):.1f}s",
+                            f"our throttle {marks.get('llm_rate_wait', 0):.1f}s"]
+                    if marks.get("llm_json_retries"):
+                        bits.append(f"⚠️ {marks['llm_json_retries']:.0f} JSON retries")
+                    if marks.get("llm_http_retries"):
+                        bits.append(f"⚠️ {marks['llm_http_retries']:.0f} HTTP retries")
+                    st.caption("interpret breakdown: " + " · ".join(bits))
 
         turn = st.session_state.get("current_turn")
-        if turn is not None:
+        waiting = st.session_state.get("pending_future") is not None
+
+        if waiting:
+            opener = st.session_state.get("opener", {})
+            st.subheader("🔊 Bridging…")
+            st.caption(
+                f"Selected the **{opener.get('class', '?')}** candidate with a string match — "
+                "no LLM call ran before this audio started."
+            )
+            st.write(opener.get("text", ""))
+            _play(st.session_state.get("bridge_audio"), f"bridge_{turn.iteration}",
+                  f"🌉 bridge · picked *{opener.get('class', '?')}* by string match, no LLM call")
+            _playback_tick(session)
+
+        elif turn is not None:
             words = len(turn.text.split())
             st.subheader(f"Turn {turn.iteration} · {turn.topic}")
 
-            # how much material this turn actually had behind it. a thin pool means this topic
-            # will run dry after a couple of turns, so surface it rather than letting it hide.
             n_sources = len(session.state.pool.get(turn.topic, []))
             st.caption(f"~{words} words · ~{words / 155 * 60:.0f}s · {n_sources} sources in pool")
             st.write(turn.text)
 
             if speak:
-                _play_turn(session, turn)
+                if not st.session_state.get("response_audio"):
+                    try:
+                        with st.spinner("Voicing this turn…"):
+                            out = state_mod.run_dir(session.state.run_id) / f"turn_{turn.iteration}.wav"
+                            st.session_state["response_audio"] = str(tts.synthesize(turn.text, out))
+                    except Exception as err:
+                        st.warning(f"TTS failed: {type(err).__name__}: {err}")
+                st.markdown(_SPEAKER_HTML, unsafe_allow_html=True)
+                _play(st.session_state.get("response_audio"), f"resp_{turn.iteration}",
+                      "🎙 the full response — pause anywhere to anchor your reaction",
+                      track_pos=f"pos_{turn.iteration}")
 
-            # --- pause-driven anchor: the sentence playing when the listener paused ----------
-            # audix reports the real pause currentTime; map it (linearly) to a sentence. Any
-            # pause auto-selects that sentence (the anchor only actually drives a deep-dive if a
-            # reaction is typed/spoken — a bare pause is dropped in submit_reaction).
-            path = st.session_state.get("turn_audio", {}).get(turn.iteration)
+            pool = session.openers.get(turn.iteration)
+            with st.expander(
+                f"🎲 Candidate openers ready ({len(pool) if pool else 0}/4)"
+                + ("" if pool else " — still generating, static fallbacks are armed"),
+                expanded=False,
+            ):
+                for name, text in (pool or session.openers.get(0) or {}).items():
+                    st.markdown(f"**{name}** — {text}")
+                if not pool:
+                    st.caption(
+                        "Generated in the background during playback. If the rate-limit window "
+                        "is tight this is shed on purpose and the static set is used instead."
+                    )
+
+            path = st.session_state.get("response_audio")
             pos = st.session_state.get(f"pos_{turn.iteration}")
             dur = tts.wav_duration(path) if path else 0.0
             sentences = _split_sentences(turn.text)
             _whole = "(react to the whole turn)"
             options = [_whole] + sentences
             akey = f"anchor_{turn.iteration}"
-            # a NEW pause writes the detected sentence straight into the widget's state — we can't
-            # use index= because Streamlit ignores it once a keyed widget exists. Guarded on the
-            # position so a manual override afterwards sticks until the listener pauses again.
             if pos and dur:
                 detected = interactive_mod.locate_snippet(turn.text, pos, dur)
                 if detected in sentences and st.session_state.get(f"anchored_pos_{turn.iteration}") != pos:
@@ -351,32 +391,25 @@ if session is not None:
                 key=f"react_{turn.iteration}",
             )
             audio = st.audio_input("🎤 …or speak your reaction", key=f"mic_{turn.iteration}")
+
             c1, c2 = st.columns([1, 4])
             if c1.button("React & continue", key=f"go_{turn.iteration}"):
                 try:
-                    # voice wins if recorded: transcribe it (local whisper STT) into the reaction text,
-                    # which then flows through the same classify/switch pipeline as typed text
                     reaction_text = react
                     if audio is not None:
                         with st.spinner("Transcribing your voice…"):
                             reaction_text = stt.transcribe(audio.getvalue())
                         st.session_state["heard"] = reaction_text
-                    # pass the pinned sentence (if any) so the reaction is anchored to that exact
-                    # point, driving the next turn's deep-dive
-                    done_turn = session.submit_reaction(reaction_text, anchor_snippet=anchor_snippet)
-                    st.session_state["last_answer"] = (
-                        done_turn.reaction.answer
-                        if done_turn.reaction and done_turn.reaction.type == ReactionType.question
-                        else None
-                    )
-                    if session.done:
-                        session.finish()
-                        st.session_state["current_turn"] = None
+
+                    if config.FAST_INTERACTION:
+                        _start_reaction(session, reaction_text, anchor_snippet)
                     else:
-                        st.session_state["current_turn"] = session.next_segment()
+                        with st.spinner("Reading your reaction and writing the next turn…"):
+                            _start_reaction_baseline(session, reaction_text, anchor_snippet)
                     st.rerun()
-                except Exception as err:  # noqa: BLE001
+                except Exception as err:
                     st.error(f"Turn failed: {type(err).__name__}: {err}")
+
             if c2.button("End session", key=f"end_{turn.iteration}"):
                 session.finish()
                 st.session_state["current_turn"] = None
@@ -391,13 +424,12 @@ if session is not None:
             st.download_button("Download transcript", transcript,
                                file_name=f"{session.persona.persona_id}_session.txt")
 
-            # optional audio of the whole session (local piper TTS)
             if st.button("Generate audio of this session"):
                 try:
                     with st.spinner("Synthesizing…"):
                         out = state_mod.run_dir(session.state.run_id) / "episode.wav"
                         st.session_state["audio_path"] = str(tts.synthesize(transcript, out))
-                except Exception as err:  # noqa: BLE001
+                except Exception as err:
                     st.warning(f"Audio failed: {type(err).__name__}: {err}")
             if st.session_state.get("audio_path"):
                 st.audio(st.session_state["audio_path"])

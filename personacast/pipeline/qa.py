@@ -10,6 +10,7 @@ changes:qa evaluation prompt, the answer pydantic object was returned by the LLM
 
 from __future__ import annotations 
 import json
+import re
 from pathlib import Path
 from pydantic import BaseModel, Field
 
@@ -94,11 +95,34 @@ def flatten_curated(curated: dict[str, list[CuratedItem]]) -> list[CuratedItem]:
     ## double wrapped for loop where we first iterate through the items in the curated then break from there
     return[ item for items in curated.values() for item in items]
 
-def select_context(question, persona: Persona, curated_items: list[CuratedItem]): 
-    """
-    simply return all curated items, this is a naive placeholder func want to maybe add things 
-    """
-    return curated_items
+_MAX_CONTEXT_ITEMS = 8
+
+_STOPWORDS = {
+    "the", "a", "an", "is", "are", "was", "were", "of", "to", "in", "on", "for", "and", "or",
+    "it", "this", "that", "with", "as", "at", "by", "from", "how", "what", "why", "when",
+    "does", "do", "did", "can", "could", "would", "should", "you", "i", "we", "they", "about",
+}
+
+def select_context(question, curated_items: list[CuratedItem]):
+    if len(curated_items) <= _MAX_CONTEXT_ITEMS:
+        return curated_items
+
+    terms = {
+        word for word in re.findall(r"[a-z0-9]+", (question or "").lower())
+        if word not in _STOPWORDS and len(word) > 2
+    }
+    if not terms:
+        return curated_items[:_MAX_CONTEXT_ITEMS]
+
+    def score(item: CuratedItem) -> int:
+        """
+        check how many times distinct query term show up in title and summary
+        """
+        haystack = f"{item.title} {item.summary}".lower()
+        return sum(1 for term in terms if term in haystack)
+
+    ranked = sorted(curated_items, key=score, reverse=True)
+    return [item for item in ranked[:_MAX_CONTEXT_ITEMS] if score(item)] or curated_items[:_MAX_CONTEXT_ITEMS]
 
 ### grounded answering methods 
 ## add in system param so system prompt can be changed on context

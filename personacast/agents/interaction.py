@@ -8,23 +8,24 @@ from pydantic import BaseModel
 
 from .. import config
 from ..llm.client import LLMClient
-from ..models import Persona, ReactionType, SessionState, InteractiveTurn
+from ..models import CuratedItem, Persona, ReactionType, SessionState, InteractiveTurn
 
-class ReactionRead(BaseModel): 
-    """
-    what the aget decides after recieving a reaction, we append this schema to system prompt! when generating response to reaaction on next turn
-    """
+class ReactionPlan(BaseModel):
 
-    ### as mentioned this appends to the reaction model in models.py as well, this model is more for request one is storage record
-    intent: str = "" # question, comment, NOne --> fills type when agent appends 
-    sentiment: float | None = None # -1 to 1 engagment signal determined by agent
-    engagement_delta: float | None = None # the engagemnet point accumulation the agent decides hat poijt value this reaction got -2 to 2 
-    requested_topic: str  # keep as string to make sure, llm wont fill string with None string "" if none 
-    reason: str # one line for trace
+    intent: str
+    sentiment: float | None
+    engagement_delta: float | None
+    requested_topic: str
+    reason: str
+    gist: str
 
+    anchor_source_index: int
 
-    needs_answer: bool # should we run grounded qa on this 
-    gist: str # one sentence summarizing turn, replacing old summarize turn
+    needs_answer: bool
+    answered: bool
+    answer: str
+    sources_used: list[int]
+
 
 
 ### richer inten mapping to. the existing three value reaction type 
@@ -40,6 +41,7 @@ _INTENT_TO_TYPE = {
     "boredom":      ReactionType.none,       
     "none":         ReactionType.none,
 }
+
 
 _SYSTEM = (
     "You are reading ONE listener reaction to ONE turn of a personalized podcast, and deciding "
@@ -86,36 +88,91 @@ _SYSTEM = (
     "for something is by definition interest in it. Do not score their boredom with the current "
     "topic here; that is already handled.\n\n"
     "GIST: ONE short plain sentence capturing what the TURN (not the reaction) covered. It "
-    "becomes a 'what we already said' note so later turns do not repeat it. No preamble."
+    "becomes a 'what we already said' note so later turns do not repeat it. No preamble.\n\n"
+    "--- You are ALSO doing two source-grounded jobs in this same pass. ---\n\n"
+    "ANCHOR_SOURCE_INDEX — you are given the numbered SOURCES the turn was synthesized from. "
+    "If you were shown a sentence they paused on, return the index of the single source that "
+    "sentence is most directly based on, so the next turn can go deeper on exactly it. If no "
+    "source clearly supports it, or no pause was shown, return -1.\n\n"
+    "ANSWERING — set needs_answer=true only if there is a real question to answer (intent "
+    "question, confusion or deeper). When it is false, set answered=false, answer=\"\", "
+    "sources_used=[] and web_query=\"\".\n"
+    "  When needs_answer is true, try to answer it from the SOURCES below. This is a short "
+    "spoken interjection, not an essay — a few sentences, then stop.\n"
+    "  FACTUAL FIDELITY — this is critical. Use ONLY what the sources actually state. Never "
+    "invent a name, number, date, statistic, or mechanism to fill a gap, and never transfer a "
+    "fact from one context to another. A generic-but-true answer beats a specific-but-invented "
+    "one.\n"
+    "  GROUNDING — if at least one source supports an answer, set answered=true, write the "
+    "answer, and list ONLY the indices you actually drew on in sources_used. If NO source "
+    "addresses it, set answered=false, leave answer and sources_used empty.\n"
+    "  PERSONALIZATION — calibrate depth and terminology to their expertise (advanced: precise "
+    "domain terms, assume fundamentals; beginner: intuition over technical detail), and honor "
+    "the AVOID list as STYLE guidance. Match their tone."
 )
 
-def read_reaction(reaction_text: str, turn : InteractiveTurn, session_state:SessionState, persona:Persona, llm:LLMClient, *, active_topics: list[str],  anchor_snippet: str = "") -> ReactionRead: 
-    """
-    structured LLM call, given inputs we return ReactionRead  object 
-      actual turn text --> turn, rest of params are exlanatory
-    """
+_WEB_ANSWER_SYSTEM = (
+    "You are answering a single listener question that interrupted a podcast, grounded ONLY in "
+    "the web results provided. This is a short spoken interjection, not an essay — a few "
+    "sentences, then stop.\n\n"
+    "FACTUAL FIDELITY — use ONLY what the results actually state. Never invent a name, number, "
+    "date, statistic, or mechanism to fill a gap. If the results still do not answer it, say so "
+    "honestly in one line and set answered=false.\n\n"
+    "Calibrate depth to the listener's expertise and honor the AVOID list as STYLE guidance."
+)
 
-    memory = session_state.memory # our growing session memory
+def source_listing(sources: list[CuratedItem]) -> str:
+    return "\n".join(
+        f"[{i}] {s.title} — {s.summary}" for i, s in enumerate(sources)
+    ) or "(no sources available for this topic)"
 
-    recent = [ # grab 4 most recent historic reactions the user has from their persona memory file
+
+def interpret(reaction_text: str, turn: InteractiveTurn, session_state: SessionState,
+              persona: Persona, llm: LLMClient, *, active_topics: list[str],
+              sources: list[CuratedItem], anchor_snippet: str = "") -> ReactionPlan:
+
+    memory = session_state.memory
+
+    recent = [
         f"- turn {r.iteration} [{r.topic}] {r.type.value}: {r.text[:80]}"
         for r in memory.reactions[-4:]
         ]
 
-    user = ( # user prompt
+    user = (
             f"CURRENT TOPIC: {turn.topic}\n"
             f"ACTIVE TOPICS (the only ones they can switch to): {active_topics}\n"
             f"Listener expertise on this topic: "
             f"{next((i.expertise.value for i in persona.interests if i.topic == turn.topic), 'intermediate')}\n"
             f"Tone they asked for: {persona.tone}\n"
+            f"AVOID (style): {persona.avoid}\n"
             f"\nTHE TURN THEY REACTED TO:\n{turn.text}\n"
             + (f"\nTHEY PAUSED ON THIS SENTENCE:\n{anchor_snippet}\n" if anchor_snippet else "")
             + (f"\nRECENT HISTORY:\n" + "\n".join(recent) + "\n" if recent else "")
             + (f"\nRUNNING SUMMARY OF THE SESSION SO FAR:\n{memory.summary}\n" if memory.summary else "")
-            + f"\nTHEIR REACTION:\n{reaction_text.strip() or '(said nothing)'}"
+            + f"\nTHEIR REACTION:\n{reaction_text.strip() or '(said nothing)'}\n"
+            + f"\nSOURCES (this turn was synthesized from these):\n{source_listing(sources)}"
         )
 
-    return llm.structured(_SYSTEM, user, ReactionRead, temperature=0.0)
+    return llm.structured(_SYSTEM, user, ReactionPlan, temperature=0.0)
+
+
+class WebAnswer(BaseModel):
+    answered: bool
+    answer: str
+
+
+def answer_from_web(question: str, persona: Persona, web_items: list[CuratedItem], llm: LLMClient) -> WebAnswer:
+    user = (
+        f"Listener question: {question}\n"
+        f"Listener interests + expertise: "
+        f"{[(i.topic, i.expertise.value) for i in persona.interests]}\n"
+        f"Listener tone: {persona.tone}\n"
+        f"AVOID (style): {persona.avoid}\n\n"
+        f"Web results:\n{source_listing(web_items)}"
+    )
+    return llm.structured(_WEB_ANSWER_SYSTEM, user, WebAnswer, temperature=0.2)
+
+
 
 def to_reaction_type(intent: str) -> ReactionType:
     """
