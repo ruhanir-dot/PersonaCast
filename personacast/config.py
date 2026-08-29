@@ -124,6 +124,30 @@ STT_MODEL_SIZE = os.getenv("PERSONACAST_STT_MODEL_SIZE", "tiny.en") # whisper se
 
 STT_INPUT_SAMPLE_RATE = 16000
 
+### Mic settinsg always on interruption capture config
+
+MIC_ALWAYS_ON = os.getenv("PERSONACAST_MIC_ALWAYS_ON", "0") in ("1", "true", "yes")
+VAD_ONSET_MS = int(os.getenv('PERSONACAST_VAD_ONSET_MS', '150')) #how much susteained voice has to be playing before we decide the user has actually started talking 
+VAD_SILENCE_MS = int(os.getenv('PERSONACAST_VAD_SILENCE_MS', '150')) # how many seconds of silence to wait before deciding user is done talking
+VAD_PREROLL_MS = int(os.getenv('PERSONACAST_VAD_PREROLL_MS', '300')) # snallk rolling biffer of last 300ms of raw audio to make sure to save entire speech segment
+
+MIC_MIN_UTTERANCE_MS = int(os.getenv("PERSONACAST_MIC_MIN_UTTERANCE_MS", "400")) # if utterance less than 400ms then we consider it to be a cough or something
+MIC_MAX_UTTERANCE_MS = int(os.getenv("PERSONACAST_MIC_MAX_UTTERANCE_MS", "30000")) # this is a max cap to make sure we dont register speaker playback 
+MIC_WS_PORT = int(os.getenv("PERSONACAST_MIC_WS_PORT", "8765")) # the websocket server browser mic capture connects to directly  instead of stremalit component
+
+### Bridge Bank and persona style drift 
+STYLE_AXES = [a.strip() for a in os.getenv(
+    "PERSONACAST_STYLE_AXES", "formality,energy,warmth,technical_register,brevity",
+).split(",") if a.strip()] # style axes of personas 
+STYLE_DRIFT_ALPHA = float(os.getenv("PERSONACAST_STYLE_DRIFT_ALPHA", "0.05"))  # drift over time of persona style 
+BRIDGE_BANK_SIZE = int(os.getenv("PERSONACAST_BRIDGE_BANK_SIZE", "10")) # number of candidates for each reaction type 
+BRIDGE_RECENCY_WINDOW = int(os.getenv('PERSONACAST_BRIDGE_RECENCY_WINDOW', '3')) # exclude the last N picked bridges in the scored narrative pools so we arent cycling the same bridges and repeats 
+
+
+
+
+
+
 
 # ----------------------    STALE     -------------------------------
 
