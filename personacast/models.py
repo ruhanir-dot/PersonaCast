@@ -144,9 +144,13 @@ class PersonaMemory(BaseModel):
     reactions: list[Reaction] = Field(default_factory= list)  #list of Reaction Objects across sessions we have stored to see reactions of user
     summary: str = "" # concatenates each interactie turn gist, cross session log of what we have covered with user
 
-    ### NEW ADDITION: sources already shon to listener keyed by topic
+    ### NEW ADDITION: sources already shown to listener keyed by topic
     covered: dict[str, list[CoveredSource]] = Field(default_factory= dict)
     updated_at: str = "" # just a straight datetime log 
+
+    ### learned style preference vector, we seed once upon construction and then drifts based on the engagement 
+    persona_style: list[float] = Field(default_factory= list)
+    persona_style_axes: list[str] = Field(default_factory= list) # the axes we base the persona vector on 
 
 class InteractiveTurn(BaseModel): 
     """

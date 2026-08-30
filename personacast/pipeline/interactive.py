@@ -150,9 +150,16 @@ class InteractiveSession:
         self._workers = ThreadPoolExecutor(max_workers=4, thread_name_prefix="pc-inner")
         self._continuation = ThreadPoolExecutor(max_workers=1, thread_name_prefix="pc-turn")
 
-        self.openers: dict[int, dict[str, str]] = {}
-        self.opener_audio: dict[int, dict[str, str]] = {}
-        self._opener_jobs: dict[int, object] = {}
+        ### add in bridge bank attributes
+        self.bridge_bank: openers_mod.BridgeBank | None = None
+        self.bridge_audio: dict[str, dict[int, str]] = {name: {} for name in openers_mod.OPENER_CLASSES}
+        self._fallback_audio: dict[str, str] = {}
+        self._bank_job = None
+        self.recent_bridge_picks: dict[str, list[int]] = {}
+        self._style_updated = False
+        self.bank_status: str | None = None
+
+        self.mic_armed: bool = False
 
         self.timings: dict[int, dict] = {}
 
@@ -171,6 +178,7 @@ class InteractiveSession:
 
     def start(self, *, rebuild_pool: bool = False) -> SessionState:
         mem = memory.load_memory(self.persona)
+        memory.seed_persona_style_if_needed(mem, self.persona, self.llm) #seed in the persona style vector at persona construction if cold user
 
         pool = None if rebuild_pool else poolcache.load(self.persona)
         if pool is not None:
@@ -189,7 +197,8 @@ class InteractiveSession:
         if self.retrieval_trace:
             state.log_retrieval(self.state.run_id, self.retrieval_trace)
 
-        self._warm_static_openers()
+        self._warm_fallback_bridges() # pre synthesize the fallback bridge 
+        self._start_bank_generation() # one time bank generation
 
         return self.state
 
@@ -237,12 +246,10 @@ class InteractiveSession:
         focus_source = self._focus_source(session_state, last_reaction)
         return last_reaction, topic, recent_gists, focus_source, session_state.pool.get(topic, [])
 
-    def _finalize_turn(self, session_state: SessionState, topic: str, text: str,
-                       sources: list[CuratedItem]) -> InteractiveTurn:
+    def _finalize_turn(self, session_state: SessionState, topic: str, text: str, sources: list[CuratedItem]) -> InteractiveTurn:
         turn = InteractiveTurn(iteration=len(session_state.turns) + 1, topic=topic, text=text)
         session_state.turns.append(turn)
         _record_covered(session_state, topic, sources)
-        self.prepare_openers(turn)
         return turn
 
     def publish(self, kind: str, text: str, path: str | None) -> None:
@@ -282,53 +289,91 @@ class InteractiveSession:
         return self._finalize_turn(session_state, topic, text, sources)
 
 
-    def _likely_switch_topic(self, current_topic: str) -> str | None:
-        others = [t for t in self._active_topics if t != current_topic]
-        if not others:
-            return None
-        return memory.next_topic(self.state.memory, others)
-
-    def prepare_openers(self, turn: InteractiveTurn) -> None:
-        if turn.iteration in self._opener_jobs:
-            return
+    def _start_bank_generation(self) -> None:
+        """
+        bridge bank generation once per session thy are persona and context based and dont rely on turns 
+        """
+        def report(msg: str) -> None:
+            self.bank_status = msg
+            if self.on_stage:
+                self.on_stage(msg)
 
         def build():
-            pool = openers_mod.generate_openers(
-                turn, self.persona, self.llm,
-                likely_switch_topic=self._likely_switch_topic(turn.topic),
-            )
-            self.openers[turn.iteration] = pool
-            self.opener_audio[turn.iteration] = openers_mod.synthesize_openers(
-                pool, state.run_dir(self.state.run_id), turn.iteration,
-                on_error=self.on_stage,
-            )
+            # building the candidate bank
+            try:
 
-        self._opener_jobs[turn.iteration] = self._workers.submit(build)
+                bank = openers_mod.generate_bridge_bank(
+                    self.persona, self.persona.additional_context, self.llm,
+                    active_topics=self._active_topics,
+                    memory_summary=self.state.memory.summary,
+                    on_error=report,
+                )
 
-    def _warm_static_openers(self) -> None:
-        try:
-            self.opener_audio[0] = openers_mod.synthesize_openers(
-                openers_mod.fallback_openers(), state.run_dir(self.state.run_id), 0,
-                on_error=self.on_stage,
-            )
-        except Exception:
-            self.opener_audio[0] = {}
+                self.bridge_bank = bank
+
+                total = sum(len(bank.by_class(n)) for n in openers_mod.OPENER_CLASSES) # check total amount generated
+
+                if total == 0: # fallback if llm call failed and empty 
+                    if self.bank_status is None:
+                        report("bridge bank came back empty — using static fallback bridges "
+                               "this session")
+                    return
+                
+                openers_mod.synthesize_bridge_bank(
+                    bank, state.run_dir(self.state.run_id), self.bridge_audio,
+                    on_error=report,
+                )
+
+            except Exception as err:
+                report(f"bridge bank build failed: {type(err).__name__}: {err} — "
+                       "using static fallback bridges this session")
+
+        self._bank_job = self._workers.submit(build)
+
+    def _warm_fallback_bridges(self) -> None:
+        """
+        pre synthesize the static fallback bridges if llm call failed or if user interrupts before bridge bank generated
+        """
+        out_dir = state.run_dir(self.state.run_id)
+        out_dir.mkdir(parents=True, exist_ok=True)
+        fallback = openers_mod.fallback_openers()
+        paths: dict[str, str] = {}
+        for name, text in fallback.items():
+            try:
+                target = out_dir / f"bridge_fallback_{name}.wav"
+                paths[name] = str(tts.synthesize(text, target))
+            except Exception as err:
+                if self.on_stage:
+                    self.on_stage(f"fallback bridge synthesis failed for {name}: {type(err).__name__}")
+        self._fallback_audio = paths
+
+    def arm_mic(self) -> None:
+        self.mic_armed = True
 
     def begin_reaction(self, reaction_text: str, *, anchor_snippet: str = ""):
         session_state = self._require_started()
         if not session_state.turns:
             raise RuntimeError("begin_reaction called before next_segment")
 
+        self.mic_armed = False
+
         turn = session_state.turns[-1]
         timer = timing.Timer()
         self.audio_chunks = []
 
-        with timer.stage(timing.OPENER_SELECT):
-            name, text, wav = openers_mod.select_opener(
-                self.openers.get(turn.iteration, {}),
-                self.opener_audio.get(turn.iteration) or self.opener_audio.get(0, {}),
+        with timer.stage(timing.OPENER_SELECT): # timer for measuring latency
+
+            name, text, wav, index =  openers_mod.select_opener(
+                self.bridge_bank, self.bridge_audio, self._fallback_audio,
+                session_state.memory.persona_style,
                 reaction_text, self._active_topics, turn.topic,
+                recent_indices=self.recent_bridge_picks,
             )
+            if index is not None:
+                window = max(0, config.BRIDGE_RECENCY_WINDOW)
+                recent = self.recent_bridge_picks.setdefault(name, [])
+                recent.append(index)
+                del recent[: max(0, len(recent) - window)]
 
         if wav:
             timer.mark(timing.FIRST_AUDIO)
@@ -338,11 +383,10 @@ class InteractiveSession:
         )
         return {"class": name, "text": text, "audio": wav}, future
 
-    def _continue_after(self, reaction_text: str, anchor_snippet: str, opener_text: str,
-                        timer: timing.Timer | None = None):
+    def _continue_after(self, reaction_text: str, anchor_snippet: str, opener_text: str, timer: timing.Timer | None = None):
+
         reacted_to = self.state.turns[-1].iteration
         self.submit_reaction(reaction_text, anchor_snippet=anchor_snippet, timer=timer)
-
 
         if self.done:
             self.finish()
@@ -423,7 +467,7 @@ class InteractiveSession:
         reaction_type = interaction.to_reaction_type(plan.intent)
         delta = interaction.clamp_delta(plan.engagement_delta, is_switch=requested is not None)
 
-        anchor = "" if reaction_type == ReactionType.none else anchor_snippet.strip()
+        anchor = "" if (reaction_type == ReactionType.none or requested) else anchor_snippet.strip()
         anchor_index = plan.anchor_source_index if anchor else -1
         if not (0 <= anchor_index < len(topic_sources)):
             anchor_index = -1
@@ -460,7 +504,22 @@ class InteractiveSession:
         return turn
 
     def finish(self) -> SessionState:
+    
         session_state = self._require_started()
+
+        session_reactions = [t.reaction for t in session_state.turns if t.reaction]
+
+        ### update persona style vector using llm call at the end of the session
+        if not self._style_updated and session_reactions:
+            self._style_updated = True
+            try:
+                memory.update_persona_style_from_session(
+                    session_state.memory, self.persona, session_reactions, self.llm,
+                )
+            except Exception as err:
+                if self.on_stage:
+                    self.on_stage(f"persona style update failed: {type(err).__name__}: {err}")
+
         memory.save_memory(session_state.memory)
         transcript = "\n\n".join(f"[{t.topic}] {t.text}" for t in session_state.turns)
         (state.run_dir(session_state.run_id) / "session.txt").write_text(transcript)

@@ -45,7 +45,7 @@ SUMMARIZE_TURNS = os.getenv("PERSONACAST_SUMMARIZE_TURNS", "1") in ("1", "true",
 WEB_FALLBACK_TIMEOUT_SECONDS = float(os.getenv("PERSONACAST_WEB_TIMEOUT", "6.0"))
 
 ### length of pregenerated opener
-OPENER_WORDS = int(os.getenv('PERSONACAST_OPENER_WORDS', '25'))
+OPENER_WORDS = int(os.getenv('PERSONACAST_OPENER_WORDS', '35'))
 RECENT_TURNS_CONTEXT = int(os.getenv("PERSONACAST_RECENT_TURNS", "4")) # determined how many of the most recent turn gists to feed into next generation turns[-4]
 TURN_MODE = os.getenv("PERSONACST_TURN_MODE", "variety") # set default witin turn style to variety
 
@@ -128,10 +128,11 @@ STT_INPUT_SAMPLE_RATE = 16000
 
 MIC_ALWAYS_ON = os.getenv("PERSONACAST_MIC_ALWAYS_ON", "0") in ("1", "true", "yes")
 VAD_ONSET_MS = int(os.getenv('PERSONACAST_VAD_ONSET_MS', '150')) #how much susteained voice has to be playing before we decide the user has actually started talking 
-VAD_SILENCE_MS = int(os.getenv('PERSONACAST_VAD_SILENCE_MS', '150')) # how many seconds of silence to wait before deciding user is done talking
+VAD_SILENCE_MS = int(os.getenv('PERSONACAST_VAD_SILENCE_MS', '2500')) # how many seconds of silence to wait before deciding user is done talking
 VAD_PREROLL_MS = int(os.getenv('PERSONACAST_VAD_PREROLL_MS', '300')) # snallk rolling biffer of last 300ms of raw audio to make sure to save entire speech segment
+VAD_AGGRESSIVENESS = float(os.getenv("PERSONACAST_VAD_AGGRESSIVENESS", "0.65")) # silero speech probability a chunk must clear to count as voiced
 
-MIC_MIN_UTTERANCE_MS = int(os.getenv("PERSONACAST_MIC_MIN_UTTERANCE_MS", "400")) # if utterance less than 400ms then we consider it to be a cough or something
+MIC_MIN_UTTERANCE_MS = int(os.getenv("PERSONACAST_MIC_MIN_UTTERANCE_MS", "250")) # measured on voiced audio only, so short affirmations like yeah/mhm still register
 MIC_MAX_UTTERANCE_MS = int(os.getenv("PERSONACAST_MIC_MAX_UTTERANCE_MS", "30000")) # this is a max cap to make sure we dont register speaker playback 
 MIC_WS_PORT = int(os.getenv("PERSONACAST_MIC_WS_PORT", "8765")) # the websocket server browser mic capture connects to directly  instead of stremalit component
 
@@ -139,7 +140,7 @@ MIC_WS_PORT = int(os.getenv("PERSONACAST_MIC_WS_PORT", "8765")) # the websocket 
 STYLE_AXES = [a.strip() for a in os.getenv(
     "PERSONACAST_STYLE_AXES", "formality,energy,warmth,technical_register,brevity",
 ).split(",") if a.strip()] # style axes of personas 
-STYLE_DRIFT_ALPHA = float(os.getenv("PERSONACAST_STYLE_DRIFT_ALPHA", "0.05"))  # drift over time of persona style 
+STYLE_UPDATE_MAX_STEP = float(os.getenv("PERSONACAST_STYLE_UPDATE_MAX_STEP", "0.15"))
 BRIDGE_BANK_SIZE = int(os.getenv("PERSONACAST_BRIDGE_BANK_SIZE", "10")) # number of candidates for each reaction type 
 BRIDGE_RECENCY_WINDOW = int(os.getenv('PERSONACAST_BRIDGE_RECENCY_WINDOW', '3')) # exclude the last N picked bridges in the scored narrative pools so we arent cycling the same bridges and repeats 
 

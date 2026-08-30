@@ -15,7 +15,8 @@ from __future__ import annotations
 import re 
 from datetime import datetime
 from pathlib import Path 
-from .. import config 
+from .. import config
+from ..llm.client import LLMClient
 from ..models import Persona, PersonaMemory, Reaction, ReactionType
 
 
@@ -117,6 +118,61 @@ def next_topic(memory: PersonaMemory, active_topics: list[str]):
     in the case of an engagement point tie we just take the first topic in the list, so whatever user listed first in session persona is what we use
     """
 
-    if not active_topics: 
+    if not active_topics:
         raise ValueError("active topics are empty ")
     return max(active_topics, key = lambda topic: memory.engagement.get(topic, config.ENGAGE_BASE)) #iterable is active topics from engagement dictionary get engagement points and get argmax
+
+
+def seed_persona_style_if_needed(memory: PersonaMemory, persona: Persona, llm: LLMClient) -> None:
+    """
+    llm call for initial seeding of persona style vector
+    """
+    from . import openers as openers_mod
+
+    if memory.persona_style and len(memory.persona_style) == len(config.STYLE_AXES):
+        return
+
+    style = openers_mod.seed_persona_style(persona, llm)
+    if len(style) != len(config.STYLE_AXES):
+        style = [0.5] * len(config.STYLE_AXES)
+
+    memory.persona_style = style
+    memory.persona_style_axes = list(config.STYLE_AXES)
+
+
+def _reaction_digest(reactions: list[Reaction]) -> str:
+    """
+     reactions of this turn to update persona style vector for alognment of bridge
+    """
+    lines = []
+    for r in reactions:
+        bits = [f"[{r.topic}]"]
+        if r.intent:
+            bits.append(f"intent={r.intent}")
+        if r.engagement_delta is not None:
+            bits.append(f"engagement={r.engagement_delta:+.1f}")
+        said = (r.text or "").strip() or "(said nothing)"
+        lines.append(f"- {' '.join(bits)}: \"{said}\"")
+    return "\n".join(lines)
+
+
+def update_persona_style_from_session(memory: PersonaMemory, persona: Persona, reactions: list[Reaction], llm: LLMClient, *, max_step: float = config.STYLE_UPDATE_MAX_STEP) -> None:
+    """
+    updating persona style vector, make call update style and clamp to the maximum step size, and append too memory
+    """
+    from . import openers as openers_mod
+
+    if not memory.persona_style or not reactions:
+        return
+
+    updated = openers_mod.infer_persona_style(
+        persona, memory.persona_style, _reaction_digest(reactions), llm,
+    )
+    if len(updated) != len(memory.persona_style):
+        return
+
+    memory.persona_style = [
+        max(0.0, min(1.0, old + max(-max_step, min(max_step, new - old))))
+        for old, new in zip(memory.persona_style, updated)
+    ]
+    memory.persona_style_axes = list(config.STYLE_AXES)
