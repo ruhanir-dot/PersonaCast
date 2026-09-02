@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personalized Podcast</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f5f5f5;
+      color: #171717;
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      width: min(760px, calc(100% - 32px));
+      margin: 48px auto;
+    }
+
+    h1,
+    h2 {
+      margin: 0 0 24px;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      padding: 12px 16px;
+      border: 1px solid #171717;
+      border-radius: 8px;
+      background: white;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    button:hover:not(:disabled) {
+      background: #171717;
+      color: white;
+    }
+
+    button:disabled {
+      cursor: default;
+      opacity: 0.45;
+    }
+
+    #topic-list,
+    #question-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    #player-screen[hidden],
+    #topic-screen[hidden],
+    #choices[hidden] {
+      display: none;
+    }
+
+    #script-box {
+      padding: 20px;
+      border-radius: 10px;
+      background: white;
+      line-height: 1.65;
+      min-height: 90px;
+    }
+
+    #status {
+      margin: 0 0 8px;
+      color: #666;
+    }
+
+    #similarity-score {
+      margin: 0 0 12px;
+      color: #666;
+    }
+
+    audio {
+      width: 100%;
+      margin: 18px 0 24px;
+    }
+
+    #choices {
+      display: grid;
+      gap: 18px;
+    }
+
+    #custom-question-form {
+      display: flex;
+      gap: 10px;
+    }
+
+    #custom-question {
+      flex: 1;
+      min-width: 0;
+      padding: 12px;
+      border: 1px solid #999;
+      border-radius: 8px;
+    }
+
+    #ask-button,
+    #next-trunk {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="topic-screen">
+      <h1 id="topic-heading">Choose a topic</h1>
+      <div id="topic-list"></div>
+    </section>
+
+    <section id="player-screen" hidden>
+      <h2 id="current-topic"></h2>
+
+      <p id="status">Now playing</p>
+      <p id="similarity-score" hidden></p>
+      <div id="script-box"></div>
+      <audio id="audio-player" controls></audio>
+
+      <div id="choices" hidden>
+        <div id="question-list"></div>
+
+        <form id="custom-question-form">
+          <input
+            id="custom-question"
+            type="text"
+            placeholder="Ask your own question"
+            autocomplete="off"
+            required
+          >
+          <button id="ask-button" type="submit">Ask</button>
+        </form>
+
+        <button id="next-trunk" type="button">Next trunk</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const topicScreen = document.getElementById("topic-screen");
+    const playerScreen = document.getElementById("player-screen");
+    const topicHeading = document.getElementById("topic-heading");
+    const topicList = document.getElementById("topic-list");
+    const currentTopic = document.getElementById("current-topic");
+    const statusElement = document.getElementById("status");
+    const similarityScore = document.getElementById("similarity-score");
+    const scriptBox = document.getElementById("script-box");
+    const audioPlayer = document.getElementById("audio-player");
+    const choices = document.getElementById("choices");
+    const questionList = document.getElementById("question-list");
+    const customQuestionForm = document.getElementById("custom-question-form");
+    const customQuestionInput = document.getElementById("custom-question");
+    const askButton = document.getElementById("ask-button");
+    const nextTrunkButton = document.getElementById("next-trunk");
+
+    let selectedTopic = null;
+    let currentTrunkIndex = 0;
+
+    async function requestJson(url, options) {
+      const response = await fetch(url, options);
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.detail || "Request failed.");
+      }
+
+      return data;
+    }
+
+    function showError(error) {
+      statusElement.textContent = error.message;
+      choices.hidden = false;
+    }
+
+    function currentTrunk() {
+      return selectedTopic.trunks[currentTrunkIndex];
+    }
+
+    function showChoices() {
+      const trunk = currentTrunk();
+      questionList.replaceChildren();
+
+      for (const questionAnswer of trunk.question_answers) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = questionAnswer.question;
+        button.addEventListener("click", () => {
+          playSegment(
+            questionAnswer.answer,
+            questionAnswer.audio_url,
+            "Answer"
+          );
+        });
+        questionList.appendChild(button);
+      }
+
+      nextTrunkButton.disabled = (
+        currentTrunkIndex >= selectedTopic.trunks.length - 1
+      );
+      choices.hidden = false;
+    }
+
+    async function playSegment(script, audioUrl, label) {
+      choices.hidden = true;
+      statusElement.textContent = label;
+      scriptBox.textContent = script;
+      audioPlayer.onended = showChoices;
+
+      if (!audioUrl) {
+        showChoices();
+        return;
+      }
+
+      audioPlayer.src = `${audioUrl}?t=${Date.now()}`;
+      audioPlayer.load();
+
+      try {
+        await audioPlayer.play();
+      } catch (error) {
+        statusElement.textContent = `${label} — press Play to begin`;
+      }
+    }
+
+    function playCurrentTrunk() {
+      const trunk = currentTrunk();
+      playSegment(trunk.script, trunk.audio_url, "Now playing");
+    }
+
+    async function selectTopic(topicId) {
+      selectedTopic = await requestJson(`/api/trunks/topics/${topicId}`);
+      currentTrunkIndex = 0;
+      currentTopic.textContent = selectedTopic.topic;
+      topicScreen.hidden = true;
+      playerScreen.hidden = false;
+      playCurrentTrunk();
+    }
+
+    async function loadTopics() {
+      const data = await requestJson("/api/trunks/topics");
+      topicHeading.textContent = `Choose one of ${data.topic_count} topics`;
+
+      for (const topic of data.topics) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = topic.topic;
+        button.addEventListener("click", () => {
+          selectTopic(topic.topic_id).catch(showError);
+        });
+        topicList.appendChild(button);
+      }
+    }
+
+    customQuestionForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const question = customQuestionInput.value.trim();
+      if (!question) {
+        return;
+      }
+
+      choices.hidden = true;
+      statusElement.textContent = "Answering";
+      similarityScore.hidden = true;
+      similarityScore.textContent = "";
+      askButton.disabled = true;
+
+      try {
+        const result = await requestJson(
+          "/api/trunks/custom-question",
+          {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+              trunk_id: currentTrunk().trunk_id,
+              question: question
+            })
+          }
+        );
+
+        customQuestionInput.value = "";
+        if (result.similarity !== null) {
+          similarityScore.textContent = (
+            `Highest embedding similarity: ${result.similarity.toFixed(4)}`
+          );
+          similarityScore.hidden = false;
+        }
+        await playSegment(result.answer, result.audio_url, "Answer");
+      } catch (error) {
+        showError(error);
+      } finally {
+        askButton.disabled = false;
+      }
+    });
+
+    nextTrunkButton.addEventListener("click", () => {
+      if (currentTrunkIndex >= selectedTopic.trunks.length - 1) {
+        return;
+      }
+
+      currentTrunkIndex += 1;
+      playCurrentTrunk();
+    });
+
+    loadTopics().catch(showError);
+  </script>
+</body>
+</html>
