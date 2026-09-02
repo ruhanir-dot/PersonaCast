@@ -434,21 +434,15 @@ def synthesize_bridge_bank(bank: BridgeBank, out_dir: Path, target: dict[str,dic
         on_error(f'bridge synthesis fialed for {len(failures)} candidates')
 
 
-def _cosine(a: list[float], b: list[float]) -> float: 
+def _euclidean_distance(a: list[float], b: list[float]) -> float:
     """
-    cosine similarity, with guards 
+    euclidean distance as dissimilarity measure, so we use reverse = False downstream
     """
 
-    if not a or not b or len(a) != len(b): 
-        return 0.0 
+    if not a or not b or len(a) != len(b):
+        return math.inf # worst possible in distance space, so malformed still ranks last
 
-    norm = math.hypot(*a) * math.hypot(*b)
-    dot_product = math.sumprod(a, b)
-
-    if norm: 
-        return dot_product / norm
-    else: 
-        return 0.0
+    return math.dist(a, b)
 
 
 ### CLASSIFYING WHAT OPENER CLASS TO LOOK AT GIVEN REACTION REGEX ###
@@ -515,7 +509,7 @@ def classify_for_opener(reaction_text: str, active_topics: list[str], current_to
 def select_opener(bank: BridgeBank | None, bank_audio: dict[str, dict[int, str]], fallback_audio: dict[str, str], persona_style: list[float], reaction_text: str, active_topics: list[str], current_topic: str, *, 
                   recent_indices: dict[str, list[int]] | None = None) -> tuple[str, str, str | None , int| None]:
     """
-    given reaction classification, select opener using argmax of cosine of candidate narrative style vector and persona style vector 
+    given reaction classification, select opener using argmin of euclidean distance between candidate narrative style vector and persona style vector
     so we choose the best fitting stylized candidate within that class and if the bank isnt ready we move to the static preloaded generic candidates
     dont want repeated candidate bridging narratives so we keep a list of recent indices that already have been used and use othe ones besides those ones 
     """
@@ -531,7 +525,7 @@ def select_opener(bank: BridgeBank | None, bank_audio: dict[str, dict[int, str]]
         return name, text, wav, None 
 
     ranked = sorted(
-        range(len(candidates)), key = lambda i: _cosine(candidates[i].scores, persona_style), reverse = True # ranking using simple cosine similarity
+        range(len(candidates)), key = lambda i: _euclidean_distance(candidates[i].scores, persona_style), reverse = False # ranking by distance so nearest style first
     )
 
     excluded = set((recent_indices or {}).get(name, [])) # the excluded set of indices used recently
