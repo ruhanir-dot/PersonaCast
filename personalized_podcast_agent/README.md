@@ -68,7 +68,7 @@ pip install -r requirements.txt
 Create a `.env` file locally. Do not commit it to GitHub.
 
 ```env
-OPENAI_API_KEY=your_key_here
+YOUTUBE_API_KEY=your_key_here
 ```
 
 Depending on the retrieval configuration, additional API keys may be required.
