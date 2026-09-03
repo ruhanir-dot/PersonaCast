@@ -65,10 +65,14 @@ pip install -r requirements.txt
 
 ## Environment variables
 
-Create a `.env` file locally. Do not commit it to GitHub.
+Create a `.env` file locally.
 
 ```env
 YOUTUBE_API_KEY=your_key_here
+LOCAL_LLM_HOST=your_local_host
+LOCAL_LLM_MODEL=qwen2.5:1.5b
+PROMPT_CASCADE_MOCK=0
+
 ```
 
 Depending on the retrieval configuration, additional API keys may be required.
