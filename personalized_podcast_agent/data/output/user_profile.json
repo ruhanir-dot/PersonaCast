@@ -1,0 +1,67 @@
+{
+  "interests": [
+    "K-pop and Korean entertainment",
+    "Fashion and luxury brands",
+    "Travel and cultural experiences",
+    "Campus and student life",
+    "Food and dining experiences",
+    "Outdoor activities and lifestyle",
+    "Stock market",
+    "Daily news",
+    "Board games and tabletop gaming",
+    "Large language models and generative AI"
+  ],
+  "preferred_topics": [
+    "K-pop music and idols",
+    "Fashion trends and brand campaigns",
+    "Travel stories and destination highlights",
+    "University events and graduation",
+    "Food culture and popular dishes",
+    "Lifestyle and wellness",
+    "Daily stock market",
+    "Daily news and current events",
+    "Board game recommendations and strategies",
+    "LLM developments and applications"
+  ],
+  "style_preferences": [
+    "Narrative and storytelling",
+    "Upbeat and positive tone",
+    "Cultural insights",
+    "Personal experience sharing",
+    "Trendy and current topics"
+  ],
+  "podcast_focus_keywords": [
+    "K-pop",
+    "fashion",
+    "travel",
+    "campus life",
+    "food",
+    "lifestyle",
+    "stock market",
+    "daily news",
+    "board games",
+    "LLM"
+  ],
+  "recommended_news_queries": [
+    "latest K-pop releases and news",
+    "fashion brand collaborations and campaigns",
+    "top travel destinations and tips",
+    "university graduation events and student life",
+    "popular food trends and recipes",
+    "outdoor lifestyle and wellness activities",
+    "daily stock market and semiconductor stock news",
+    "latest daily news and major events",
+    "latest board game releases and tabletop gaming news",
+    "latest LLM research models and generative AI news"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "health conditions"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and health conditions are excluded."
+  ]
+}
