@@ -24,6 +24,7 @@ def extract_user_profile():
             "Run python src\\00_parse_instagram_export.py first."
         )
 
+    ## change in prompt to ensure the configs 10 topic count barrier is enforced in prompt!
     prompt = f"""
 You are a user profiling assistant for a personalized podcast generation system.
 
@@ -105,6 +106,10 @@ Important:
 - "preferred_topics" must not be empty.
 - "recommended_news_queries" must not be empty.
 - If user keywords are empty, create podcast_focus_keywords from Instagram interests.
+- "podcast_focus_keywords" must contain EXACTLY 10 entries. Downstream trunk
+  generation builds one topic per keyword and fails with fewer than 10.
+- Each podcast_focus_keyword must be a news-searchable subject of two to four
+  words, and must be distinct from the others rather than a rephrasing.
 """
 
     profile = llm_json(

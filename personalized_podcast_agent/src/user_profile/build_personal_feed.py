@@ -38,6 +38,25 @@ YOUTUBE_DATE_RE = re.compile(
     r"(\d{4})年(\d{1,2})月(\d{1,2})日\s+"
     r"(上午|下午|晚上|凌晨)(\d{1,2}):(\d{2}):(\d{2})\s+([A-Z]{2,5})"
 )
+
+### English date handling! 
+
+YOUTUBE_DATE_EN_RE = re.compile(
+    r"([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4}),\s+"
+    r"(\d{1,2}):(\d{2}):(\d{2})\s*(AM|PM)\s+([A-Z]{2,5})"
+)
+ENGLISH_MONTHS = {
+    "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
+    "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12,
+}
+### more zone offsets for more users if needed, or ever travelling
+ZONE_OFFSETS = {
+    "UTC": 0, "GMT": 0,
+    "EDT": -4, "EST": -5,
+    "CDT": -5, "CST": -6,
+    "MDT": -6, "MST": -7,
+    "PDT": -7, "PST": -8,
+}
 DELETED_TITLES = {
     "deleted video",
     "private video",
@@ -128,30 +147,59 @@ def unix_timestamp_to_iso(value: Any) -> str | None:
     return datetime.fromtimestamp(timestamp, timezone.utc).isoformat()
 
 
-def parse_youtube_datetime(text: str) -> str | None:
+def match_youtube_date(text: str) -> tuple[re.Match[str], str] | None:
+    """
+    matching export timestamp to chinese or english region for proper parsing downstream
+    """
+    # depending on youtube export timestamp determine if chinese or english handling
     match = YOUTUBE_DATE_RE.search(text)
-    if not match:
-        return None
+    if match:
+        return match, "zh"
+    match = YOUTUBE_DATE_EN_RE.search(text)
+    if match:
+        return match, "en"
+    return None
 
-    year, month, day = (int(match.group(i)) for i in range(1, 4))
-    period = match.group(4)
-    hour = int(match.group(5))
-    minute = int(match.group(6))
-    second = int(match.group(7))
+
+def parse_youtube_datetime(text: str) -> str | None:
+    """
+    parsing youtube datetime for handling chinese and english exports
+    """
+    matched = match_youtube_date(text) # check using utility func
+
+    if not matched:
+        return None
+    match, locale = matched
+
+    if locale == "zh":
+        year, month, day = (int(match.group(i)) for i in range(1, 4))
+        period = match.group(4)
+        hour = int(match.group(5))
+        minute = int(match.group(6))
+        second = int(match.group(7))
+        if period in {"下午", "晚上"} and hour < 12:
+            hour += 12
+        elif period in {"上午", "凌晨"} and hour == 12:
+            hour = 0
+    
+    else:
+        month = ENGLISH_MONTHS.get(match.group(1), 0)
+        if not month:
+            return None
+        day = int(match.group(2))
+        year = int(match.group(3))
+        hour = int(match.group(4))
+        minute = int(match.group(5))
+        second = int(match.group(6))
+        period = match.group(7)
+        if period == "PM" and hour < 12:
+            hour += 12
+        elif period == "AM" and hour == 12:
+            hour = 0
+
     zone_name = match.group(8)
 
-    if period in {"下午", "晚上"} and hour < 12:
-        hour += 12
-    elif period in {"上午", "凌晨"} and hour == 12:
-        hour = 0
-
-    zone_offsets = {
-        "PDT": -7,
-        "PST": -8,
-        "UTC": 0,
-        "GMT": 0,
-    }
-    offset_hours = zone_offsets.get(zone_name)
+    offset_hours = ZONE_OFFSETS.get(zone_name)
     if offset_hours is None:
         return None
 
@@ -436,8 +484,8 @@ class YouTubeTakeoutParser(HTMLParser):
 
     @staticmethod
     def _raw_date(block_text: str) -> str:
-        match = YOUTUBE_DATE_RE.search(block_text)
-        return match.group(0) if match else ""
+        matched = match_youtube_date(block_text)
+        return matched[0].group(0) if matched else ""
 
 
 def parse_youtube_html(
