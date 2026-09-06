@@ -99,30 +99,33 @@ Sign in to YouTube, open the homepage, scroll until at least 50 long-form
 videos are loaded, then open the browser Console with `F12` and run:
 
 ```javascript
-const videos = [...document.querySelectorAll('a#video-title-link[href^="/watch"]')]
-  .map((link) => {
-    const card = link.closest('ytd-rich-item-renderer, ytd-video-renderer');
-    const title = (link.textContent || link.getAttribute('aria-label') || '').trim();
-    const channel = (
-      card?.querySelector('#channel-name #text, ytd-channel-name a, #channel-name a')
-        ?.textContent || ''
-    ).trim();
-    const videoId = new URL(link.href).searchParams.get('v');
+const rows = [...document.querySelectorAll('a[href^="/watch"]')]
+  .map((a) => {
+    const card = a.closest(
+      'ytd-rich-grid-media, ytd-rich-item-renderer, ytd-video-renderer, ytd-lockup-view-model'
+    );
 
     return {
-      title,
-      channel,
-      url: videoId ? `https://www.youtube.com/watch?v=${videoId}` : '',
+      title: (
+        a.querySelector('#video-title')?.textContent ||
+        a.textContent ||
+        a.getAttribute('aria-label') ||
+        ''
+      ).trim(),
+      channel: (
+        card?.querySelector('#channel-name a, #channel-name')?.textContent ||
+        ''
+      ).trim(),
+      url: a.href
     };
   })
-  .filter((video) => video.title && video.title !== '觀看' && video.url);
+  .filter((video) => video.title && video.url);
 
-const uniqueVideos = [
-  ...new Map(videos.map((video) => [video.url, video])).values(),
-].slice(0, 50);
+const videos = [...new Map(rows.map((video) => [video.url, video])).values()]
+  .slice(0, 50);
 
-copy(JSON.stringify(uniqueVideos, null, 2));
-console.log(`Copied ${uniqueVideos.length} non-Shorts homepage videos.`);
+copy(JSON.stringify(videos, null, 2));
+console.log(`Copied ${videos.length} non-Shorts homepage videos.`);
 ```
 
 Paste the copied JSON into:
