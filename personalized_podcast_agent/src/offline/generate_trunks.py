@@ -304,62 +304,42 @@ def audio_file_has_frames(audio_file: Path) -> bool:
         return False
 
 
-def set_english_tts_voice(engine: Any) -> None:
-    for voice in engine.getProperty("voices"):
-        languages = " ".join(
-            (
-                language.decode(errors="ignore")
-                if isinstance(language, bytes)
-                else str(language)
-            )
-            for language in (getattr(voice, "languages", []) or [])
-        )
-        description = " ".join(
-            [
-                str(getattr(voice, "id", "")),
-                str(getattr(voice, "name", "")),
-                languages,
-            ]
-        ).casefold()
+def get_piper_synthesizer():
+    """
+    using personacasts local piper TTS, so sae voice across vocalized stored qa from offline gen 
+    replacing pyttsx3!
+    """
 
-        if "en-us" in description or "english" in description:
-            engine.setProperty("voice", voice.id)
-            return
+    repo_root = PROJECT_ROOT.parent # going to repo root
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
 
-    raise RuntimeError(
-        "No English TTS voice is installed on this computer."
-    )
+    # imports
+    from personacast import config as personacast_config 
+    from personacast.pipeline.tts import synthesize
+
+    voice_path = Path(personacast_config.PIPER_VOICE_PATH)
+    if not voice_path.is_absolute():
+        personacast_config.PIPER_VOICE_PATH = str(repo_root / voice_path)
+
+    return synthesize
 
 
 def generate_candidate_audio(
     trunks: list[dict[str, Any]],
 ) -> None:
-    try:
-        import pyttsx3
-    except ImportError as exc:
-        raise RuntimeError(
-            "pyttsx3 is not installed. Install it with: pip install pyttsx3"
-        ) from exc
+    synthesize = get_piper_synthesizer()
 
     AUDIO_DIR.mkdir(parents=True, exist_ok=True)
-    audio_jobs: list[tuple[dict[str, Any], Path, Path]] = []
+    audio_jobs: list[tuple[dict[str, Any], Path, Path, str]] = []
 
-    engine = pyttsx3.init()
-    set_english_tts_voice(engine)
-    engine.setProperty("rate", 175)
-    engine.setProperty("volume", 1.0)
-
-    for trunk in trunks:
-        trunk_audio_file = AUDIO_DIR / f"{trunk['trunk_id']}.wav"
+    for trunk in trunks: # iterate through trunks
+        trunk_audio_file = AUDIO_DIR / f"{trunk['trunk_id']}.wav" # path for trunk
         trunk_temporary_file = AUDIO_DIR / (
             f"{trunk['trunk_id']}.{os.getpid()}.tmp.wav"
         )
-        engine.save_to_file(
-            str(trunk["script"]).strip(),
-            str(trunk_temporary_file),
-        )
         audio_jobs.append(
-            (trunk, trunk_temporary_file, trunk_audio_file)
+            (trunk, trunk_temporary_file, trunk_audio_file, trunk["script"])
         )
 
         for question_answer in trunk["question_answers"]:
@@ -367,18 +347,25 @@ def generate_candidate_audio(
             qa_temporary_file = AUDIO_DIR / (
                 f"{question_answer['qa_id']}.{os.getpid()}.tmp.wav"
             )
-            engine.save_to_file(
-                str(question_answer["answer"]).strip(),
-                str(qa_temporary_file),
-            )
             audio_jobs.append(
-                (question_answer, qa_temporary_file, qa_audio_file)
+                (
+                    question_answer,
+                    qa_temporary_file,
+                    qa_audio_file,
+                    question_answer["answer"],
+                )
             )
 
-    engine.runAndWait()
-    engine.stop()
+    for _, temporary_file, _, text in audio_jobs:
+        script = str(text or "").strip()
+        if not script:
+            continue
+        try:
+            synthesize(script, temporary_file)
+        except Exception as exc:
+            print(f"TTS failed for {temporary_file.name}: {exc}", flush=True)
 
-    for candidate, temporary_file, audio_file in audio_jobs:
+    for candidate, temporary_file, audio_file, _ in audio_jobs:
         if audio_file_has_frames(temporary_file):
             os.replace(temporary_file, audio_file)
             candidate["audio_file"] = str(
@@ -393,7 +380,7 @@ def generate_candidate_audio(
 
     ready_count = sum(
         candidate["audio_status"] == "ready"
-        for candidate, _, _ in audio_jobs
+        for candidate, _, _, _ in audio_jobs # extra element for answer text to pass through synthesise()
     )
     print(
         f"Generated {ready_count}/{len(audio_jobs)} audio files.",
