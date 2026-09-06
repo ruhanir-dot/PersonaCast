@@ -12,167 +12,72 @@ The project is designed to prepare content before playback:
 
 The generated candidate pool can later be used by an interactive player without requiring every response to be generated from scratch.
 
-Project structure
-
+## Project structure
+text
 personalized_podcast_agent/
 ├── src/
 │   ├── offline/
-│   │   ├── generate_main_narrative.py  # Split each selected transcript into 5 ordered parts
-│   │   ├── generate_trunks.py          # Rewrite parts into podcast trunks and generate Q&A
-│   │   ├── predict_user_actions.py     # Predict likely listener questions
-│   │   └── question_index.py           # Index candidate questions
-│   ├── user_profile/
-│   │   ├── import_youtube_homepage_manual.py  # Import homepage videos and transcripts
-│   │   ├── build_personal_feed.py             # Build the unified personal feed
-│   │   ├── build_feed_embeddings.py           # Create feed embeddings
-│   │   └── select_feed_seeds.py               # MMR-select daily video candidates
+│   │   ├── generate_trunks.py          # Generate topic/content trunks
+│   │   ├── generate_tree.py            # Generate offline question tree
+│   │   ├── generate_main_narrative.py  # Generate short narrative segments
+│   │   ├── predict_user_actions.py     # Predict likely listener actions/questions
+│   │   └── question_index.py           # Search and index candidate questions
+│   ├── online/                         # Optional online interaction components
+│   ├── 00_parse_instagram_export.py    # Parse Instagram export
+│   ├── 00_parse_youtube_history.py     # Parse YouTube history
+│   ├── 00_build_user_preference.py     # Build preference profile
 │   ├── api_app.py                      # API entry point
-│   └── utils.py                        # Shared utilities and local LLM calls
+│   └── utils.py                        # Shared utilities
 ├── data/
-│   ├── input/                          # Local input data; do not commit
-│   └── output/                         # Generated files; do not commit
+│   ├── input/                          # Local input data; do not commit private data
+│   └── output/                         # Generated profiles, embeddings, and candidates
 ├── web/                                # Front-end files
 ├── requirements.txt
 └── README.md
-
-Installation
-
-From the project folder:
-
+## Installation From the personalized_podcast_agent folder:
+bash
 python -m venv .venv
-
 Activate the environment:
-
+powershell
 # Windows PowerShell
 .venv\Scripts\Activate.ps1
-
+bash
 # macOS / Linux
 source .venv/bin/activate
-
 Install dependencies:
-
+bash
 pip install -r requirements.txt
-
-Environment variables
-
-Create a local .env file:
-
+## Environment variables Create a .env file locally.
+env
 YOUTUBE_API_KEY=your_key_here
 LOCAL_LLM_HOST=your_local_host
 LOCAL_LLM_MODEL=qwen2.5:1.5b
 PROMPT_CASCADE_MOCK=0
-
-The local LLM must be running before generating trunks. Translation settings
-may also be required when the collected YouTube metadata or transcripts are
-not already in English.
-
-Optional profile exports
-
-If Instagram or YouTube Takeout exports are available, place them under the
-local data/ directory and run:
-
+Depending on the retrieval configuration, additional API keys may be required. ## Offline workflow ### 1. Prepare a user profile Place optional source exports in the local data/ directory, then run the relevant parsing and profile-building scripts:
+bash
 python src/00_parse_instagram_export.py
 python src/00_parse_youtube_history.py
 python src/00_build_user_preference.py
-
-This creates the user profile used when predicting possible listener questions.
-
-Daily YouTube podcast workflow
-
-1. Copy 50 non-Shorts videos from the YouTube homepage
-
-Sign in to YouTube, open the homepage, scroll until at least 50 long-form
-videos are loaded, then open the browser Console with F12 and run:
-
-const videos = [...document.querySelectorAll('a#video-title-link[href^="/watch"]')]
-  .map((link) => {
-    const card = link.closest('ytd-rich-item-renderer, ytd-video-renderer');
-    const title = (link.textContent || link.getAttribute('aria-label') || '').trim();
-    const channel = (
-      card?.querySelector('#channel-name #text, ytd-channel-name a, #channel-name a')
-        ?.textContent || ''
-    ).trim();
-    const videoId = new URL(link.href).searchParams.get('v');
-
-    return {
-      title,
-      channel,
-      url: videoId ? `https://www.youtube.com/watch?v=${videoId}` : '',
-    };
-  })
-  .filter((video) => video.title && video.title !== '觀看' && video.url);
-
-const uniqueVideos = [
-  ...new Map(videos.map((video) => [video.url, video])).values(),
-].slice(0, 50);
-
-copy(JSON.stringify(uniqueVideos, null, 2));
-console.log(`Copied ${uniqueVideos.length} non-Shorts homepage videos.`);
-
-Paste the copied JSON into:
-
-data/output/youtube_homepage_manual.json
-
-The selector only collects /watch URLs, so it excludes YouTube Shorts.
-
-2. Import metadata and transcripts
-
-python -m src.user_profile.import_youtube_homepage_manual
-
-This collects public metadata and available transcripts, skips videos without
-usable transcripts, and filters out clearly unsuitable sources such as songs,
-music performances, fancams, and sports highlights. It writes:
-
-data/output/youtube_daily_items_raw.json
-data/output/youtube_daily_items.json
-
-3. Build the personal feed and embeddings
-
-python -m src.user_profile.build_personal_feed
-python -m src.user_profile.build_feed_embeddings
-
-personal_feed_items.json combines the user's available local sources with
-the filtered daily YouTube items. The embedding step creates multilingual,
-normalized embeddings for MMR selection.
-
-4. Select stories and split transcripts
-
-python -m src.offline.generate_main_narrative
-
-This step runs MMR over the daily YouTube videos, selects up to 10 different
-videos with saved transcripts, and splits every selected transcript into five
-ordered sections. The result is saved to:
-
-data/output/topic_feed_seeds.json
-data/output/main_narratives.json
-
-5. Generate podcast trunks and questions
-
-python -m src.offline.generate_trunks
-
-For every transcript section, Qwen produces one third-person English podcast
-script. The system then predicts three likely listener questions for each
-trunk, creates transcript-supported answers, generates audio, and stores
-embeddings for later retrieval.
-
-Generated files include:
-
-data/output/candidate_trunks.json
-data/output/candidate_trunk_embeddings.npy
-data/output/candidate_question_embeddings.npy
-data/output/candidate_embedding_ids.json
-data/output/audio/
-
-Privacy and repository policy
-
-Do not commit personal raw data, transcripts, generated profiles, embeddings,
-audio files, or credentials. Keep at least the following out of Git:
-
+This creates a preference profile used to personalize content selection. ### 2. Build personal-feed embeddings Create multilingual embeddings for the personal feed items:
+bash
+python src/offline/build_feed_embeddings.py
+The embeddings support cosine-similarity retrieval of content related to a selected topic. ### 3. Generate offline trunks and questions Generate topic-specific content trunks and personalized question candidates:
+bash
+python src/offline/generate_trunks.py
+Generated files are saved under data/output/, for example:
+text
+candidate_trunks.json
+candidate_trunk_embeddings.npy
+personal_feed_embeddings.npy
+personal_feed_embedding_ids.json
+### 4. Generate podcast segments The system generates short spoken-style segments based on the selected trunk and predicted listener question. Each segment focuses on one main idea and can be used as the next podcast segment. ## Privacy and repository policy Do not commit personal raw data or credentials, including:
+text
 .env
 data/instagram_export/
 data/youtube_history/
-data/output/
-.venv/
-__pycache__/
+data/output/user_profile.json
+data/output/personal_feed_items.json
 *.npy
-*.wav
+__pycache__/
+.venv/
+Generated embeddings and user-specific profiles should be recreated locally from each user's own data. 幫我改我的readme
