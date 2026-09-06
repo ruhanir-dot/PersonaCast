@@ -110,7 +110,21 @@ POOL_CACHE = os.getenv("PERSONACAST_POOL_CACHE", "1") in ("1", "true", "yes")
 POOL_CACHE_DIR = os.getenv("PERSONACAST_POOL_CACHE_DIR", "personas/pool")
 POOL_CACHE_TTL_HOURS = float(os.getenv("PERSONACAST_POOL_CACHE_TTL", "24"))
 
-### output/tts config 
+TRUNKS = os.getenv("PERSONACAST_TRUNKS", "1") in ("1", "true", "yes")
+TRUNK_POOL_DIR = os.getenv(
+    "PERSONACAST_TRUNK_POOL_DIR",
+    "personalized_podcast_agent/data/output",
+)
+TRUNK_POOL_ROOT = os.getenv("PERSONACAST_TRUNK_POOL_ROOT", "personas/pools")
+TRUNK_EMBED_MODEL = os.getenv(
+    "PERSONACAST_TRUNK_EMBED_MODEL",
+    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+)
+TRUNK_EMBED_DEVICE = os.getenv("PERSONACAST_TRUNK_EMBED_DEVICE", "")
+TRUNK_SUMMARY_CHARS = int(os.getenv("PERSONACAST_TRUNK_SUMMARY_CHARS", "4000"))
+TRUNK_QA_THRESHOLD = float(os.getenv("PERSONACAST_TRUNK_QA_THRESHOLD", "0.45"))
+
+### output/tts config
 RUNS_DIR = os.getenv("PERSONACAST_RUNS_DIR", "runs")
 
 ### TTS backend, local piper much faster than using gemini live api! 
@@ -119,8 +133,7 @@ PIPER_VOICE_PATH = os.getenv("PERSONACAST_PIPER_VOICE", "models/piper/en_US-less
 
 ### STT backend, using whisper, local as well
 STT_BACKEND = os.getenv("PERSONACAST_STT_BACKEND", 'whisper') # engine
-STT_MODEL_SIZE = os.getenv("PERSONACAST_STT_MODEL_SIZE", "tiny.en") # whisper setting, picks what model file whisper is loading 
-## can bump to base.en, if tinyen is to inaccurate in STT
+STT_MODEL_SIZE = os.getenv("PERSONACAST_STT_MODEL_SIZE", "base.en") # whisper setting, picks what model file whisper is loading
 
 STT_INPUT_SAMPLE_RATE = 16000
 
@@ -131,6 +144,9 @@ VAD_ONSET_MS = int(os.getenv('PERSONACAST_VAD_ONSET_MS', '150')) #how much suste
 VAD_SILENCE_MS = int(os.getenv('PERSONACAST_VAD_SILENCE_MS', '2500')) # how many seconds of silence to wait before deciding user is done talking
 VAD_PREROLL_MS = int(os.getenv('PERSONACAST_VAD_PREROLL_MS', '300')) # snallk rolling biffer of last 300ms of raw audio to make sure to save entire speech segment
 VAD_AGGRESSIVENESS = float(os.getenv("PERSONACAST_VAD_AGGRESSIVENESS", "0.65")) # silero speech probability a chunk must clear to count as voiced
+
+AUTO_ADVANCE = os.getenv("PERSONACAST_AUTO_ADVANCE", "1") in ("1", "true", "yes")
+AUTO_ADVANCE_SILENCE_SECONDS = float(os.getenv("PERSONACAST_AUTO_ADVANCE_SILENCE", "2.0"))
 
 MIC_MIN_UTTERANCE_MS = int(os.getenv("PERSONACAST_MIC_MIN_UTTERANCE_MS", "250")) # measured on voiced audio only, so short affirmations like yeah/mhm still register
 MIC_MAX_UTTERANCE_MS = int(os.getenv("PERSONACAST_MIC_MAX_UTTERANCE_MS", "30000")) # this is a max cap to make sure we dont register speaker playback 
