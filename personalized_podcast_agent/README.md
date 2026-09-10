@@ -215,4 +215,4 @@ __pycache__/
 ```
 __pycache__/
 .venv/
-Generated embeddings and user-specific profiles should be recreated locally from each user's own data. 幫我改我的readme
+Generated embeddings and user-specific profiles should be recreated locally from each user's own data.
