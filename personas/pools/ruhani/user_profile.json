@@ -1,0 +1,58 @@
+{
+  "interests": [
+    "K-pop culture and idol groups",
+    "Guitar performance and music theory",
+    "Productivity and study techniques",
+    "Korean cuisine and culinary arts",
+    "Computer science and data analysis",
+    "Anime and pop culture",
+    "Travel and urban exploration",
+    "Fashion and upcycled clothing"
+  ],
+  "preferred_topics": [
+    "K-pop industry trends and artist spotlights",
+    "Advanced guitar techniques and gear reviews",
+    "Pomodoro study methods and focus music",
+    "Korean food recipes and restaurant culture",
+    "Mathematics and linear algebra for programming",
+    "DevOps and software engineering tutorials",
+    "Independent music production and live performances"
+  ],
+  "style_preferences": [
+    "Informative and educational",
+    "Relaxed and chill atmosphere",
+    "Energetic and fast-paced",
+    "Community-focused and relatable"
+  ],
+  "podcast_focus_keywords": [
+    "K-pop industry trends",
+    "Advanced guitar techniques",
+    "Productivity study methods",
+    "Korean culinary culture",
+    "Linear algebra applications",
+    "Software engineering tutorials",
+    "Independent music scene",
+    "Urban travel experiences",
+    "Sustainable fashion trends",
+    "Anime industry news"
+  ],
+  "recommended_news_queries": [
+    "latest K-pop comeback news",
+    "guitar gear and technique trends",
+    "productivity and study hacks",
+    "Korean food and restaurant trends",
+    "data science and programming news",
+    "independent music festival updates",
+    "sustainable fashion and upcycling"
+  ],
+  "topics_to_avoid": [
+    "Political debates",
+    "Financial investment advice",
+    "Health and medical diagnosis",
+    "Private personal gossip"
+  ],
+  "privacy_notes": [
+    "Excluded all personally identifiable information such as email, phone, and location.",
+    "Focused on broad content preferences and interests rather than specific user activity logs."
+  ]
+}

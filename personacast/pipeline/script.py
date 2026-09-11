@@ -192,6 +192,18 @@ _REACTION_INSTR = {
     ),
 }
 
+_ANSWER_ALREADY_SPOKEN = (
+    "The listener asked: \"{text}\". That question has ALREADY BEEN FULLY ANSWERED OUT LOUD, "
+    "in your own voice, immediately before this turn. They heard all of it. Here is what they "
+    "just heard so you do not repeat it:\n{answer}\n\n"
+    "Do NOT answer the question again. Do NOT summarise, restate or paraphrase any of the above, "
+    "and do NOT open with 'good question', 'as I said', 'to build on that', or any other callback "
+    "-- the answer is finished and they know it. Move the episode forward onto the NEW material in "
+    "the sources below, picking up as if you had simply carried on talking. If the new material "
+    "genuinely connects to what they asked, you may nod to it in a single clause, but the substance "
+    "of this turn must be something they have not heard."
+)
+
 _CONTINUATION_INSTR = {
     None: (
         "You are MID-TURN and already speaking. Continue straight on from what you just said."
@@ -253,13 +265,16 @@ def generate_turn(topic: str,
                   focus_source: CuratedItem | None = None,
                   mode: str | None = None,
                   target_words: int | None = None,
-                  opener_text: str = "", ):
+                  opener_text: str = "",
+                  draft: str = "",
+                  draft_focus: str = "", ):
 
 
     system, user, budget = _build_turn_prompt(
         topic, sources, persona, memory, recent_gists, llm,
         last_reaction=last_reaction, focus_source=focus_source, mode=mode,
         target_words=target_words, opener_text=opener_text,
+        draft=draft, draft_focus=draft_focus,
     )
     text = llm.complete(system, user, temperature=0.4)
     return _trim_to_budget(text, budget)
@@ -276,7 +291,9 @@ def _build_turn_prompt(topic: str,
                        focus_source: CuratedItem | None = None,
                        mode: str | None = None,
                        target_words: int | None = None,
-                       opener_text: str = ""):
+                       opener_text: str = "",
+                       draft: str = "",
+                       draft_focus: str = ""):
     budget = target_words or config.WORDS_PER_TURN
     mode = mode or config.TURN_MODE
 
@@ -285,9 +302,13 @@ def _build_turn_prompt(topic: str,
     if last_reaction is None:
         reaction_instr = instr[None]
     elif last_reaction.type == ReactionType.question:
-        reaction_instr = instr[ReactionType.question].format(
-            text = last_reaction.text,
-            answer = last_reaction.answer or "no answer found")
+        if getattr(last_reaction, "answer_source", "") == "trunk_qa" and last_reaction.answer:
+            reaction_instr = _ANSWER_ALREADY_SPOKEN.format(
+                text = last_reaction.text, answer = last_reaction.answer)
+        else:
+            reaction_instr = instr[ReactionType.question].format(
+                text = last_reaction.text,
+                answer = last_reaction.answer or "no answer found")
     else:
         reaction_instr = instr[last_reaction.type].format(text = last_reaction.text)
 
@@ -337,6 +358,22 @@ def _build_turn_prompt(topic: str,
           f"[{focus_source.source}] {focus_source.title} ({focus_source.url})\n{focus_source.summary}"
         )
 
+    draft_block = ""
+    if draft.strip():
+        draft_block = (
+            "\n\nTHIS SEGMENT'S ASSIGNMENT — cover THIS, not the other sources listed above:\n"
+        )
+        if draft_focus.strip():
+            draft_block += f"In one line: {draft_focus.strip()}\n"
+        draft_block += (
+            f"Rough draft of the point:\n\"{draft.strip()}\"\n"
+            "The draft is a planning note, not copy. Do not quote it, do not follow its wording "
+            "or its length — rewrite the substance in your own voice for this listener. Where the "
+            "draft is thin or awkward, go to the sources for the concrete detail; where it "
+            "conflicts with a source, the source is right. Other sources are background only: "
+            "mention them solely if they sharpen this point."
+        )
+
     user = (
         f"Topic: {topic}\n"
         f"Listener expertise: {_expertise_for(topic, persona)}\n"
@@ -346,6 +383,7 @@ def _build_turn_prompt(topic: str,
         f"Recent turn gists:\n{gists_block}\n\n"
         f"Sources to draw on:\n{sources_block}"
         f"{focus_block}"
+        f"{draft_block}"
     )
 
     return system, user, budget

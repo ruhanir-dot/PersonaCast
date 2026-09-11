@@ -108,6 +108,16 @@ class TrunkPool(BaseModel):
         return [topic.topic for topic in self.topics]
 
     def by_topic(self) -> dict[str, TrunkTopic]:
+        """
+        look up dictionary for TrunkPool 
+        Produces like so...
+        {
+        "K-pop": TrunkTopic(topic="K-pop", trunks=[...], selected_seeds=[...]),
+        "Advanced guitar techniques": TrunkTopic(...),
+        ...
+        }
+
+        """
         return {topic.topic: topic for topic in self.topics}
 
     def all_trunks(self) -> list[Trunk]:
