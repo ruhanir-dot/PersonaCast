@@ -1,24 +1,16 @@
 from __future__ import annotations
 
-import argparse
-import csv
 import hashlib
-import html
 import json
-import re
-from collections import Counter
-from datetime import datetime, timedelta, timezone
-from html.parser import HTMLParser
-from pathlib import Path
-from typing import Any, TextIO
+from datetime import UTC, datetime
+from typing import Any
+
+from src.utils import PROJECT_ROOT
 
 
-try:
-    from src.utils import PROJECT_ROOT
-except ImportError:
-    # This fallback works when the file is placed in src/user_profile/.
-    PROJECT_ROOT = Path(__file__).resolve().parents[2]
-
+DATA_DIR = PROJECT_ROOT / "data" / "output"
+DAILY_YOUTUBE_FILE = DATA_DIR / "youtube_daily_items.json"
+OUTPUT_FILE = DATA_DIR / "personal_feed_items.json"
 
 # The Instagram and YouTube exports are already extracted under data/.
 # No ZIP file is required.
@@ -66,69 +58,10 @@ DELETED_TITLES = {
 
 
 def clean_text(value: Any) -> str:
-    if value is None:
-        return ""
-    return SPACE_RE.sub(" ", html.unescape(str(value))).strip()
+    return " ".join(str(value or "").split())
 
 
-def repair_mojibake(value: str) -> str:
-    """Repair UTF-8 byte sequences that Instagram stored as Latin-1 text."""
-    # Do not normalize whitespace before repairing. Some mojibake continuation
-    # bytes (for example U+00A0) are classified as whitespace by Python.
-    value = html.unescape(str(value or ""))
-    suspicious = ("Ã", "Â", "â", "å", "æ", "ç", "ä", "é")
-    if not any(mark in value for mark in suspicious):
-        return clean_text(value)
-
-    repaired_parts: list[str] = []
-    index = 0
-
-    while index < len(value):
-        byte = ord(value[index])
-        if byte > 255 or byte < 128:
-            repaired_parts.append(value[index])
-            index += 1
-            continue
-
-        if 0xC2 <= byte <= 0xDF:
-            sequence_length = 2
-        elif 0xE0 <= byte <= 0xEF:
-            sequence_length = 3
-        elif 0xF0 <= byte <= 0xF4:
-            sequence_length = 4
-        else:
-            repaired_parts.append(value[index])
-            index += 1
-            continue
-
-        candidate = value[index: index + sequence_length]
-        candidate_bytes = [ord(character) for character in candidate]
-        valid_continuations = (
-            len(candidate_bytes) == sequence_length
-            and all(number <= 255 for number in candidate_bytes)
-            and all(0x80 <= number <= 0xBF for number in candidate_bytes[1:])
-        )
-
-        if not valid_continuations:
-            repaired_parts.append(value[index])
-            index += 1
-            continue
-
-        try:
-            repaired_parts.append(bytes(candidate_bytes).decode("utf-8"))
-            index += sequence_length
-        except UnicodeDecodeError:
-            repaired_parts.append(value[index])
-            index += 1
-
-    repaired = "".join(repaired_parts)
-
-    # Only byte sequences that form valid UTF-8 are converted, so mixed text
-    # containing English, Korean, emoji, and mojibake can be repaired safely.
-    return clean_text(repaired)
-
-
-def make_feed_id(source_type: str, stable_key: str) -> str:
+def make_feed_id(video_id: str, url: str) -> str:
     digest = hashlib.sha256(
         f"{source_type}|{stable_key}".encode("utf-8")
     ).hexdigest()[:16]
@@ -327,146 +260,51 @@ def find_nested_label(value: Any, label_name: str) -> str:
     return ""
 
 
-def parse_instagram_likes(bundle: InputBundle, store: FeedStore) -> None:
-    with bundle.open_text(INSTAGRAM_LIKES) as file:
-        records = json.load(file)
+def build_feed_items() -> dict[str, Any]:
+    with DAILY_YOUTUBE_FILE.open("r", encoding="utf-8") as file:
+        daily_data = json.load(file)
 
-    if not isinstance(records, list):
+    source_items = daily_data.get("feed_items", [])
+    if not isinstance(source_items, list):
         raise ValueError(
-            "Instagram liked_posts.json must contain a JSON array.")
+            "youtube_daily_items.json must contain a feed_items array.")
 
-    for record in records:
-        label_values = record.get("label_values") or []
-        caption = repair_mojibake(find_nested_label(label_values, "Caption"))
-        title = repair_mojibake(find_nested_label(label_values, "Title"))
-        url = find_nested_label(label_values, "URL")
-        username = find_nested_label(label_values, "Username")
-        owner_name = repair_mojibake(find_nested_label(label_values, "Name"))
-        creator = username or owner_name
-        text = caption or title
+    feed_items: list[dict[str, Any]] = []
+    for fallback_rank, source_item in enumerate(source_items, start=1):
+        if not isinstance(source_item, dict):
+            continue
 
-        store.add(
-            source_type="instagram_like",
-            stable_key=url or str(record.get("fbid") or ""),
-            text=text,
-            creator=creator,
-            url=url,
-            occurred_at=unix_timestamp_to_iso(record.get("timestamp")),
-        )
+        video_id = clean_text(source_item.get("video_id"))
+        url = clean_text(source_item.get("url"))
+        title = clean_text(source_item.get("title"))
+        description = clean_text(source_item.get("description"))
+        channel = clean_text(source_item.get("channel")
+                             or source_item.get("creator"))
+        if not title or not (video_id or url):
+            continue
 
+        try:
+            homepage_rank = int(source_item.get(
+                "homepage_rank", fallback_rank))
+        except (TypeError, ValueError):
+            homepage_rank = fallback_rank
 
-class YouTubeTakeoutParser(HTMLParser):
-    """Stream Google Takeout HTML and emit one item per outer activity cell."""
-
-    def __init__(self, mode: str, store: FeedStore) -> None:
-        super().__init__(convert_charrefs=True)
-        if mode not in {"watch", "search"}:
-            raise ValueError(f"Unsupported YouTube parser mode: {mode}")
-        self.mode = mode
-        self.store = store
-        self.capture_depth = 0
-        self.text_parts: list[str] = []
-        self.links: list[dict[str, str]] = []
-        self.current_link: dict[str, Any] | None = None
-
-    def handle_starttag(
-        self,
-        tag: str,
-        attrs: list[tuple[str, str | None]],
-    ) -> None:
-        attrs_dict = dict(attrs)
-
-        if tag == "div":
-            classes = set((attrs_dict.get("class") or "").split())
-            if self.capture_depth == 0 and "outer-cell" in classes:
-                self.capture_depth = 1
-                self.text_parts = []
-                self.links = []
-                self.current_link = None
-                return
-            if self.capture_depth > 0:
-                self.capture_depth += 1
-
-        if self.capture_depth > 0 and tag == "a":
-            self.current_link = {
-                "href": attrs_dict.get("href") or "",
-                "text_parts": [],
+        text = title if not description else f"{title}\n\n{description}"
+        feed_items.append(
+            {
+                "feed_id": make_feed_id(video_id, url),
+                "source_type": "youtube_daily_video",
+                "title": title,
+                "description": description,
+                "channel": channel or None,
+                "creator": channel or None,
+                "text": text,
+                "url": url or None,
+                "occurred_at": source_item.get("occurred_at"),
+                "occurred_at_raw": source_item.get("occurred_at_raw"),
+                "homepage_rank": homepage_rank,
+                "interaction_count": 1,
             }
-
-    def handle_data(self, data: str) -> None:
-        if self.capture_depth == 0:
-            return
-        self.text_parts.append(data)
-        if self.current_link is not None:
-            self.current_link["text_parts"].append(data)
-
-    def handle_endtag(self, tag: str) -> None:
-        if self.capture_depth == 0:
-            return
-
-        if tag == "a" and self.current_link is not None:
-            self.links.append(
-                {
-                    "href": clean_text(self.current_link["href"]),
-                    "text": clean_text(" ".join(self.current_link["text_parts"])),
-                }
-            )
-            self.current_link = None
-
-        if tag == "div":
-            self.capture_depth -= 1
-            if self.capture_depth == 0:
-                self._finish_activity()
-
-    def _finish_activity(self) -> None:
-        block_text = clean_text(" ".join(self.text_parts))
-
-        if self.mode == "watch":
-            if "From Google Ads" in block_text:
-                self.store.skipped["youtube_google_ad"] += 1
-                return
-
-            video_link = next(
-                (
-                    link
-                    for link in self.links
-                    if "youtube.com/watch" in link["href"]
-                    or "youtu.be/" in link["href"]
-                ),
-                None,
-            )
-            if not video_link:
-                self.store.skipped["youtube_watch_without_video"] += 1
-                return
-
-            channel_link = next(
-                (
-                    link
-                    for link in self.links
-                    if "youtube.com/channel/" in link["href"]
-                    or "youtube.com/@" in link["href"]
-                ),
-                None,
-            )
-            occurred_at = parse_youtube_datetime(block_text)
-            self.store.add(
-                source_type="youtube_watch",
-                stable_key=video_link["href"],
-                text=video_link["text"],
-                creator=channel_link["text"] if channel_link else "",
-                url=video_link["href"],
-                occurred_at=occurred_at,
-                occurred_at_raw=self._raw_date(block_text),
-            )
-            return
-
-        search_link = next(
-            (
-                link
-                for link in self.links
-                if "youtube.com/results?search_query=" in link["href"]
-            ),
-            None,
         )
         if not search_link:
             self.store.skipped["youtube_search_without_query"] += 1
@@ -543,80 +381,25 @@ def build_feed_items(input_path: Path) -> dict[str, Any]:
     items = store.items()
     source_counts = Counter(item["source_type"] for item in items)
 
+    feed_items.sort(key=lambda item: int(item["homepage_rank"]))
     return {
         "metadata": {
             "schema_version": 1,
-            "generated_at": datetime.now(timezone.utc).isoformat(),
-            "input_name": input_path.name,
-            "total_feed_items": len(items),
-            "source_counts": dict(sorted(source_counts.items())),
-            "skipped_or_merged": dict(sorted(store.skipped.items())),
-            "privacy": {
-                "included": [
-                    "Instagram liked-post captions, owners, URLs, and timestamps",
-                    "YouTube watch titles, channels, URLs, and timestamps",
-                    "YouTube search queries and timestamps",
-                    "YouTube subscriptions",
-                ],
-                "excluded": [
-                    "Google Ads watch events",
-                    "emails",
-                    "exact locations",
-                    "device information",
-                    "profile information",
-                    "private comments and messages",
-                ],
-            },
+            "generated_at": datetime.now(UTC).isoformat(),
+            "total_feed_items": len(feed_items),
+            "source_counts": {"youtube_daily_video": len(feed_items)},
         },
-        "feed_items": items,
+        "feed_items": feed_items,
     }
 
 
-def save_json(result: dict[str, Any], output_path: Path) -> None:
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    temporary_path = output_path.with_suffix(output_path.suffix + ".tmp")
-    with temporary_path.open("w", encoding="utf-8") as file:
-        json.dump(result, file, ensure_ascii=False, indent=2)
-    temporary_path.replace(output_path)
-
-
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description=(
-            "Convert raw Instagram and YouTube exports into unified feed items."
-        )
-    )
-    parser.add_argument(
-        "--input",
-        type=Path,
-        default=DEFAULT_INPUT,
-        help=(
-            "Path to the extracted Instagram/YouTube data directory "
-            f"(default: {DEFAULT_INPUT})"
-        ),
-    )
-    parser.add_argument(
-        "--output",
-        type=Path,
-        default=DEFAULT_OUTPUT,
-        help=f"Output JSON path (default: {DEFAULT_OUTPUT})",
-    )
-    return parser.parse_args()
-
-
 def main() -> None:
-    args = parse_args()
-    result = build_feed_items(args.input)
-    save_json(result, args.output)
-
-    metadata = result["metadata"]
+    result = build_feed_items()
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with OUTPUT_FILE.open("w", encoding="utf-8") as file:
+        json.dump(result, file, ensure_ascii=False, indent=2)
     print(
-        "Completed: "
-        f"{metadata['total_feed_items']} unified feed items.\n"
-        f"Source counts: {metadata['source_counts']}\n"
-        f"Saved to: {args.output.resolve()}",
-        flush=True,
-    )
+        f"Saved {len(result['feed_items'])} YouTube homepage videos to {OUTPUT_FILE}")
 
 
 if __name__ == "__main__":

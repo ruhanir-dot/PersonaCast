@@ -1,7 +1,5 @@
 import json
 import os
-import re
-import sys
 import time
 import wave
 from pathlib import Path
@@ -10,12 +8,8 @@ from typing import Any
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-from src.offline.generate_main_narrative import retrieve_recommended_contents
+from src.offline.generate_main_narrative import MAIN_NARRATIVES_FILE
 from src.offline.predict_user_actions import predict_user_questions
-from src.user_profile.select_feed_seeds import (
-    save_feed_seeds,
-    select_feed_seeds,
-)
 from src.utils import PROJECT_ROOT, llm_json
 
 
@@ -27,12 +21,8 @@ QUESTION_EMBEDDINGS_FILE = DATA_DIR / "candidate_question_embeddings.npy"
 EMBEDDING_IDS_FILE = DATA_DIR / "candidate_embedding_ids.json"
 AUDIO_DIR = DATA_DIR / "audio"
 
-TOPIC_COUNT = 10
 TRUNKS_PER_TOPIC = 5
 QUESTIONS_PER_TRUNK = 3
-SCRIPT_MIN_WORDS = 20
-SCRIPT_MAX_WORDS = 40
-SCRIPT_MAX_ATTEMPTS = 3
 EMBEDDING_MODEL = (
     "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 )
@@ -63,186 +53,77 @@ def save_candidate_pool(candidate_pool: dict[str, Any]) -> None:
             time.sleep(0.1)
 
 
-def predict_topics(user_profile: dict[str, Any]) -> list[str]:
-    topics = [
-        str(topic).strip()
-        for topic in user_profile.get("podcast_focus_keywords", [])
-        if str(topic).strip()
-    ]
+def load_main_narratives() -> dict[str, Any]:
+    if not MAIN_NARRATIVES_FILE.exists():
+        raise FileNotFoundError(
+            "Main narratives are missing. Run "
+            "python -m src.offline.generate_main_narrative first."
+        )
+    with MAIN_NARRATIVES_FILE.open("r", encoding="utf-8") as file:
+        return json.load(file)
 
-    if len(topics) < TOPIC_COUNT:
+
+def generate_story_chunks(
+    *,
+    story_title: str,
+    steps: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    if len(steps) != TRUNKS_PER_TOPIC:
         raise ValueError(
-            f"Expected at least {TOPIC_COUNT} podcast focus keywords, "
-            f"but received {len(topics)}."
+            f"Expected {TRUNKS_PER_TOPIC} researched steps, received {len(steps)}."
         )
 
-    return topics[:TOPIC_COUNT]
+    chunks: list[dict[str, Any]] = []
 
-
-def clean_search_text(value: Any) -> str:
-    text = str(value or "")
-    text = re.sub(r"https?://\S+", " ", text)
-    text = re.sub(r"[@#]+", "", text)
-    text = re.sub(r"[|/\\]+", " ", text)
-    text = re.sub(r"[^\w\s'’-]", " ", text, flags=re.UNICODE)
-    return " ".join(text.split())
-
-
-def build_search_queries(topic: str, seed: dict[str, Any]) -> list[str]:
-    seed_text = clean_search_text(seed.get("text"))
-    creator = clean_search_text(seed.get("creator"))
-    clean_topic = clean_search_text(topic)
-
-    queries = [
-        f"{clean_topic} {seed_text} latest news",
-        f"{clean_topic} {creator} latest news",
-    ]
-
-    unique_queries = []
-    seen_queries: set[str] = set()
-
-    for query in queries:
-        query = " ".join(query.split())
-        normalized_query = query.casefold()
-
-        if query and normalized_query not in seen_queries:
-            unique_queries.append(query)
-            seen_queries.add(normalized_query)
-
-    return unique_queries
-
-
-def source_key(source_item: dict[str, Any]) -> str:
-    for field in ("url", "link", "source_url", "title"):
-        value = str(source_item.get(field) or "").strip().casefold()
-        if value:
-            return value
-    return json.dumps(source_item, ensure_ascii=False, sort_keys=True)
-
-
-def retrieve_source_for_seed(
-    topic: str,
-    seed: dict[str, Any],
-    used_source_keys: set[str],
-) -> tuple[str, dict[str, Any]] | None:
-    attempted_queries = []
-
-    for search_query in build_search_queries(topic, seed):
-        attempted_queries.append(search_query)
-        source_items = retrieve_recommended_contents(query=search_query)
-
-        for source_item in source_items:
-            key = source_key(source_item)
-            if key in used_source_keys:
-                continue
-            if not source_item.get("article_text"):
-                continue
-
-            used_source_keys.add(key)
-            return search_query, source_item
-
-    print(
-        "Skipped seed because no article was found. "
-        f"Attempted queries: {attempted_queries}",
-        flush=True,
-    )
-    return None
-
-
-def validate_script(script: str) -> bool:
-    word_count = len(script.split())
-    return (
-        SCRIPT_MIN_WORDS <= word_count <= SCRIPT_MAX_WORDS
-        and script.endswith((".", "!", "?"))
-    )
-
-
-def generate_short_script(
-    topic: str,
-    personalized_seed: dict[str, Any],
-    source_item: dict[str, Any],
-) -> dict[str, Any]:
-    previous_feedback = ""
-
-    for _ in range(SCRIPT_MAX_ATTEMPTS):
+    for step in steps:
+        focus = str(step["focus"]).strip()
+        source_segment = str(step["source_segment"]).strip()
         result = llm_json(
             prompt=(
-                f"Podcast topic:\n{topic}\n\n"
-                "Personalized feed seed:\n"
-                f"{json.dumps(personalized_seed, ensure_ascii=False)}\n\n"
-                "Article title:\n"
-                f"{source_item.get('title', '')}\n\n"
-                "Article content:\n"
-                f"{source_item['article_text']}\n\n"
-                "Write exactly 25 English words as one standalone podcast "
-                "script using one or two complete sentences. Base every fact "
-                "only on the article. Do not include greetings, conclusions, "
-                "headings, hashtags, or source descriptions."
-                f"{previous_feedback}"
+                "Rewrite this source section as one clear spoken English podcast "
+                "segment. Keep the supplied facts and sequence. Remove source noise, "
+                "advertisements, and repeated filler. Do not add information. Tell the events in third person; "
+                "do not use I, we, or you. Write about 100 words in three to five "
+                "natural sentences.\n\n"
+                f"Story title:\n{story_title}\n\n"
+                f"Source section {step['chunk_order']} of {TRUNKS_PER_TOPIC}:\n"
+                f"{source_segment}"
             ),
-            system=(
-                "Return one concise source-grounded podcast script as valid "
-                "JSON only."
-            ),
-            temperature=0.0,
-            max_output_tokens=500,
+            system="Return valid JSON only.",
+            temperature=0.1,
+            max_output_tokens=300,
             json_schema={
                 "type": "object",
                 "properties": {
-                    "title": {
-                        "type": "string",
-                        "maxLength": 180,
-                    },
-                    "focus": {
-                        "type": "string",
-                        "maxLength": 300,
-                    },
-                    "script": {
-                        "type": "string",
-                        "minLength": 40,
-                        "maxLength": 350,
-                    },
+                    "script": {"type": "string", "maxLength": 1200},
                 },
-                "required": ["title", "focus", "script"],
+                "required": ["script"],
                 "additionalProperties": False,
             },
         )
-
-        script = str(result["script"]).strip()
-        return {
-            "title": str(result["title"]).strip(),
-            "focus": str(result["focus"]).strip(),
-            "script": script,
-        }
-        '''if validate_script(script):
-            return {
-                "title": str(result["title"]).strip(),
-                "focus": str(result["focus"]).strip(),
+        script = " ".join(str(result["script"]).split())
+        chunks.append(
+            {
+                "title": story_title,
+                "focus": focus,
                 "script": script,
+                "chunk_order": int(step["chunk_order"]),
+                "chunk_role": focus,
+                "search_query": step["search_query"],
+                "source_item": step["source_item"],
             }
-
-        previous_feedback = (
-            f"\nThe previous script had {len(script.split())} words. "
-            "Rewrite it using exactly 25 words and end with complete "
-            "punctuation."
         )
 
-    raise ValueError(
-        f"Could not generate a valid 20-to-30-word script for topic: {topic}"
-    )'''
+    return chunks
 
 
 def generate_question_answers(
-    topic: str,
-    personalized_seed: dict[str, Any],
     source_item: dict[str, Any],
     final_script: str,
     user_profile: dict[str, Any],
 ) -> list[dict[str, Any]]:
     predicted_questions = predict_user_questions(
-        topic=topic,
         trunk_script=final_script,
-        selected_feed_seed=personalized_seed,
         user_profile=user_profile,
     )
 
@@ -305,18 +186,81 @@ def generate_question_answers(
     )
 
     answers_by_id: dict[str, str] = {}
-    for item in result["answers"]:
-        candidate_id = str(item["candidate_id"])
-        if candidate_id in answers_by_id:
-            raise ValueError(
-                f"Duplicate answer returned for {candidate_id}."
-            )
-        answers_by_id[candidate_id] = str(item["answer"]).strip()
 
-    if set(answers_by_id) != set(candidate_ids):
-        raise ValueError(
-            "The answer generator did not answer every predicted question."
-        )
+    for item in result["answers"]:
+        candidate_id = str(item.get("candidate_id", "")).strip()
+        answer = str(item.get("answer", "")).strip()
+
+        # Ignore malformed IDs, duplicate IDs, or empty answers.
+        if (
+            candidate_id not in candidate_ids
+            or candidate_id in answers_by_id
+            or not answer
+        ):
+            continue
+
+        answers_by_id[candidate_id] = answer
+
+    missing_questions = [
+        item
+        for item in questions_with_ids
+        if item["candidate_id"] not in answers_by_id
+    ]
+
+    # A small local model may occasionally duplicate an ID.
+    # Retry only the missing answers, so one bad response does not stop the daily job.
+    if missing_questions:
+        try:
+            retry_result = llm_json(
+                prompt=(
+                    "Article title:\n"
+                    f"{source_item.get('title', '')}\n\n"
+                    "Article content:\n"
+                    f"{source_item['article_text']}\n\n"
+                    "Answer these questions in exactly the same order:\n"
+                    f"{json.dumps([item['question'] for item in missing_questions], ensure_ascii=False, indent=2)}"
+                ),
+                system=(
+                    "Answer each question using the supplied article. "
+                    "Return valid JSON only."
+                ),
+                temperature=0.1,
+                max_output_tokens=700,
+                json_schema={
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "type": "array",
+                            "minItems": len(missing_questions),
+                            "maxItems": len(missing_questions),
+                            "items": {
+                                "type": "string",
+                                "maxLength": 700,
+                            },
+                        }
+                    },
+                    "required": ["answers"],
+                    "additionalProperties": False,
+                },
+            )
+
+            for question_item, answer in zip(
+                missing_questions,
+                retry_result.get("answers", []),
+            ):
+                cleaned_answer = str(answer).strip()
+                if cleaned_answer:
+                    answers_by_id[question_item["candidate_id"]
+                                  ] = cleaned_answer
+
+        except (KeyError, RuntimeError, TypeError, ValueError) as exc:
+            print(f"Warning: Q&A retry failed: {exc}")
+
+    # Last-resort fallback: preserve a usable daily candidate pool.
+    for question_item in questions_with_ids:
+        candidate_id = question_item["candidate_id"]
+        if candidate_id not in answers_by_id:
+            answers_by_id[candidate_id] = final_script
 
     return [
         {
@@ -325,27 +269,6 @@ def generate_question_answers(
         }
         for item in questions_with_ids
     ]
-
-
-def generate_trunk(
-    topic: str,
-    personalized_seed: dict[str, Any],
-    source_item: dict[str, Any],
-    user_profile: dict[str, Any],
-) -> dict[str, Any]:
-    trunk = generate_short_script(
-        topic=topic,
-        personalized_seed=personalized_seed,
-        source_item=source_item,
-    )
-    trunk["question_answers"] = generate_question_answers(
-        topic=topic,
-        personalized_seed=personalized_seed,
-        source_item=source_item,
-        final_script=trunk["script"],
-        user_profile=user_profile,
-    )
-    return trunk
 
 
 def add_candidate_ids(
@@ -545,98 +468,74 @@ def generate_candidate_embeddings(
 
 def main() -> None:
     user_profile = load_user_profile()
-    topics = predict_topics(user_profile)
-
-    feed_seed_pool = select_feed_seeds(topics)
-    save_feed_seeds(feed_seed_pool)
+    main_narrative_pool = load_main_narratives()
 
     candidate_pool: dict[str, Any] = {
         "configuration": {
-            "topic_count": TOPIC_COUNT,
-            "trunks_per_topic": TRUNKS_PER_TOPIC,
+            "story_count": len(main_narrative_pool["stories"]),
+            "chunks_per_story": TRUNKS_PER_TOPIC,
             "questions_per_trunk": QUESTIONS_PER_TRUNK,
+            "generation_mode": "daily_youtube_source_story",
         },
         "topics": [],
     }
     save_candidate_pool(candidate_pool)
 
-    used_source_keys: set[str] = set()
-
-    for topic_number, topic_data in enumerate(
-        feed_seed_pool["topics"],
+    for story_number, narrative in enumerate(
+        main_narrative_pool["stories"],
         start=1,
     ):
-        topic = topic_data["topic"]
-        selected_seeds = topic_data["selected_seeds"]
-        trunks = []
-
         print(
-            f"[{topic_number}/{TOPIC_COUNT}] Generating topic: {topic}",
+            f"[{story_number}/{len(main_narrative_pool['stories'])}] "
+            "Generating trunks.",
             flush=True,
         )
 
-        for seed in selected_seeds:
-            if len(trunks) >= TRUNKS_PER_TOPIC:
-                break
-
-            retrieved = retrieve_source_for_seed(
-                topic=topic,
-                seed=seed,
-                used_source_keys=used_source_keys,
+        try:
+            trunks = generate_story_chunks(
+                story_title=narrative["story_title"],
+                steps=narrative["steps"],
             )
-
-            if retrieved is None:
-                continue
-
-            search_query, source_item = retrieved
-
-            trunk = generate_trunk(
-                topic=topic,
-                personalized_seed=seed,
-                source_item=source_item,
-                user_profile=user_profile,
-            )
-            trunk["personalized_seed"] = seed
-            trunk["search_query"] = search_query
-            trunk["source_item"] = source_item
-            trunks.append(trunk)
-
-            print(
-                f"  [{len(trunks)}/{TRUNKS_PER_TOPIC}] Finished trunk",
-                flush=True,
-            )
-
-        ### error handling to make sure to not abort pool if a topic is short and keep going
-        if len(trunks) < TRUNKS_PER_TOPIC:
-            print(
-                f"  ! Only {len(trunks)}/{TRUNKS_PER_TOPIC} trunks for '{topic}' (ran out of usable seeds). Keeping what was built.",
-                flush=True,
-            )
-
-        if not trunks:
-            print(f"! No trunks for '{topic}'. Skipping topic.", flush=True)
+            for trunk in trunks:
+                trunk["question_answers"] = generate_question_answers(
+                    source_item=trunk["source_item"],
+                    final_script=trunk["script"],
+                    user_profile=user_profile,
+                )
+                trunk["personalized_seed"] = narrative["selected_seed"]
+        except (KeyError, RuntimeError, TypeError, ValueError) as exc:
+            print(f"Skipping main narrative: {exc}", flush=True)
             continue
 
-        ###
-        
+        topic_number = len(candidate_pool["topics"]) + 1
         trunks = add_candidate_ids(topic_number, trunks)
         generate_candidate_audio(trunks)
         candidate_pool["topics"].append(
             {
                 "topic_id": f"topic_{topic_number:02d}",
-                "topic": topic,
-                "selected_seeds": selected_seeds,
+                "topic": narrative["story_title"],
+                "story_reason": "Built from sequential related sources.",
+                "selected_seeds": [narrative["selected_seed"]],
                 "trunks": trunks,
             }
         )
         save_candidate_pool(candidate_pool)
 
         print(
-            f"[{topic_number}/{TOPIC_COUNT}] Finished: "
-            f"{len(trunks)} trunks, "
-            f"{len(trunks) * QUESTIONS_PER_TRUNK} Q&A candidates",
+            f"[{topic_number}/{len(main_narrative_pool['stories'])}] Finished: "
+            f"{narrative['story_title']}",
             flush=True,
         )
+
+    if not candidate_pool["topics"]:
+        raise ValueError(
+            "Could not generate trunks from the main narratives."
+        )
+
+    candidate_pool["configuration"]["story_count"] = len(
+        candidate_pool["topics"]
+    )
+    save_candidate_pool(candidate_pool)
 
     total_trunks = sum(
         len(topic["trunks"]) for topic in candidate_pool["topics"]
@@ -651,8 +550,8 @@ def main() -> None:
 
     print(
         "Offline candidate generation completed: "
-        f"{len(candidate_pool['topics'])} topics, "
-        f"{total_trunks} trunks, "
+        f"{len(candidate_pool['topics'])} daily stories, "
+        f"{total_trunks} connected chunks, "
         f"{total_questions} Q&A candidates.\n"
         f"Saved to: {OUTPUT_FILE}",
         flush=True,

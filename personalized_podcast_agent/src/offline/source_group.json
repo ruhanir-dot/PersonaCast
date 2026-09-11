@@ -1,0 +1,151 @@
+{
+  "require_english_content": true,
+  "source_groups": {
+    "official_primary": {
+      "mode": "official_entity_lookup",
+      "description": "Official sources for brands, people, products, events, releases, and announcements.",
+      "domains": []
+    },
+    "government_public": {
+      "description": "Government policies, laws, public services, local events, and public information.",
+      "domains": [
+        "usa.gov",
+        "gov.uk",
+        "europa.eu",
+        "nps.gov",
+        "travel.state.gov",
+        "cdc.gov",
+        "nasa.gov",
+        "loc.gov"
+      ]
+    },
+    "academic_research": {
+      "description": "Research papers, university research, engineering, medicine, and scientific methods.",
+      "domains": [
+        "arxiv.org",
+        "pubmed.ncbi.nlm.nih.gov",
+        "nature.com",
+        "science.org",
+        "pnas.org",
+        "nih.gov",
+        "mit.edu",
+        "stanford.edu"
+      ]
+    },
+    "museum_education": {
+      "description": "History, art, culture, archaeology, museums, and educational science content.",
+      "domains": [
+        "si.edu",
+        "britishmuseum.org",
+        "metmuseum.org",
+        "getty.edu",
+        "loc.gov",
+        "smithsonianmag.com",
+        "britannica.com"
+      ]
+    },
+    "reputable_editorial": {
+      "description": "Reliable reporting, interviews, trend analysis, and general explanatory coverage.",
+      "domains": [
+        "reuters.com",
+        "apnews.com",
+        "bbc.com",
+        "npr.org",
+        "theconversation.com",
+        "wired.com",
+        "theverge.com",
+        "nationalgeographic.com"
+      ]
+    },
+    "game_official": {
+      "description": "Official game announcements, developer interviews, game updates, and product pages.",
+      "domains": [
+        "nintendo.com",
+        "playstation.com",
+        "xbox.com",
+        "store.steampowered.com",
+        "ea.com",
+        "ubisoft.com"
+      ]
+    },
+    "game_guide": {
+      "description": "English game guides, walkthroughs, mechanics explanations, and build guides.",
+      "domains": [
+        "zeldadungeon.net",
+        "ign.com",
+        "gamespot.com",
+        "polygon.com",
+        "game8.co",
+        "fandom.com"
+      ]
+    },
+    "entertainment_official": {
+      "description": "Official K-pop, film, television, artist, label, and behind-the-scenes content.",
+      "domains": [
+        "weverse.io",
+        "hybecorp.com",
+        "smtown.com",
+        "jype.com",
+        "ygfamily.com",
+        "universal-music.de"
+      ]
+    },
+    "entertainment_editorial": {
+      "description": "English music, entertainment, and culture interviews and reporting.",
+      "domains": [
+        "billboard.com",
+        "rollingstone.com",
+        "nme.com",
+        "soompi.com",
+        "variety.com",
+        "hollywoodreporter.com"
+      ]
+    },
+    "technology_primary": {
+      "description": "Primary technology, AI, semiconductor, software, and product documentation sources.",
+      "domains": [
+        "openai.com",
+        "deepmind.google",
+        "research.google",
+        "microsoft.com",
+        "developer.nvidia.com",
+        "huggingface.co",
+        "amd.com",
+        "intel.com"
+      ]
+    },
+    "finance_primary": {
+      "description": "Company investor relations, filings, exchanges, and official financial information.",
+      "domains": [
+        "sec.gov",
+        "investor.gov",
+        "nasdaq.com",
+        "nyse.com",
+        "investor.nvidia.com",
+        "ir.amd.com"
+      ]
+    },
+    "travel_local_official": {
+      "description": "Official travel, city, park, campus, transportation, and local public information.",
+      "domains": [
+        "nps.gov",
+        "travel.state.gov",
+        "visitcalifornia.com",
+        "ucdavis.edu",
+        "visitjapan.com",
+        "visitbritain.com"
+      ]
+    },
+    "food_lifestyle_editorial": {
+      "description": "English food, fashion, beauty, home, and lifestyle explanatory content.",
+      "domains": [
+        "seriouseats.com",
+        "epicurious.com",
+        "bonappetit.com",
+        "vogue.com",
+        "whowhatwear.com",
+        "nytimes.com"
+      ]
+    }
+  }
+}
