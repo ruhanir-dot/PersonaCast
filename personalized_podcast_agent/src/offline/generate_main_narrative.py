@@ -1,4 +1,4 @@
-from __future__ import annotations
+
 
 import json
 import os
@@ -6,6 +6,7 @@ import re
 import time
 from typing import Any
 
+from src.offline.search_web_sources import search_web_source
 from src.utils import PROJECT_ROOT
 
 
@@ -69,14 +70,14 @@ def load_saved_transcript_sources() -> dict[str, dict[str, Any]]:
     return sources
 
 
-def split_transcript(transcript_text: str) -> list[str]:
+def split_source_text(source_text: str) -> list[str]:
     sentences = [
         sentence.strip()
-        for sentence in re.split(r"(?<=[.!?])\s+", transcript_text)
+        for sentence in re.split(r"(?<=[.!?])\s+", source_text)
         if sentence.strip()
     ]
     if len(sentences) < TRUNKS_PER_TOPIC:
-        words = transcript_text.split()
+        words = source_text.split()
         sentences = [
             " ".join(
                 words[
@@ -94,7 +95,7 @@ def split_transcript(transcript_text: str) -> list[str]:
         parts.append(" ".join(sentences[start:end]).strip())
 
     if any(not part for part in parts):
-        raise ValueError("The transcript could not be split into five parts.")
+        raise ValueError("The source text could not be split into five parts.")
     return parts
 
 
@@ -110,11 +111,13 @@ def build_main_narrative(
 ) -> dict[str, Any] | None:
     source_item = transcript_sources.get(
         str(selected_seed.get("url") or "").strip())
+    if source_item is None:
+        source_item = search_web_source(selected_seed)
     if source_item is None or source_key(source_item) in used_source_keys:
         return None
 
     story_title = str(source_item.get("title") or "").strip()
-    transcript_parts = split_transcript(str(source_item["transcript_text"]))
+    source_parts = split_source_text(str(source_item["article_text"]))
     used_source_keys.add(source_key(source_item))
     return {
         "story_title": story_title,
@@ -122,12 +125,12 @@ def build_main_narrative(
         "steps": [
             {
                 "chunk_order": order,
-                "focus": f"Transcript segment {order}",
-                "transcript_segment": transcript_part,
-                "search_query": None,
+                "focus": f"Source segment {order}",
+                "source_segment": source_part,
+                "search_query": source_item.get("search_query"),
                 "source_item": source_item,
             }
-            for order, transcript_part in enumerate(transcript_parts, start=1)
+            for order, source_part in enumerate(source_parts, start=1)
         ],
     }
 
@@ -142,7 +145,7 @@ def generate_main_narratives(
 
     for candidate_number, candidate_data in enumerate(candidates, start=1):
         print(
-            f"[{candidate_number}/{len(candidates)}] Using saved transcript.",
+            f"[{candidate_number}/{len(candidates)}] Building source story.",
             flush=True,
         )
         try:
@@ -160,7 +163,7 @@ def generate_main_narratives(
         narrative["story_id"] = f"story_{len(stories) + 1:02d}"
         stories.append(narrative)
         print(
-            f"[{len(stories)}/{len(candidates)}] Found transcript story: "
+            f"[{len(stories)}/{len(candidates)}] Found story: "
             f"{narrative['story_title']}",
             flush=True,
         )
@@ -187,7 +190,7 @@ def main() -> None:
     result = generate_main_narratives(story_seed_pool)
     if not result["stories"]:
         raise ValueError(
-            "Could not build a transcript story from the selected seeds.")
+            "Could not build a story from the selected seeds.")
     save_main_narratives(result)
     print(
         f"Saved {len(result['stories'])} main narratives to: "

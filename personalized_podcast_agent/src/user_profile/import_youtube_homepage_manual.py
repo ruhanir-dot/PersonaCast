@@ -2,7 +2,6 @@ import json
 import os
 import re
 from datetime import UTC, datetime
-from pathlib import Path
 from typing import Any
 from urllib.parse import parse_qs, urlparse
 
@@ -17,7 +16,6 @@ from src.user_profile.fetch_youtube_daily import (
     video_to_feed_item,
     youtube_api_get,
 )
-from src.utils import llm_json
 
 MANUAL_INPUT_FILE = DATA_DIR / "youtube_homepage_manual.json"
 VIDEOS_PER_REQUEST = 50
@@ -30,8 +28,6 @@ def normalize_text(value: Any) -> str:
 
 def video_id_from_url(url: str) -> str:
     parsed = urlparse(normalize_text(url))
-    if parsed.path.startswith("/shorts/"):
-        return ""
     return normalize_text(parse_qs(parsed.query).get("v", [""])[0])
 
 
@@ -92,7 +88,8 @@ def fetch_transcript(video_id: str) -> dict[str, Any] | None:
             transcript = next(iter(transcript_list))
         fetched_transcript = transcript.fetch()
     except Exception as exc:
-        print(f"Skipping {video_id}: no transcript ({exc})", flush=True)
+        print(
+            f"No transcript for {video_id}; storing null ({exc})", flush=True)
         return None
 
     transcript_text = normalize_text(
@@ -105,7 +102,7 @@ def fetch_transcript(video_id: str) -> dict[str, Any] | None:
     spoken_text = re.sub(r"\[[^\]]*\]|\([^)]*\)|[♪♫]", " ", transcript_text)
     spoken_text = normalize_text(spoken_text)
     if len(spoken_text) < MIN_TRANSCRIPT_CHARACTERS:
-        print(f"Skipping {video_id}: transcript is too short", flush=True)
+        print(f"Transcript too short for {video_id}; storing null", flush=True)
         return None
 
     return {
@@ -115,36 +112,6 @@ def fetch_transcript(video_id: str) -> dict[str, Any] | None:
         "transcript_language_code": str(fetched_transcript.language_code),
         "transcript_is_generated": bool(fetched_transcript.is_generated),
     }
-
-
-def is_podcast_suitable(
-    item: dict[str, Any], transcript: dict[str, Any]
-) -> bool:
-    result = llm_json(
-        prompt=(
-            "Return keep=false only when this transcript is clearly unsuitable as a "
-            "podcast source: it is primarily song lyrics, a music video, a dance or "
-            "stage performance, a fancam, sports play-by-play highlights, an animated "
-            "speedrun, sparse captions, or has no meaningful spoken content. Keep "
-            "interviews, conversations, food reviews, cooking, travel or lifestyle "
-            "vlogs, commentary, personal stories, and spoken game discussion. These "
-            "videos may later be organized into five podcast segments, so do not reject "
-            "them just because they include visual moments. When uncertain, return true. "
-            "Judge the transcript itself, not the title.\n\n"
-            f"Video title:\n{item.get('title', '')}\n\n"
-            f"Transcript:\n{transcript['transcript_text']}"
-        ),
-        system="Return valid JSON only.",
-        temperature=0.0,
-        max_output_tokens=100,
-        json_schema={
-            "type": "object",
-            "properties": {"keep": {"type": "boolean"}},
-            "required": ["keep"],
-            "additionalProperties": False,
-        },
-    )
-    return bool(result["keep"])
 
 
 def import_manual_homepage_items() -> dict[str, Any]:
@@ -166,19 +133,20 @@ def import_manual_homepage_items() -> dict[str, Any]:
         if not item:
             continue
         transcript = fetch_transcript(video_id)
-        if transcript is None:
-            continue
-        try:
-            if not is_podcast_suitable(item, transcript):
-                print(
-                    f"Skipping {video_id}: not suitable for a podcast", flush=True)
-                continue
-        except (KeyError, RuntimeError, TypeError, ValueError) as exc:
-            print(
-                f"Skipping {video_id}: transcript classification failed ({exc})", flush=True)
-            continue
         item["homepage_rank"] = homepage_rank
-        item.update(transcript)
+        if transcript is None:
+            item.update(
+                {
+                    "text": None,
+                    "transcript_text": None,
+                    "transcript_character_count": None,
+                    "transcript_language": None,
+                    "transcript_language_code": None,
+                    "transcript_is_generated": None,
+                }
+            )
+        else:
+            item.update(transcript)
         feed_items.append(item)
 
     if not feed_items:

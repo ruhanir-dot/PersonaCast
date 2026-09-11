@@ -77,18 +77,17 @@ def generate_story_chunks(
 
     for step in steps:
         focus = str(step["focus"]).strip()
-        transcript_segment = str(step["transcript_segment"]).strip()
+        source_segment = str(step["source_segment"]).strip()
         result = llm_json(
             prompt=(
-                "Rewrite this chronological YouTube transcript section as one "
-                "clear spoken English podcast segment. Keep the original sequence "
-                "and facts. Remove subtitle noise, advertisements, and repeated "
-                "filler. Do not add information. Tell the events in third person; "
+                "Rewrite this source section as one clear spoken English podcast "
+                "segment. Keep the supplied facts and sequence. Remove source noise, "
+                "advertisements, and repeated filler. Do not add information. Tell the events in third person; "
                 "do not use I, we, or you. Write about 100 words in three to five "
                 "natural sentences.\n\n"
                 f"Story title:\n{story_title}\n\n"
-                f"Transcript section {step['chunk_order']} of {TRUNKS_PER_TOPIC}:\n"
-                f"{transcript_segment}"
+                f"Source section {step['chunk_order']} of {TRUNKS_PER_TOPIC}:\n"
+                f"{source_segment}"
             ),
             system="Return valid JSON only.",
             temperature=0.1,
@@ -489,7 +488,7 @@ def main() -> None:
             "story_count": len(main_narrative_pool["stories"]),
             "chunks_per_story": TRUNKS_PER_TOPIC,
             "questions_per_trunk": QUESTIONS_PER_TRUNK,
-            "generation_mode": "daily_youtube_transcript_story",
+            "generation_mode": "daily_youtube_source_story",
         },
         "topics": [],
     }
