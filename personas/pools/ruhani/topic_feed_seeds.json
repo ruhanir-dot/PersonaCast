@@ -1,0 +1,1021 @@
+{
+  "configuration": {
+    "top_candidates": 50,
+    "seeds_per_topic": 8,
+    "mmr_lambda": 0.6,
+    "max_pair_similarity": 0.8,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  },
+  "topics": [
+    {
+      "topic": "K-pop industry trends",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_watch_4eafd59491f6e8db",
+          "source_type": "youtube_watch",
+          "text": "What K-pop Is Really Selling",
+          "original_text": "What K-pop Is Really Selling",
+          "creator": "Papiens",
+          "url": "https://www.youtube.com/watch?v=Xp7bggY8mpI",
+          "occurred_at": "2026-07-10T18:33:47-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.735893,
+          "mmr_score": 0.441536
+        },
+        {
+          "feed_id": "youtube_watch_7c022ef9fc3b104f",
+          "source_type": "youtube_watch",
+          "text": "2026 K-Pop is like…",
+          "original_text": "2026 K-Pop is like…",
+          "creator": "Ryu Ryu",
+          "url": "https://www.youtube.com/watch?v=0xmVCrMWpYM",
+          "occurred_at": "2026-05-10T22:57:13-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.68559,
+          "mmr_score": 0.188089
+        },
+        {
+          "feed_id": "youtube_watch_f2a87ebb3126696c",
+          "source_type": "youtube_watch",
+          "text": "Auditioning For K-POP Companies Until I Make It In... HYBE",
+          "original_text": "Auditioning For K-POP Companies Until I Make It In... HYBE",
+          "creator": "NovaPovie",
+          "url": "https://www.youtube.com/watch?v=DLy0JsoXspk",
+          "occurred_at": "2026-08-26T09:46:38-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.6124,
+          "mmr_score": 0.185458
+        },
+        {
+          "feed_id": "youtube_watch_76b4dcc775f58323",
+          "source_type": "youtube_watch",
+          "text": "K-Pop stans risking loosing their jobs @ypqls_02 #lemontang #hearts2hearts #kpop #kpopinpublic",
+          "original_text": "K-Pop stans risking loosing their jobs @ypqls_02 #lemontang #hearts2hearts #kpop #kpopinpublic",
+          "creator": "Daiki",
+          "url": "https://www.youtube.com/watch?v=16_nNNygDL8",
+          "occurred_at": "2026-08-02T20:47:51-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.658414,
+          "mmr_score": 0.169306
+        },
+        {
+          "feed_id": "youtube_watch_b8ae6721262052fc",
+          "source_type": "youtube_watch",
+          "text": "K-pop idols noticing the popularity gap between members #kpop #aespa #shorts #fyp",
+          "original_text": "K-pop idols noticing the popularity gap between members #kpop #aespa #shorts #fyp",
+          "creator": "@Rosélyn",
+          "url": "https://www.youtube.com/watch?v=OEjsenNz7GU",
+          "occurred_at": "2025-06-21T20:35:47-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.651958,
+          "mmr_score": 0.167442
+        },
+        {
+          "feed_id": "youtube_search_b96b47a102f077a4",
+          "source_type": "youtube_search",
+          "text": "upbeat kpop mix",
+          "original_text": "upbeat kpop mix",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=upbeat+kpop+mix",
+          "occurred_at": "2026-02-14T16:24:36-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.628773,
+          "mmr_score": 0.163291
+        },
+        {
+          "feed_id": "youtube_watch_9560b3e9b56488f5",
+          "source_type": "youtube_watch",
+          "text": "Kpop in public ATEEZ 'BAD'",
+          "original_text": "Kpop in public ATEEZ 'BAD'",
+          "creator": "PINKIE kpop",
+          "url": "https://www.youtube.com/watch?v=hyIVa4CdruU",
+          "occurred_at": "2026-07-25T17:03:54-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.647568,
+          "mmr_score": 0.140763
+        },
+        {
+          "feed_id": "youtube_watch_cfb9984a1a8fc539",
+          "source_type": "youtube_watch",
+          "text": "[K-POP] Inside i-dle’s Daily Life with Their Managers🤩 #idle #Kpop #girlgroup",
+          "original_text": "[K-POP] Inside i-dle’s Daily Life with Their Managers🤩 #idle #Kpop #girlgroup",
+          "creator": "MBC WORLD",
+          "url": "https://www.youtube.com/watch?v=-B2OJJzl5j0",
+          "occurred_at": "2026-07-17T17:27:12-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.629553,
+          "mmr_score": 0.125715
+        }
+      ]
+    },
+    {
+      "topic": "Advanced guitar techniques",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_watch_f5c6ab0013437d08",
+          "source_type": "youtube_watch",
+          "text": "guitar practice",
+          "original_text": "guitar practice",
+          "creator": "He's a guitar player for a hobby.",
+          "url": "https://www.youtube.com/watch?v=YuSllosb5FA",
+          "occurred_at": "2026-04-15T19:21:05-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.818494,
+          "mmr_score": 0.491096
+        },
+        {
+          "feed_id": "youtube_watch_d146f72891b7b1b4",
+          "source_type": "youtube_watch",
+          "text": "New Guitar Technique (it’s insane)🎶🎸 #guitar #heavymetal #rockmusic #learn #explore #tabs",
+          "original_text": "New Guitar Technique (it’s insane)🎶🎸 #guitar #heavymetal #rockmusic #learn #explore #tabs",
+          "creator": "taylor D.I.E",
+          "url": "https://www.youtube.com/watch?v=4nKsOBDaKPM",
+          "occurred_at": "2026-04-30T11:01:17-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.788613,
+          "mmr_score": 0.159796
+        },
+        {
+          "feed_id": "youtube_watch_d4a3e8abfc1bac65",
+          "source_type": "youtube_watch",
+          "text": "How to play “DAISIES” on guitar",
+          "original_text": "How to play “DAISIES” on guitar",
+          "creator": "Sohil",
+          "url": "https://www.youtube.com/watch?v=aGqu5Y3gZlg",
+          "occurred_at": "2026-04-19T11:30:05-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.719965,
+          "mmr_score": 0.155824
+        },
+        {
+          "feed_id": "youtube_watch_6cb12224cee840cd",
+          "source_type": "youtube_watch",
+          "text": "Cauchemard de Guitard",
+          "original_text": "Cauchemard de Guitard",
+          "creator": "Vapeur d'encre",
+          "url": "https://www.youtube.com/watch?v=c25SY_cQxgU",
+          "occurred_at": "2026-04-23T17:29:38-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.691565,
+          "mmr_score": 0.154049
+        },
+        {
+          "feed_id": "youtube_watch_715134ce7a41fc52",
+          "source_type": "youtube_watch",
+          "text": "Akad - Payung Teduh | Tutorial Chord Gitar Mudah dan Lirik #chordgitar #guitarchords",
+          "original_text": "Akad - Payung Teduh | Tutorial Chord Gitar Mudah dan Lirik #chordgitar #guitarchords",
+          "creator": "Guitar Intensive",
+          "url": "https://www.youtube.com/watch?v=ABeStM6_vDc",
+          "occurred_at": "2026-04-18T21:07:09-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.769529,
+          "mmr_score": 0.151206
+        },
+        {
+          "feed_id": "youtube_watch_9bb377e83c4cd36c",
+          "source_type": "youtube_watch",
+          "text": "FIRST guitar that has FRETLESS frets",
+          "original_text": "FIRST guitar that has FRETLESS frets",
+          "creator": "Microtonal Guitar - Tolgahan Çoğulu",
+          "url": "https://www.youtube.com/watch?v=XMBq-v90a2Q",
+          "occurred_at": "2026-04-18T11:15:06-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.667405,
+          "mmr_score": 0.140019
+        },
+        {
+          "feed_id": "youtube_search_ac066dddf6342616",
+          "source_type": "youtube_search",
+          "text": "duet zico guitar",
+          "original_text": "duet zico guitar",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=duet+zico+guitar",
+          "occurred_at": "2026-04-13T16:37:30-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.65358,
+          "mmr_score": 0.133862
+        },
+        {
+          "feed_id": "youtube_watch_9329e040e52140a4",
+          "source_type": "youtube_watch",
+          "text": "Guitar Noodling",
+          "original_text": "Guitar Noodling",
+          "creator": "Clay Bowers",
+          "url": "https://www.youtube.com/watch?v=x12klRiGTFA",
+          "occurred_at": "2026-05-23T10:11:20-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.690282,
+          "mmr_score": 0.128045
+        }
+      ]
+    },
+    {
+      "topic": "Productivity study methods",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_watch_188ec7f2f173d78b",
+          "source_type": "youtube_watch",
+          "text": "my productivity workflow 2023!",
+          "original_text": "my productivity workflow 2023!",
+          "creator": "jvscholz",
+          "url": "https://www.youtube.com/watch?v=IZX-cDR6IQM",
+          "occurred_at": "2025-11-27T10:55:25-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.703238,
+          "mmr_score": 0.421943
+        },
+        {
+          "feed_id": "youtube_search_890dfe0b43924f18",
+          "source_type": "youtube_search",
+          "text": "best study system for statistics",
+          "original_text": "best study system for statistics",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=best+study+system+for+statistics",
+          "occurred_at": "2025-06-02T16:00:19-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.519454,
+          "mmr_score": 0.191184
+        },
+        {
+          "feed_id": "youtube_watch_4f2408a70f7a1131",
+          "source_type": "youtube_watch",
+          "text": "common productivity advice I disagree with",
+          "original_text": "common productivity advice I disagree with",
+          "creator": "james vinh scholz",
+          "url": "https://www.youtube.com/watch?v=WApjTE4MLZ0",
+          "occurred_at": "2025-11-24T14:15:05-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.701023,
+          "mmr_score": 0.152177
+        },
+        {
+          "feed_id": "youtube_search_e0d650f8ed5e9e2c",
+          "source_type": "youtube_search",
+          "text": "study motivation",
+          "original_text": "study motivation",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=study+motivation+",
+          "occurred_at": "2025-06-03T17:38:47-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.494725,
+          "mmr_score": 0.142851
+        },
+        {
+          "feed_id": "youtube_watch_ffb2d4e97dd63b60",
+          "source_type": "youtube_watch",
+          "text": "Uniform Distribution EXPLAINED with Examples",
+          "original_text": "Uniform Distribution EXPLAINED with Examples",
+          "creator": "Ace Tutors",
+          "url": "https://www.youtube.com/watch?v=UC-CBUSQXAo",
+          "occurred_at": "2026-02-16T20:19:12-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.433877,
+          "mmr_score": 0.113475
+        },
+        {
+          "feed_id": "youtube_watch_f9faa043802da0ae",
+          "source_type": "youtube_watch",
+          "text": "Study Day at Home 💘| Calm Productivity + Cozy Routine | Aesthetic Study Vlog",
+          "original_text": "Study Day at Home 💘| Calm Productivity + Cozy Routine | Aesthetic Study Vlog",
+          "creator": "Salma",
+          "url": "https://www.youtube.com/watch?v=40Fp9vs4JNk",
+          "occurred_at": "2026-04-17T13:52:00-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.47374,
+          "mmr_score": 0.1054
+        },
+        {
+          "feed_id": "youtube_watch_a5b04914715fda2f",
+          "source_type": "youtube_watch",
+          "text": "Calculating Decision Trees | A-Level Business",
+          "original_text": "Calculating Decision Trees | A-Level Business",
+          "creator": "Academic Plus",
+          "url": "https://www.youtube.com/watch?v=vQM2JjxZT70",
+          "occurred_at": "2026-03-15T18:56:22-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.443341,
+          "mmr_score": 0.103364
+        },
+        {
+          "feed_id": "youtube_watch_e6c5f44a7a29647c",
+          "source_type": "youtube_watch",
+          "text": "3-2-1 STUDY METHOD",
+          "original_text": "3-2-1 STUDY METHOD",
+          "creator": "Elise Pham",
+          "url": "https://www.youtube.com/watch?v=Phk5leTwPFk",
+          "occurred_at": "2025-12-02T19:19:46-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.448805,
+          "mmr_score": 0.102378
+        }
+      ]
+    },
+    {
+      "topic": "Korean culinary culture",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_watch_92e3eb94d4318052",
+          "source_type": "youtube_watch",
+          "text": "Day 5 Learning Korean traditional Jang : Korean temple food #jeongkwansnim",
+          "original_text": "Day 5 Learning Korean traditional Jang : Korean temple food #jeongkwansnim",
+          "creator": "Cookim",
+          "url": "https://www.youtube.com/watch?v=wVrvPen8zaM",
+          "occurred_at": "2026-04-24T21:17:22-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.819401,
+          "mmr_score": 0.491641
+        },
+        {
+          "feed_id": "youtube_watch_2d9d766ada0439b7",
+          "source_type": "youtube_watch",
+          "text": "Cooking My Korean Parents’ First Puerto Rican Food #puertorico #puertoricanfood",
+          "original_text": "Cooking My Korean Parents’ First Puerto Rican Food #puertorico #puertoricanfood",
+          "creator": "Crazy Korean Cooking",
+          "url": "https://www.youtube.com/watch?v=vQ_mC2tk7ec",
+          "occurred_at": "2026-02-27T18:51:34-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.789732,
+          "mmr_score": 0.196856
+        },
+        {
+          "feed_id": "youtube_watch_1bc422d3ad36e72f",
+          "source_type": "youtube_watch",
+          "text": "Korean restaurant hits differently",
+          "original_text": "Korean restaurant hits differently",
+          "creator": "Uyen Ninh",
+          "url": "https://www.youtube.com/watch?v=oRvVuf3l8go",
+          "occurred_at": "2025-10-24T18:35:48-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.679425,
+          "mmr_score": 0.183304
+        },
+        {
+          "feed_id": "youtube_watch_eda3d33f27b206dc",
+          "source_type": "youtube_watch",
+          "text": "What people think Koreans eat…",
+          "original_text": "What people think Koreans eat…",
+          "creator": "Kimchi & Tattie",
+          "url": "https://www.youtube.com/watch?v=1lDZeJ0UzJs",
+          "occurred_at": "2026-06-11T22:12:13-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.776934,
+          "mmr_score": 0.182287
+        },
+        {
+          "feed_id": "youtube_search_d9118f3224b01662",
+          "source_type": "youtube_search",
+          "text": "korean cafe music",
+          "original_text": "korean cafe music",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=korean+cafe+music",
+          "occurred_at": "2026-03-14T10:28:33-07:00",
+          "interaction_count": 4,
+          "topic_similarity": 0.737594,
+          "mmr_score": 0.1819
+        },
+        {
+          "feed_id": "youtube_watch_2de6e21978bb02bc",
+          "source_type": "youtube_watch",
+          "text": "Meju & Ganjang #koreanfood",
+          "original_text": "Meju & Ganjang #koreanfood",
+          "creator": "Cookim",
+          "url": "https://www.youtube.com/watch?v=hoAqnzNzW9k",
+          "occurred_at": "2026-04-24T21:15:15-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.816538,
+          "mmr_score": 0.174025
+        },
+        {
+          "feed_id": "youtube_watch_89a20db0c7353fa0",
+          "source_type": "youtube_watch",
+          "text": "British Chefs Try Korean Delicacies! (ft. Fallow)",
+          "original_text": "British Chefs Try Korean Delicacies! (ft. Fallow)",
+          "creator": "British male Korean Englishman",
+          "url": "https://www.youtube.com/watch?v=rajgCgZiFxY",
+          "occurred_at": "2026-05-20T17:06:24-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.718168,
+          "mmr_score": 0.157188
+        },
+        {
+          "feed_id": "youtube_watch_1e8a9e4547ccffa9",
+          "source_type": "youtube_watch",
+          "text": "Cooking Korean Food for my Danish In Law's",
+          "original_text": "Cooking Korean Food for my Danish In Law's",
+          "creator": "Doobydobap",
+          "url": "https://www.youtube.com/watch?v=Fw-iiGUW9Lg",
+          "occurred_at": "2026-06-07T18:26:17-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.72213,
+          "mmr_score": 0.148766
+        }
+      ]
+    },
+    {
+      "topic": "Linear algebra applications",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_search_bbdf87b1d6620a44",
+          "source_type": "youtube_search",
+          "text": "linear algebra",
+          "original_text": "linear algebra",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=linear+algebra",
+          "occurred_at": "2026-04-06T12:22:20-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.925152,
+          "mmr_score": 0.555091
+        },
+        {
+          "feed_id": "youtube_search_f9fd56bf27066b02",
+          "source_type": "youtube_search",
+          "text": "linear algebra organic chemistry tutor playlist",
+          "original_text": "linear algebra organic chemistry tutor playlist",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=linear+algebra+organic+chemistry+tutor+playlist",
+          "occurred_at": "2026-03-31T19:49:37-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.608079,
+          "mmr_score": 0.153711
+        },
+        {
+          "feed_id": "youtube_watch_9116a0dca3c8515c",
+          "source_type": "youtube_watch",
+          "text": "Linear Algebra for Machine Learning",
+          "original_text": "Linear Algebra for Machine Learning",
+          "creator": "freeCodeCamp.org",
+          "url": "https://www.youtube.com/watch?v=QCPJ0VdpM00",
+          "occurred_at": "2026-03-30T13:45:58-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.667362,
+          "mmr_score": 0.153372
+        },
+        {
+          "feed_id": "youtube_watch_2bd744415f52a3ac",
+          "source_type": "youtube_watch",
+          "text": "Essence of linear algebra preview",
+          "original_text": "Essence of linear algebra preview",
+          "creator": "3Blue1Brown",
+          "url": "https://www.youtube.com/watch?v=kjBOesZCoqc",
+          "occurred_at": "2026-04-07T21:21:05-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.751112,
+          "mmr_score": 0.151285
+        },
+        {
+          "feed_id": "youtube_watch_6c71ace0e82ae557",
+          "source_type": "youtube_watch",
+          "text": "Summarizing How HARD Every Linear Algebra and Differential Equations Topic Is",
+          "original_text": "Summarizing How HARD Every Linear Algebra and Differential Equations Topic Is",
+          "creator": "JuicedItUp",
+          "url": "https://www.youtube.com/watch?v=Rep34MitL3s",
+          "occurred_at": "2026-03-31T17:25:56-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.681536,
+          "mmr_score": 0.14609
+        },
+        {
+          "feed_id": "youtube_search_55a29760583777bc",
+          "source_type": "youtube_search",
+          "text": "eigenvectors in linear algebra",
+          "original_text": "eigenvectors in linear algebra",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=eigenvectors+in+linear+algebra",
+          "occurred_at": "2026-04-07T21:20:35-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.755914,
+          "mmr_score": 0.141505
+        },
+        {
+          "feed_id": "youtube_watch_563c5bdc69b4a8a6",
+          "source_type": "youtube_watch",
+          "text": "How to Solve Systems of Equations using Inverse Matrices",
+          "original_text": "How to Solve Systems of Equations using Inverse Matrices",
+          "creator": "Rithvik Yagnamurthy",
+          "url": "https://www.youtube.com/watch?v=8QP1Zh4XjhQ",
+          "occurred_at": "2026-04-04T21:29:14-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.592434,
+          "mmr_score": 0.132657
+        },
+        {
+          "feed_id": "youtube_watch_389a389249eeee6d",
+          "source_type": "youtube_watch",
+          "text": "All Of Linear Algebra Explained In 10 Minutes",
+          "original_text": "All Of Linear Algebra Explained In 10 Minutes",
+          "creator": "Find Y",
+          "url": "https://www.youtube.com/watch?v=E8YQPBHLUrY",
+          "occurred_at": "2026-03-31T19:30:21-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.687571,
+          "mmr_score": 0.130108
+        }
+      ]
+    },
+    {
+      "topic": "Software engineering tutorials",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_watch_754182ef3433ee4b",
+          "source_type": "youtube_watch",
+          "text": "Day In The Life Of A Software Engineer Coding A Startup 🧑‍💻",
+          "original_text": "Day In The Life Of A Software Engineer Coding A Startup 🧑‍💻",
+          "creator": "Erik Cupsa",
+          "url": "https://www.youtube.com/watch?v=lwFxIE_o2wo",
+          "occurred_at": "2025-11-24T14:25:39-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.59959,
+          "mmr_score": 0.359754
+        },
+        {
+          "feed_id": "youtube_search_e14ad76c83696743",
+          "source_type": "youtube_search",
+          "text": "grafana tutorial",
+          "original_text": "grafana tutorial",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=grafana+tutorial",
+          "occurred_at": "2025-09-03T14:14:48-07:00",
+          "interaction_count": 2,
+          "topic_similarity": 0.563549,
+          "mmr_score": 0.189992
+        },
+        {
+          "feed_id": "youtube_watch_0edc4a5ae7d57fee",
+          "source_type": "youtube_watch",
+          "text": "Linked List - Data Structures & Algorithms Tutorials in Python #4",
+          "original_text": "Linked List - Data Structures & Algorithms Tutorials in Python #4",
+          "creator": "codebasics",
+          "url": "https://www.youtube.com/watch?v=qp8u-frRAnU",
+          "occurred_at": "2025-10-24T19:49:04-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.471558,
+          "mmr_score": 0.160161
+        },
+        {
+          "feed_id": "youtube_watch_7e03208a2d44d293",
+          "source_type": "youtube_watch",
+          "text": "Create a project folder (Visual Studio Code), create a file and open the Terminal (2/5)",
+          "original_text": "Create a project folder (Visual Studio Code), create a file and open the Terminal (2/5)",
+          "creator": "Wietse Wind",
+          "url": "https://www.youtube.com/watch?v=fEp5nWvujhI",
+          "occurred_at": "2025-09-18T17:08:30-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.509384,
+          "mmr_score": 0.157972
+        },
+        {
+          "feed_id": "youtube_watch_41211192ea09bc8f",
+          "source_type": "youtube_watch",
+          "text": "L01.1 Lecture Overview",
+          "original_text": "L01.1 Lecture Overview",
+          "creator": "MIT OpenCourseWare",
+          "url": "https://www.youtube.com/watch?v=1uW3qMFA9Ho",
+          "occurred_at": "2025-12-15T19:25:47-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.56956,
+          "mmr_score": 0.156948
+        },
+        {
+          "feed_id": "youtube_watch_2082a6fb6715d5b4",
+          "source_type": "youtube_watch",
+          "text": "programming setup tour 2026",
+          "original_text": "programming setup tour 2026",
+          "creator": "isak",
+          "url": "https://www.youtube.com/watch?v=tZgHqgAkLMs",
+          "occurred_at": "2025-09-11T12:28:11-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.536109,
+          "mmr_score": 0.129183
+        },
+        {
+          "feed_id": "youtube_watch_f28b2701c9f883b6",
+          "source_type": "youtube_watch",
+          "text": "Tutorial 1A Training and Deploying Multi Stage Recommender Systems",
+          "original_text": "Tutorial 1A Training and Deploying Multi Stage Recommender Systems",
+          "creator": "ACM RecSys",
+          "url": "https://www.youtube.com/watch?v=4KP20UPdG-U",
+          "occurred_at": "2026-05-21T17:08:14-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.544337,
+          "mmr_score": 0.124831
+        },
+        {
+          "feed_id": "youtube_watch_e8ea87e3b0795ebe",
+          "source_type": "youtube_watch",
+          "text": "Easy LaTeX Documents in VSCode",
+          "original_text": "Easy LaTeX Documents in VSCode",
+          "creator": "Davis Cole",
+          "url": "https://www.youtube.com/watch?v=Mty0vHb0knI",
+          "occurred_at": "2025-12-25T13:29:46-07:00",
+          "interaction_count": 2,
+          "topic_similarity": 0.504665,
+          "mmr_score": 0.122225
+        }
+      ]
+    },
+    {
+      "topic": "Independent music scene",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_search_574c5eb67606a6cf",
+          "source_type": "youtube_search",
+          "text": "music",
+          "original_text": "music",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=music",
+          "occurred_at": "2025-12-03T15:01:37-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.718125,
+          "mmr_score": 0.430875
+        },
+        {
+          "feed_id": "youtube_watch_4e442b94c3e61c8f",
+          "source_type": "youtube_watch",
+          "text": "independent artists deserve their flowers #popmusic #newartist #newmusic #pophits",
+          "original_text": "independent artists deserve their flowers #popmusic #newartist #newmusic #pophits",
+          "creator": "Sarah Sky",
+          "url": "https://www.youtube.com/watch?v=-vnWINUMGGY",
+          "occurred_at": "2026-08-03T20:41:29-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.5978,
+          "mmr_score": 0.169357
+        },
+        {
+          "feed_id": "youtube_watch_5b91d0684e506904",
+          "source_type": "youtube_watch",
+          "text": "underscores (DJ Set) - Elevator Music",
+          "original_text": "underscores (DJ Set) - Elevator Music",
+          "creator": "Elevator Music",
+          "url": "https://www.youtube.com/watch?v=h8LZ3wAW7fQ",
+          "occurred_at": "2026-08-31T12:00:44-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.61956,
+          "mmr_score": 0.142149
+        },
+        {
+          "feed_id": "youtube_watch_fe578e581a18c210",
+          "source_type": "youtube_watch",
+          "text": "Blind fold edition #drums #drumming #drummer #band #music",
+          "original_text": "Blind fold edition #drums #drumming #drummer #band #music",
+          "creator": "Lovelace",
+          "url": "https://www.youtube.com/watch?v=PBzm5fEooRE",
+          "occurred_at": "2026-04-12T19:40:31-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.62816,
+          "mmr_score": 0.134358
+        },
+        {
+          "feed_id": "youtube_watch_329812118957949c",
+          "source_type": "youtube_watch",
+          "text": "[PLAYLIST] I want you to have a pre-play list. Relaxing Indie Vibes.",
+          "original_text": "[PLAYLIST] 여기 PREP 플레이리스트 한잔 주세요☕️ Relaxing Indie Vibes🎧",
+          "creator": "Beepley B Playlist",
+          "url": "https://www.youtube.com/watch?v=2V1_Vqv6ldQ",
+          "occurred_at": "2025-08-12T13:25:24-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.64215,
+          "mmr_score": 0.131132
+        },
+        {
+          "feed_id": "youtube_watch_4e7e6ed771fe6565",
+          "source_type": "youtube_watch",
+          "text": "Suedehead [1988] – Morrissey, Stephen Street | KiwiCo programmable music box",
+          "original_text": "Suedehead [1988] – Morrissey, Stephen Street | KiwiCo programmable music box",
+          "creator": "Jason Music Portal",
+          "url": "https://www.youtube.com/watch?v=H_m4vEyIdIA",
+          "occurred_at": "2026-05-26T11:33:44-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.602266,
+          "mmr_score": 0.124124
+        },
+        {
+          "feed_id": "youtube_watch_b2c2634d7e8bc948",
+          "source_type": "youtube_watch",
+          "text": "Recreating ICONIC Songs Without Hearing Them",
+          "original_text": "Recreating ICONIC Songs Without Hearing Them",
+          "creator": "Trident Collective",
+          "url": "https://www.youtube.com/watch?v=H7WnFz8Nv5g",
+          "occurred_at": "2026-01-18T14:05:08-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.628938,
+          "mmr_score": 0.121216
+        },
+        {
+          "feed_id": "youtube_watch_221f7a7e6d99e2f1",
+          "source_type": "youtube_watch",
+          "text": "Ambient Study Music To Concentrate - 4 Hours of Music for Studying, Concentration and Memory",
+          "original_text": "Ambient Study Music To Concentrate - 4 Hours of Music for Studying, Concentration and Memory",
+          "creator": "Quiet Quest - Study Music",
+          "url": "https://www.youtube.com/watch?v=sjkrrmBnpGE",
+          "occurred_at": "2025-06-01T12:03:19-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.615353,
+          "mmr_score": 0.119693
+        }
+      ]
+    },
+    {
+      "topic": "Urban travel experiences",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_watch_150bb647481b8a23",
+          "source_type": "youtube_watch",
+          "text": "My WORST Travel Experience in South America",
+          "original_text": "My WORST Travel Experience in South America",
+          "creator": "Jorden Tually",
+          "url": "https://www.youtube.com/watch?v=iZhkJflgaNI",
+          "occurred_at": "2026-02-18T16:39:56-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.634464,
+          "mmr_score": 0.380678
+        },
+        {
+          "feed_id": "youtube_subscription_27d73852bccbc04f",
+          "source_type": "youtube_subscription",
+          "text": "Urban Atlas",
+          "original_text": "Urban Atlas",
+          "creator": "Urban Atlas",
+          "url": "http://www.youtube.com/channel/UCKIwJ734FQFP2nWBxvNx_YQ",
+          "occurred_at": null,
+          "interaction_count": 1,
+          "topic_similarity": 0.524045,
+          "mmr_score": 0.228639
+        },
+        {
+          "feed_id": "youtube_watch_33b23e114c8afff3",
+          "source_type": "youtube_watch",
+          "text": "Furnished Dream Tokyo Apartment Tour",
+          "original_text": "Furnished Dream Tokyo Apartment Tour",
+          "creator": "worldofxtra",
+          "url": "https://www.youtube.com/watch?v=Kjvr8Cn0bQA",
+          "occurred_at": "2026-04-27T16:29:07-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.561687,
+          "mmr_score": 0.185832
+        },
+        {
+          "feed_id": "youtube_watch_4490d959183265e9",
+          "source_type": "youtube_watch",
+          "text": "European Tourist Confronts Local Biker..",
+          "original_text": "European Tourist Confronts Local Biker..",
+          "creator": "voyageash",
+          "url": "https://www.youtube.com/watch?v=XV1C0WkkNVE",
+          "occurred_at": "2026-04-10T16:57:39-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.575425,
+          "mmr_score": 0.166572
+        },
+        {
+          "feed_id": "youtube_watch_6a9468dfd0aedd48",
+          "source_type": "youtube_watch",
+          "text": "POV: A Cab Drivers Lunch Break in New York City",
+          "original_text": "POV: A Cab Drivers Lunch Break in New York City",
+          "creator": "AmericanTurk",
+          "url": "https://www.youtube.com/watch?v=0f6l-MbBUqk",
+          "occurred_at": "2026-02-21T16:50:46-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.500003,
+          "mmr_score": 0.158697
+        },
+        {
+          "feed_id": "youtube_watch_8f59f0d538a3a639",
+          "source_type": "youtube_watch",
+          "text": "Crossing the US-Canada Border: Full Interaction & Tips! 🇺🇸🇨🇦",
+          "original_text": "Crossing the US-Canada Border: Full Interaction & Tips! 🇺🇸🇨🇦",
+          "creator": "Vanderson Vibes",
+          "url": "https://www.youtube.com/watch?v=dAnFUB2B-qg",
+          "occurred_at": "2025-07-16T18:50:32-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.510471,
+          "mmr_score": 0.150653
+        },
+        {
+          "feed_id": "youtube_watch_3a73b92ebcaf7f04",
+          "source_type": "youtube_watch",
+          "text": "Do you enjoy hiking?",
+          "original_text": "Do you enjoy hiking?",
+          "creator": "TaleFilm",
+          "url": "https://www.youtube.com/watch?v=jGywMJz8z7E",
+          "occurred_at": "2026-08-10T22:31:43-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.497794,
+          "mmr_score": 0.148847
+        },
+        {
+          "feed_id": "youtube_watch_e0eb4efca1db1156",
+          "source_type": "youtube_watch",
+          "text": "Expert Explains Hidden Airport Design Tricks That Guide Travelers | WSJ Pro Perfected",
+          "original_text": "Expert Explains Hidden Airport Design Tricks That Guide Travelers | WSJ Pro Perfected",
+          "creator": "The Wall Street Journal",
+          "url": "https://www.youtube.com/watch?v=oeJcvKZG2w8",
+          "occurred_at": "2025-05-19T20:00:42-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.483838,
+          "mmr_score": 0.141638
+        }
+      ]
+    },
+    {
+      "topic": "Sustainable fashion trends",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_watch_545535d92645927b",
+          "source_type": "youtube_watch",
+          "text": "#japan #tokyo #streetwear #closettour",
+          "original_text": "#japan #tokyo #streetwear #closettour",
+          "creator": "Mystery Fashionist",
+          "url": "https://www.youtube.com/watch?v=AGBgex7rKG4",
+          "occurred_at": "2026-05-04T13:44:26-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.655975,
+          "mmr_score": 0.393585
+        },
+        {
+          "feed_id": "youtube_watch_a3912ea7257d02ed",
+          "source_type": "youtube_watch",
+          "text": "How ThredUp Resells 17 Million Garments Every Year | AI in Action | Business Insider",
+          "original_text": "How ThredUp Resells 17 Million Garments Every Year | AI in Action | Business Insider",
+          "creator": "Business Insider",
+          "url": "https://www.youtube.com/watch?v=MdaP0HnzGuo",
+          "occurred_at": "2025-05-19T16:38:45-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.559042,
+          "mmr_score": 0.17134
+        },
+        {
+          "feed_id": "youtube_watch_8d6c9d17fed29ee6",
+          "source_type": "youtube_watch",
+          "text": "GOOD FIT or just for Pinterest? Recreating Outfits on a Plus Size Body #plussizemenswear",
+          "original_text": "GOOD FIT or just for Pinterest? Recreating Outfits on a Plus Size Body #plussizemenswear",
+          "creator": "Vitor Arruda",
+          "url": "https://www.youtube.com/watch?v=QBWJUpJFJMQ",
+          "occurred_at": "2026-02-16T19:16:22-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.580831,
+          "mmr_score": 0.152598
+        },
+        {
+          "feed_id": "youtube_watch_e7e7f7cdd96119c0",
+          "source_type": "youtube_watch",
+          "text": "pose ideas for vinyl shopping #CORTIS #CORTIS",
+          "original_text": "pose ideas for vinyl shopping #CORTIS #코르티스",
+          "creator": "CORTIS",
+          "url": "https://www.youtube.com/watch?v=BPrVeNhF_ok",
+          "occurred_at": "2026-06-09T23:04:06-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.491298,
+          "mmr_score": 0.145437
+        },
+        {
+          "feed_id": "youtube_watch_1a8479203bf95a62",
+          "source_type": "youtube_watch",
+          "text": "How to STEAL designer Clothing #fashion #tutorial #upcycle #sewing ng",
+          "original_text": "How to STEAL designer Clothing #fashion #tutorial #upcycle #sewing ng",
+          "creator": "wynunlimited",
+          "url": "https://www.youtube.com/watch?v=Ln7sK-SGmLM",
+          "occurred_at": "2025-07-12T12:34:39-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.619052,
+          "mmr_score": 0.144903
+        },
+        {
+          "feed_id": "youtube_watch_491dd589e10c62ac",
+          "source_type": "youtube_watch",
+          "text": "Golden Era to Gen Z Shift ✨😮#chanel #fashion #models #luxuryfashion #edit #shorts",
+          "original_text": "Golden Era to Gen Z Shift ✨😮#chanel #fashion #models #luxuryfashion #edit #shorts",
+          "creator": "Celebcy",
+          "url": "https://www.youtube.com/watch?v=83ZZVnJB2iU",
+          "occurred_at": "2026-07-16T09:41:05-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.534862,
+          "mmr_score": 0.140734
+        },
+        {
+          "feed_id": "youtube_watch_70485a207467739b",
+          "source_type": "youtube_watch",
+          "text": "Socially unacceptable things we need to change #stayflexy @wearpeluva #ad",
+          "original_text": "Socially unacceptable things we need to change #stayflexy @wearpeluva #ad",
+          "creator": "MovementbyDavid",
+          "url": "https://www.youtube.com/watch?v=DhcRUTJbO_E",
+          "occurred_at": "2025-07-22T10:07:44-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.508939,
+          "mmr_score": 0.122202
+        },
+        {
+          "feed_id": "youtube_watch_083aeb63cccda76a",
+          "source_type": "youtube_watch",
+          "text": "Gabbriette for #gucci #fw26 #runway #fashion #catwalk #highfashion #model #fyp #explore #ytshorts",
+          "original_text": "Gabbriette for #gucci #fw26 #runway #fashion #catwalk #highfashion #model #fyp #explore #ytshorts",
+          "creator": "Its Iconiccc 💅🏻",
+          "url": "https://www.youtube.com/watch?v=3_FRW5k1kLA",
+          "occurred_at": "2026-04-30T20:38:03-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.592092,
+          "mmr_score": 0.121675
+        }
+      ]
+    },
+    {
+      "topic": "Anime industry news",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_watch_a3397da703299326",
+          "source_type": "youtube_watch",
+          "text": "Anime Just to Good ❤️‍🩹 #anime #memes #jujutsukaisen",
+          "original_text": "Anime Just to Good ❤️‍🩹 #anime #memes #jujutsukaisen",
+          "creator": "Ichigomemes",
+          "url": "https://www.youtube.com/watch?v=dQi27dUm-kg",
+          "occurred_at": "2026-04-30T10:44:21-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.697142,
+          "mmr_score": 0.418285
+        },
+        {
+          "feed_id": "youtube_watch_2728d3274c470ecb",
+          "source_type": "youtube_watch",
+          "text": "New documentary explores real-life \"Truman Show\" in Japan",
+          "original_text": "New documentary explores real-life \"Truman Show\" in Japan",
+          "creator": "CBS News",
+          "url": "https://www.youtube.com/watch?v=P_ms8QrkKuo",
+          "occurred_at": "2025-06-06T19:58:30-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.524774,
+          "mmr_score": 0.190661
+        },
+        {
+          "feed_id": "youtube_watch_5db98daae5bb408a",
+          "source_type": "youtube_watch",
+          "text": "The most Japanese company: Akagi Nyūgyō and their legendary popsicle",
+          "original_text": "The most Japanese company: Akagi Nyūgyō and their legendary popsicle",
+          "creator": "Kyota Ko",
+          "url": "https://www.youtube.com/watch?v=jdOQZoMWOoQ",
+          "occurred_at": "2026-05-29T18:28:01-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.530715,
+          "mmr_score": 0.16333
+        },
+        {
+          "feed_id": "youtube_watch_802b3d530940fbc4",
+          "source_type": "youtube_watch",
+          "text": "AKAD - PUSAKATA |🔴 LIVE PERFORMANCE | VIBES ENTERTAINMENT",
+          "original_text": "AKAD - PUSAKATA |🔴 LIVE PERFORMANCE | VIBES ENTERTAINMENT",
+          "creator": "VIBES Entertainment",
+          "url": "https://www.youtube.com/watch?v=dWRRVp8ouQU",
+          "occurred_at": "2026-04-18T21:07:16-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.548668,
+          "mmr_score": 0.146813
+        },
+        {
+          "feed_id": "youtube_watch_d5d6649af7964d7a",
+          "source_type": "youtube_watch",
+          "text": "this is the most anime music battle of all times",
+          "original_text": "this is the most anime music battle of all times",
+          "creator": "Davie504",
+          "url": "https://www.youtube.com/watch?v=M5IRQS5_vmg",
+          "occurred_at": "2026-04-30T20:08:20-07:00",
+          "interaction_count": 2,
+          "topic_similarity": 0.632161,
+          "mmr_score": 0.139764
+        },
+        {
+          "feed_id": "youtube_search_fd926ac0c39e55e3",
+          "source_type": "youtube_search",
+          "text": "jawhn cameraman drama sakura",
+          "original_text": "jawhn cameraman drama sakura",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=jawhn+cameraman+drama+sakura",
+          "occurred_at": "2026-07-26T13:53:42-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.567966,
+          "mmr_score": 0.138052
+        },
+        {
+          "feed_id": "youtube_watch_6786d9147000a0a7",
+          "source_type": "youtube_watch",
+          "text": "This sport needs an anime ￼",
+          "original_text": "This sport needs an anime ￼",
+          "creator": "Michael Franko",
+          "url": "https://www.youtube.com/watch?v=4ZwFGZSegRQ",
+          "occurred_at": "2026-05-21T16:35:26-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.642983,
+          "mmr_score": 0.134319
+        },
+        {
+          "feed_id": "youtube_watch_9a6353a924c7039d",
+          "source_type": "youtube_watch",
+          "text": "Most Viral Pastries in Japan 🇯🇵",
+          "original_text": "Most Viral Pastries in Japan 🇯🇵",
+          "creator": "VinceEats",
+          "url": "https://www.youtube.com/watch?v=d0yrwIizS_Y",
+          "occurred_at": "2026-04-30T17:39:07-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.554328,
+          "mmr_score": 0.1273
+        }
+      ]
+    }
+  ]
+}

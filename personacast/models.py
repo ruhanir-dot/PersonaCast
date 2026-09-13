@@ -112,8 +112,12 @@ class Reaction(BaseModel):
     ## current logic for this it looks at the active topics in the session and fires if reaction names other topic, could do an LLM call for this maybe
     ## additionally we will use requested topic on next score, do -2 switch penalty on current topic
 
-    ## did answer come from web fallback rather than the pool 
+    ## did answer come from web fallback rather than the pool
     used_web: bool = False
+
+    answer_source: str = ""
+    answer_match_score: float | None = None
+    answer_qa_id: str = ""
 
     anchor_snippet: str = "" # the specific sentence listener interrupted and reacted at
     anchor_source: str = "" # title of the curated source that the sentence interrupted at is attached to ,  "" if no confident match, found out through LLM call!
