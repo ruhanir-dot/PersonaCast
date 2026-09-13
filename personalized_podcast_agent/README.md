@@ -105,6 +105,13 @@ const rows = [...document.querySelectorAll('a[href^="/watch"]')]
       'ytd-rich-grid-media, ytd-rich-item-renderer, ytd-video-renderer, ytd-lockup-view-model'
     );
 
+    const url = new URL(a.href);
+    const cardText = (card?.textContent || '').trim();
+
+    const isPlaylistOrMix =
+      url.searchParams.has('list') || // 包含 Mix、播放清單等
+      /(^|\s)(Mix|合輯|播放清單|Playlist)(\s|$)/i.test(cardText);
+
     return {
       title: (
         a.querySelector('#video-title')?.textContent ||
@@ -116,17 +123,24 @@ const rows = [...document.querySelectorAll('a[href^="/watch"]')]
         card?.querySelector('#channel-name a, #channel-name')?.textContent ||
         ''
       ).trim(),
-      url: a.href
+      url: a.href,
+      isPlaylistOrMix
     };
   })
-  .filter((video) => video.title && video.url);
+  .filter((video) =>
+    video.title &&
+    video.url &&
+    !video.isPlaylistOrMix &&
+    !video.url.includes('/shorts/')
+  );
 
-const videos = [...new Map(rows.map((video) => [video.url, video])).values()]
-  .slice(0, 50);
+const videos = [...new Map(rows.map((video) => {
+  delete video.isPlaylistOrMix;
+  return [video.url, video];
+})).values()].slice(0, 50);
 
 copy(JSON.stringify(videos, null, 2));
-console.log(`Copied ${videos.length} non-Shorts homepage videos.`);
-```
+console.log(`Copied ${videos.length} homepage videos, excluding Shorts and playlists/Mixes.`);
 
 Paste the copied JSON into:
 
