@@ -109,7 +109,7 @@ const rows = [...document.querySelectorAll('a[href^="/watch"]')]
     const cardText = (card?.textContent || '').trim();
 
     const isPlaylistOrMix =
-      url.searchParams.has('list') || // 包含 Mix、播放清單等
+      url.searchParams.has('list') || // include Mix、playlist
       /(^|\s)(Mix|合輯|播放清單|Playlist)(\s|$)/i.test(cardText);
 
     return {
