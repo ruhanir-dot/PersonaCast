@@ -1,0 +1,1017 @@
+{
+  "configuration": {
+    "reconstructed_from": "candidate_trunks.json topics[].selected_seeds"
+  },
+  "topics": [
+    {
+      "topic": "K-pop",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_watch_46fbeb26326d92cd",
+          "source_type": "youtube_watch",
+          "text": "(Idol_Challenge - WJSN ep-1) Have you had a drink...?",
+          "original_text": "(Idol_Challenge - WJSN ep-1) 혹시 한잔하셨어요…? 본격 회식 텐션 우주소녀 챌린지 (ENG sub)",
+          "creator": "THE K-POP",
+          "url": "https://www.youtube.com/watch?v=aq-2bYN625s",
+          "occurred_at": "2022-07-22T03:34:36-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.837217,
+          "mmr_score": 0.50233
+        },
+        {
+          "feed_id": "youtube_watch_32b4fee331d5573a",
+          "source_type": "youtube_watch",
+          "text": "K-pop in public MAVE: \"PANDORA\" Gintan",
+          "original_text": "K-pop in public MAVE: (메이브) 'PANDORA' Gintan",
+          "creator": "PINKIE kpop",
+          "url": "https://www.youtube.com/watch?v=6aQD_ITuM1I",
+          "occurred_at": "2023-09-25T01:41:48-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.805526,
+          "mmr_score": 0.20563
+        },
+        {
+          "feed_id": "youtube_search_1940f7b5654af06b",
+          "source_type": "youtube_search",
+          "text": "kpop",
+          "original_text": "kpop",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=kpop",
+          "occurred_at": "2021-11-14T18:12:38-07:00",
+          "interaction_count": 2,
+          "topic_similarity": 0.764173,
+          "mmr_score": 0.201041
+        },
+        {
+          "feed_id": "youtube_watch_68118dde9c9d75e4",
+          "source_type": "youtube_watch",
+          "text": "That's how good you are.",
+          "original_text": "???: 그만큼 잘하신다는 거지",
+          "creator": "Mnet K-POP",
+          "url": "https://www.youtube.com/watch?v=s1D4fVxdP-k",
+          "occurred_at": "2024-02-24T00:26:13-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.778662,
+          "mmr_score": 0.191776
+        },
+        {
+          "feed_id": "youtube_watch_927fff1371b832b6",
+          "source_type": "youtube_watch",
+          "text": "KPOP PLAYLIST 2023 💖🌼 K-POP Lite",
+          "original_text": "KPOP PLAYLIST 2023 💖🌼 K-POP Lite",
+          "creator": "K-POP Lite",
+          "url": "https://www.youtube.com/watch?v=PoTyt_OoPUs",
+          "occurred_at": null,
+          "interaction_count": 1,
+          "topic_similarity": 0.802149,
+          "mmr_score": 0.181151
+        },
+        {
+          "feed_id": "youtube_watch_bf505b9550fd41ee",
+          "source_type": "youtube_watch",
+          "text": "It's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it's me, it'",
+          "original_text": "摄影师是第6位成员吧？ILLIT 《It’s Me》舞台直拍引热议！#illit #kpop",
+          "creator": "Reload K-pop",
+          "url": "https://www.youtube.com/watch?v=ZEUyEKRF-ns",
+          "occurred_at": "2026-05-19T14:44:24-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.768585,
+          "mmr_score": 0.172416
+        },
+        {
+          "feed_id": "youtube_watch_e1cb87cd58323aa8",
+          "source_type": "youtube_watch",
+          "text": "Nana X's \"Shhh Shhh\" Challenge l #dancing and dance #show champion",
+          "original_text": "나나 X 키스오브라이프의 ＂쉿(Shhh)🤫＂ 챌린지 l #나춤잘추나 #쇼챔피언",
+          "creator": "ALL THE K-POP",
+          "url": "https://www.youtube.com/watch?v=VxsIrvalvac",
+          "occurred_at": "2023-08-16T00:50:44-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.800024,
+          "mmr_score": 0.171493
+        },
+        {
+          "feed_id": "youtube_watch_e4f8787bc0c2e831",
+          "source_type": "youtube_watch",
+          "text": "K-pop Groups Choice",
+          "original_text": "K-pop Groups Choice",
+          "creator": "KAFTAN",
+          "url": "https://www.youtube.com/watch?v=jY7NZJMK5V8",
+          "occurred_at": "2023-12-25T09:06:20-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.748643,
+          "mmr_score": 0.168121
+        }
+      ]
+    },
+    {
+      "topic": "fashion",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_search_e79ffb37defd7e54",
+          "source_type": "youtube_search",
+          "text": "And clothing",
+          "original_text": "和服",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=%E5%92%8C%E6%9C%8D",
+          "occurred_at": null,
+          "interaction_count": 1,
+          "topic_similarity": 0.791362,
+          "mmr_score": 0.474817
+        },
+        {
+          "feed_id": "youtube_watch_f2487dac55bafbe0",
+          "source_type": "youtube_watch",
+          "text": "#kissoflife #midastouch #dancechallenge with #outfit from @fashionchingu",
+          "original_text": "#kissoflife #midastouch #dancechallenge with #outfit from @fashionchingu",
+          "creator": "Kathleen Carm",
+          "url": "https://www.youtube.com/watch?v=WMOpq35WCqo",
+          "occurred_at": "2024-04-19T23:51:52-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.70359,
+          "mmr_score": 0.199358
+        },
+        {
+          "feed_id": "youtube_search_a3e63807ef171700",
+          "source_type": "youtube_search",
+          "text": "lacking style",
+          "original_text": "lacking style",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=lacking+style",
+          "occurred_at": null,
+          "interaction_count": 1,
+          "topic_similarity": 0.676359,
+          "mmr_score": 0.194948
+        },
+        {
+          "feed_id": "youtube_search_12fac69c74b0fe25",
+          "source_type": "youtube_search",
+          "text": "sana fancy",
+          "original_text": "sana fancy",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=sana+fancy",
+          "occurred_at": "2021-02-09T10:24:41-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.709275,
+          "mmr_score": 0.176168
+        },
+        {
+          "feed_id": "youtube_watch_f057ae022366a69d",
+          "source_type": "youtube_watch",
+          "text": "How is this a dress? 😳 (part 2) #fashion #outfit #onlinevsreality #swealife",
+          "original_text": "How is this a dress? 😳 (part 2) #fashion #outfit #onlinevsreality #swealife",
+          "creator": "Swealife",
+          "url": "https://www.youtube.com/watch?v=OKZjAkRNj8Q",
+          "occurred_at": "2024-07-23T00:34:49-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.734921,
+          "mmr_score": 0.156938
+        },
+        {
+          "feed_id": "youtube_search_7f18d626aa464e98",
+          "source_type": "youtube_search",
+          "text": "Models",
+          "original_text": "模特",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=%E6%A8%A1%E7%89%B9",
+          "occurred_at": "2023-07-08T00:47:48-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.633802,
+          "mmr_score": 0.14907
+        },
+        {
+          "feed_id": "youtube_watch_2654f9f0e7e49dd1",
+          "source_type": "youtube_watch",
+          "text": "Fashion winter Coat ✨ #outfit #fashion #makeup #viral #shorts #beauty",
+          "original_text": "Fashion winter Coat ✨ #outfit #fashion #makeup #viral #shorts #beauty",
+          "creator": "Beauty NiNi",
+          "url": "https://www.youtube.com/watch?v=9MsWZkk8vlc",
+          "occurred_at": "2024-03-20T03:28:55-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.718195,
+          "mmr_score": 0.148925
+        },
+        {
+          "feed_id": "youtube_watch_408e5c0309dd3d6a",
+          "source_type": "youtube_watch",
+          "text": "SANA-log : Milan Fashion week",
+          "original_text": "SANA-log : Milan Fashion week",
+          "creator": "TWICE",
+          "url": "https://www.youtube.com/watch?v=FqrTeWGd6_o",
+          "occurred_at": "2022-12-01T08:01:17-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.65701,
+          "mmr_score": 0.146594
+        }
+      ]
+    },
+    {
+      "topic": "travel",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_search_e4985bde782bf9ea",
+          "source_type": "youtube_search",
+          "text": "Free march in southern France",
+          "original_text": "南法 自由行",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=%E5%8D%97%E6%B3%95+%E8%87%AA%E7%94%B1%E8%A1%8C",
+          "occurred_at": null,
+          "interaction_count": 1,
+          "topic_similarity": 0.786319,
+          "mmr_score": 0.471791
+        },
+        {
+          "feed_id": "youtube_search_47b7974b4d5ccefc",
+          "source_type": "youtube_search",
+          "text": "passenger",
+          "original_text": "passenger",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=passenger",
+          "occurred_at": "2021-03-14T08:13:40-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.69048,
+          "mmr_score": 0.194318
+        },
+        {
+          "feed_id": "youtube_search_cdb2fdc02612af11",
+          "source_type": "youtube_search",
+          "text": "vlog travel",
+          "original_text": "vlog travel",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=vlog+travel",
+          "occurred_at": "2026-04-20T11:57:59-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.676136,
+          "mmr_score": 0.18359
+        },
+        {
+          "feed_id": "youtube_search_016b3d8e1ec0b165",
+          "source_type": "youtube_search",
+          "text": "tour",
+          "original_text": "tour",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=tour",
+          "occurred_at": "2025-09-06T18:50:07-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.71837,
+          "mmr_score": 0.176017
+        },
+        {
+          "feed_id": "youtube_watch_4a2767e085cabbf2",
+          "source_type": "youtube_watch",
+          "text": "Travel blowout *on the plane* | YESHIPOLITO",
+          "original_text": "Travel blowout *on the plane* | YESHIPOLITO",
+          "creator": "YesHipolito",
+          "url": "https://www.youtube.com/watch?v=NXFuknN9JJw",
+          "occurred_at": "2023-08-31T22:35:04-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.634769,
+          "mmr_score": 0.145001
+        },
+        {
+          "feed_id": "youtube_search_f41b916333f33228",
+          "source_type": "youtube_search",
+          "text": "go go",
+          "original_text": "go go",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=go+go",
+          "occurred_at": "2020-03-28T04:22:09-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.542538,
+          "mmr_score": 0.142397
+        },
+        {
+          "feed_id": "youtube_search_7ea90fa256e9202a",
+          "source_type": "youtube_search",
+          "text": "Moving luggage to bed",
+          "original_text": "搬宿行李",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=%E6%90%AC%E5%AE%BF%E8%A1%8C%E6%9D%8E",
+          "occurred_at": "2021-09-10T01:40:29-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.610416,
+          "mmr_score": 0.135472
+        },
+        {
+          "feed_id": "youtube_watch_1a7bbd6daa622cc9",
+          "source_type": "youtube_watch",
+          "text": "Traveling is a prison escape from a boring life #original #drama #funny #everyday #life #work #work #sand sculpture #partners #travel #love",
+          "original_text": "旅行~是枯燥生活中的一場越獄 #原創 #劇情 #搞笑 #日常 #生活 #上班 #工作 #沙雕 #情侶 #旅遊 #戀愛",
+          "creator": "What are you doing here?",
+          "url": "https://www.youtube.com/watch?v=xQAzqB2EWkY",
+          "occurred_at": "2025-08-21T20:41:43-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.650272,
+          "mmr_score": 0.134767
+        }
+      ]
+    },
+    {
+      "topic": "campus life",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_search_601f14f0714689d3",
+          "source_type": "youtube_search",
+          "text": "jessi college",
+          "original_text": "jessi college",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=jessi+college",
+          "occurred_at": "2022-05-09T04:49:23-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.69925,
+          "mmr_score": 0.41955
+        },
+        {
+          "feed_id": "instagram_like_6403ba691b821f61",
+          "source_type": "instagram_like",
+          "text": "If you ask me, \"What's your college life like?\" the people in the photo probably represent a summary of my entire college life. We always thought we had a lot of time to spend together, but time always flowed in a corner we couldn't see. Thank you to those who have been with me for four years, and to those who have stayed here for a short time, and believe that the joy and grief of those days, are the things we remember from time to time, the things we did in the past, the things we did in the past, the things we did in the",
+          "original_text": "🎓2025.06.11 如果你問我：「你的大學生活長什麼樣子？」 照片裡出現過的人，大概就代表了我整個大學生活的縮影。 我們總以為還有很多時間可以相處，但時間總在我們看不到的角落悄悄流逝。 謝謝這四年裡一直陪在我身邊的人，和那些短暫停留過的人，相信這段日子的喜怒哀樂，都是往後出社會的我們會時不時回想起的，那些我們曾經做過瘋狂的事，無數個夜晚一起談心、聊未來，等到那個時候我們應該會覺得當時的自己很可愛吧。 我們在四年前的這個季節相遇 並在彼此的青春留下一點痕跡 四年後的這個季節我們各自奔向未來 期待下個章節的我們 愛大家🫶🏻 「幸運在炙熱的青春 遇見耀眼的你們」 日四技旅館四C 41011223 下台一鞠躬🙇‍♀️",
+          "creator": "its.wen23",
+          "url": "https://www.instagram.com/p/DK-BLswSYj7wzFBI5YBzREB3v8qkz5DhjhpVgQ0/",
+          "occurred_at": "2025-06-17T08:15:29+00:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.639237,
+          "mmr_score": 0.200617
+        },
+        {
+          "feed_id": "youtube_search_62086704ba0037f1",
+          "source_type": "youtube_search",
+          "text": "Life in the dorms",
+          "original_text": "宿舍生活",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=%E5%AE%BF%E8%88%8D%E7%94%9F%E6%B4%BB",
+          "occurred_at": null,
+          "interaction_count": 1,
+          "topic_similarity": 0.688776,
+          "mmr_score": 0.190349
+        },
+        {
+          "feed_id": "youtube_watch_f95e36b9f9b47b84",
+          "source_type": "youtube_watch",
+          "text": "How college students can give their first boost #JoJoJoJoJoJoJoJoJoJoJoJoJo",
+          "original_text": "大學生的第一次給壯壯會怎樣 #勤益科大 #校園巡迴",
+          "creator": "What are you doing?",
+          "url": "https://www.youtube.com/watch?v=rVhZYiZS_vE",
+          "occurred_at": "2025-08-10T09:08:10-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.68536,
+          "mmr_score": 0.165896
+        },
+        {
+          "feed_id": "youtube_search_d42cc86a5a64bbc0",
+          "source_type": "youtube_search",
+          "text": "#School Poll",
+          "original_text": "#校園民調",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=%23%E6%A0%A1%E5%9C%92%E6%B0%91%E8%AA%BF",
+          "occurred_at": "2019-11-04T08:10:09-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.697831,
+          "mmr_score": 0.149848
+        },
+        {
+          "feed_id": "youtube_watch_58b0457812bf6e10",
+          "source_type": "youtube_watch",
+          "text": "Women college students who spend zero money",
+          "original_text": "不同零花钱的女大学生",
+          "creator": "ShirleyLife_SF",
+          "url": "https://www.youtube.com/watch?v=EPnUQ_5zA-0",
+          "occurred_at": "2024-01-04T08:34:17-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.53603,
+          "mmr_score": 0.112617
+        },
+        {
+          "feed_id": "youtube_watch_2f92f2eaf101f7d7",
+          "source_type": "youtube_watch",
+          "text": "#studyinchina #university #scholarship #workinchina #students #studying in China",
+          "original_text": "#studyinchina #university #scholarship #workinchina #students #留学中国",
+          "creator": "MrsNancy",
+          "url": "https://www.youtube.com/watch?v=E1Thg62SGyY",
+          "occurred_at": "2025-07-28T09:05:21-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.605405,
+          "mmr_score": 0.110117
+        },
+        {
+          "feed_id": "youtube_watch_2e2c5ae0ba30fcb1",
+          "source_type": "youtube_watch",
+          "text": "Zach Terry, a student at Boise State University in the United States, gave a speech at the graduation ceremony to encourage graduates to take a positive view of life, and you can always choose a better side.",
+          "original_text": "美国博伊西州立大学学生扎克·泰里在毕业典礼发表演讲，鼓励毕业生们积极面对生活，你永远可以选择更好的一面。",
+          "creator": "Michaels Liu World",
+          "url": "https://www.youtube.com/watch?v=SZ7uIBjPU3E",
+          "occurred_at": "2024-07-02T02:18:27-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.538221,
+          "mmr_score": 0.102
+        }
+      ]
+    },
+    {
+      "topic": "food",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_search_48256eaab5b82788",
+          "source_type": "youtube_search",
+          "text": "The food is delicious.",
+          "original_text": "小穎美食",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=%E5%B0%8F%E7%A9%8E%E7%BE%8E%E9%A3%9F",
+          "occurred_at": "2019-12-02T16:23:21-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.826051,
+          "mmr_score": 0.495631
+        },
+        {
+          "feed_id": "youtube_search_99d9a91f509ab62d",
+          "source_type": "youtube_search",
+          "text": "eating",
+          "original_text": "eating",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=eating",
+          "occurred_at": "2020-07-26T03:43:32-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.814499,
+          "mmr_score": 0.21331
+        },
+        {
+          "feed_id": "youtube_search_e72b5b153ad9d16f",
+          "source_type": "youtube_search",
+          "text": "food day",
+          "original_text": "food day",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=food+day",
+          "occurred_at": "2025-03-01T02:41:29-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.749742,
+          "mmr_score": 0.191125
+        },
+        {
+          "feed_id": "youtube_search_1c3229fb8067a0c9",
+          "source_type": "youtube_search",
+          "text": "food channel",
+          "original_text": "food channel",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=food+channel",
+          "occurred_at": "2020-07-26T03:22:21-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.70715,
+          "mmr_score": 0.188278
+        },
+        {
+          "feed_id": "youtube_search_bc0d3f58adac21b0",
+          "source_type": "youtube_search",
+          "text": "dish",
+          "original_text": "dish",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=dish",
+          "occurred_at": "2022-04-23T19:24:11-07:00",
+          "interaction_count": 2,
+          "topic_similarity": 0.748933,
+          "mmr_score": 0.179955
+        },
+        {
+          "feed_id": "youtube_search_f5245981402eb70a",
+          "source_type": "youtube_search",
+          "text": "vlog food",
+          "original_text": "vlog food",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=vlog+food",
+          "occurred_at": "2026-04-20T11:57:53-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.714018,
+          "mmr_score": 0.160294
+        },
+        {
+          "feed_id": "youtube_watch_7f37c04aa807b84e",
+          "source_type": "youtube_watch",
+          "text": "Asian street food and bread",
+          "original_text": "Asian street food 面包",
+          "creator": "Asian Street food",
+          "url": "https://www.youtube.com/watch?v=7hEhPPVSiZs",
+          "occurred_at": "2024-03-05T22:03:04-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.652071,
+          "mmr_score": 0.157659
+        },
+        {
+          "feed_id": "youtube_search_7e12259895d2cd5a",
+          "source_type": "youtube_search",
+          "text": "Two meals",
+          "original_text": "兩餐",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=%E5%85%A9%E9%A4%90",
+          "occurred_at": "2021-12-06T21:32:58-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.734693,
+          "mmr_score": 0.148828
+        }
+      ]
+    },
+    {
+      "topic": "lifestyle",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_subscription_5aeea8611fd0a49d",
+          "source_type": "youtube_subscription",
+          "text": "Life in a fat house x",
+          "original_text": "人生肥宅x尊",
+          "creator": "Life in a fat house x",
+          "url": "http://www.youtube.com/channel/UC6VKHP606ee6ffKwKmBHSig",
+          "occurred_at": null,
+          "interaction_count": 1,
+          "topic_similarity": 0.61224,
+          "mmr_score": 0.367344
+        },
+        {
+          "feed_id": "youtube_search_7f18d626aa464e98",
+          "source_type": "youtube_search",
+          "text": "Models",
+          "original_text": "模特",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=%E6%A8%A1%E7%89%B9",
+          "occurred_at": "2023-07-08T00:47:48-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.56878,
+          "mmr_score": 0.16276
+        },
+        {
+          "feed_id": "youtube_search_2e2057c1df8311c1",
+          "source_type": "youtube_search",
+          "text": "Le sserafim movement",
+          "original_text": "le sserafim 運動",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=le+sserafim+%E9%81%8B%E5%8B%95",
+          "occurred_at": "2023-03-22T19:16:38-07:00",
+          "interaction_count": 2,
+          "topic_similarity": 0.555552,
+          "mmr_score": 0.127029
+        },
+        {
+          "feed_id": "youtube_search_99d9a91f509ab62d",
+          "source_type": "youtube_search",
+          "text": "eating",
+          "original_text": "eating",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=eating",
+          "occurred_at": "2020-07-26T03:43:32-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.510462,
+          "mmr_score": 0.122169
+        },
+        {
+          "feed_id": "youtube_search_3bcd7e7fdcb9385a",
+          "source_type": "youtube_search",
+          "text": "popular",
+          "original_text": "popular",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=popular",
+          "occurred_at": null,
+          "interaction_count": 2,
+          "topic_similarity": 0.492795,
+          "mmr_score": 0.115568
+        },
+        {
+          "feed_id": "youtube_watch_d1db50988464225d",
+          "source_type": "youtube_watch",
+          "text": "How do you make yourself look rich and free? That's eating healthy food every day... #healthy food #fitness food #weight loss # slimming down #diet control",
+          "original_text": "如何讓自己看起來財富自由？那就是每天都吃健康餐…#健康餐 #健身餐 #減肥 #瘦身 #飲食控制",
+          "creator": "Joeman",
+          "url": "https://www.youtube.com/watch?v=OeTGrc3QDVw",
+          "occurred_at": "2023-10-26T03:45:45-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.495657,
+          "mmr_score": 0.099003
+        },
+        {
+          "feed_id": "youtube_search_bcfe7106aef01d14",
+          "source_type": "youtube_search",
+          "text": "body",
+          "original_text": "body",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=body",
+          "occurred_at": "2025-10-13T16:57:02-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.531229,
+          "mmr_score": 0.097737
+        },
+        {
+          "feed_id": "youtube_search_e0d19477a8cf2979",
+          "source_type": "youtube_search",
+          "text": "twice live",
+          "original_text": "twice live",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=twice+live",
+          "occurred_at": null,
+          "interaction_count": 3,
+          "topic_similarity": 0.488124,
+          "mmr_score": 0.096659
+        }
+      ]
+    },
+    {
+      "topic": "stock market",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_search_a128e464dcdee332",
+          "source_type": "youtube_search",
+          "text": "Shares",
+          "original_text": "股票",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=%E8%82%A1%E7%A5%A8",
+          "occurred_at": null,
+          "interaction_count": 2,
+          "topic_similarity": 0.876268,
+          "mmr_score": 0.525761
+        },
+        {
+          "feed_id": "youtube_watch_384b17f397b7ae8a",
+          "source_type": "youtube_watch",
+          "text": "As the stock market exploded, careful earnings were no longer used; AI margin trading 00878 deci0056 deci0056 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005 deci005",
+          "original_text": "股市大彈，小心賺再多都沒用；AI邊緣運算|00878|0056|邁達特|力積電|神達|台積電|三大法人|投資理財|台幣|美元|存股|股票| 02/05/25【宏爺講股】",
+          "creator": "Grandfather shares",
+          "url": "https://www.youtube.com/watch?v=hlpVBUxTcaA",
+          "occurred_at": "2025-02-07T08:02:40-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.70744,
+          "mmr_score": 0.133018
+        },
+        {
+          "feed_id": "youtube_watch_876e0156f2be0465",
+          "source_type": "youtube_watch",
+          "text": "How do you buy stocks? 600 seconds to learn the basics of stock trading.",
+          "original_text": "股票怎麼買？600秒學完股票交易基礎 | 夯翻鼠FQ30 投資理財",
+          "creator": "ZRBros, brother of the rat",
+          "url": "https://www.youtube.com/watch?v=zEDJ7LBZO4M",
+          "occurred_at": "2023-08-02T02:55:37-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.674133,
+          "mmr_score": 0.122995
+        },
+        {
+          "feed_id": "youtube_watch_c06ffeed7495d2f0",
+          "source_type": "youtube_watch",
+          "text": "The world's largest stock market is on the way! four major indices tell you all at once: Dow Jones Industrial Average, the Standard 500 Index, the NASDAQ Composite Index, the Philadelphia Semiconductor Index, the #02FC&FQ18",
+          "original_text": "【股票教學】全球最強股市美股來啦！四大指數一次報你知！道瓊工業平均指數、標準普爾500指數、那斯達克綜合指數、費城半導體指數｜美股#02｜FC&FQ18",
+          "creator": "This is the first time I've seen this.",
+          "url": "https://www.youtube.com/watch?v=MzdagJqfG-I",
+          "occurred_at": "2024-10-06T01:02:25-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.649973,
+          "mmr_score": 0.104557
+        },
+        {
+          "feed_id": "youtube_search_0fd0924824b8adc0",
+          "source_type": "youtube_search",
+          "text": "fiesta line distribution",
+          "original_text": "fiesta line distribution",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=fiesta+line+distribution",
+          "occurred_at": "2020-02-27T23:23:46-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.345908,
+          "mmr_score": 0.086581
+        },
+        {
+          "feed_id": "youtube_watch_5be3ce2883cc3a09",
+          "source_type": "youtube_watch",
+          "text": "How do new investors buy their first stock or ETF! How do securities buyers choose? 0050 0056 Buying is easy!// New investors entrance class ep1 to SHIN LI",
+          "original_text": "投資新手怎麼購買第一支股票或ETF！證券戶怎麼選？0050 0056購買很簡單！//新手投資入門課ep1｜SHIN LI",
+          "creator": "SHIN LI",
+          "url": "https://www.youtube.com/watch?v=vA0KLn4JNv8",
+          "occurred_at": "2023-08-13T04:46:23-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.564122,
+          "mmr_score": 0.073396
+        },
+        {
+          "feed_id": "youtube_watch_141ec1737aad2d8c",
+          "source_type": "youtube_watch",
+          "text": "Why do some seniors say stocks are dangerous and don't touch them?",
+          "original_text": "為何有長輩說股票很危險，不要碰？🤔｜志祺七七 #shorts",
+          "creator": "What is the meaning of life?",
+          "url": "https://www.youtube.com/watch?v=tWm3DlT1O10",
+          "occurred_at": "2024-07-02T02:14:48-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.511269,
+          "mmr_score": 0.069924
+        },
+        {
+          "feed_id": "youtube_search_84641758b3d88803",
+          "source_type": "youtube_search",
+          "text": "BTS 2018 The facts",
+          "original_text": "bts 2018 事情",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=bts+2018+%E4%BA%8B%E6%83%85",
+          "occurred_at": null,
+          "interaction_count": 1,
+          "topic_similarity": 0.334309,
+          "mmr_score": 0.063951
+        }
+      ]
+    },
+    {
+      "topic": "daily news",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_search_b26dcbec143f55fb",
+          "source_type": "youtube_search",
+          "text": "Newspapers report",
+          "original_text": "新聞 報告",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=%E6%96%B0%E8%81%9E+%E5%A0%B1%E5%91%8A",
+          "occurred_at": "2023-10-05T22:20:48-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.875891,
+          "mmr_score": 0.525535
+        },
+        {
+          "feed_id": "youtube_search_dfd3cff9de2585e8",
+          "source_type": "youtube_search",
+          "text": "morning news",
+          "original_text": "morning news",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=morning+news",
+          "occurred_at": "2026-04-17T14:21:06-07:00",
+          "interaction_count": 2,
+          "topic_similarity": 0.81312,
+          "mmr_score": 0.199129
+        },
+        {
+          "feed_id": "youtube_search_c10a7a1bbbf9653c",
+          "source_type": "youtube_search",
+          "text": "cnn news live",
+          "original_text": "cnn news live",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=cnn+news+live",
+          "occurred_at": "2026-04-15T19:32:02-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.687167,
+          "mmr_score": 0.163208
+        },
+        {
+          "feed_id": "youtube_search_52864540465a1a7c",
+          "source_type": "youtube_search",
+          "text": "daily vlog",
+          "original_text": "daily vlog",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=daily+vlog",
+          "occurred_at": "2021-09-11T20:07:38-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.608212,
+          "mmr_score": 0.156155
+        },
+        {
+          "feed_id": "youtube_watch_fbd0978bc06889d6",
+          "source_type": "youtube_watch",
+          "text": "Weather experts estimate that the northernmost county of Taïwan, Ireland, is in the southern part of the country.",
+          "original_text": "放第2天颱風假？ 氣象專家估宜蘭、台中以北縣市",
+          "creator": "TTV NEWS is a television news channel.",
+          "url": "https://www.youtube.com/watch?v=LS7FiuIipUc",
+          "occurred_at": "2024-10-31T02:35:09-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.596861,
+          "mmr_score": 0.132604
+        },
+        {
+          "feed_id": "youtube_watch_d9befc7e2276acc6",
+          "source_type": "youtube_watch",
+          "text": "In August, a new version of the platform was launched, and it became the \"priority seat\" for the eight major TV stations.",
+          "original_text": "8月新制上路 博愛座變「優先席」 |【民生八方事】| 2025073104 | 八大電視台",
+          "creator": "What is the meaning of this article?",
+          "url": "https://www.youtube.com/watch?v=f0yQxku2um0",
+          "occurred_at": "2025-07-31T23:55:57-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.578152,
+          "mmr_score": 0.127918
+        },
+        {
+          "feed_id": "youtube_watch_897fe0c9ba02dbcd",
+          "source_type": "youtube_watch",
+          "text": "The more the gardens are planted, the more I'll live alone.",
+          "original_text": "Key種蔥上新聞！後續菜園越種越多_《我獨自生活》第449集_friDay影音韓綜線上看",
+          "creator": "FreeDay Video - South Korean drama, cooking and full-length movies - updated daily.",
+          "url": "https://www.youtube.com/watch?v=djEWQB6WoEA",
+          "occurred_at": "2022-06-11T17:14:54-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.579567,
+          "mmr_score": 0.122853
+        },
+        {
+          "feed_id": "youtube_watch_94fdf8527d3d653f",
+          "source_type": "youtube_watch",
+          "text": "The Chief Minister of NAP shared the highlights of his 100 days in office",
+          "original_text": "南投縣長上任100天施政亮點分享",
+          "creator": "Taiwan Daily Network is a Taiwanese daily news channel.",
+          "url": "https://www.youtube.com/watch?v=nsE3mvDd8r4",
+          "occurred_at": "2023-04-08T03:25:17-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.559856,
+          "mmr_score": 0.1222
+        }
+      ]
+    },
+    {
+      "topic": "board games",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_watch_10bdfaf3a8cee2eb",
+          "source_type": "youtube_watch",
+          "text": "Pac Man The Board Game?! #boardgames #couple #fun",
+          "original_text": "Pac Man The Board Game?! #boardgames #couple #fun",
+          "creator": "Games4two",
+          "url": "https://www.youtube.com/watch?v=CqOa2RtJn5Y",
+          "occurred_at": "2024-09-28T02:15:50-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.78519,
+          "mmr_score": 0.471114
+        },
+        {
+          "feed_id": "youtube_search_76082d1873d69f82",
+          "source_type": "youtube_search",
+          "text": "splendor board game",
+          "original_text": "splendor board game",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=splendor+board+game",
+          "occurred_at": "2024-11-02T11:59:48-07:00",
+          "interaction_count": 2,
+          "topic_similarity": 0.774283,
+          "mmr_score": 0.216039
+        },
+        {
+          "feed_id": "youtube_watch_d7a41d66fa49d7e5",
+          "source_type": "youtube_watch",
+          "text": "Agricola 2 edition Teaching + Mindfulness",
+          "original_text": "Agricola 2人版 教學＋心得",
+          "creator": "Amazing Boardgame",
+          "url": "https://www.youtube.com/watch?v=x_XeNkgqFmU",
+          "occurred_at": null,
+          "interaction_count": 1,
+          "topic_similarity": 0.739986,
+          "mmr_score": 0.163969
+        },
+        {
+          "feed_id": "youtube_watch_e46fd0f5e255b05d",
+          "source_type": "youtube_watch",
+          "text": "Block Up Is A Challenging Game Of Speed, Balance, And Accuracy! #boardgames #couple #fun",
+          "original_text": "Block Up Is A Challenging Game Of Speed, Balance, And Accuracy! #boardgames #couple #fun",
+          "creator": "Games4two",
+          "url": "https://www.youtube.com/watch?v=vtqaI-k-KsM",
+          "occurred_at": "2024-09-28T03:24:30-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.659081,
+          "mmr_score": 0.15319
+        },
+        {
+          "feed_id": "youtube_watch_a28d1dedd31c4656",
+          "source_type": "youtube_watch",
+          "text": "Farmer's Choir, two people",
+          "original_text": "農家樂 雙人",
+          "creator": "BoardGameGroup board game board game board game board game board game board game board game board game board game board game board game board game board game board board game board board game board board game board board board game board board board game board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board board",
+          "url": "https://www.youtube.com/watch?v=cL8FbF3Hvcw",
+          "occurred_at": "2024-06-23T02:13:34-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.686212,
+          "mmr_score": 0.151617
+        },
+        {
+          "feed_id": "youtube_watch_26fbe99ad2db3446",
+          "source_type": "youtube_watch",
+          "text": "Play Popdarts With Or Without The Board, This Game Is Perfect For Any Occasion! #boardgame #couple",
+          "original_text": "Play Popdarts With Or Without The Board, This Game Is Perfect For Any Occasion! #boardgame #couple",
+          "creator": "Games4two",
+          "url": "https://www.youtube.com/watch?v=_yygYFeB9Go",
+          "occurred_at": "2023-11-11T22:35:33-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.714725,
+          "mmr_score": 0.147273
+        },
+        {
+          "feed_id": "youtube_watch_fb9d32fe342a8d05",
+          "source_type": "youtube_watch",
+          "text": "A Reverse Balance Board Game? This Is So Much Fun! #boardgame #couple",
+          "original_text": "A Reverse Balance Board Game? This Is So Much Fun! #boardgame #couple",
+          "creator": "Games4two",
+          "url": "https://www.youtube.com/watch?v=jGy4zRNMyNY",
+          "occurred_at": "2023-11-08T19:00:25-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.741172,
+          "mmr_score": 0.146699
+        },
+        {
+          "feed_id": "youtube_search_9b08886721afe2c8",
+          "source_type": "youtube_search",
+          "text": "Sounds and games",
+          "original_text": "抖音 遊戲",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=%E6%8A%96%E9%9F%B3+%E9%81%8A%E6%88%B2",
+          "occurred_at": "2021-10-16T03:43:41-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.658745,
+          "mmr_score": 0.139155
+        }
+      ]
+    },
+    {
+      "topic": "LLM",
+      "selected_seeds": [
+        {
+          "feed_id": "youtube_search_64d10a5f4efa3614",
+          "source_type": "youtube_search",
+          "text": "llm",
+          "original_text": "llm",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=llm",
+          "occurred_at": "2026-05-21T11:45:02-07:00",
+          "interaction_count": 2,
+          "topic_similarity": 0.940073,
+          "mmr_score": 0.564044
+        },
+        {
+          "feed_id": "youtube_search_8b2fe76df268120f",
+          "source_type": "youtube_search",
+          "text": "dm",
+          "original_text": "dm",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=dm",
+          "occurred_at": "2022-02-07T02:35:17-07:00",
+          "interaction_count": 2,
+          "topic_similarity": 0.775412,
+          "mmr_score": 0.168911
+        },
+        {
+          "feed_id": "youtube_search_536f5f27f43b346a",
+          "source_type": "youtube_search",
+          "text": "llm models",
+          "original_text": "llm models",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=llm+models",
+          "occurred_at": "2026-05-12T13:26:18-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.727934,
+          "mmr_score": 0.161746
+        },
+        {
+          "feed_id": "youtube_search_490e9bcd1fb2a177",
+          "source_type": "youtube_search",
+          "text": "GD cl",
+          "original_text": "GD cl",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=GD+cl",
+          "occurred_at": null,
+          "interaction_count": 1,
+          "topic_similarity": 0.76181,
+          "mmr_score": 0.145147
+        },
+        {
+          "feed_id": "youtube_search_6e8ce3e4b6218782",
+          "source_type": "youtube_search",
+          "text": "jyp",
+          "original_text": "jyp",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=jyp",
+          "occurred_at": "2019-09-20T20:43:54-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.722773,
+          "mmr_score": 0.136998
+        },
+        {
+          "feed_id": "youtube_search_fa61bd290f27703f",
+          "source_type": "youtube_search",
+          "text": "v bts",
+          "original_text": "v bts",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=v+bts",
+          "occurred_at": null,
+          "interaction_count": 1,
+          "topic_similarity": 0.648747,
+          "mmr_score": 0.126529
+        },
+        {
+          "feed_id": "youtube_search_0bcace68ea011f01",
+          "source_type": "youtube_search",
+          "text": "rbfs",
+          "original_text": "rbfs",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=rbfs",
+          "occurred_at": null,
+          "interaction_count": 1,
+          "topic_similarity": 0.661985,
+          "mmr_score": 0.115921
+        },
+        {
+          "feed_id": "youtube_search_e6b7301e18477ff1",
+          "source_type": "youtube_search",
+          "text": "omg",
+          "original_text": "omg",
+          "creator": null,
+          "url": "https://www.youtube.com/results?search_query=omg",
+          "occurred_at": "2023-01-07T01:08:14-07:00",
+          "interaction_count": 1,
+          "topic_similarity": 0.680388,
+          "mmr_score": 0.114898
+        }
+      ]
+    }
+  ]
+}
