@@ -215,13 +215,10 @@ python -m src.offline.generate_trunks
 
 This step:
 
-- Generates multiple English trunks for each topic
 - Uses flexible sections based on the content
 - Splits long-form content into multiple trunks
 - Usually keeps short posts, Reels, and Shorts as one trunk
 - Generates three predicted questions for each trunk
-
-Answers are not generated at this stage.
 
 Output:
 
@@ -243,8 +240,6 @@ For each question, the system:
 2. Finds similar trunks, excluding the current trunk.
 3. Checks whether another trunk can answer the question.
 4. Links the question to the answer trunk through `next_trunks`.
-5. Uses Tavily when no existing trunk can answer.
-6. Saves the final result.
 
 Output:
 
@@ -252,20 +247,6 @@ Output:
 data/output/candidate_trunks_with_next.json
 ```
 
-Example:
-
-```json
-{
-  "question": "What caused the traffic problem?",
-  "answer": "",
-  "qa_id": "topic_01_trunk_01_qa_01",
-  "audio_file": null,
-  "audio_status": "not_generated",
-  "next_trunks": [
-    "topic_02_trunk_04"
-  ]
-}
-```
 
 ## Output Files
 
