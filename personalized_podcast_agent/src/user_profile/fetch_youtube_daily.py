@@ -19,8 +19,10 @@ DATA_DIR = PROJECT_ROOT / "data" / "output"
 USER_PROFILE_FILE = DATA_DIR / "user_profile.json"
 YOUTUBE_PROFILE_FILE = DATA_DIR / "youtube_profile.json"
 EXISTING_FEED_FILE = DATA_DIR / "personal_feed_items.json"
-RAW_OUTPUT_FILE = DATA_DIR / "youtube_daily_items_raw.json"
-OUTPUT_FILE = DATA_DIR / "youtube_daily_items.json"
+
+RAW_OUTPUT_FILE = PROJECT_ROOT / "data" / \
+    "daily" / "youtube_daily_items_raw.json"
+OUTPUT_FILE = PROJECT_ROOT / "data" / "daily" / "youtube_daily_items.json"
 
 DEFAULT_LOOKBACK_DAYS = 7
 DEFAULT_MAX_PER_CHANNEL = 3

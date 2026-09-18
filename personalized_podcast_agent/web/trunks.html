@@ -191,7 +191,10 @@
           playSegment(
             questionAnswer.answer,
             questionAnswer.audio_url,
-            "Answer"
+            "Answer",
+            async () => {
+              await playNextTrunk(questionAnswer.next_trunks?.[0]);
+            }
           );
         });
         questionList.appendChild(button);
@@ -203,14 +206,21 @@
       choices.hidden = false;
     }
 
-    async function playSegment(script, audioUrl, label) {
+    async function playSegment(
+      script,
+      audioUrl,
+      label,
+      onEnded = showChoices
+    ) {
       choices.hidden = true;
       statusElement.textContent = label;
       scriptBox.textContent = script;
-      audioPlayer.onended = showChoices;
+      audioPlayer.onended = () => {
+        Promise.resolve(onEnded()).catch(showError);
+      };
 
       if (!audioUrl) {
-        showChoices();
+        await onEnded();
         return;
       }
 
@@ -222,6 +232,29 @@
       } catch (error) {
         statusElement.textContent = `${label} — press Play to begin`;
       }
+    }
+
+    async function playNextTrunk(trunkId) {
+      if (!trunkId) {
+        showChoices();
+        return;
+      }
+
+      const topic = await requestJson(
+        `/api/trunks/by-id/${encodeURIComponent(trunkId)}`
+      );
+      const targetIndex = topic.trunks.findIndex(
+        (trunk) => trunk.trunk_id === trunkId
+      );
+
+      if (targetIndex < 0) {
+        throw new Error("Next trunk was not found.");
+      }
+
+      selectedTopic = topic;
+      currentTrunkIndex = targetIndex;
+      currentTopic.textContent = topic.topic;
+      playCurrentTrunk();
     }
 
     function playCurrentTrunk() {
@@ -287,7 +320,14 @@
           );
           similarityScore.hidden = false;
         }
-        await playSegment(result.answer, result.audio_url, "Answer");
+        await playSegment(
+          result.answer,
+          result.audio_url,
+          "Answer",
+          async () => {
+            await playNextTrunk(result.next_trunks?.[0]);
+          }
+        );
       } catch (error) {
         showError(error);
       } finally {
