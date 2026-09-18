@@ -260,6 +260,3 @@ data/output/
 ├── candidate_trunks.json
 └── candidate_trunks_with_next.json
 ```
-
-.venv/
-Generated embeddings and user-specific profiles should be recreated locally from each user's own data.
