@@ -21,6 +21,7 @@ personalized_podcast_agent/
 │   │   ├── generate_main_narrative.py  # Split each selected transcript into 5 ordered parts
 │   │   ├── generate_trunks.py          # Rewrite parts into podcast trunks and generate Q&A
 │   │   ├── predict_user_actions.py     # Predict likely listener questions
+│   │   ├── link_questions.py           # Find next trunks
 │   │   └── question_index.py           # Index candidate questions
 │   ├── user_profile/
 │   │   ├── import_youtube_homepage_manual.py  # Import homepage videos and transcripts
@@ -91,142 +92,193 @@ python src/00_build_user_preference.py
 
 This creates the user profile used when predicting possible listener questions.
 
-## Daily YouTube podcast workflow
+## Daily Workflow
 
-### 1. Copy 50 non-Shorts videos from the YouTube homepage
+### 1. Collect Daily Source Data
 
-Sign in to YouTube, open the homepage, scroll until at least 50 long-form
-videos are loaded, then open the browser Console with `F12` and run:
-
-```javascript
-const rows = [...document.querySelectorAll('a[href^="/watch"]')]
-  .map((a) => {
-    const card = a.closest(
-      'ytd-rich-grid-media, ytd-rich-item-renderer, ytd-video-renderer, ytd-lockup-view-model'
-    );
-
-    const url = new URL(a.href);
-    const cardText = (card?.textContent || '').trim();
-
-    const isPlaylistOrMix =
-      url.searchParams.has('list') || // include Mix、playlist
-      /(^|\s)(Mix|合輯|播放清單|Playlist)(\s|$)/i.test(cardText);
-
-    return {
-      title: (
-        a.querySelector('#video-title')?.textContent ||
-        a.textContent ||
-        a.getAttribute('aria-label') ||
-        ''
-      ).trim(),
-      channel: (
-        card?.querySelector('#channel-name a, #channel-name')?.textContent ||
-        ''
-      ).trim(),
-      url: a.href,
-      isPlaylistOrMix
-    };
-  })
-  .filter((video) =>
-    video.title &&
-    video.url &&
-    !video.isPlaylistOrMix &&
-    !video.url.includes('/shorts/')
-  );
-
-const videos = [...new Map(rows.map((video) => {
-  delete video.isPlaylistOrMix;
-  return [video.url, video];
-})).values()].slice(0, 50);
-
-copy(JSON.stringify(videos, null, 2));
-console.log(`Copied ${videos.length} homepage videos, excluding Shorts and playlists/Mixes.`);
-
-Paste the copied JSON into:
+The browser collection scripts are stored in:
 
 ```text
-data/output/youtube_homepage_manual.json
+src/fetch_code/
+├── fetch_youtube.js
+├── fetch_instagram.js
+└── fetch_google_search.js
 ```
 
-The selector only collects `/watch` URLs, so it excludes YouTube Shorts.
+Open the corresponding file and run it in the browser Console.
 
-### 2. Import metadata and transcripts
+Save the collected files to:
+
+```text
+data/daily/
+├── youtube_homepage_manual.json
+├── instagram_feed_manual_json
+└── google_search_manual.json
+```
+
+The scripts collect:
+
+- 50 YouTube homepage videos
+- 100 Instagram posts or Reels
+- The user's daily Google Search records
+
+### 2. Organize Source Content
+
+Run:
 
 ```bash
 python -m src.user_profile.import_youtube_homepage_manual
+python -m src.user_profile.organize_instagram_feed
+python -m src.user_profile.organize_google_search
 ```
 
-This collects public metadata and available transcripts, skips videos without
-usable transcripts, and filters out clearly unsuitable sources such as songs,
-music performances, fancams, and sports highlights. It writes:
+Generated files:
 
 ```text
-data/output/youtube_daily_items_raw.json
-data/output/youtube_daily_items.json
+data/daily/
+├── youtube_daily_items_raw.json
+├── youtube_daily_items.json
+├── instagram_profile_raw.json
+├── instagram_profile.json
+├── google_search_profile_raw.json
+└── google_search_profile.json
 ```
 
-### 3. Build the personal feed and embeddings
+### 3. Build the Personal Feed
+
+Run:
 
 ```bash
 python -m src.user_profile.build_personal_feed
+```
+
+Output:
+
+```text
+data/output/personal_feed_items.json
+```
+
+The unified feed contains:
+
+```text
+feed_id
+source_type
+text
+url
+creator
+```
+
+### 4. Build Multilingual Embeddings
+
+Run:
+
+```bash
 python -m src.user_profile.build_feed_embeddings
 ```
 
-`personal_feed_items.json` combines the user's available local sources with
-the filtered daily YouTube items. The embedding step creates multilingual,
-normalized embeddings for MMR selection.
+Outputs:
 
-### 4. Select stories and split transcripts
+```text
+data/output/
+├── personal_feed_embeddings.npy
+└── personal_feed_embedding_ids.json
+```
+
+The embeddings are used to compare YouTube, Instagram, and Google Search feeds in the same semantic space.
+
+### 5. Select Topics and Generate Narratives
+
+Run:
 
 ```bash
+python -m src.offline.select_feed_seeds
 python -m src.offline.generate_main_narrative
 ```
 
-This step runs MMR over the daily YouTube videos, selects up to 10 different
-videos with saved transcripts, and splits every selected transcript into five
-ordered sections. The result is saved to:
+This step groups semantically related feeds from all sources and generates English narratives for each topic.
+
+Outputs:
 
 ```text
-data/output/topic_feed_seeds.json
-data/output/main_narratives.json
+data/output/
+├── topic_feed_seeds.json
+└── main_narratives.json
 ```
 
-### 5. Generate podcast trunks and questions
+### 6. Generate Trunks and Questions
+
+Run:
 
 ```bash
 python -m src.offline.generate_trunks
 ```
 
-For every transcript section, Qwen produces one third-person English podcast
-script. The system then predicts three likely listener questions for each
-trunk, creates transcript-supported answers, generates audio, and stores
-embeddings for later retrieval.
+This step:
 
-Generated files include:
+- Generates multiple English trunks for each topic
+- Uses flexible sections based on the content
+- Splits long-form content into multiple trunks
+- Usually keeps short posts, Reels, and Shorts as one trunk
+- Generates three predicted questions for each trunk
+
+Answers are not generated at this stage.
+
+Output:
 
 ```text
 data/output/candidate_trunks.json
-data/output/candidate_trunk_embeddings.npy
-data/output/candidate_question_embeddings.npy
-data/output/candidate_embedding_ids.json
-data/output/audio/
 ```
 
-## Privacy and repository policy
+### 7. Link Questions to Other Trunks
 
-Do not commit personal raw data, transcripts, generated profiles, embeddings,
-audio files, or credentials. Keep at least the following out of Git:
+Run:
+
+```bash
+python -m src.offline.link_questions
+```
+
+For each question, the system:
+
+1. Creates an embedding for the question.
+2. Finds similar trunks, excluding the current trunk.
+3. Checks whether another trunk can answer the question.
+4. Links the question to the answer trunk through `next_trunks`.
+5. Uses Tavily when no existing trunk can answer.
+6. Saves the final result.
+
+Output:
 
 ```text
-.env
-data/instagram_export/
-data/youtube_history/
-data/output/
-.venv/
-__pycache__/
-*.npy
-*.wav
+data/output/candidate_trunks_with_next.json
 ```
-__pycache__/
+
+Example:
+
+```json
+{
+  "question": "What caused the traffic problem?",
+  "answer": "",
+  "qa_id": "topic_01_trunk_01_qa_01",
+  "audio_file": null,
+  "audio_status": "not_generated",
+  "next_trunks": [
+    "topic_02_trunk_04"
+  ]
+}
+```
+
+## Output Files
+
+```text
+data/output/
+├── personal_feed_items.json
+├── personal_feed_embeddings.npy
+├── personal_feed_embedding_ids.json
+├── topic_feed_seeds.json
+├── main_narratives.json
+├── candidate_trunks.json
+└── candidate_trunks_with_next.json
+```
+
 .venv/
 Generated embeddings and user-specific profiles should be recreated locally from each user's own data.
