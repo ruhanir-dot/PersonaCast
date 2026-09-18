@@ -6,9 +6,9 @@ from typing import Any
 from urllib.parse import parse_qs, urlparse
 
 from youtube_transcript_api import YouTubeTranscriptApi
+from src.utils import PROJECT_ROOT
 
 from src.user_profile.fetch_youtube_daily import (
-    DATA_DIR,
     OUTPUT_FILE,
     RAW_OUTPUT_FILE,
     save_json_atomic,
@@ -17,7 +17,8 @@ from src.user_profile.fetch_youtube_daily import (
     youtube_api_get,
 )
 
-MANUAL_INPUT_FILE = DATA_DIR / "youtube_homepage_manual.json"
+MANUAL_INPUT_FILE = PROJECT_ROOT / "data" / \
+    "daily" / "youtube_homepage_manual.json"
 VIDEOS_PER_REQUEST = 50
 MIN_TRANSCRIPT_CHARACTERS = 1200
 

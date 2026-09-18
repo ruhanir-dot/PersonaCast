@@ -1,20 +1,19 @@
-
-
 import json
+import math
 import os
 import re
 import time
 from typing import Any
 
-from src.offline.search_web_sources import search_web_source
-from src.utils import PROJECT_ROOT
+from src.utils import PROJECT_ROOT, llm_json
 
 
 TOPIC_COUNT = 10
-TRUNKS_PER_TOPIC = 5
+WORDS_PER_TRUNK = 40
+MAX_TRUNKS_PER_TOPIC = 15
 DATA_DIR = PROJECT_ROOT / "data" / "output"
 MAIN_NARRATIVES_FILE = DATA_DIR / "main_narratives.json"
-DAILY_YOUTUBE_FILE = DATA_DIR / "youtube_daily_items.json"
+FEED_ITEMS_FILE = DATA_DIR / "personal_feed_items.json"
 
 
 def save_main_narratives(result: dict[str, Any]) -> None:
@@ -34,104 +33,271 @@ def save_main_narratives(result: dict[str, Any]) -> None:
             time.sleep(0.1)
 
 
-def load_saved_transcript_sources() -> dict[str, dict[str, Any]]:
-    if not DAILY_YOUTUBE_FILE.exists():
-        raise FileNotFoundError(
-            "Saved YouTube videos are missing. Run the YouTube importer first."
+def normalize_text(value: Any) -> str:
+    return " ".join(str(value or "").split())
+
+
+def load_feed_items() -> list[dict[str, Any]]:
+    with FEED_ITEMS_FILE.open("r", encoding="utf-8") as file:
+        feed_data = json.load(file)
+    return feed_data["feed_items"]
+
+
+def feed_to_source_item(item: dict[str, Any]) -> dict[str, Any] | None:
+    source_type = str(item.get("source_type") or "")
+    title = normalize_text(
+        item.get("title")
+        or item.get("caption")
+        or item.get("query")
+    )
+    raw_text = str(item.get("text") or "").strip()
+
+    if source_type == "google_news_article":
+        text = "\n\n".join(
+            normalize_text(paragraph)
+            for paragraph in re.split(r"\n\s*\n|\r?\n", raw_text)
+            if paragraph.strip()
+        )
+    else:
+        text = normalize_text(raw_text)
+
+    if not text:
+        text = normalize_text(
+            " ".join(
+                value for value in [
+                    item.get("description"),
+                    item.get("transcript"),
+                    item.get("caption"),
+                    item.get("query"),
+                ]
+                if value
+            )
         )
 
-    with DAILY_YOUTUBE_FILE.open("r", encoding="utf-8") as file:
-        payload = json.load(file)
+    if not title and not text:
+        return None
 
-    sources: dict[str, dict[str, Any]] = {}
-    for item in payload.get("feed_items", []):
-        if not isinstance(item, dict):
-            continue
-
-        url = str(item.get("url") or "").strip()
-        transcript_text = str(item.get("transcript_text") or "").strip()
-        if not url or not transcript_text:
-            continue
-
-        sources[url] = {
-            "source_type": "youtube_transcript",
-            "title": str(item.get("title") or "").strip(),
-            "url": url,
-            "published_at": item.get("occurred_at"),
-            "transcript_text": transcript_text,
-            "article_text": transcript_text,
-            "transcript_word_count": len(transcript_text.split()),
-            "article_word_count": len(transcript_text.split()),
-            "language": str(item.get("transcript_language") or ""),
-            "language_code": str(item.get("transcript_language_code") or ""),
-            "is_generated": bool(item.get("transcript_is_generated")),
-        }
-
-    return sources
+    return {
+        "feed_id": item.get("feed_id"),
+        "source_type": source_type,
+        "title": title,
+        "url": item.get("url"),
+        "creator": item.get("creator") or item.get("channel"),
+        "search_query": item.get("query"),
+        "article_text": text or title,
+    }
 
 
-def split_source_text(source_text: str) -> list[str]:
+def generate_story_title(
+    *,
+    selected_seed: dict[str, Any],
+    source_items: list[dict[str, Any]],
+) -> str | None:
+    if not source_items:
+        return None
+
+    source_content = "\n\n".join(
+        f"{item.get('title', '')}\n{item.get('article_text', '')[:600]}"
+        for item in source_items
+    )
+
+    prompt = f"""
+Create one fluent English podcast story title based on the related sources below.
+
+Make the title clear and related to the source content.
+Return JSON only in this format:
+{{"story_title": "..."}}.
+
+Selected topic:
+{selected_seed.get('title', '')}
+
+Related sources:
+{source_content[:5000]}
+""".strip()
+
+    result = llm_json(
+        prompt,
+        system="You create clear and fluent podcast story titles.",
+    )
+
+    title = str(result.get("story_title") or "").strip()
+    title = re.sub(r"\s+", " ", title)
+    return title or normalize_text(selected_seed.get("title")) or None
+
+
+def split_source_text(source_text: str, source_type: str) -> list[str]:
+    source_text = source_text.strip()
+
+    if source_type in {"instagram_post", "instagram_reel"}:
+        return [normalize_text(source_text)]
+
+    if source_type == "google_news_article":
+        paragraphs = [
+            normalize_text(paragraph)
+            for paragraph in re.split(r"\n\s*\n|\r?\n", source_text)
+            if paragraph.strip()
+        ]
+
+        if len(paragraphs) <= 1:
+            paragraphs = [
+                sentence.strip()
+                for sentence in re.split(
+                    r"(?<=[.!?。！？])\s*",
+                    source_text,
+                )
+                if sentence.strip()
+            ]
+
+        return paragraphs or [normalize_text(source_text)]
+
+    words = source_text.split()
+
+    if len(words) <= 150:
+        return [source_text]
+
+    trunk_count = max(1, math.ceil(len(words) / WORDS_PER_TRUNK))
     sentences = [
         sentence.strip()
-        for sentence in re.split(r"(?<=[.!?])\s+", source_text)
+        for sentence in re.split(r"(?<=[.!?。！？])\s*", source_text)
         if sentence.strip()
     ]
-    if len(sentences) < TRUNKS_PER_TOPIC:
-        words = source_text.split()
+
+    if len(sentences) < trunk_count:
         sentences = [
             " ".join(
                 words[
-                    round(order * len(words) / TRUNKS_PER_TOPIC):
-                    round((order + 1) * len(words) / TRUNKS_PER_TOPIC)
+                    round(order * len(words) / trunk_count):
+                    round((order + 1) * len(words) / trunk_count)
                 ]
             )
-            for order in range(TRUNKS_PER_TOPIC)
+            for order in range(trunk_count)
         ]
 
     parts: list[str] = []
-    for order in range(TRUNKS_PER_TOPIC):
-        start = round(order * len(sentences) / TRUNKS_PER_TOPIC)
-        end = round((order + 1) * len(sentences) / TRUNKS_PER_TOPIC)
+    for order in range(trunk_count):
+        start = round(order * len(sentences) / trunk_count)
+        end = round((order + 1) * len(sentences) / trunk_count)
         parts.append(" ".join(sentences[start:end]).strip())
 
     if any(not part for part in parts):
-        raise ValueError("The source text could not be split into five parts.")
+        raise ValueError("The source text could not be split into trunks.")
     return parts
 
 
-def source_key(source_item: dict[str, Any]) -> str:
-    return str(source_item.get("url") or source_item.get("title") or "").casefold()
+def allocate_trunk_budgets(part_counts: list[int]) -> list[int]:
+    budgets = [1 for _ in part_counts]
+    remaining = MAX_TRUNKS_PER_TOPIC - len(budgets)
+
+    while remaining > 0:
+        available = [
+            index
+            for index, count in enumerate(part_counts)
+            if budgets[index] < count
+        ]
+        if not available:
+            break
+
+        index = max(
+            available,
+            key=lambda value: part_counts[value] / budgets[value],
+        )
+        budgets[index] += 1
+        remaining -= 1
+
+    return budgets
+
+
+def merge_parts(parts: list[str], count: int) -> list[str]:
+    if len(parts) <= count:
+        return parts
+
+    return [
+        " ".join(
+            parts[
+                round(order * len(parts) / count):
+                round((order + 1) * len(parts) / count)
+            ]
+        ).strip()
+        for order in range(count)
+    ]
+
+
+def find_related_sources(
+    feed_ids: list[str],
+    feed_items: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    feed_ids = {str(feed_id) for feed_id in feed_ids}
+    related_sources: list[dict[str, Any]] = []
+
+    for item in feed_items:
+        if str(item.get("feed_id")) not in feed_ids:
+            continue
+
+        source_item = feed_to_source_item(item)
+        if source_item is None:
+            continue
+
+        related_sources.append(source_item)
+
+    return related_sources
 
 
 def build_main_narrative(
     *,
     selected_seed: dict[str, Any],
-    transcript_sources: dict[str, dict[str, Any]],
-    used_source_keys: set[str],
+    feed_ids: list[str],
+    feed_items: list[dict[str, Any]],
 ) -> dict[str, Any] | None:
-    source_item = transcript_sources.get(
-        str(selected_seed.get("url") or "").strip())
-    if source_item is None:
-        source_item = search_web_source(selected_seed)
-    if source_item is None or source_key(source_item) in used_source_keys:
+    source_items = find_related_sources(
+        feed_ids=feed_ids,
+        feed_items=feed_items,
+    )
+    if not source_items:
         return None
 
-    story_title = str(source_item.get("title") or "").strip()
-    source_parts = split_source_text(str(source_item["article_text"]))
-    used_source_keys.add(source_key(source_item))
+    story_title = generate_story_title(
+        selected_seed=selected_seed,
+        source_items=source_items,
+    )
+    if story_title is None:
+        return None
+
+    source_parts_by_item = [
+        split_source_text(
+            str(source_item["article_text"]),
+            str(source_item.get("source_type") or ""),
+        )
+        for source_item in source_items
+    ]
+    budgets = allocate_trunk_budgets(
+        [len(parts) for parts in source_parts_by_item]
+    )
+
+    steps: list[dict[str, Any]] = []
+    for source_item, source_parts, budget in zip(
+        source_items,
+        source_parts_by_item,
+        budgets,
+    ):
+        source_parts = merge_parts(source_parts, budget)
+        for part_number, source_part in enumerate(source_parts, start=1):
+            steps.append(
+                {
+                    "chunk_order": len(steps) + 1,
+                    "focus": (
+                        f"{source_item['source_type']} "
+                        f"trunk {part_number}"
+                    ),
+                    "source_segment": source_part,
+                    "search_query": source_item.get("search_query"),
+                    "source_item": source_item,
+                }
+            )
+
     return {
         "story_title": story_title,
         "selected_seed": selected_seed,
-        "steps": [
-            {
-                "chunk_order": order,
-                "focus": f"Source segment {order}",
-                "source_segment": source_part,
-                "search_query": source_item.get("search_query"),
-                "source_item": source_item,
-            }
-            for order, source_part in enumerate(source_parts, start=1)
-        ],
+        "steps": steps,
     }
 
 
@@ -139,9 +305,8 @@ def generate_main_narratives(
     story_seed_pool: dict[str, Any],
 ) -> dict[str, Any]:
     stories: list[dict[str, Any]] = []
-    used_source_keys: set[str] = set()
     candidates = story_seed_pool.get("candidates", [])
-    transcript_sources = load_saved_transcript_sources()
+    feed_items = load_feed_items()
 
     for candidate_number, candidate_data in enumerate(candidates, start=1):
         print(
@@ -151,8 +316,8 @@ def generate_main_narratives(
         try:
             narrative = build_main_narrative(
                 selected_seed=candidate_data["selected_seed"],
-                transcript_sources=transcript_sources,
-                used_source_keys=used_source_keys,
+                feed_ids=candidate_data["feed_ids"],
+                feed_items=feed_items,
             )
         except (KeyError, RuntimeError, TypeError, ValueError) as exc:
             print(f"Skipping candidate: {exc}", flush=True)
@@ -160,20 +325,23 @@ def generate_main_narratives(
 
         if narrative is None:
             continue
+
         narrative["story_id"] = f"story_{len(stories) + 1:02d}"
         stories.append(narrative)
+
         print(
             f"[{len(stories)}/{len(candidates)}] Found story: "
             f"{narrative['story_title']}",
             flush=True,
         )
+
         if len(stories) >= TOPIC_COUNT:
             break
 
     return {
         "configuration": {
             "story_count": len(stories),
-            "trunks_per_story": TRUNKS_PER_TOPIC,
+            "trunks_per_story": "dynamic",
         },
         "stories": stories,
     }
@@ -187,11 +355,15 @@ def main() -> None:
 
     story_seed_pool = select_story_seeds()
     save_feed_seeds(story_seed_pool)
+
     result = generate_main_narratives(story_seed_pool)
     if not result["stories"]:
         raise ValueError(
-            "Could not build a story from the selected seeds.")
+            "Could not build a story from the selected seeds."
+        )
+
     save_main_narratives(result)
+
     print(
         f"Saved {len(result['stories'])} main narratives to: "
         f"{MAIN_NARRATIVES_FILE}",
