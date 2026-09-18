@@ -118,7 +118,7 @@ data/daily/
 
 The scripts collect:
 
-- 50 YouTube homepage videos
+- 100 YouTube homepage videos
 - 100 Instagram posts or Reels
 - The user's daily Google Search records
 
