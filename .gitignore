@@ -1,5 +1,23 @@
 .env
 runs/
+
+# Personal data exports - never commit.
+# Unanchored so they match at any depth (root and reference_v* snapshots).
+Takeout/
+instagram-*/
+# instagram_export/
+# youtube_history/
+# personal_feed_items.json
+# personal_feed_embedding_ids.json
+# user_profile.json
+# user_ig_profile.txt
+# user_preference_profile.json
+# youtube_profile.json
+# *.npy
+### per-listener pools hold one person's viewing history
+# personas/pools/
+personas/memory/
+
 __pycache__/
 *.pyc
 .venv/
