@@ -6,6 +6,7 @@ retrieve + curate ipelie runs once, we synthesize from the resulting pool
 
 from __future__ import annotations
 
+import json
 import re
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import contextmanager
@@ -33,6 +34,22 @@ def build_source_pool(persona: Persona, llm: LLMClient, on_stage = None,
     return build_source_pool_agentic(
         persona, llm, on_stage=on_stage, memory=memory, on_topic_done=on_topic_done
     )
+
+
+def load_trunk_pool(on_stage = None, *, persona_id: str | None = None):
+    if not config.TRUNKS:
+        return None
+
+    from ..trunks import store as trunk_store
+
+    try:
+        loaded = trunk_store.load(persona_id=persona_id)
+    except trunk_store.TrunkStoreError as err:
+        if on_stage:
+            on_stage(f"Trunk pool unavailable, falling back to live retrieval — {err}")
+        return None
+
+    return loaded
 
 
 
@@ -147,6 +164,11 @@ class InteractiveSession:
 
         self.pool_from_cache = False
 
+        self.trunks = None
+        self.current_trunks: dict[int, object] = {}
+
+        self.first_topic: str | None = None
+
         self._workers = ThreadPoolExecutor(max_workers=4, thread_name_prefix="pc-inner")
         self._continuation = ThreadPoolExecutor(max_workers=1, thread_name_prefix="pc-turn")
 
@@ -165,6 +187,29 @@ class InteractiveSession:
 
         self.audio_chunks: list[dict] = []
 
+    def _align_topics_to_pool(self, pool: dict[str, list[CuratedItem]]) -> None:
+        pool_topics = list(pool.keys())
+        if not pool_topics:
+            return
+
+        persona_topics = [interest.topic for interest in self.persona.interests]
+        unmatched = [topic for topic in persona_topics if topic not in pool]
+
+        self._active_topics = pool_topics
+
+        if unmatched and self.on_stage:
+            self.on_stage(
+                f"Persona topics not in the trunk pool ({', '.join(unmatched[:3])}"
+                f"{'…' if len(unmatched) > 3 else ''}) — using the pool's topics instead"
+            )
+
+    def _warm_trunk_encoder(self) -> None:
+        if self.trunks is None:
+            return
+        from ..trunks import embed as trunk_embed
+
+        self._workers.submit(trunk_embed.warm)
+
     def _note_topic(self, topic: str, final_state: dict) -> None:
         self.retrieval_trace[topic] = {
             "sources": final_state.get("sources", []),
@@ -176,19 +221,42 @@ class InteractiveSession:
         }
 
 
-    def start(self, *, rebuild_pool: bool = False) -> SessionState:
+    def start(self, *, rebuild_pool: bool = False, first_topic: str | None = None) -> SessionState:
+        if first_topic:
+            self.first_topic = first_topic.strip() or None
+
         mem = memory.load_memory(self.persona)
         memory.seed_persona_style_if_needed(mem, self.persona, self.llm) #seed in the persona style vector at persona construction if cold user
 
-        pool = None if rebuild_pool else poolcache.load(self.persona)
-        if pool is not None:
+        self.trunks = load_trunk_pool(on_stage=self.on_stage,
+                                      persona_id=self.persona.persona_id)
+
+        if self.trunks is not None:
+            pool = self.trunks.pool.as_source_pool(summary_chars=config.TRUNK_SUMMARY_CHARS)
             self.pool_from_cache = True
+            self._align_topics_to_pool(pool)
+            if self.first_topic and self.first_topic not in self._active_topics:
+                if self.on_stage:
+                    self.on_stage(
+                        f"Requested opening topic '{self.first_topic}' is not in the pool — "
+                        "starting on the highest-engagement topic instead"
+                    )
+                self.first_topic = None
             if self.on_stage:
-                age = poolcache.age_hours(self.persona) or 0.0
-                self.on_stage(f"Reusing cached source pool ({age:.1f}h old) — no retrieval calls")
+                self.on_stage(
+                    f"Using offline trunk pool — {len(self.trunks.pool.topics)} topics, "
+                    f"{len(self.trunks.pool.all_trunks())} candidate segments, no retrieval calls"
+                )
         else:
-            pool = build_source_pool(self.persona, self.llm, on_stage= self.on_stage, memory = mem, on_topic_done= self._note_topic)
-            poolcache.save(self.persona, pool)
+            pool = None if rebuild_pool else poolcache.load(self.persona)
+            if pool is not None:
+                self.pool_from_cache = True
+                if self.on_stage:
+                    age = poolcache.age_hours(self.persona) or 0.0
+                    self.on_stage(f"Reusing cached source pool ({age:.1f}h old) — no retrieval calls")
+            else:
+                pool = build_source_pool(self.persona, self.llm, on_stage= self.on_stage, memory = mem, on_topic_done= self._note_topic)
+                poolcache.save(self.persona, pool)
 
         self.state = SessionState(
             run_id = state.new_run_id(), persona = self.persona, memory = mem, pool = pool
@@ -197,8 +265,9 @@ class InteractiveSession:
         if self.retrieval_trace:
             state.log_retrieval(self.state.run_id, self.retrieval_trace)
 
-        self._warm_fallback_bridges() # pre synthesize the fallback bridge 
+        self._warm_fallback_bridges() # pre synthesize the fallback bridge
         self._start_bank_generation() # one time bank generation
+        self._warm_trunk_encoder() # so the first interruption isn't the one paying the model load
 
         return self.state
 
@@ -212,6 +281,8 @@ class InteractiveSession:
             return last_reaction.requested_topic
 
         if session_state.current_topic is None:
+            if self.first_topic and self.first_topic in self._active_topics:
+                return self.first_topic
             return memory.next_topic(session_state.memory, self._active_topics)
 
         if last_reaction and last_reaction.type == ReactionType.none:
@@ -220,8 +291,14 @@ class InteractiveSession:
             if session_state.memory.engagement.get(best, config.ENGAGE_BASE)  > session_state.memory.engagement.get(session_state.current_topic, config.ENGAGE_BASE):
                 return best
 
-            i = self._active_topics.index(session_state.current_topic)
+            try:
+                i = self._active_topics.index(session_state.current_topic)
+            except ValueError:
+                return best
             return self._active_topics[(i + 1) % len(self._active_topics)]
+
+        if session_state.current_topic not in self._active_topics:
+            return memory.next_topic(session_state.memory, self._active_topics)
 
         return session_state.current_topic
 
@@ -238,18 +315,51 @@ class InteractiveSession:
         index = last_reaction.anchor_source_index
         return sources[index] if index < len(sources) else None
 
+    def _select_trunk(self, session_state: SessionState, topic: str):
+        if self.trunks is None:
+            return None
+
+        from ..trunks import select as trunk_select
+
+        picked = trunk_select.next_trunk(self.trunks.pool, session_state, topic)
+        if picked is None:
+            return None
+
+        trunk, _index = picked
+        self.current_trunks[len(session_state.turns) + 1] = trunk
+        return trunk
+
     def _turn_context(self, session_state: SessionState):
         last_reaction = session_state.turns[-1].reaction if session_state.turns else None
+
+        if self.trunks is not None:
+            from ..trunks import select as trunk_select
+
+            self._active_topics = trunk_select.live_topics(
+                self.trunks.pool, session_state, self._active_topics
+            )
+
         topic = self._choose_topic(session_state, last_reaction)
         session_state.current_topic = topic
         recent_gists = [t.gist for t in session_state.turns[-config.RECENT_TURNS_CONTEXT:] if t.gist]
         focus_source = self._focus_source(session_state, last_reaction)
-        return last_reaction, topic, recent_gists, focus_source, session_state.pool.get(topic, [])
 
-    def _finalize_turn(self, session_state: SessionState, topic: str, text: str, sources: list[CuratedItem]) -> InteractiveTurn:
+        sources = session_state.pool.get(topic, [])
+        trunk = self._select_trunk(session_state, topic)
+
+        return last_reaction, topic, recent_gists, focus_source, sources, trunk
+
+    def _finalize_turn(self, session_state: SessionState, topic: str, text: str,
+                       sources: list[CuratedItem], trunk=None) -> InteractiveTurn:
         turn = InteractiveTurn(iteration=len(session_state.turns) + 1, topic=topic, text=text)
         session_state.turns.append(turn)
-        _record_covered(session_state, topic, sources)
+
+        if trunk is not None:
+            covered = [trunk.to_curated_item(summary_chars=config.TRUNK_SUMMARY_CHARS)]
+        else:
+            covered = sources
+
+        _record_covered(session_state, topic, covered)
         return turn
 
     def publish(self, kind: str, text: str, path: str | None) -> None:
@@ -257,23 +367,27 @@ class InteractiveSession:
 
     def next_segment(self, *, opener_text: str = ""):
         session_state = self._require_started()
-        last_reaction, topic, recent_gists, focus_source, sources = self._turn_context(session_state)
+        last_reaction, topic, recent_gists, focus_source, sources, trunk = self._turn_context(session_state)
 
         text = script.generate_turn(
             topic, sources, self.persona, session_state.memory, recent_gists, self.llm,
             last_reaction=last_reaction, focus_source= focus_source, opener_text=opener_text,
+            draft=trunk.script if trunk else "",
+            draft_focus=trunk.focus if trunk else "",
         )
-        return self._finalize_turn(session_state, topic, text, sources)
+        return self._finalize_turn(session_state, topic, text, sources, trunk)
 
     def generate_segment(self, *, opener_text: str = "", timer=None) -> InteractiveTurn:
         session_state = self._require_started()
-        _last, topic, gists, focus, sources = self._turn_context(session_state)
+        _last, topic, gists, focus, sources, trunk = self._turn_context(session_state)
         iteration = len(session_state.turns) + 1
         out_dir = state.run_dir(session_state.run_id)
 
         text = script.generate_turn(
             topic, sources, self.persona, session_state.memory, gists, self.llm,
             last_reaction=_last, focus_source=focus, opener_text=opener_text,
+            draft=trunk.script if trunk else "",
+            draft_focus=trunk.focus if trunk else "",
         )
 
         with (timer.stage(timing.TTS) if timer else _null()):
@@ -286,7 +400,7 @@ class InteractiveSession:
         if timer is not None:
             timer.mark("turn_audio_ready")
 
-        return self._finalize_turn(session_state, topic, text, sources)
+        return self._finalize_turn(session_state, topic, text, sources, trunk)
 
 
     def _start_bank_generation(self) -> None:
@@ -408,6 +522,56 @@ class InteractiveSession:
             return None
         return requested
 
+    def _match_trunk_qa(self, reaction_text: str, iteration: int):
+        if self.trunks is None:
+            return None
+
+        trunk = self.current_trunks.get(iteration)
+        if trunk is None or not trunk.question_answers:
+            return None
+
+        rows, qas = [], []
+        for qa in trunk.question_answers:
+            row = self.trunks.question_row(qa.qa_id)
+            if row is not None:
+                rows.append(row)
+                qas.append(qa)
+        if not rows:
+            return None
+
+        from ..trunks import embed as trunk_embed
+
+        try:
+            vector = trunk_embed.encode(reaction_text)
+            hit = trunk_embed.best_match(vector, self.trunks.question_embeddings[rows])
+        except Exception as err:
+            if self.on_stage:
+                self.on_stage(f"Trunk Q&A match unavailable ({type(err).__name__})")
+            return None
+
+        if hit is None:
+            return None
+
+        index, score = hit
+        if score < config.TRUNK_QA_THRESHOLD:
+            if self.on_stage and score > 0.0:
+                self.on_stage(
+                    f"No cached answer (best {score:.2f} < {config.TRUNK_QA_THRESHOLD:.2f}) "
+                    f"— closest predicted: \"{qas[index].question[:60]}\""
+                )
+            return None
+        return qas[index], score
+
+    def _play_cached_answer(self, qa, score: float) -> bool:
+        path = self.trunks.audio_path(qa.audio_file) if qa.has_audio else None
+        self.publish("trunk_qa", qa.answer, str(path) if path else None)
+        if self.on_stage:
+            self.on_stage(
+                f"Answered from the offline pool (similarity {score:.2f}, no LLM call)"
+                + ("" if path else " — no audio for it, text only")
+            )
+        return path is not None
+
     def _web_fallback(self, plan, reaction_text: str, web_future) -> tuple[str, bool]:
         if web_future is None:
             return plan.answer, False
@@ -453,6 +617,13 @@ class InteractiveSession:
             anchor_snippet=anchor_snippet.strip(),
         )
         web_future = None
+        qa_future = None
+
+        if reaction_text.strip():
+            qa_future = self._workers.submit(
+                self._match_trunk_qa, reaction_text, turn.iteration,
+            )
+
         if _looks_like_question(reaction_text):
             web_future = self._workers.submit(
                 search_web, reaction_text, topic="general", days=None,
@@ -467,6 +638,9 @@ class InteractiveSession:
         reaction_type = interaction.to_reaction_type(plan.intent)
         delta = interaction.clamp_delta(plan.engagement_delta, is_switch=requested is not None)
 
+        if reaction_type == ReactionType.none and not requested:
+            delta = config.ENGAGE_NONE
+
         anchor = "" if (reaction_type == ReactionType.none or requested) else anchor_snippet.strip()
         anchor_index = plan.anchor_source_index if anchor else -1
         if not (0 <= anchor_index < len(topic_sources)):
@@ -480,17 +654,49 @@ class InteractiveSession:
             intent=plan.intent, sentiment=plan.sentiment, engagement_delta=delta,
         )
 
-        if plan.needs_answer:
-            if plan.answered:
+        cached = None
+        if qa_future is not None:
+            try:
+                cached = qa_future.result(timeout=config.WEB_FALLBACK_TIMEOUT_SECONDS)
+            except Exception:
+                cached = None
+
+        if plan.needs_answer or cached is not None:
+            if cached is not None:
+                qa, score = cached
+                reaction.answer = qa.answer
+                reaction.answer_source = "trunk_qa"
+                reaction.answer_match_score = round(score, 4)
+                reaction.answer_qa_id = qa.qa_id
+                self._play_cached_answer(qa, score)
+            elif plan.answered:
                 reaction.answer = plan.answer
+                reaction.answer_source = "sources"
+                if self.on_stage:
+                    self.on_stage("Answered inline from the topic's sources (interpret)")
             else:
                 with (timer.stage(timing.WEB_ANSWER) if timer else _null()):
                     reaction.answer, reaction.used_web = self._web_fallback(
                         plan, reaction.text, web_future,
                     )
+                reaction.answer_source = "web" if reaction.used_web else (
+                    "sources" if reaction.answer else "none"
+                )
+                if self.on_stage:
+                    self.on_stage(
+                        "Answered from live web retrieval"
+                        if reaction.used_web
+                        else f"No cached or web answer — fell back to plan.answer"
+                    )
 
-        if web_future is not None and not web_future.done():
-            web_future.cancel()
+        if not reaction.answer_source and (
+            reaction.type == ReactionType.question or _looks_like_question(reaction.text)
+        ):
+            reaction.answer_source = "unanswered"
+
+        for pending in (web_future, qa_future):
+            if pending is not None and not pending.done():
+                pending.cancel()
 
         turn.reaction = reaction
 
@@ -502,6 +708,45 @@ class InteractiveSession:
         memory.save_memory(session_state.memory)
         state.log_turn(session_state, turn.iteration)
         return turn
+
+
+    def _write_answer_trace(self, session_state: SessionState) -> None:
+        rows = []
+        for turn in session_state.turns:
+            reaction = turn.reaction
+            if reaction is None or not reaction.text.strip():
+                continue
+            trunk = self.current_trunks.get(turn.iteration)
+            rows.append({
+                "iteration": turn.iteration,
+                "topic": turn.topic,
+                "trunk_id": getattr(trunk, "trunk_id", None),
+                "asked": reaction.text,
+                "reaction_type": reaction.type.value,
+                "answer_source": reaction.answer_source or "(not a question)",
+                "match_score": reaction.answer_match_score,
+                "matched_qa_id": reaction.answer_qa_id or None,
+                "answer": reaction.answer,
+            })
+
+        counts: dict[str, int] = {}
+        for row in rows:
+            counts[row["answer_source"]] = counts.get(row["answer_source"], 0) + 1
+
+        payload = {
+            "run_id": session_state.run_id,
+            "trunk_pool_used": self.trunks is not None,
+            "qa_threshold": config.TRUNK_QA_THRESHOLD,
+            "counts": counts,
+            "reactions": rows,
+        }
+
+        path = state.run_dir(session_state.run_id) / "answer_trace.json"
+        path.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
+
+        if self.on_stage and counts:
+            summary = ", ".join(f"{k}={v}" for k, v in sorted(counts.items()))
+            self.on_stage(f"Answer sources this session — {summary} (answer_trace.json)")
 
     def finish(self) -> SessionState:
     
@@ -523,6 +768,8 @@ class InteractiveSession:
         memory.save_memory(session_state.memory)
         transcript = "\n\n".join(f"[{t.topic}] {t.text}" for t in session_state.turns)
         (state.run_dir(session_state.run_id) / "session.txt").write_text(transcript)
+
+        self._write_answer_trace(session_state)
 
         if self.timings:
             state.log_timings(session_state.run_id, self.timings)

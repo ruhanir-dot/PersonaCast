@@ -50,7 +50,37 @@ def synthesize(script: str, out_path: str | Path) -> Path:
     return out_path
 
 
-def wav_duration(path: str| Path) -> float: 
+def concat_wavs(paths: list[str | Path], out_path: str | Path) -> Path | None:
+    usable = [Path(p) for p in paths if p and Path(p).exists()]
+    if not usable:
+        return None
+    if len(usable) == 1:
+        return usable[0]
+
+    out_path = Path(out_path)
+
+    with wave.open(str(usable[0]), "rb") as first:
+        params = first.getparams()
+        frames = [first.readframes(first.getnframes())]
+
+    for path in usable[1:]:
+        try:
+            with wave.open(str(path), "rb") as clip:
+                if clip.getparams()[:3] != params[:3]:
+                    continue
+                frames.append(clip.readframes(clip.getnframes()))
+        except (OSError, wave.Error):
+            continue
+
+    with wave.open(str(out_path), "wb") as out:
+        out.setparams(params)
+        for chunk in frames:
+            out.writeframes(chunk)
+
+    return out_path
+
+
+def wav_duration(path: str| Path) -> float:
     """ 
     playback length of the wav file, use to map audio pause time to a certain sentence 
     """
