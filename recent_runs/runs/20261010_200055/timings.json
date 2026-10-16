@@ -1,0 +1,52 @@
+{
+  "1": {
+    "stages": {
+      "qa_match": 0.01,
+      "opener_select": 0.0,
+      "interpret": 13.548,
+      "tts": 1.185,
+      "generate": 12.189
+    },
+    "marks": {
+      "stt_ms": 434.9,
+      "ser_wait_ms": 0.0,
+      "ser_ms": 138.9,
+      "ser_abstained": false,
+      "ser_reason": "ok",
+      "time_to_first_audio": 0.01,
+      "llm_calls": 2,
+      "llm_rate_wait": 0.199,
+      "llm_api_time": 17.127,
+      "llm_http_retries": 0,
+      "llm_json_retries": 0,
+      "turn_audio_ready": 25.751,
+      "continuation_ready": 25.751
+    },
+    "total": 25.751
+  },
+  "2": {
+    "stages": {
+      "qa_match": 0.014,
+      "opener_select": 0.0,
+      "interpret": 10.797,
+      "tts": 0.891,
+      "generate": 7.413
+    },
+    "marks": {
+      "stt_ms": 445.4,
+      "ser_wait_ms": 0.0,
+      "ser_ms": 128.3,
+      "ser_abstained": false,
+      "ser_reason": "ok",
+      "time_to_first_audio": 0.015,
+      "llm_calls": 2,
+      "llm_rate_wait": 0.199,
+      "llm_api_time": 20.471,
+      "llm_http_retries": 0,
+      "llm_json_retries": 0,
+      "turn_audio_ready": 18.227,
+      "continuation_ready": 18.227
+    },
+    "total": 18.227
+  }
+}
