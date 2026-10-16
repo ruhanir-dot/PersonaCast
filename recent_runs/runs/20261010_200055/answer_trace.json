@@ -1,0 +1,98 @@
+{
+  "run_id": "20261010_200055",
+  "trunk_pool_used": true,
+  "qa_threshold": 0.45,
+  "transitions_enabled": true,
+  "transitions_loaded": 0,
+  "transition_rejections": {},
+  "counts": {
+    "unanswered": 1,
+    "(not a question)": 1
+  },
+  "openers": {
+    "bridge": 2
+  },
+  "ser_model": "iic/emotion2vec_plus_base",
+  "sounded_counts": {
+    "ok": 2
+  },
+  "emotion_bridges_enabled": true,
+  "bridge_pool_sizes": {
+    "question": 15,
+    "comment": 15,
+    "switch": 6,
+    "none": 6,
+    "question_positive": 5,
+    "comment_positive": 5,
+    "switch_positive": 5,
+    "none_positive": 5,
+    "question_negative": 5,
+    "comment_negative": 5,
+    "switch_negative": 5,
+    "none_negative": 5
+  },
+  "bridge_valence_counts": {
+    "neutral -> question": 1,
+    "neutral -> comment": 1
+  },
+  "reactions": [
+    {
+      "iteration": 1,
+      "topic": "Today's episode",
+      "trunk_id": "episode_root",
+      "chunk_order": 1,
+      "asked": "Can you just...",
+      "reaction_type": "comment",
+      "answer_source": "unanswered",
+      "match_score": null,
+      "routed_trunk": "trunk_001_youtube_daily_video_71b3ea167c77df64",
+      "routed_used": true,
+      "matched_qa_id": null,
+      "cached_answer_was_stub": null,
+      "opener_kind": "bridge",
+      "opener_valence": "neutral",
+      "opener_pool": "question",
+      "transition_mode": null,
+      "transition_to": null,
+      "pinned_trunk_used": null,
+      "answer": null,
+      "sounded": {
+        "label": "neutral",
+        "score": 1.0,
+        "margin": 1.0,
+        "reason": "ok",
+        "voiced_ms": 832.0,
+        "latency_ms": 138.9
+      }
+    },
+    {
+      "iteration": 2,
+      "topic": "Politics and International Relations",
+      "trunk_id": "trunk_001_youtube_daily_video_71b3ea167c77df64",
+      "chunk_order": 70,
+      "asked": "I don't want to talk about this.",
+      "reaction_type": "comment",
+      "answer_source": "(not a question)",
+      "match_score": null,
+      "routed_trunk": "trunk_001_youtube_daily_video_7f2e8c7afbc48e45",
+      "routed_used": true,
+      "matched_qa_id": null,
+      "cached_answer_was_stub": null,
+      "opener_kind": "bridge",
+      "opener_valence": "neutral",
+      "opener_pool": "comment",
+      "transition_mode": null,
+      "transition_to": null,
+      "pinned_trunk_used": null,
+      "answer": null,
+      "sounded": {
+        "label": "neutral",
+        "score": 1.0,
+        "margin": 1.0,
+        "reason": "ok",
+        "voiced_ms": 1088.0,
+        "latency_ms": 128.3
+      }
+    }
+  ]
+}

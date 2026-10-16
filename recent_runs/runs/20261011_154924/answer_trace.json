@@ -1,0 +1,135 @@
+{
+  "run_id": "20261011_154924",
+  "trunk_pool_used": true,
+  "qa_threshold": 0.45,
+  "transitions_enabled": true,
+  "transitions_loaded": 0,
+  "transition_rejections": {
+    "no_record": 1
+  },
+  "counts": {
+    "feed_rundown": 1,
+    "sources": 2
+  },
+  "openers": {
+    "bridge": 3
+  },
+  "ser_model": "iic/emotion2vec_plus_base",
+  "sounded_counts": {
+    "ok": 2,
+    "abstain_label": 1
+  },
+  "emotion_bridges_enabled": true,
+  "bridge_pool_sizes": {
+    "question": 15,
+    "comment": 15,
+    "switch": 6,
+    "none": 6,
+    "question_positive": 5,
+    "comment_positive": 5,
+    "switch_positive": 5,
+    "none_positive": 5,
+    "question_negative": 5,
+    "comment_negative": 5,
+    "switch_negative": 5,
+    "none_negative": 5
+  },
+  "bridge_valence_counts": {
+    "neutral -> question": 3
+  },
+  "reactions": [
+    {
+      "iteration": 1,
+      "topic": "Today's episode",
+      "trunk_id": "episode_root",
+      "chunk_order": 1,
+      "asked": "Can you tell more about what's going on in global news?",
+      "reaction_type": "question",
+      "answer_source": "feed_rundown",
+      "match_score": 0.616,
+      "routed_trunk": null,
+      "routed_used": null,
+      "matched_qa_id": "episode_root_feed_06",
+      "cached_answer_was_stub": null,
+      "opener_kind": "bridge",
+      "opener_valence": "neutral",
+      "opener_pool": "question",
+      "opener_sub_intent": "neutral",
+      "opener_sub_intent_regex": "neutral",
+      "transition_mode": null,
+      "transition_to": null,
+      "pinned_trunk_used": true,
+      "answer": null,
+      "sounded": {
+        "label": "neutral",
+        "score": 0.9906,
+        "margin": 0.9875,
+        "reason": "ok",
+        "voiced_ms": 2880.0,
+        "latency_ms": 434.1
+      }
+    },
+    {
+      "iteration": 2,
+      "topic": "Today's episode",
+      "trunk_id": "source_65d89d6b464f",
+      "chunk_order": 0,
+      "asked": "What exact is the labor party?",
+      "reaction_type": "question",
+      "answer_source": "sources",
+      "match_score": null,
+      "routed_trunk": "trunk_002_breaking_news_038e79c7ba855446",
+      "routed_used": true,
+      "matched_qa_id": null,
+      "cached_answer_was_stub": null,
+      "opener_kind": "bridge",
+      "opener_valence": "neutral",
+      "opener_pool": "question",
+      "opener_sub_intent": "neutral",
+      "opener_sub_intent_regex": "neutral",
+      "transition_mode": null,
+      "transition_to": null,
+      "pinned_trunk_used": null,
+      "answer": "The Labour Party is a political group currently making headlines for their domestic policy plans in England, specifically their initiative to establish 1,000 new Sure Start family hubs.",
+      "sounded": {
+        "label": "neutral",
+        "score": 0.8571,
+        "margin": 0.7159,
+        "reason": "ok",
+        "voiced_ms": 1472.0,
+        "latency_ms": 112.5
+      }
+    },
+    {
+      "iteration": 3,
+      "topic": "Social Issues",
+      "trunk_id": "trunk_002_breaking_news_038e79c7ba855446",
+      "chunk_order": 218,
+      "asked": "What is the SureStart model?",
+      "reaction_type": "question",
+      "answer_source": "sources",
+      "match_score": null,
+      "routed_trunk": "trunk_002_breaking_news_038e79c7ba855446",
+      "routed_used": true,
+      "matched_qa_id": null,
+      "cached_answer_was_stub": null,
+      "opener_kind": "bridge",
+      "opener_valence": "neutral",
+      "opener_pool": "question",
+      "opener_sub_intent": "neutral",
+      "opener_sub_intent_regex": "neutral",
+      "transition_mode": null,
+      "transition_to": null,
+      "pinned_trunk_used": null,
+      "answer": "Think of the Sure Start model as a community-focused initiative designed to act as a one-stop shop for essential health services. It’s really all about providing a vital safety net for parents and pre-school children, ensuring they have the early-years support they need to thrive.",
+      "sounded": {
+        "label": null,
+        "score": 0.9497,
+        "margin": 0.912,
+        "reason": "abstain_label",
+        "voiced_ms": 1920.0,
+        "latency_ms": 198.5
+      }
+    }
+  ]
+}
