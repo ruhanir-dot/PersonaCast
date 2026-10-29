@@ -27,10 +27,6 @@ USER_IG_FILE = DATA_DIR / "user_ig_profile.txt"
 USER_KEYWORDS_FILE = DATA_DIR / "user_keywords.txt"
 USER_PROFILE_FILE = OUTPUT_DIR / "user_profile.json"
 
-###
-PODCAST_SETTINGS_FILE = DATA_DIR / "podcast_settings.json"
-PORTFOLIO_SNAPSHOT_FILE = OUTPUT_DIR / "portfolio_snapshot.json"
-
 
 # ============================================================
 # Setup
@@ -157,23 +153,6 @@ def read_json_file(path: str | Path) -> Any:
 def write_json_file(path: str | Path, data: Any) -> None:
     write_json(path, data)
 
-### to make sure 01_extract_user_profile.py doesnt break on usage feel free to change into the methods you used!
-
-def truncate_text(text: str, limit: int) -> str:
-    text = str(text or "")
-    if limit <= 0 or len(text) <= limit:
-        return text
-    return text[:limit].rstrip() + "\n...[truncated]"
-
-def read_podcast_settings() -> dict[str, Any]:
-    settings = read_json(PODCAST_SETTINGS_FILE, default=None)
-    if not isinstance(settings, dict):
-        settings = {}
-    settings.setdefault("podcast_type", "ig_analysis")
-    return settings
-
-###
-
 
 # ============================================================
 # JSON parsing
@@ -228,7 +207,7 @@ def llm_text(
     max_output_tokens: int | None = None,
 ) -> str:
     client = get_local_text_client()
-    model = os.getenv("LOCAL_LLM_MODEL", "qwen2.5:1.5b")
+    model = os.getenv("LOCAL_LLM_MODEL", "qwen2.5:7b")
     full_prompt = prompt if not system else (
         f"System instruction:\n{system}\n\n"
         f"User task:\n{prompt}"
@@ -270,7 +249,7 @@ def _ollama_json_response(
     response = requests.post(
         f"{host}/api/chat",
         json={
-            "model": os.getenv("LOCAL_LLM_MODEL", "qwen2.5:1.5b"),
+            "model": os.getenv("LOCAL_LLM_MODEL", "qwen2.5:7b"),
             "messages": messages,
             "format": json_schema or "json",
             "stream": False,
