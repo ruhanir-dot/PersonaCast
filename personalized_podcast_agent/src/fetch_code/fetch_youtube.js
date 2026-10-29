@@ -1,10 +1,26 @@
 (async () => {
-  const TARGET_COUNT = 100;
+  // auto_fetch.py sets window.__PODCAST_FETCH__ to run unattended.
+  const AUTO = window.__PODCAST_FETCH__;
+  const TARGET_COUNT = AUTO?.count || 100;
   const WAIT_MS = 1000;
   const items = new Map();
 
   const sleep = ms =>
     new Promise(resolve => setTimeout(resolve, ms));
+  
+  const MUSIC_CONTENT_PATTERNS = [
+    /\b(?:official\s+)?(?:music\s+video|mv|m\/v)\b/i,
+    /\b(?:official\s+audio|audio\s+only|lyrics?(?:\s+video)?|visuali[sz]er)\b/i,
+    /\b(?:dance\s+practice|dance\s+performance|live\s+performance|stage\s+mix|fancam|focus\s+cam|karaoke|instrumental|remix|song\s+cover|cover\s+by)\b/i,
+    /\b(?:sped[\s-]?up|slowed(?:\s+down)?)\b/i,
+    /뮤직비디오|가사\s*(?:영상|버전)|안무\s*영상|공식\s*음원/,
+    /ミュージックビデオ|歌詞付き|ダンスプラクティス|公式音源|カラオケ/,
+    /音樂錄影帶|歌詞(?:版|影片)|舞蹈練習|官方音源|卡拉OK/
+  ];
+
+  function isMusicContent(title) {
+    return MUSIC_CONTENT_PATTERNS.some(pattern => pattern.test(title));
+  }
 
   function collectVideos() {
     const anchors = document.querySelectorAll(
@@ -13,6 +29,7 @@
 
     for (const a of anchors) {
       const url = new URL(a.href);
+      if (a.closest("ytd-ad-slot-renderer, ytd-in-feed-ad-layout-renderer, ytd-promoted-video-renderer")) continue;
       const card = a.closest(
         [
           "ytd-rich-grid-media",
@@ -41,6 +58,7 @@
         /Mix|Playlist|合輯|播放清單/i.test(cardText);
 
       if (isPlaylist) continue;
+      
 
       const titleElement = card?.querySelector(
         [
@@ -86,9 +104,10 @@
       ).trim();
 
       if (!title) continue;
+      if (/^(Sponsored|贊助|廣告|Ad)$/im.test(cardText)) continue;
       if (/^\d{1,2}:\d{2}(:\d{2})?$/.test(title)) continue;
       if (/^(觀看|Watch|Shorts)$/i.test(title)) continue;
-
+      if (isMusicContent(title)) continue;
       if (!items.has(url.href)) {
         items.set(url.href, {
           title,
@@ -129,6 +148,8 @@
 
   const result = [...items.values()].slice(0, TARGET_COUNT);
   const output = JSON.stringify(result, null, 2);
+
+  if (AUTO) return result;
 
   if (typeof copy === "function") {
     copy(output);

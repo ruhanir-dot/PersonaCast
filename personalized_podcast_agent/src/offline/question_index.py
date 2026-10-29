@@ -100,7 +100,6 @@ def search_by_embedding(
             f"query={query_embedding.shape[0]}"
         )
 
-    # 两边都已经 normalize，所以 dot product 就是 cosine similarity。
     scores = embeddings @ query_embedding
 
     top_k = min(top_k, len(indexed_nodes))

@@ -1,5 +1,7 @@
 (async () => {
-    const TARGET_COUNT = 100;
+    // auto_fetch.py sets window.__PODCAST_FETCH__ to run unattended.
+    const AUTO = window.__PODCAST_FETCH__;
+    const TARGET_COUNT = AUTO?.count || 100;
     const WAIT_MS = 1000;
     const items = new Map();
 
@@ -12,11 +14,15 @@
         )) {
             const url = new URL(a.href);
             url.search = "";
+            // Sub-links such as /p/ID/liked_by/ belong to the same post.
+            const post = url.pathname.match(/^\/(p|reel)\/[^/]+\//);
+            if (!post) continue;
+            url.pathname = post[0];
 
             const article = a.closest("article");
             const text = (article?.innerText || "").trim();
 
-            if (/Sponsored|贊助|廣告|Paid partnership/i.test(text)) {
+            if (/Sponsored|贊助|廣告|Paid partnership|^Ad$/im.test(text)) {
                 continue;
             }
 
@@ -26,11 +32,11 @@
                     .map(x => x.trim())
                     .filter(Boolean);
 
-                const username =
-                    article?.querySelector('header a[href^="/"]')
-                        ?.getAttribute("href")
-                        ?.split("/")
-                        .filter(Boolean)[0] || "";
+                // The author is the first profile link (/name/) in the post.
+                const RESERVED = /^(p|reel|reels|explore|stories|accounts|direct)$/;
+                const username = [...(article?.querySelectorAll('a[href^="/"]') || [])]
+                    .map(link => link.getAttribute("href").match(/^\/([\w.]+)\/(?:\?|$)/)?.[1])
+                    .find(name => name && !RESERVED.test(name)) || "";
 
                 const hashtags = [
                     ...new Set(text.match(/#[\p{L}\p{N}_]+/gu) || [])
@@ -39,6 +45,7 @@
                 items.set(url.href, {
                     title: lines[0] || "",
                     text,
+                    username,
                     url: url.href,
                     source_type: url.pathname.startsWith("/reel/")
                         ? "instagram_reel"
@@ -61,6 +68,8 @@
 
     const result = [...items.values()].slice(0, TARGET_COUNT);
     const output = JSON.stringify(result, null, 2);
+
+    if (AUTO) return result;
 
     const blob = new Blob([output], {
         type: "application/json"
