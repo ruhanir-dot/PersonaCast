@@ -1,0 +1,11 @@
+{
+ "built_at": "2026-11-07T03:53:47.099595+00:00",
+ "window_days": 7,
+ "hobby_window_days": 30,
+ "caps": {
+  "general_news": 300,
+  "existing": 120,
+  "hobby": 150
+ },
+ "topic_results": 8
+}

@@ -1,0 +1,616 @@
+{
+ "checked": "2026-11-06",
+ "description": "Content-pool sources that need no user account: RSS feeds (no key, no quota) or SearXNG site: search. Each was checked for robots.txt permission and 3 freely readable full-text articles.",
+ "sources": [
+  {
+   "domain": "soompi.com",
+   "name": "Soompi",
+   "topics": "K-pop idols, Korean music, Korean dramas, Korean actors and entertainment news",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.soompi.com/feed"
+  },
+  {
+   "domain": "pcgamer.com",
+   "name": "PC Gamer",
+   "topics": "PC video games, game reviews, gaming hardware, strategy and role-playing video games",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.pcgamer.com/feeds.xml"
+  },
+  {
+   "domain": "ign.com",
+   "name": "IGN",
+   "topics": "video games, PlayStation, Xbox, Nintendo, console game news and reviews",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.ign.com/rss/v2/articles/feed"
+  },
+  {
+   "domain": "theverge.com",
+   "name": "The Verge",
+   "topics": "consumer technology, gadgets, smartphones, AI products, streaming services",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.theverge.com/rss/index.xml"
+  },
+  {
+   "domain": "arstechnica.com",
+   "name": "Ars Technica",
+   "topics": "technology, science, space, computing, security, cars and policy explained in depth",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://arstechnica.com:443/feed"
+  },
+  {
+   "domain": "wired.com",
+   "name": "WIRED",
+   "topics": "technology and culture, artificial intelligence, internet culture, gear reviews",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.wired.com/feed/rss"
+  },
+  {
+   "domain": "vogue.com",
+   "name": "Vogue",
+   "topics": "fashion, runway shows, designers, beauty, celebrity style",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.vogue.com/feed/rss"
+  },
+  {
+   "domain": "gq.com",
+   "name": "GQ",
+   "topics": "men's fashion, grooming, watches, sneakers, celebrity profiles",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.gq.com/feed/rss"
+  },
+  {
+   "domain": "seriouseats.com",
+   "name": "Serious Eats",
+   "topics": "cooking techniques, recipes, baking, food science, kitchen equipment",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://feeds-api.dotdashmeredith.com/v1/rss/google/ad57d421-0ff5-41e7-a5da-f2167b6d7f7a"
+  },
+  {
+   "domain": "bonappetit.com",
+   "name": "Bon Appetit",
+   "topics": "recipes, home cooking, restaurants, chefs, food culture",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.bonappetit.com/feed/rss"
+  },
+  {
+   "domain": "eater.com",
+   "name": "Eater",
+   "topics": "restaurants, chefs, dining trends, food and drink news",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.eater.com/rss/index.xml"
+  },
+  {
+   "domain": "theguardian.com",
+   "name": "The Guardian",
+   "topics": "world news, US news, politics, opinion and commentary, environment, culture, long reads",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.theguardian.com/rss"
+  },
+  {
+   "domain": "bbc.com",
+   "name": "BBC",
+   "topics": "world news, UK news, British royal family, health, science, travel",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://feeds.bbci.co.uk/news/rss.xml"
+  },
+  {
+   "domain": "npr.org",
+   "name": "NPR",
+   "topics": "US news, national affairs, health, science, books, music and culture",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://feeds.npr.org/1002/rss.xml"
+  },
+  {
+   "domain": "indiewire.com",
+   "name": "IndieWire",
+   "topics": "film criticism, directors, independent cinema, TV series reviews, awards",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.indiewire.com/feed/rss/"
+  },
+  {
+   "domain": "variety.com",
+   "name": "Variety",
+   "topics": "film industry, television, Hollywood business, celebrities, music",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://variety.com/feed/rss/"
+  },
+  {
+   "domain": "hollywoodreporter.com",
+   "name": "The Hollywood Reporter",
+   "topics": "Hollywood, movie stars, TV stars, film and TV production, awards",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.hollywoodreporter.com/feed/rss/"
+  },
+  {
+   "domain": "vulture.com",
+   "name": "Vulture",
+   "topics": "TV show recaps, comedy, movies, pop culture criticism, celebrities",
+   "group": "existing",
+   "method": "rss",
+   "feed": "http://feeds.feedburner.com/nymag/vulture"
+  },
+  {
+   "domain": "avclub.com",
+   "name": "The A.V. Club",
+   "topics": "movies, TV episode reviews, classic films, music and pop culture",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.avclub.com/rss.xml"
+  },
+  {
+   "domain": "collider.com",
+   "name": "Collider",
+   "topics": "movie news, film rankings, horror, science fiction, superhero films, TV series",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://collider.com/feed"
+  },
+  {
+   "domain": "espn.com",
+   "name": "ESPN",
+   "topics": "NFL football, NBA basketball, NHL hockey, baseball, soccer, college sports",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.espn.com/espn/rss/news"
+  },
+  {
+   "domain": "cbssports.com",
+   "name": "CBS Sports",
+   "topics": "NFL, NBA, MLB, NHL, golf, college football analysis and standings",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.cbssports.com/rss/headlines/"
+  },
+  {
+   "domain": "wrestlinginc.com",
+   "name": "Wrestling Inc",
+   "topics": "WWE, professional wrestling, AEW, wrestling history",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.wrestlinginc.com/category/news/feed/"
+  },
+  {
+   "domain": "space.com",
+   "name": "Space.com",
+   "topics": "space exploration, astronomy, NASA, rockets, science fiction",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.space.com/feeds.xml"
+  },
+  {
+   "domain": "scientificamerican.com",
+   "name": "Scientific American",
+   "topics": "science, health research, nature, physics, biology",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.scientificamerican.com/platform/syndication/rss/"
+  },
+  {
+   "domain": "smithsonianmag.com",
+   "name": "Smithsonian Magazine",
+   "topics": "history, archaeology, animals, art, science, travel",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.smithsonianmag.com/rss/latest_articles/"
+  },
+  {
+   "domain": "nationalgeographic.com",
+   "name": "National Geographic",
+   "topics": "animals, wildlife, nature, environment, exploration, travel photography",
+   "group": "existing",
+   "method": "search"
+  },
+  {
+   "domain": "cnbc.com",
+   "name": "CNBC",
+   "topics": "stock market, company and business news, personal finance, economy",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"
+  },
+  {
+   "domain": "caranddriver.com",
+   "name": "Car and Driver",
+   "topics": "cars, car reviews, classic cars, sports cars, auto industry",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.caranddriver.com/rss/news"
+  },
+  {
+   "domain": "motor1.com",
+   "name": "Motor1",
+   "topics": "cars, auto news, sports cars, car enthusiasts, racing",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.motor1.com/rss/news/all/"
+  },
+  {
+   "domain": "rideapart.com",
+   "name": "RideApart",
+   "topics": "motorcycles, riding gear, motorcycle news and reviews",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.rideapart.com/rss/news/all/"
+  },
+  {
+   "domain": "rollingstone.com",
+   "name": "Rolling Stone",
+   "topics": "music, albums, musicians, music stars, rock and pop culture",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.rollingstone.com/feed/rss/"
+  },
+  {
+   "domain": "pitchfork.com",
+   "name": "Pitchfork",
+   "topics": "album reviews, independent music, hip-hop, electronic music",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://pitchfork.com/feed/rss"
+  },
+  {
+   "domain": "architecturaldigest.com",
+   "name": "Architectural Digest",
+   "topics": "home design, interiors, architecture, celebrity homes",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.architecturaldigest.com/feed/rss"
+  },
+  {
+   "domain": "healthline.com",
+   "name": "Healthline",
+   "topics": "health news, nutrition, wellness, fitness, medical conditions explained",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.healthline.com/rss/health-news",
+   "note": "feed entries carry no publish date"
+  },
+  {
+   "domain": "cntraveler.com",
+   "name": "Conde Nast Traveler",
+   "topics": "travel ideas, destinations, hotels, trips",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.cntraveler.com/feed/rss"
+  },
+  {
+   "domain": "bookriot.com",
+   "name": "Book Riot",
+   "topics": "books, novels, reading recommendations, mystery and fantasy fiction, comics, book clubs",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://bookriot.com/feed/"
+  },
+  {
+   "domain": "outsideonline.com",
+   "name": "Outside",
+   "topics": "outdoor adventure, hiking, climbing, camping, trail running, national parks",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.outsideonline.com/feed"
+  },
+  {
+   "domain": "eurogamer.net",
+   "name": "Eurogamer",
+   "topics": "video games, console game reviews, Nintendo, PlayStation, Xbox, game retrospectives",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.eurogamer.net/feed"
+  },
+  {
+   "domain": "nbcnews.com",
+   "name": "NBC News",
+   "topics": "breaking news, US and world news, national affairs",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.nbcnews.com/feed"
+  },
+  {
+   "domain": "fool.com",
+   "name": "The Motley Fool",
+   "topics": "stocks, investing, retirement, personal finance",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.fool.com/feeds/index.aspx"
+  },
+  {
+   "domain": "thespruce.com",
+   "name": "The Spruce",
+   "topics": "home cleaning, home organization, decorating, houseplants, home repair basics",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://feeds-api.dotdashmeredith.com/v1/rss/google/aa6fe5c4-9f19-4c32-b63e-6e4c19b5a50f"
+  },
+  {
+   "domain": "eonline.com",
+   "name": "E! News",
+   "topics": "celebrity news, royal family, lifestyle buzz, TV stars",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.eonline.com/feed"
+  },
+  {
+   "domain": "playbill.com",
+   "name": "Playbill",
+   "topics": "Broadway, theater, musicals, stage plays",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://playbill.com/rss/news"
+  },
+  {
+   "domain": "history.com",
+   "name": "History",
+   "topics": "history, wars, World War II, ancient civilizations, biographies, religion in history",
+   "group": "existing",
+   "method": "rss",
+   "feed": "https://www.history.com/news/rss"
+  },
+  {
+   "domain": "gardeningknowhow.com",
+   "name": "Gardening Know How",
+   "topics": "gardening, vegetable gardening, flower gardens, houseplants, lawn care, growing tips",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.gardeningknowhow.com/feeds.xml"
+  },
+  {
+   "domain": "bhg.com",
+   "name": "Better Homes & Gardens",
+   "topics": "gardening, home decorating, home improvement, recipes, crafts and holiday projects",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://feeds-api.dotdashmeredith.com/v1/rss/google/198df1e2-261c-478b-a469-2954823d1c07"
+  },
+  {
+   "domain": "fieldandstream.com",
+   "name": "Field & Stream",
+   "topics": "fishing, fly fishing, bass fishing, hunting, deer hunting, outdoor gear",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://fieldandstream.com/feed"
+  },
+  {
+   "domain": "outdoorlife.com",
+   "name": "Outdoor Life",
+   "topics": "hunting, fishing, wildlife, survival skills, guns and outdoor gear",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.outdoorlife.com/feed/"
+  },
+  {
+   "domain": "familyhandyman.com",
+   "name": "Family Handyman",
+   "topics": "DIY home improvement, woodworking projects, home repairs, power tools, renovation",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.familyhandyman.com/feed"
+  },
+  {
+   "domain": "chess.com",
+   "name": "Chess.com",
+   "topics": "chess, chess tournaments, chess players, chess puzzles and strategy",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.chess.com/rss/news"
+  },
+  {
+   "domain": "chessbase.com",
+   "name": "ChessBase",
+   "topics": "chess news, chess tournaments, grandmasters, chess openings and analysis",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://en.chessbase.com/feed"
+  },
+  {
+   "domain": "petapixel.com",
+   "name": "PetaPixel",
+   "topics": "photography, cameras, lenses, landscape, street and wildlife photography",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://petapixel.com/feed"
+  },
+  {
+   "domain": "audubon.org",
+   "name": "Audubon",
+   "topics": "birds, birdwatching, bird identification, bird migration, bird conservation",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.audubon.org/rss.xml"
+  },
+  {
+   "domain": "guitarworld.com",
+   "name": "Guitar World",
+   "topics": "guitar playing, guitar lessons, acoustic and electric guitar, guitarists, music gear",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.guitarworld.com/feeds.xml"
+  },
+  {
+   "domain": "hagerty.com",
+   "name": "Hagerty",
+   "topics": "classic cars, car restoration, collector cars, vintage car auctions, car culture",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.hagerty.com/media/feed/"
+  },
+  {
+   "domain": "trains.com",
+   "name": "Trains.com",
+   "topics": "model trains, model railroading, scale model building, railroads, railroad history",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.trains.com/feed/"
+  },
+  {
+   "domain": "runnersworld.com",
+   "name": "Runner's World",
+   "topics": "running, marathons, running training, races, running shoes",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.runnersworld.com/rss/all.xml/"
+  },
+  {
+   "domain": "bicycling.com",
+   "name": "Bicycling",
+   "topics": "cycling, bikes, road and mountain biking, bike rides, cycling training",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.bicycling.com/rss/all.xml"
+  },
+  {
+   "domain": "dicebreaker.com",
+   "name": "Dicebreaker",
+   "topics": "board games, tabletop games, card games, tabletop role-playing games, puzzles",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.dicebreaker.com/feed"
+  },
+  {
+   "domain": "familytreemagazine.com",
+   "name": "Family Tree Magazine",
+   "topics": "genealogy, family history research, ancestry, DNA testing for genealogy",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://familytreemagazine.com/feed"
+  },
+  {
+   "domain": "mindful.org",
+   "name": "Mindful",
+   "topics": "mindfulness, meditation, stress relief, well-being, journaling",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.mindful.org/feed"
+  },
+  {
+   "domain": "theguardian.com",
+   "name": "The Guardian US",
+   "topics": "US news, politics, national affairs",
+   "group": "general_news",
+   "method": "rss",
+   "feed": "https://www.theguardian.com/us-news/rss"
+  },
+  {
+   "domain": "theguardian.com",
+   "name": "The Guardian World",
+   "topics": "world news, international affairs",
+   "group": "general_news",
+   "method": "rss",
+   "feed": "https://www.theguardian.com/world/rss"
+  },
+  {
+   "domain": "bbc.com",
+   "name": "BBC World",
+   "topics": "world news, international affairs",
+   "group": "general_news",
+   "method": "rss",
+   "feed": "https://feeds.bbci.co.uk/news/world/rss.xml"
+  },
+  {
+   "domain": "npr.org",
+   "name": "NPR News",
+   "topics": "US news, national affairs, breaking news",
+   "group": "general_news",
+   "method": "rss",
+   "feed": "https://feeds.npr.org/1001/rss.xml"
+  },
+  {
+   "domain": "cbsnews.com",
+   "name": "CBS News",
+   "topics": "breaking news, US news, national affairs",
+   "group": "general_news",
+   "method": "rss",
+   "feed": "https://www.cbsnews.com/latest/rss/main"
+  },
+  {
+   "domain": "abcnews.go.com",
+   "name": "ABC News",
+   "topics": "breaking news, US news, world news",
+   "group": "general_news",
+   "method": "rss",
+   "feed": "https://feeds.abcnews.com/abcnews/topstories"
+  },
+  {
+   "domain": "golf.com",
+   "name": "GOLF",
+   "topics": "golf, PGA Tour, golf instruction, golf equipment, golf courses",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://golf.com/feed/"
+  },
+  {
+   "domain": "quiltingdaily.com",
+   "name": "Quilting Daily",
+   "topics": "quilting, quilt patterns, sewing, knitting and fabric crafts",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://www.quiltingdaily.com/feed/"
+  },
+  {
+   "domain": "thecrafttrain.com",
+   "name": "The Craft Train",
+   "topics": "paper crafts, kids' crafts, scrapbooking, DIY craft projects",
+   "group": "hobby",
+   "method": "rss",
+   "feed": "https://thecrafttrain.com/feed/"
+  }
+ ],
+ "excluded": [
+  {
+   "domain": "commonsensemedia.org",
+   "name": "Common Sense Media",
+   "reason": "no feed and no readable article found by site: search"
+  },
+  {
+   "domain": "thisoldhouse.com",
+   "name": "This Old House",
+   "reason": "no feed and no readable article found by site: search"
+  },
+  {
+   "domain": "allaboutbirds.org",
+   "name": "All About Birds",
+   "reason": "no feed and no readable article found by site: search"
+  },
+  {
+   "domain": "thesprucecrafts.com",
+   "name": "The Spruce Crafts",
+   "reason": "no feed and no readable article found by site: search"
+  },
+  {
+   "domain": "golfdigest.com",
+   "name": "Golf Digest",
+   "reason": "no feed found and homepage or articles not readable"
+  },
+  {
+   "domain": "interweave.com",
+   "name": "Interweave",
+   "reason": "no feed found and homepage or articles not readable"
+  },
+  {
+   "domain": "craftsy.com",
+   "name": "Craftsy",
+   "reason": "no feed found and homepage or articles not readable"
+  },
+  {
+   "domain": "allfreeknitting.com",
+   "name": "AllFreeKnitting",
+   "reason": "no feed found and homepage or articles not readable"
+  }
+ ]
+}
