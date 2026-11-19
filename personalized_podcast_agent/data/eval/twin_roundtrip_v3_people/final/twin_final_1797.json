@@ -1,0 +1,551 @@
+{
+  "user_id": "twin_final_1797",
+  "interests": [
+    "Travel ideas",
+    "Personal finance",
+    "Fun facts and trivia",
+    "Tips and life hacks",
+    "Lifestyle buzz",
+    "World news",
+    "Adventure films",
+    "Fantasy films",
+    "Musicals",
+    "Action movies",
+    "entrepreneurship",
+    "business management",
+    "Financial Planning",
+    "Relationships and Grief",
+    "investing",
+    "historical fiction",
+    "american immigration history",
+    "adult coloring",
+    "retirement planning",
+    "cake decorating",
+    "Music and Dancing",
+    "Financial Management",
+    "Adventure and Travel"
+  ],
+  "preferred_topics": [
+    "Financial planning and investment",
+    "Travel and adventure stories",
+    "Music and dance culture",
+    "travel tips",
+    "financial planning",
+    "life hacks",
+    "entrepreneurship",
+    "adventure travel",
+    "fantasy movies",
+    "musicals",
+    "action movies",
+    "relationship advice",
+    "investment strategies",
+    "retirement planning",
+    "cake decorating"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Curious about new and unusual angles"
+  ],
+  "podcast_focus_keywords": [
+    "travel",
+    "finance",
+    "hacks",
+    "entrepreneurship",
+    "adventure",
+    "fantasy",
+    "musicals",
+    "action",
+    "relationships",
+    "investing",
+    "retirement",
+    "cake"
+  ],
+  "recommended_news_queries": [
+    "Top 5 ways to save money on travel",
+    "Personal finance news",
+    "10 interesting facts about travel",
+    "Top 10 life hacks for travel",
+    "Lifestyle buzz news",
+    "World news news",
+    "Adventure movie review",
+    "Fantasy film analysis",
+    "Musical director interview",
+    "Action movie review",
+    "Top entrepreneurship tips",
+    "Top business management strategies",
+    "Top financial planning tips",
+    "How travel can help with grief",
+    "investing news",
+    "Top historical fiction books of the year",
+    "Current immigration trends",
+    "Top adult coloring books",
+    "Top retirement planning tips",
+    "Top cake decorating techniques",
+    "Top music and dance festivals",
+    "Top financial management tips",
+    "Top adventure travel destinations"
+  ],
+  "youtube_search_queries": [
+    "Budget travel tips",
+    "Personal finance",
+    "Travel trivia quiz",
+    "Life hacks for everyday life",
+    "Lifestyle trends",
+    "World news highlights",
+    "Adventure movie review",
+    "Fantasy film analysis",
+    "Musical director interview",
+    "Action movie review",
+    "Entrepreneurship success stories",
+    "Business management tips",
+    "Financial planning strategies",
+    "Relationships and Grief",
+    "investing",
+    "Historical fiction recommendations",
+    "Immigration history documentaries",
+    "Adult coloring tutorials",
+    "Retirement planning strategies",
+    "Cake decorating tutorials",
+    "Music and dance performances",
+    "Financial management strategies",
+    "Adventure travel videos"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "autos",
+    "sports",
+    "weather",
+    "TV"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "The listener is familiar with travel tips, financial planning, life hacks, entrepreneurship, adventure travel, fantasy movies, musicals, action movies, relationship advice, investment strategies, retirement planning, and cake decorating.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U89063",
+    "movielens_user": "125788",
+    "amazon_user": "AHUU6RD27REMQBXY2CSOMKACYLZQ",
+    "interests_by_source": {
+      "news": 6,
+      "movies": 4,
+      "reviews": 10,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Travel ideas",
+        "source": "news",
+        "keys": [
+          "traveltripideas"
+        ],
+        "count": 9,
+        "examples": [
+          "50 underrated state parks across the US that everyone should visit in their lifetime",
+          "The best time to visit Iceland and 49 other top travel destinations"
+        ]
+      },
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Fun facts and trivia",
+        "source": "news",
+        "keys": [
+          "lifestyledidyouknow"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Tips and life hacks",
+        "source": "news",
+        "keys": [
+          "tipsandtricks"
+        ],
+        "count": 2,
+        "examples": [
+          "10 of the best lunch items you can buy at Costco for under $12"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 2,
+        "examples": [
+          "Man Goes To Adoption Event And Finds His Long-Lost Dog"
+        ]
+      },
+      {
+        "interest": "World news",
+        "source": "news",
+        "keys": [
+          "newsworld"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 63,
+        "lift": 1.78,
+        "examples": [
+          "National Treasure (2004)",
+          "Sahara (2005)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 29,
+        "lift": 1.68,
+        "examples": [
+          "Freaky Friday (2003)",
+          "Sorcerer's Apprentice, The (2010)"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 8,
+        "lift": 1.49,
+        "examples": [
+          "Mulan (1998)"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 52,
+        "lift": 1.16,
+        "examples": [
+          "National Treasure (2004)",
+          "Sahara (2005)"
+        ]
+      },
+      {
+        "interest": "entrepreneurship",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 21,
+        "categories": [
+          "Books > Business & Money > Management & Leadership"
+        ],
+        "examples": [
+          "From Idea to Success: The Dartmouth Entrepreneurial Network Guide for Start-Ups",
+          "Hurdle: The Book on Business Planning",
+          "The Customer-Driven Company: Moving from Talk to Action"
+        ]
+      },
+      {
+        "interest": "business management",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 15,
+        "categories": [
+          "Books > Business & Money > Business Culture"
+        ],
+        "examples": [
+          "General Business Anthropology",
+          "More Than a Hobby: How a $600 Startup Became America's Home and Craft Superstore",
+          "The One Minute Manager"
+        ]
+      },
+      {
+        "interest": "Financial Planning",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 9,
+        "categories": [
+          "Books > Business & Money > Personal Finance"
+        ],
+        "examples": [
+          "Personal Finance For Dummies",
+          "I Didn't Know I Could Do That: 9 Financial Strategies That Can Save or Make You ",
+          "Money Won't Buy Happiness – But Time to Find It"
+        ]
+      },
+      {
+        "interest": "Relationships and Grief",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 9,
+        "categories": [
+          "Books > Self-Help > Relationships"
+        ],
+        "examples": [
+          "Don't Divorce: Powerful Arguments for Saving and Revitalizing Your Marriage",
+          "Amazing Adventures with Dev",
+          "The Third Circle Protocol: How to relate to yourself and others in a healthy, vi"
+        ]
+      },
+      {
+        "interest": "investing",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Business & Money > Economics"
+        ],
+        "examples": [
+          "Too Big to Fail: The Inside Story of How Wall Street and Washington Fought to Sa",
+          "Setting Sun: The End of US Economic Dominance",
+          "13 Ways to Kill Your Community 2nd Edition"
+        ]
+      },
+      {
+        "interest": "historical fiction",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "Felling Big Trees (1)",
+          "Helen",
+          "The Touch: A Supernatural Story - Part I"
+        ]
+      },
+      {
+        "interest": "american immigration history",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Biographies & Memoirs > Community & Culture"
+        ],
+        "examples": [
+          "The Iron Fist: The Immigrant Journey of J. B. Leonis to Riches and Power in Sout",
+          "Touched by the Finger of God: The Heartfelt True Story of a Faithful Believer",
+          "Perseverance: The Seven Skills You Need to Survive, Thrive, and Accomplish More "
+        ]
+      },
+      {
+        "interest": "adult coloring",
+        "source": "reviews",
+        "keys": [
+          "P46",
+          "P47",
+          "P48",
+          "P49",
+          "P50"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Crafts & Hobbies"
+        ],
+        "examples": [
+          "Tingle Boots Coloring Book (Design Originals) (Suzy Toronto Coloring)",
+          "Complete Guide to Bible Journaling: Creative Techniques to Express Your Faith (D",
+          "Colorful Creations Positively Inspired Coloring Book: Coloring Book Pages Design"
+        ]
+      },
+      {
+        "interest": "retirement planning",
+        "source": "reviews",
+        "keys": [
+          "P51",
+          "P52",
+          "P53",
+          "P54",
+          "P55"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Business & Money > Finance"
+        ],
+        "examples": [
+          "FOB: Master Your Cash Flow: The Key To Grow And Retain Wealth",
+          "The Financial Briefing: Answers To Life's Most Important Money Questions",
+          "Finding Your Money's Greater Purpose: How to Make Your Legacy Count"
+        ]
+      },
+      {
+        "interest": "cake decorating",
+        "source": "reviews",
+        "keys": [
+          "P56",
+          "P57",
+          "P58",
+          "P59",
+          "P60"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Baking"
+        ],
+        "examples": [
+          "Buttercream Basics: Learn the Art of Buttercream Decorating",
+          "Eclairs: Easy, Elegant and Modern Recipes",
+          "175 Best Small-Batch Baking Recipes: Treats for 1 or 2"
+        ]
+      },
+      {
+        "interest": "Music and Dancing",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "music -> dancing -> party -> birthday -> cake -> ice cream -> summer -> sunshine -> cozy -> blankets -> sleep -> coffee "
+        ]
+      },
+      {
+        "interest": "Financial Management",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy: very high (100th percentile)"
+        ]
+      },
+      {
+        "interest": "Adventure and Travel",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "paper -> Plane -> crash -> cymbals -> music -> dancing -> party -> birthday -> cake -> ice cream -> summer -> sunshine -"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Budget travel tips": "news",
+      "Personal finance": "news",
+      "Travel trivia quiz": "news",
+      "Life hacks for everyday life": "news",
+      "Lifestyle trends": "news",
+      "World news highlights": "news",
+      "Adventure movie review": "movies",
+      "Fantasy film analysis": "movies",
+      "Musical director interview": "movies",
+      "Action movie review": "movies",
+      "Entrepreneurship success stories": "reviews",
+      "Business management tips": "reviews",
+      "Financial planning strategies": "reviews",
+      "Relationships and Grief": "reviews",
+      "investing": "reviews",
+      "Historical fiction recommendations": "reviews",
+      "Immigration history documentaries": "reviews",
+      "Adult coloring tutorials": "reviews",
+      "Retirement planning strategies": "reviews",
+      "Cake decorating tutorials": "reviews",
+      "Music and dance performances": "twin",
+      "Financial management strategies": "twin",
+      "Adventure travel videos": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "informative and educational",
+    "brief and to the point",
+    "casual and relatable",
+    "humorous and light-hearted",
+    "practical and actionable",
+    "inspirational and motivational"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "high",
+    "extraversion": "low",
+    "conscientiousness": "average"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness high (curious about new, unusual and artistic experiences); extraversion low (reserved and quiet); conscientiousness average (reasonably organized).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1797",
+    "additional_context": "Age 30-49; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 69,
+      "openness": 69,
+      "extraversion": 15,
+      "conscientiousness": 58
+    },
+    "twin_interests": [
+      "Music and Dancing",
+      "Financial Management",
+      "Adventure and Travel"
+    ],
+    "twin_background_knowledge": "This person likely has a good understanding of financial management and enjoys activities related to music, dancing, and travel."
+  }
+}

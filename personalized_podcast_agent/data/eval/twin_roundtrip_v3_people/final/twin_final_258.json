@@ -1,0 +1,606 @@
+{
+  "user_id": "twin_final_258",
+  "interests": [
+    "NFL football",
+    "Wellness",
+    "MLB baseball",
+    "Retirement planning",
+    "Lifestyle buzz",
+    "Real estate",
+    "Musicals",
+    "Documentaries",
+    "War films",
+    "Family and kids' movies",
+    "Drama films",
+    "yoga and dance",
+    "chia and coconut products",
+    "jewelry making",
+    "fitness and strength training",
+    "World War II novels",
+    "business management",
+    "Sudoku",
+    "biography",
+    "digital marketing",
+    "green tea",
+    "mystery novels",
+    "personal fitness and exercise routines",
+    "local community and neighborhood activities",
+    "financial management and investment"
+  ],
+  "preferred_topics": [
+    "home workout routines",
+    "neighborhood events and activities",
+    "investment strategies and options",
+    "NFL trade news",
+    "Financial planning",
+    "Real estate investment",
+    "Wellness routines",
+    "Musical theater",
+    "Documentary films",
+    "War history",
+    "Business management",
+    "Fitness and exercise",
+    "Jewelry making",
+    "Green tea benefits",
+    "Family movies"
+  ],
+  "style_preferences": [
+    "Clear, moderately detailed explanations",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "NFL trades",
+    "financial tips",
+    "real estate",
+    "wellness",
+    "musicals",
+    "documentaries",
+    "war films",
+    "business strategies",
+    "fitness routines",
+    "jewelry making",
+    "green tea",
+    "family movies"
+  ],
+  "recommended_news_queries": [
+    "NFL team trades and player movements this week",
+    "Top wellness trends",
+    "MLB team standings and upcoming games",
+    "Retirement savings tips and strategies",
+    "Latest lifestyle trends and tips",
+    "Real estate market updates and trends",
+    "Musical movie review",
+    "Documentary film analysis",
+    "War director interview",
+    "Family and kids' movie review",
+    "Drama film analysis",
+    "Yoga and dance classes for beginners",
+    "Health benefits of chia and coconut products",
+    "Jewelry making techniques and tutorials",
+    "Fitness and strength training tips",
+    "Top World War II novels of the year",
+    "Business management strategies and tips",
+    "Sudoku puzzles and solving tips",
+    "biography news",
+    "Digital marketing trends and strategies",
+    "Health benefits of green tea",
+    "Top mystery novels of the year",
+    "Fitness and exercise routines for beginners",
+    "Community events and activities",
+    "Financial management and investment tips"
+  ],
+  "youtube_search_queries": [
+    "Top NFL trades of the season",
+    "Wellness",
+    "Best baseball training exercises",
+    "How to invest in real estate for retirement",
+    "Lifestyle buzz",
+    "How to choose the right real estate agent",
+    "Musical movie review",
+    "Documentary film analysis",
+    "War director interview",
+    "Family and kids' movie review",
+    "Drama film analysis",
+    "Yoga and dance routines for stress relief",
+    "How to use chia seeds in recipes",
+    "DIY jewelry making projects",
+    "fitness and strength training",
+    "Historical documentaries about World War II",
+    "How to start a small business",
+    "How to improve Sudoku solving skills",
+    "biography",
+    "digital marketing",
+    "How to make green tea",
+    "Best mystery movies and TV shows",
+    "Workout routines for home",
+    "Local community projects",
+    "financial management and investment"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "travel",
+    "food and drink",
+    "TV",
+    "Mystery films"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with NFL, financial planning, real estate, wellness routines, musical theater, documentaries, war history, business management, fitness and exercise, jewelry making, green tea, family movies, and Sudoku.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U53393",
+    "movielens_user": "97595",
+    "amazon_user": "AEBXQ5Q6XQJPO2HPE724DXEF6QVA",
+    "interests_by_source": {
+      "news": 6,
+      "movies": 5,
+      "reviews": 11,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "NFL football",
+        "source": "news",
+        "keys": [
+          "football_nfl"
+        ],
+        "count": 3,
+        "examples": [
+          "Potential trade targets for all 32 NFL teams at the 2019 deadline, from A.J. Green to Trent Williams",
+          "Gronkowski suggests that he'll unretire if NFL legalizes CBD"
+        ]
+      },
+      {
+        "interest": "Wellness",
+        "source": "news",
+        "keys": [
+          "wellness"
+        ],
+        "count": 2,
+        "examples": [
+          "Why You Should Always Close the Door Before You Go to Bed"
+        ]
+      },
+      {
+        "interest": "MLB baseball",
+        "source": "news",
+        "keys": [
+          "baseball_mlb"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 2,
+        "examples": [
+          "This waterfront city is the top place in America to retire"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 2,
+        "examples": [
+          "Bed, Bath and Beyond Pulls 'Blackface Pumpkins From the Shelves",
+          "A couple's attempt to re-create a picture-perfect engagement photo with a bottle of Champagne totally backfired, but the result is going viral"
+        ]
+      },
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 2,
+        "examples": [
+          "3 reasons to invest in real estate, according to a financial planner who owns 10 rental properties",
+          "3 reasons to invest in real estate, according to a financial planner who owns 10 rental properties"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 20,
+        "lift": 4.23,
+        "examples": [
+          "Into the Woods (2014)",
+          "Little Mermaid, The (1989)"
+        ]
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 6,
+        "lift": 3.89,
+        "examples": [
+          "Page One: Inside the New York Times (2011)"
+        ]
+      },
+      {
+        "interest": "War films",
+        "source": "movies",
+        "keys": [
+          "War"
+        ],
+        "count": 11,
+        "lift": 1.71,
+        "examples": [
+          "Saving Private Ryan (1998)",
+          "War Horse (2011)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 19,
+        "lift": 1.69,
+        "examples": [
+          "Into the Woods (2014)",
+          "Little Mermaid, The (1989)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 62,
+        "lift": 1.11,
+        "examples": [
+          "Moneyball (2011)",
+          "Rookie, The (2002)"
+        ]
+      },
+      {
+        "interest": "yoga and dance",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 76,
+        "categories": [
+          "Movies & TV > Genre for Featured Categories > Exercise & Fitness"
+        ],
+        "examples": [
+          "Shiva Rea - Yoga Trance Dance",
+          "Amy Bento: Slo-Mo Strength Challenge [DVD]",
+          "Dance the Chakras Yoga Workout - Ana Brett & Ravi Singh ***With the New MATRIX M"
+        ]
+      },
+      {
+        "interest": "chia and coconut products",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 13,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Cooking & Baking"
+        ],
+        "examples": [
+          "Spectrum Essentials Chia & Flax Seed, Decadent Blend with Coconut & Cocoa, 12 Oz",
+          "Spectrum Essentials Chia Seed, 12-Ounce Bags (Pack of 4)",
+          "Organic Coconut Oil - Unrefined and Cold-Pressed, Natural Hair Oil, Skin Oil and"
+        ]
+      },
+      {
+        "interest": "jewelry making",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 13,
+        "categories": [
+          "Arts, Crafts & Sewing > Beading & Jewelry Making"
+        ],
+        "examples": [
+          "60 Pieces Assorted European Beads with Copper Core Big Hole Resin Spacer No Copp",
+          "1584Pcs Crystal Jewelry Making Kit, Thrilez Ring Making Kit with Crystal Gemston",
+          "Halcraft Multi-Pack - Picasso Jasper Round Stone Beads (Sizes 4mm/6mm/8mm/10mm) "
+        ]
+      },
+      {
+        "interest": "fitness and strength training",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20",
+          "P51",
+          "P52",
+          "P53",
+          "P54",
+          "P55"
+        ],
+        "count": 17,
+        "categories": [
+          "Sports & Outdoors > Exercise & Fitness > Strength Training Equipment",
+          "Sports & Outdoors > Exercise & Fitness"
+        ],
+        "examples": [
+          "Cathe Friedrich Travel Fit Low Impact Resistance Band Workout DVD For Women - Lo",
+          "Fitness by Cathe 10-Pound X-Vest",
+          "GoFit Premium Vinyl Dipped Kettle Bell with Introductory Training DVD - 20 Pound"
+        ],
+        "merged": [
+          "fitness workouts"
+        ]
+      },
+      {
+        "interest": "World War II novels",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 12,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "Becoming Jane Eyre: A Novel (Penguin Original)",
+          "Matterhorn: A Novel of the Vietnam War",
+          "The Sisterhood"
+        ]
+      },
+      {
+        "interest": "business management",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 10,
+        "categories": [
+          "Books > Business & Money > Business Culture"
+        ],
+        "examples": [
+          "Stealing MySpace: The Battle to Control the Most Popular Website in America",
+          "Rework",
+          "The Little Big Things: 163 Ways to Pursue EXCELLENCE"
+        ]
+      },
+      {
+        "interest": "Sudoku",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 10,
+        "categories": [
+          "Books > Humor & Entertainment > Puzzles & Games"
+        ],
+        "examples": [
+          "Cal 2012 Sudoku",
+          "The Big, Big, Big Book of Brainteasers",
+          "The Original Sudoku 2013 Page-A-Day Calendar"
+        ]
+      },
+      {
+        "interest": "biography",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Biographies & Memoirs > Leaders & Notable People"
+        ],
+        "examples": [
+          "Where Men Win Glory: The Odyssey of Pat Tillman",
+          "Abigail Adams: A Life",
+          "No Better Time: The Brief, Remarkable Life of Danny Lewin, the Genius Who Transf"
+        ]
+      },
+      {
+        "interest": "digital marketing",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42",
+          "P43",
+          "P44",
+          "P45"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Business & Money > Marketing & Sales"
+        ],
+        "examples": [
+          "All Marketers are Liars: The Underground Classic That Explains How Marketing Rea",
+          "The On-Demand Brand: 10 Rules for Digital Marketing Success in an Anytime, Every",
+          "Speak Human: Outmarket the Big Guys by Getting Personal"
+        ]
+      },
+      {
+        "interest": "green tea",
+        "source": "reviews",
+        "keys": [
+          "P46",
+          "P47",
+          "P48",
+          "P49",
+          "P50"
+        ],
+        "count": 6,
+        "categories": [
+          "Grocery & Gourmet Food > Beverages > Tea"
+        ],
+        "examples": [
+          "Teavana Earl Grey Crème, Black Tea With Lavender and Vanilla Notes, 60 Count (4 ",
+          "Amizle Lemon Tea, 1.1 Pound",
+          "Tiesta Tea - Peaches N´ Green, Loose Leaf Smooth Peach Green Tea, Medium caffein"
+        ]
+      },
+      {
+        "interest": "mystery novels",
+        "source": "reviews",
+        "keys": [
+          "P56",
+          "P57",
+          "P58",
+          "P59",
+          "P60"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Thrillers & Suspense"
+        ],
+        "examples": [
+          "Play Him Again (A Matt Hudson Roaring Twenties Crime Novel)",
+          "Rules of Crime (A Detective Jackson Mystery)",
+          "The Wrong Girl (Jane Ryland)"
+        ]
+      },
+      {
+        "interest": "personal fitness and exercise routines",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "table -> leg -> muscle -> workout -> squat -> pushup -> situp -> walking"
+        ]
+      },
+      {
+        "interest": "local community and neighborhood activities",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "neighborhood -> street -> sign -> garbage -> truck -> thursday -> remember -> day -> weekday -> market -> trade -> optio"
+        ]
+      },
+      {
+        "interest": "financial management and investment",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy: very high (91th percentile)"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Top NFL trades of the season": "news",
+      "Wellness": "news",
+      "Best baseball training exercises": "news",
+      "How to invest in real estate for retirement": "news",
+      "Lifestyle buzz": "news",
+      "How to choose the right real estate agent": "news",
+      "Musical movie review": "movies",
+      "Documentary film analysis": "movies",
+      "War director interview": "movies",
+      "Family and kids' movie review": "movies",
+      "Drama film analysis": "movies",
+      "Yoga and dance routines for stress relief": "reviews",
+      "How to use chia seeds in recipes": "reviews",
+      "DIY jewelry making projects": "reviews",
+      "fitness and strength training": "reviews",
+      "Historical documentaries about World War II": "reviews",
+      "How to start a small business": "reviews",
+      "How to improve Sudoku solving skills": "reviews",
+      "biography": "reviews",
+      "digital marketing": "reviews",
+      "How to make green tea": "reviews",
+      "Best mystery movies and TV shows": "reviews",
+      "Workout routines for home": "twin",
+      "Local community projects": "twin",
+      "financial management and investment": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Brief and straightforward headlines",
+    "Simple and practical advice",
+    "Calm and encouraging tone",
+    "Focus on practical benefits",
+    "Short and to-the-point reviews"
+  ],
+  "preferred_detail": "moderate",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "average",
+    "openness": "low",
+    "extraversion": "low",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition average (enjoys some thinking but not heavy material); openness low (prefers the familiar and conventional); extraversion low (reserved and quiet); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "258",
+    "additional_context": "Age 50-64; Retired; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 43,
+      "openness": 4,
+      "extraversion": 3,
+      "conscientiousness": 72
+    },
+    "twin_interests": [
+      "personal fitness and exercise routines",
+      "local community and neighborhood activities",
+      "financial management and investment"
+    ],
+    "twin_background_knowledge": "This person likely has a strong interest in personal fitness, enjoys local community activities, and is knowledgeable about financial management and investment strategies."
+  }
+}

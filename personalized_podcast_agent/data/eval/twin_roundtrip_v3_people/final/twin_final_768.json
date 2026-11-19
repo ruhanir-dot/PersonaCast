@@ -1,0 +1,806 @@
+{
+  "user_id": "twin_final_768",
+  "interests": [
+    "Lifestyle buzz",
+    "NHL hockey",
+    "Personal essays",
+    "Food news",
+    "Movie stars",
+    "Music stars",
+    "World news",
+    "British royal family",
+    "Wellness",
+    "Health news",
+    "Crime news",
+    "US news",
+    "Tips and life hacks",
+    "Weight loss",
+    "Celebrity news",
+    "Westerns",
+    "Mystery films",
+    "Crime films",
+    "Thrillers",
+    "Action movies",
+    "Fantasy films",
+    "Adventure films",
+    "Horror films",
+    "Science fiction films",
+    "strategy board games",
+    "Kinect Games",
+    "bow tuning",
+    "miniature painting",
+    "airbrush painting",
+    "skateboarding and scooting",
+    "origami",
+    "miniatures gaming",
+    "indoor cycling",
+    "roller hockey",
+    "Broadway Music",
+    "hard science fiction",
+    "Hockey",
+    "Sports",
+    "Fairness and Ethics",
+    "Minimalism"
+  ],
+  "preferred_topics": [
+    "Hockey strategy and tactics",
+    "Minimalist living tips",
+    "Fairness in sports and society",
+    "Ethical decision-making in games and life",
+    "Hockey",
+    "NHL",
+    "Celebrity News",
+    "Personal Essays",
+    "Health and Wellness",
+    "Miniatures Gaming",
+    "Science Fiction Films",
+    "Strategy Board Games",
+    "Miniature Painting",
+    "Food News",
+    "Broadway Music",
+    "Action Movies"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms",
+    "Curious about new and unusual angles"
+  ],
+  "podcast_focus_keywords": [
+    "Hockey",
+    "Miniatures",
+    "Games",
+    "Painting",
+    "Science Fiction",
+    "Health",
+    "Wellness",
+    "Personal Stories",
+    "Strategy",
+    "Miniature Painting",
+    "Board Games",
+    "Fantasy Films"
+  ],
+  "recommended_news_queries": [
+    "Top lifestyle trends this month",
+    "NHL standings this week",
+    "Latest personal essays",
+    "Top food trends",
+    "Latest movie stars in the news",
+    "Top music stars of the year",
+    "Top world news stories",
+    "Latest news about the British royal family",
+    "Top wellness trends",
+    "Top health news stories",
+    "Top crime news stories",
+    "Top US news stories",
+    "Top life hacks",
+    "Top weight loss trends",
+    "Top celebrity news",
+    "Western movie review",
+    "Mystery film analysis",
+    "Crime director interview",
+    "Thriller movie review",
+    "Action film analysis",
+    "Fantasy director interview",
+    "Adventure movie review",
+    "Horror film analysis",
+    "Science fiction director interview",
+    "Top strategy board games",
+    "Top Kinect games",
+    "Top bow tuning tips",
+    "Top miniature painting techniques",
+    "Top airbrush painting techniques",
+    "Top skateboarding and scooting tips",
+    "Top origami techniques",
+    "Top miniatures gaming strategies",
+    "Top indoor cycling tips",
+    "Top roller hockey tips",
+    "Top Broadway music",
+    "Top hard science fiction",
+    "Top hockey news",
+    "Top sports news",
+    "Top stories on fairness and ethics",
+    "Top minimalism trends"
+  ],
+  "youtube_search_queries": [
+    "Top lifestyle hacks and tips",
+    "Best NHL plays of the week",
+    "Best personal essay videos",
+    "Best food hacks and tips",
+    "Top movie stars on social media",
+    "Best music videos of the year",
+    "Best world news videos",
+    "Best royal family videos",
+    "Best wellness tips and hacks",
+    "Best health tips and hacks",
+    "Best crime news videos",
+    "Best US news videos",
+    "Best life hack videos",
+    "Best weight loss tips and hacks",
+    "Best celebrity news videos",
+    "Western movie review",
+    "Mystery film analysis",
+    "Crime director interview",
+    "Thriller movie review",
+    "Action film analysis",
+    "Fantasy director interview",
+    "Adventure movie review",
+    "Horror film analysis",
+    "Science fiction director interview",
+    "Best strategy board games",
+    "Best Kinect games",
+    "Best bow tuning videos",
+    "Best miniature painting videos",
+    "Best airbrush painting videos",
+    "Best skateboarding and scooting videos",
+    "Best origami videos",
+    "Best miniatures gaming videos",
+    "Best indoor cycling videos",
+    "Best roller hockey videos",
+    "Best Broadway music videos",
+    "Best hard science fiction videos",
+    "Best hockey videos",
+    "Best sports videos",
+    "Best fairness and ethics videos",
+    "Best minimalism videos"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with the National Hockey League, the British royal family, and various board games and miniature painting techniques.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U71275",
+    "movielens_user": "97615",
+    "amazon_user": "AEGUKPSVWIXFVR3JF7SRAEYW7DMA",
+    "interests_by_source": {
+      "news": 15,
+      "movies": 9,
+      "reviews": 12,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 8,
+        "examples": [
+          "This Foster Kitten Smiling for a Photo Will Make Your Friday"
+        ]
+      },
+      {
+        "interest": "NHL hockey",
+        "source": "news",
+        "keys": [
+          "icehockey_nhl"
+        ],
+        "count": 8,
+        "examples": [
+          "Scott Darling, Scottie Upshall sign in Europe",
+          "Evander Kane sued by hotel for gambling debt built during playoffs"
+        ]
+      },
+      {
+        "interest": "Personal essays",
+        "source": "news",
+        "keys": [
+          "voices"
+        ],
+        "count": 6,
+        "examples": []
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 4,
+        "examples": []
+      },
+      {
+        "interest": "Movie stars",
+        "source": "news",
+        "keys": [
+          "movies-celebrity"
+        ],
+        "count": 4,
+        "examples": []
+      },
+      {
+        "interest": "Music stars",
+        "source": "news",
+        "keys": [
+          "music-celebrity"
+        ],
+        "count": 4,
+        "examples": []
+      },
+      {
+        "interest": "World news",
+        "source": "news",
+        "keys": [
+          "newsworld"
+        ],
+        "count": 3,
+        "examples": [
+          "The true story of John Demjanjuk, twice convicted of being a guard at a Nazi death camp and now the subject of Netflix's 'The Devil Next Door'"
+        ]
+      },
+      {
+        "interest": "British royal family",
+        "source": "news",
+        "keys": [
+          "lifestyleroyals"
+        ],
+        "count": 3,
+        "examples": []
+      },
+      {
+        "interest": "Wellness",
+        "source": "news",
+        "keys": [
+          "wellness"
+        ],
+        "count": 3,
+        "examples": []
+      },
+      {
+        "interest": "Health news",
+        "source": "news",
+        "keys": [
+          "health-news"
+        ],
+        "count": 3,
+        "examples": [
+          "It's Easy to Overdose on Acetaminophen and It Can Kill You, New Study Says"
+        ]
+      },
+      {
+        "interest": "Crime news",
+        "source": "news",
+        "keys": [
+          "newscrime"
+        ],
+        "count": 3,
+        "examples": []
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 3,
+        "examples": [
+          "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+          "LA firefighter banked $360,010 in overtime pay in one year, city audit finds"
+        ]
+      },
+      {
+        "interest": "Tips and life hacks",
+        "source": "news",
+        "keys": [
+          "tipsandtricks"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Weight loss",
+        "source": "news",
+        "keys": [
+          "weightloss"
+        ],
+        "count": 2,
+        "examples": [
+          "Gradual lifestyle changes helped this woman lose 75 pounds and keep it off"
+        ]
+      },
+      {
+        "interest": "Celebrity news",
+        "source": "news",
+        "keys": [
+          "celebrity"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Westerns",
+        "source": "movies",
+        "keys": [
+          "Western"
+        ],
+        "count": 10,
+        "lift": 1.75,
+        "examples": [
+          "Unforgiven (1992)",
+          "Tombstone (1993)"
+        ]
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 35,
+        "lift": 1.37,
+        "examples": [
+          "Aqua Teen Hunger Force Colon Movie Film for Theaters (2007)",
+          "Minority Report (2002)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 67,
+        "lift": 1.29,
+        "examples": [
+          "Minority Report (2002)",
+          "Get Shorty (1995)"
+        ]
+      },
+      {
+        "interest": "Thrillers",
+        "source": "movies",
+        "keys": [
+          "Thriller"
+        ],
+        "count": 103,
+        "lift": 1.22,
+        "examples": [
+          "Minority Report (2002)",
+          "Get Shorty (1995)"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 111,
+        "lift": 1.16,
+        "examples": [
+          "Aqua Teen Hunger Force Colon Movie Film for Theaters (2007)",
+          "Tombstone (1993)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 39,
+        "lift": 1.06,
+        "examples": [
+          "Aqua Teen Hunger Force Colon Movie Film for Theaters (2007)",
+          "Groundhog Day (1993)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 78,
+        "lift": 1.03,
+        "examples": [
+          "Aqua Teen Hunger Force Colon Movie Film for Theaters (2007)",
+          "Descent, The (2005)"
+        ]
+      },
+      {
+        "interest": "Horror films",
+        "source": "movies",
+        "keys": [
+          "Horror"
+        ],
+        "count": 24,
+        "lift": 1.01,
+        "examples": [
+          "Descent, The (2005)",
+          "Host, The (Gwoemul) (2006)"
+        ]
+      },
+      {
+        "interest": "Science fiction films",
+        "source": "movies",
+        "keys": [
+          "Sci-Fi"
+        ],
+        "count": 57,
+        "lift": 1.0,
+        "examples": [
+          "Aqua Teen Hunger Force Colon Movie Film for Theaters (2007)",
+          "Minority Report (2002)"
+        ]
+      },
+      {
+        "interest": "strategy board games",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 27,
+        "categories": [
+          "Toys & Games > Games & Accessories > Board Games"
+        ],
+        "examples": [
+          "Vintage Sports Cards Nexus Ops",
+          "Cargo Noir",
+          "Z-Man Games Neuroshima Hex Babel 13 Expansion"
+        ]
+      },
+      {
+        "interest": "Kinect Games",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 10,
+        "categories": [
+          "Video Games > Legacy Systems"
+        ],
+        "examples": [
+          "Mario Party DS",
+          "Kinect Sports",
+          "Kinect Star Wars - Xbox 360"
+        ]
+      },
+      {
+        "interest": "bow tuning",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 7,
+        "categories": [
+          "Sports & Outdoors > Hunting & Fishing > Archery"
+        ],
+        "examples": [
+          "New Archery Products NAP Apache Drop Away Arrow Rests",
+          "K’Netix™ 5 Piece Compound Bow Tuning Kit, Blue (158)",
+          "Apex Gear Axim 4-Pin Sight .019\""
+        ]
+      },
+      {
+        "interest": "miniature painting",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 5,
+        "categories": [
+          "Arts, Crafts & Sewing > Model & Hobby Building"
+        ],
+        "examples": [
+          "Carson FreeHand 2.5x LED Lighted Hand-Held or Hands-Free Magnifier with 5.5x Spo",
+          "Codex Necrons",
+          "Vallejo Painting Miniatures from A to Z Vol 2 Paint"
+        ]
+      },
+      {
+        "interest": "airbrush painting",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 5,
+        "categories": [
+          "Arts, Crafts & Sewing > Painting, Drawing & Art Supplies"
+        ],
+        "examples": [
+          "Master Performance G266 Pro Set Master Airbrush with 3 Nozzle Sets (0.2, 0.3 & 0",
+          "Master Airbrush Cool Runner II Dual Fan Air Tank Compressor System Kit with a Pr",
+          "Masterson Sta-Wet Handy Palette Airtight Paint Palette Keeps Paint Fresh for Day"
+        ]
+      },
+      {
+        "interest": "skateboarding and scooting",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29"
+        ],
+        "count": 4,
+        "categories": [
+          "Sports & Outdoors > Sports > Skates, Skateboards & Scooters"
+        ],
+        "examples": [
+          "Barbed Wire 8 Inline Skate Wheels 80mm 78a, Clear/Gray",
+          "Player's Choice Outdoor Roller Hockey Wheels Hilo Set 4-76mm 4-80mm 82a",
+          "Micro Kickboard - Micro Classic, Two Wheeled Scooter, Fold-to-Carry, Swiss-Desig"
+        ]
+      },
+      {
+        "interest": "origami",
+        "source": "reviews",
+        "keys": [
+          "P30",
+          "P31",
+          "P32",
+          "P33"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Crafts & Hobbies"
+        ],
+        "examples": [
+          "Unit Polyhedron Origami",
+          "Geometric Origami (Origami Books)",
+          "Fabulous Origami Boxes"
+        ]
+      },
+      {
+        "interest": "miniatures gaming",
+        "source": "reviews",
+        "keys": [
+          "P34",
+          "P35",
+          "P36"
+        ],
+        "count": 3,
+        "categories": [
+          "Toys & Games > Games & Accessories > Card Games"
+        ],
+        "examples": [
+          "Tormentor R and D Cruiser Directorate Firestorm Armada",
+          "Exploding Kittens Party Pack Card Game by Exploding kittens - A Russian Roulette",
+          "Monster TCG Gaming Prism Playmat Tube(Blue) - Won't Roll Off Surfaces - Easy in "
+        ]
+      },
+      {
+        "interest": "indoor cycling",
+        "source": "reviews",
+        "keys": [
+          "P37",
+          "P38",
+          "P39"
+        ],
+        "count": 3,
+        "categories": [
+          "Sports & Outdoors > Sports > Cycling"
+        ],
+        "examples": [
+          "Vittoria Zaffiro Pro Home Trainer Tire - Indoor Bike Trainer Tire - Foldable Tra",
+          "CycleOps JetFluid Pro Trainer",
+          "Shimano SPD Pedal Clipless Pedals"
+        ]
+      },
+      {
+        "interest": "roller hockey",
+        "source": "reviews",
+        "keys": [
+          "P40",
+          "P41",
+          "P42"
+        ],
+        "count": 3,
+        "categories": [
+          "Sports & Outdoors > Sports > Team Sports"
+        ],
+        "examples": [
+          "Franklin Sports NHL SX Comp 1020 Power Force Hockey Stick 52-Inch Junior - Color",
+          "Franklin Sports NHL Street Hockey Balls - No Bounce Outdoor Street + Roller Hock",
+          "Grit Inc. HT1 Hockey Tower 33-Inch Solid Black Hockey Bag HT1-33-B"
+        ]
+      },
+      {
+        "interest": "Broadway Music",
+        "source": "reviews",
+        "keys": [
+          "P43",
+          "P44"
+        ],
+        "count": 2,
+        "categories": [
+          "CDs & Vinyl > Pop"
+        ],
+        "examples": [
+          "LE BEST OF 2",
+          "One Is Not Enough"
+        ]
+      },
+      {
+        "interest": "hard science fiction",
+        "source": "reviews",
+        "keys": [
+          "P45",
+          "P46"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Science Fiction & Fantasy > Science Fiction"
+        ],
+        "examples": [
+          "Terraforming Earth",
+          "The Caves of Steel: Robot, Book 1"
+        ]
+      },
+      {
+        "interest": "Hockey",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "snow -> cold -> winter -> frosty -> ice -> skating -> rink -> hockey"
+        ]
+      },
+      {
+        "interest": "Sports",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "sports -> equipment"
+        ]
+      },
+      {
+        "interest": "Fairness and Ethics",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "generosity; fairness; kind; humility; friendship"
+        ]
+      },
+      {
+        "interest": "Minimalism",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "preference for minimalism: very high (88th percentile)"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Top lifestyle hacks and tips": "news",
+      "Best NHL plays of the week": "news",
+      "Best personal essay videos": "news",
+      "Best food hacks and tips": "news",
+      "Top movie stars on social media": "news",
+      "Best music videos of the year": "news",
+      "Best world news videos": "news",
+      "Best royal family videos": "news",
+      "Best wellness tips and hacks": "news",
+      "Best health tips and hacks": "news",
+      "Best crime news videos": "news",
+      "Best US news videos": "news",
+      "Best life hack videos": "news",
+      "Best weight loss tips and hacks": "news",
+      "Best celebrity news videos": "news",
+      "Western movie review": "movies",
+      "Mystery film analysis": "movies",
+      "Crime director interview": "movies",
+      "Thriller movie review": "movies",
+      "Action film analysis": "movies",
+      "Fantasy director interview": "movies",
+      "Adventure movie review": "movies",
+      "Horror film analysis": "movies",
+      "Science fiction director interview": "movies",
+      "Best strategy board games": "reviews",
+      "Best Kinect games": "reviews",
+      "Best bow tuning videos": "reviews",
+      "Best miniature painting videos": "reviews",
+      "Best airbrush painting videos": "reviews",
+      "Best skateboarding and scooting videos": "reviews",
+      "Best origami videos": "reviews",
+      "Best miniatures gaming videos": "reviews",
+      "Best indoor cycling videos": "reviews",
+      "Best roller hockey videos": "reviews",
+      "Best Broadway music videos": "reviews",
+      "Best hard science fiction videos": "reviews",
+      "Best hockey videos": "twin",
+      "Best sports videos": "twin",
+      "Best fairness and ethics videos": "twin",
+      "Best minimalism videos": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Brief and simple material",
+    "Calm and straightforward delivery",
+    "Focus on practical tips and hacks",
+    "Detailed reviews of games and products",
+    "Personal anecdotes and experiences",
+    "In-depth analysis of movies and TV shows"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "high",
+    "extraversion": "high",
+    "conscientiousness": "average"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness high (curious about new, unusual and artistic experiences); extraversion high (outgoing, lively and energetic); conscientiousness average (reasonably organized).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "768",
+    "additional_context": "Age 30-49; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 30,
+      "openness": 74,
+      "extraversion": 75,
+      "conscientiousness": 62
+    },
+    "twin_interests": [
+      "Hockey",
+      "Sports",
+      "Fairness and Ethics",
+      "Minimalism"
+    ],
+    "twin_background_knowledge": "This person likely enjoys watching and playing hockey, values fairness and ethical behavior, and appreciates a minimalist lifestyle."
+  }
+}

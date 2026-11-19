@@ -1,0 +1,662 @@
+{
+  "user_id": "twin_final_1220",
+  "interests": [
+    "US news",
+    "Personal essays",
+    "Personal finance",
+    "Retirement planning",
+    "Lifestyle buzz",
+    "Real estate",
+    "Company and business news",
+    "War films",
+    "Crime films",
+    "Fantasy films",
+    "Mystery films",
+    "Drama films",
+    "Thrillers",
+    "Adventure films",
+    "funk music",
+    "structural engineering",
+    "business strategy",
+    "alternative rock",
+    "sustainable architecture",
+    "type design",
+    "experimental music",
+    "business management",
+    "Japanese Cooking",
+    "data analysis and decision making",
+    "crime comics",
+    "industrial metal",
+    "finance and personal money management",
+    "minimalism",
+    "entrepreneurship and business"
+  ],
+  "preferred_topics": [
+    "personal finance",
+    "budgeting",
+    "entrepreneurship",
+    "minimalist living",
+    "small business management",
+    "Affordable living",
+    "Legal issues",
+    "Family planning",
+    "Health and wellness",
+    "Business strategies",
+    "Financial management",
+    "Real estate trends",
+    "Crime and justice",
+    "Adventure films",
+    "Drama films",
+    "Fantasy films",
+    "Mystery films"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms"
+  ],
+  "podcast_focus_keywords": [
+    "Affordable",
+    "Legal",
+    "Family",
+    "Health",
+    "Business",
+    "Finance",
+    "Real estate",
+    "Crime",
+    "Adventure",
+    "Drama",
+    "Fantasy",
+    "Mystery"
+  ],
+  "recommended_news_queries": [
+    "Affordable housing trends in the US",
+    "Personal stories of overcoming legal challenges",
+    "Top tips for managing personal finances",
+    "Retirement planning strategies for the middle class",
+    "The impact of minimalism on lifestyle",
+    "Real estate market trends in affordable areas",
+    "Business strategies for small businesses",
+    "War movie review",
+    "Crime film analysis",
+    "Fantasy director interview",
+    "Mystery movie review",
+    "Drama film analysis",
+    "Thriller director interview",
+    "Adventure movie review",
+    "The evolution of funk music",
+    "Innovations in structural engineering",
+    "Strategies for small business growth",
+    "The impact of alternative rock on music",
+    "Sustainable architecture trends",
+    "Innovations in type design",
+    "The role of experimental music in modern music",
+    "Effective business management techniques",
+    "Traditional Japanese cooking techniques",
+    "Data analysis in business decision making",
+    "The impact of crime comics on society",
+    "The evolution of industrial metal",
+    "Personal finance tips for beginners",
+    "minimalism news",
+    "Entrepreneurship success stories"
+  ],
+  "youtube_search_queries": [
+    "US news",
+    "Personal essays on legal battles",
+    "Personal finance management strategies",
+    "Retirement planning tips for beginners",
+    "Lifestyle buzz",
+    "Affordable real estate investment opportunities",
+    "Small business success stories",
+    "War movie review",
+    "Crime film analysis",
+    "Fantasy director interview",
+    "Mystery movie review",
+    "Drama film analysis",
+    "Thriller director interview",
+    "Adventure movie review",
+    "Top funk music artists and songs",
+    "Structural engineering challenges and solutions",
+    "Business strategy case studies",
+    "Top alternative rock bands and songs",
+    "Top sustainable architecture projects",
+    "Top type designers and their work",
+    "Top experimental music artists and songs",
+    "Top business management strategies",
+    "Top Japanese cooking recipes",
+    "Top data analysis tools and techniques",
+    "Top crime comics of all time",
+    "Top industrial metal bands and songs",
+    "Top personal finance blogs and resources",
+    "minimalism",
+    "Top entrepreneurship podcasts and resources"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with game theory, financial market blow-ups, and the basics of project finance.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U1598",
+    "movielens_user": "49577",
+    "amazon_user": "AF2NYJ55LHG7C6LAAYHAA2LJNNJA",
+    "interests_by_source": {
+      "news": 7,
+      "movies": 7,
+      "reviews": 12,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Personal essays",
+        "source": "news",
+        "keys": [
+          "voices"
+        ],
+        "count": 2,
+        "examples": [
+          "Early to Bed, Early to Rise, Makes Me Diabetic, Depressed and Sick"
+        ]
+      },
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 2,
+        "examples": [
+          "Elderly getting scammed by their own families, and AARP is out to stop it"
+        ]
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 2,
+        "examples": [
+          "This waterfront city is the top place in America to retire"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 2,
+        "examples": [
+          "Bed, Bath and Beyond Pulls 'Blackface Pumpkins From the Shelves",
+          "Katie Holmes Talks About That Bra and Cardigan Moment"
+        ]
+      },
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 2,
+        "examples": [
+          "The most affordable places with the best schools",
+          "The best places to raise a family in the Midwest"
+        ]
+      },
+      {
+        "interest": "Company and business news",
+        "source": "news",
+        "keys": [
+          "finance-companies"
+        ],
+        "count": 2,
+        "examples": [
+          "GM UAW workers ponder the point of the strike in light of Ford's deal",
+          "Kroger is rebranding with a new logo and slogan"
+        ]
+      },
+      {
+        "interest": "War films",
+        "source": "movies",
+        "keys": [
+          "War"
+        ],
+        "count": 14,
+        "lift": 1.98,
+        "examples": [
+          "Saving Private Ryan (1998)",
+          "Blood Diamond (2006)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 35,
+        "lift": 1.47,
+        "examples": [
+          "Gran Torino (2008)",
+          "Man on Fire (2004)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 23,
+        "lift": 1.37,
+        "examples": []
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 15,
+        "lift": 1.28,
+        "examples": [
+          "Man on Fire (2004)",
+          "Bourne Identity, The (2002)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 72,
+        "lift": 1.17,
+        "examples": [
+          "Gone Girl (2014)",
+          "Gran Torino (2008)"
+        ]
+      },
+      {
+        "interest": "Thrillers",
+        "source": "movies",
+        "keys": [
+          "Thriller"
+        ],
+        "count": 44,
+        "lift": 1.14,
+        "examples": [
+          "Gone Girl (2014)",
+          "Man on Fire (2004)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 35,
+        "lift": 1.02,
+        "examples": [
+          "Gladiator (2000)",
+          "Blood Diamond (2006)"
+        ]
+      },
+      {
+        "interest": "funk music",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 22,
+        "categories": [
+          "CDs & Vinyl > Dance & Electronic"
+        ],
+        "examples": [
+          "Presents Straight to Video",
+          "Sticks",
+          "Ephemeral Exhibits"
+        ]
+      },
+      {
+        "interest": "structural engineering",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 12,
+        "categories": [
+          "Books > Engineering & Transportation > Engineering"
+        ],
+        "examples": [
+          "Essential Mathematics for Science and Technology: A Self-Learning Guide (Volume ",
+          "Engineering Materials 1: An Introduction to Properties, Applications and Design",
+          "Energy Materials"
+        ]
+      },
+      {
+        "interest": "business strategy",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Business & Money > Management & Leadership"
+        ],
+        "examples": [
+          "The Three Tensions: Winning the Struggle to Perform Without Compromise",
+          "Influence: Science and Practice",
+          "Obliquity: Why Our Goals Are Best Achieved Indirectly"
+        ]
+      },
+      {
+        "interest": "alternative rock",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 6,
+        "categories": [
+          "CDs & Vinyl > Pop"
+        ],
+        "examples": [
+          "Evanescence / Ellipsis",
+          "Lazer Sword",
+          "Maze"
+        ]
+      },
+      {
+        "interest": "sustainable architecture",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Arts & Photography > Architecture"
+        ],
+        "examples": [
+          "Sustainable Facades: Design Methods for High-Performance Building Envelopes",
+          "The SketchUp Workflow for Architecture: Modeling Buildings, Visualizing Design, ",
+          "Architecture of First Societies: A Global Perspective"
+        ]
+      },
+      {
+        "interest": "type design",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Arts & Photography > Graphic Design"
+        ],
+        "examples": [
+          "Designing Type",
+          "Picturing and Poeting",
+          "My Wonderful World of Fashion: A Book for Drawing, Creating and Dreaming"
+        ]
+      },
+      {
+        "interest": "experimental music",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 5,
+        "categories": [
+          "CDs & Vinyl > International Music"
+        ],
+        "examples": [
+          "Sonantes",
+          "Vagarosa",
+          "Sink"
+        ]
+      },
+      {
+        "interest": "business management",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Business & Money > Business Culture"
+        ],
+        "examples": [
+          "Systems Thinking for Curious Managers: With 40 New Management F-Law",
+          "Crush It!: Why NOW Is the Time to Cash In on Your Passion",
+          "Thinking in Systems: International Bestseller"
+        ]
+      },
+      {
+        "interest": "Japanese Cooking",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42",
+          "P43",
+          "P44",
+          "P45"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Regional & International"
+        ],
+        "examples": [
+          "Basic Thai Cooking",
+          "Easy Japanese Cooking: Donburi Mania",
+          "Easy Japanese Cooking: Noodle Comfort"
+        ]
+      },
+      {
+        "interest": "data analysis and decision making",
+        "source": "reviews",
+        "keys": [
+          "P46",
+          "P47",
+          "P48",
+          "P49",
+          "P50"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Science & Math > Mathematics"
+        ],
+        "examples": [
+          "Lean Analytics: Use Data to Build a Better Startup Faster (Lean (O'Reilly))",
+          "How to Solve It: A New Aspect of Mathematical Method (Princeton Science Library,",
+          "How to Lie with Statistics"
+        ]
+      },
+      {
+        "interest": "crime comics",
+        "source": "reviews",
+        "keys": [
+          "P51",
+          "P52",
+          "P53",
+          "P54"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Comics & Graphic Novels > Graphic Novels"
+        ],
+        "examples": [
+          "Frank Miller: The Art of Sin City",
+          "Dante's Divine Comedy: A Graphic Adaptation",
+          "Scud: The Whole Shebang"
+        ]
+      },
+      {
+        "interest": "industrial metal",
+        "source": "reviews",
+        "keys": [
+          "P55",
+          "P56",
+          "P57",
+          "P58"
+        ],
+        "count": 4,
+        "categories": [
+          "CDs & Vinyl > Indie & Alternative"
+        ],
+        "examples": [
+          "The Sound of Love Impermanent",
+          "Succubus",
+          "Super Science Fiction"
+        ]
+      },
+      {
+        "interest": "finance and personal money management",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy: average (57th percentile), money; money; money; money; money; money, cash; profit; green; mean; mach"
+        ]
+      },
+      {
+        "interest": "minimalism",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "preference for minimalism: very high (88th percentile)"
+        ]
+      },
+      {
+        "interest": "entrepreneurship and business",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "money; money; money; money; money; money, cash; profit; green; mean; machine"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "US news": "news",
+      "Personal essays on legal battles": "news",
+      "Personal finance management strategies": "news",
+      "Retirement planning tips for beginners": "news",
+      "Lifestyle buzz": "news",
+      "Affordable real estate investment opportunities": "news",
+      "Small business success stories": "news",
+      "War movie review": "movies",
+      "Crime film analysis": "movies",
+      "Fantasy director interview": "movies",
+      "Mystery movie review": "movies",
+      "Drama film analysis": "movies",
+      "Thriller director interview": "movies",
+      "Adventure movie review": "movies",
+      "Top funk music artists and songs": "reviews",
+      "Structural engineering challenges and solutions": "reviews",
+      "Business strategy case studies": "reviews",
+      "Top alternative rock bands and songs": "reviews",
+      "Top sustainable architecture projects": "reviews",
+      "Top type designers and their work": "reviews",
+      "Top experimental music artists and songs": "reviews",
+      "Top business management strategies": "reviews",
+      "Top Japanese cooking recipes": "reviews",
+      "Top data analysis tools and techniques": "reviews",
+      "Top crime comics of all time": "reviews",
+      "Top industrial metal bands and songs": "reviews",
+      "Top personal finance blogs and resources": "twin",
+      "minimalism": "twin",
+      "Top entrepreneurship podcasts and resources": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Informative and straightforward",
+    "Casual and conversational tone",
+    "Focus on practical applications",
+    "Brief and to the point"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "low",
+    "extraversion": "low",
+    "conscientiousness": "low"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness low (prefers the familiar and conventional); extraversion low (reserved and quiet); conscientiousness low (spontaneous, less concerned with order).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1220",
+    "additional_context": "Age 18-29; Unemployed; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 1,
+      "openness": 3,
+      "extraversion": 1,
+      "conscientiousness": 0
+    },
+    "twin_interests": [
+      "finance and personal money management",
+      "minimalism",
+      "entrepreneurship and business"
+    ],
+    "twin_background_knowledge": "This person likely has a strong interest in managing personal finances and may be exploring ways to reduce expenses and increase savings."
+  }
+}

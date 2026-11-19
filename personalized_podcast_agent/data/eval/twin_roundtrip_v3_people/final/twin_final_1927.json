@@ -1,0 +1,559 @@
+{
+  "user_id": "twin_final_1927",
+  "interests": [
+    "Travel ideas",
+    "TV stars",
+    "Restaurant news",
+    "Real estate",
+    "Retirement planning",
+    "Documentaries",
+    "Horror films",
+    "Comedy films",
+    "Mystery films",
+    "Film noir",
+    "Thrillers",
+    "Science fiction films",
+    "Crime films",
+    "Wire and Bead Jewelry",
+    "rock music",
+    "Southern Cooking",
+    "sewing and quilting",
+    "New Age Music",
+    "Jewelry Making",
+    "comedy movies",
+    "jazz music",
+    "astronomy",
+    "travel",
+    "personal finance",
+    "minimalism"
+  ],
+  "preferred_topics": [
+    "astronomy podcasts",
+    "travel vlogs",
+    "personal finance tips",
+    "minimalist lifestyle",
+    "travel ideas",
+    "horror films",
+    "comedy films",
+    "documentaries",
+    "retirement planning",
+    "real estate",
+    "astronomy",
+    "jazz music",
+    "rock music",
+    "science fiction films",
+    "minimalism",
+    "sewing and quilting"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Curious about new and unusual angles",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "travel tips",
+    "documentary series",
+    "retirement strategies",
+    "astronomy facts",
+    "crafting techniques",
+    "horror movie reviews",
+    "comedy film analysis",
+    "science fiction insights",
+    "jazz music history",
+    "rock music trends",
+    "minimalist living",
+    "sewing projects"
+  ],
+  "recommended_news_queries": [
+    "Top travel destinations",
+    "TV stars news",
+    "Restaurant news news",
+    "Real estate trends in the US",
+    "Retirement planning tips",
+    "Documentary movie review",
+    "Horror film analysis",
+    "Comedy director interview",
+    "Mystery movie review",
+    "noir film analysis",
+    "Thriller director interview",
+    "Science fiction movie review",
+    "Crime film analysis",
+    "Wire and bead jewelry trends",
+    "Top rock bands",
+    "Southern cooking trends",
+    "New sewing and quilting trends",
+    "New Age music trends",
+    "Jewelry making trends",
+    "comedy director interview",
+    "Top jazz musicians",
+    "Astronomy news",
+    "Travel tips",
+    "Personal finance tips",
+    "Minimalism trends"
+  ],
+  "youtube_search_queries": [
+    "Best travel destinations in the world",
+    "TV stars",
+    "Restaurant news",
+    "Top real estate investment strategies",
+    "How to plan for a comfortable retirement",
+    "Documentary movie review",
+    "Horror film analysis",
+    "Comedy director interview",
+    "Mystery movie review",
+    "noir film analysis",
+    "Thriller director interview",
+    "Science fiction movie review",
+    "Crime film analysis",
+    "Top wire and bead jewelry designs",
+    "Best rock albums of all time",
+    "Best southern cooking recipes",
+    "Top sewing and quilting projects",
+    "Top New Age music artists",
+    "Top jewelry making techniques",
+    "comedy director interview",
+    "Best jazz albums of all time",
+    "Top astronomy discoveries",
+    "travel",
+    "How to manage personal finances",
+    "minimalism"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with travel destinations, real estate trends, and minimalism concepts.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U32344",
+    "movielens_user": "166810",
+    "amazon_user": "AH75GR4XGK7UAZQRJCID33WYJD5Q",
+    "interests_by_source": {
+      "news": 5,
+      "movies": 8,
+      "reviews": 8,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Travel ideas",
+        "source": "news",
+        "keys": [
+          "traveltripideas"
+        ],
+        "count": 3,
+        "examples": [
+          "Everything to Know About Visiting the Biltmore Estate This Christmas",
+          "The Perfect Family Road Trip along Florida's 30A"
+        ]
+      },
+      {
+        "interest": "TV stars",
+        "source": "news",
+        "keys": [
+          "tv-celebrity"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Restaurant news",
+        "source": "news",
+        "keys": [
+          "restaurantsandnews"
+        ],
+        "count": 2,
+        "examples": [
+          "Cracker Barrel Has Two Thanksgiving Options This Year, and They Both Sound Delicious"
+        ]
+      },
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 2,
+        "examples": [
+          "Young homebuyers are vanishing from the US"
+        ]
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 2,
+        "examples": [
+          "The Average Retirement Age in Every State",
+          "Best Places to Retire If You Can't Save Up $1,000,000"
+        ]
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 33,
+        "lift": 2.61,
+        "examples": [
+          "Planet Earth (2006)",
+          "Harmontown (2014)"
+        ]
+      },
+      {
+        "interest": "Horror films",
+        "source": "movies",
+        "keys": [
+          "Horror"
+        ],
+        "count": 168,
+        "lift": 2.09,
+        "examples": []
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 540,
+        "lift": 1.46,
+        "examples": [
+          "Everything Everywhere All at Once (2022)",
+          "¡Three Amigos! (1986)"
+        ]
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 108,
+        "lift": 1.24,
+        "examples": [
+          "The Nice Guys (2016)",
+          "Knives Out (2019)"
+        ]
+      },
+      {
+        "interest": "Film noir",
+        "source": "movies",
+        "keys": [
+          "Film-Noir"
+        ],
+        "count": 12,
+        "lift": 1.19,
+        "examples": []
+      },
+      {
+        "interest": "Thrillers",
+        "source": "movies",
+        "keys": [
+          "Thriller"
+        ],
+        "count": 333,
+        "lift": 1.17,
+        "examples": [
+          "Simple Plan, A (1998)",
+          "The Nice Guys (2016)"
+        ]
+      },
+      {
+        "interest": "Science fiction films",
+        "source": "movies",
+        "keys": [
+          "Sci-Fi"
+        ],
+        "count": 214,
+        "lift": 1.11,
+        "examples": [
+          "Everything Everywhere All at Once (2022)",
+          "Star Wars: Episode IV - A New Hope (1977)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 186,
+        "lift": 1.05,
+        "examples": [
+          "Wolf of Wall Street, The (2013)",
+          "Simple Plan, A (1998)"
+        ]
+      },
+      {
+        "interest": "Wire and Bead Jewelry",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 18,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Crafts & Hobbies"
+        ],
+        "examples": [
+          "Crafts for the Spirit: 30 Beautiful Projects to Enhance Your Personal Journey",
+          "Wire & Bead Celtic Jewelry: 35 Quick and Stylish Projects",
+          "Complete Guide to Making Wire Jewelry"
+        ]
+      },
+      {
+        "interest": "rock music",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 17,
+        "categories": [
+          "CDs & Vinyl > Pop"
+        ],
+        "examples": [
+          "Time the Conqueror",
+          "All the Lost Souls",
+          "Battle Studies"
+        ]
+      },
+      {
+        "interest": "Southern Cooking",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Regional & International"
+        ],
+        "examples": [
+          "Paula Deen's Kitchen Classics: The Lady & Sons Savannah Country Cookbook and The",
+          "The Lady & Sons Savannah Country Cookbook",
+          "The Southern Cake Book"
+        ]
+      },
+      {
+        "interest": "sewing and quilting",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 6,
+        "categories": [
+          "Arts, Crafts & Sewing > Sewing"
+        ],
+        "examples": [
+          "Ogrmar 10PCS Professional Tailors Chalk Triangle Tailor's Chalk Markers Sewing F",
+          "Beadalon Beading Station, Natural",
+          "Dritz Quilting Deluxe Ruler Handle, Red"
+        ]
+      },
+      {
+        "interest": "New Age Music",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 5,
+        "categories": [
+          "CDs & Vinyl > International Music"
+        ],
+        "examples": [
+          "Laotus Land",
+          "The Turn Of A Friendly Card",
+          "Watermark"
+        ]
+      },
+      {
+        "interest": "Jewelry Making",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34"
+        ],
+        "count": 4,
+        "categories": [
+          "Arts, Crafts & Sewing > Beading & Jewelry Making"
+        ],
+        "examples": [
+          "Artistic Wire Deluxe Jig Kit, Stainless",
+          "The Beadsmith, Wig Jig, Wig-A-Ma-Jig Deluxe, 4.5 x 5.5 inch square jig, includes",
+          "The Beadsmith Wire Working Combo – 5.75” Wire Bending Plier and 4.75” Double Nyl"
+        ]
+      },
+      {
+        "interest": "comedy movies",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42"
+        ],
+        "count": 2,
+        "categories": [
+          "Movies & TV > Genre for Featured Categories > Action & Adventure"
+        ],
+        "examples": [
+          "Turk 182 VHS",
+          "Mystery Men [DVD]"
+        ]
+      },
+      {
+        "interest": "jazz music",
+        "source": "reviews",
+        "keys": [
+          "P43",
+          "P44"
+        ],
+        "count": 2,
+        "categories": [
+          "CDs & Vinyl > Children's Music"
+        ],
+        "examples": [
+          "Love Songs & Lullabies",
+          "Closer"
+        ]
+      },
+      {
+        "interest": "astronomy",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "space"
+        ]
+      },
+      {
+        "interest": "travel",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "mountain -> river -> boat -> ocean -> sand -> beach"
+        ]
+      },
+      {
+        "interest": "personal finance",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy: very high (91th percentile)"
+        ]
+      },
+      {
+        "interest": "minimalism",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "preference for minimalism: very high (92th percentile)"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Best travel destinations in the world": "news",
+      "TV stars": "news",
+      "Restaurant news": "news",
+      "Top real estate investment strategies": "news",
+      "How to plan for a comfortable retirement": "news",
+      "Documentary movie review": "movies",
+      "Horror film analysis": "movies",
+      "Comedy director interview": "movies",
+      "Mystery movie review": "movies",
+      "noir film analysis": "movies",
+      "Thriller director interview": "movies",
+      "Science fiction movie review": "movies",
+      "Crime film analysis": "movies",
+      "Top wire and bead jewelry designs": "reviews",
+      "Best rock albums of all time": "reviews",
+      "Best southern cooking recipes": "reviews",
+      "Top sewing and quilting projects": "reviews",
+      "Top New Age music artists": "reviews",
+      "Top jewelry making techniques": "reviews",
+      "comedy director interview": "reviews",
+      "Best jazz albums of all time": "reviews",
+      "Top astronomy discoveries": "twin",
+      "travel": "twin",
+      "How to manage personal finances": "twin",
+      "minimalism": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "brief and straightforward",
+    "casual and relaxed",
+    "focused on personal experiences",
+    "praise for quality and craftsmanship"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "high",
+    "extraversion": "low",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness high (curious about new, unusual and artistic experiences); extraversion low (reserved and quiet); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1927",
+    "additional_context": "Age 30-49; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 100,
+      "openness": 100,
+      "extraversion": 30,
+      "conscientiousness": 92
+    },
+    "twin_interests": [
+      "astronomy",
+      "travel",
+      "personal finance",
+      "minimalism"
+    ],
+    "twin_background_knowledge": "This person likely has a strong interest in space and astronomy, enjoys traveling to various places, is financially savvy, and values a minimalist lifestyle."
+  }
+}

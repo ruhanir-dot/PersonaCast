@@ -1,0 +1,583 @@
+{
+  "user_id": "twin_final_925",
+  "interests": [
+    "Sports cars",
+    "Retirement planning",
+    "Car news",
+    "Saving and investing",
+    "Movie news",
+    "Music stars",
+    "College football",
+    "Car enthusiast news",
+    "Travel news",
+    "Crime news",
+    "Action movies",
+    "Science fiction films",
+    "Adventure films",
+    "Fantasy films",
+    "Crime films",
+    "Thrillers",
+    "horse books",
+    "horse romance novels",
+    "movie soundtracks",
+    "writing",
+    "country music",
+    "equestrian mysteries",
+    "horse care",
+    "financial management",
+    "horseback riding",
+    "fast cars and speed",
+    "goal setting and achievement"
+  ],
+  "preferred_topics": [
+    "retirement savings strategies",
+    "horseback riding techniques",
+    "high-performance cars",
+    "speed and racing",
+    "personal development and goal setting",
+    "sports cars",
+    "retirement planning",
+    "car news",
+    "saving and investing",
+    "movie news",
+    "music stars",
+    "college football",
+    "car enthusiast news",
+    "travel news",
+    "crime news",
+    "action movies",
+    "science fiction films"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "sports cars",
+    "retirement",
+    "investment",
+    "movie reviews",
+    "music",
+    "football",
+    "car news",
+    "travel",
+    "crime",
+    "action",
+    "sci-fi",
+    "adventure"
+  ],
+  "recommended_news_queries": [
+    "Top sports cars",
+    "Retirement savings tips",
+    "Latest car models and releases",
+    "Saving and investing news",
+    "Upcoming action movies",
+    "Top music stars",
+    "College football rankings",
+    "Top car enthusiast news",
+    "Top travel destinations",
+    "Top crime stories",
+    "Action movie review",
+    "Science fiction film analysis",
+    "Adventure director interview",
+    "Fantasy movie review",
+    "Crime film analysis",
+    "Thriller director interview",
+    "Top horse books",
+    "Top horse romance novels",
+    "soundtracks movie review",
+    "Top writing tips",
+    "Top country music",
+    "Top equestrian mysteries",
+    "Top horse care tips",
+    "Top financial management strategies",
+    "Top horseback riding tips",
+    "Top fast cars and speed stories",
+    "Top goal setting and achievement stories"
+  ],
+  "youtube_search_queries": [
+    "Top sports cars in the world",
+    "Best retirement planning strategies",
+    "New car releases",
+    "Saving and investing",
+    "Top action movies",
+    "Top music stars in the world",
+    "Top college football teams",
+    "Top car enthusiast stories",
+    "Top travel destinations in the world",
+    "Top crime news",
+    "Action movie review",
+    "Science fiction film analysis",
+    "Adventure director interview",
+    "Fantasy movie review",
+    "Crime film analysis",
+    "Thriller director interview",
+    "Top horse books",
+    "Top horse romance novels",
+    "soundtracks movie review",
+    "Top writing tips",
+    "Top country music",
+    "Top equestrian mysteries",
+    "Top horse care tips",
+    "Top financial management strategies",
+    "Top horseback riding tips",
+    "Top fast cars and speed stories",
+    "Top goal setting and achievement stories"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with sports cars, retirement planning, car news, saving and investing, movie news, music stars, college football, car enthusiast news, travel news, crime news, action movies, science fiction films, adventure films, fantasy films, crime films, thrillers, horse books, horse romance novels, movie soundtracks, writing, country music, equestrian mysteries, horse care, financial management, horseback riding, fast cars and speed, goal setting and achievement.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U33506",
+    "movielens_user": "35297",
+    "amazon_user": "AHQRMWOB26T6XD5OCBSYPGFQTFEQ",
+    "interests_by_source": {
+      "news": 10,
+      "movies": 6,
+      "reviews": 7,
+      "twin": 5
+    },
+    "interest_evidence": [
+      {
+        "interest": "Sports cars",
+        "source": "news",
+        "keys": [
+          "autossports"
+        ],
+        "count": 6,
+        "examples": [
+          "2020 C8 Corvette First Drive Review: It's Brilliant",
+          "2020 C8 Corvette First Drive Review: It's Brilliant"
+        ]
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 3,
+        "examples": [
+          "11 Social Security mistakes you can avoid",
+          "How much Social Security you could get from a $75,000 salary"
+        ]
+      },
+      {
+        "interest": "Car news",
+        "source": "news",
+        "keys": [
+          "autosnews"
+        ],
+        "count": 3,
+        "examples": [
+          "Chevy Says This Isn't a Mid-Engine C8 Corvette Hybrid Prototype",
+          "Mid-Engine C8 Corvette Production Postponed Until February 2020"
+        ]
+      },
+      {
+        "interest": "Saving and investing",
+        "source": "news",
+        "keys": [
+          "finance-saving-investing"
+        ],
+        "count": 3,
+        "examples": [
+          "More Americans are leaving their money in 401(k) plans after retirement   should you?",
+          "Do not try this at home: How to turn $3,000 into $1.7 million"
+        ]
+      },
+      {
+        "interest": "Movie news",
+        "source": "news",
+        "keys": [
+          "movienews"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Music stars",
+        "source": "news",
+        "keys": [
+          "music-celebrity"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "College football",
+        "source": "news",
+        "keys": [
+          "football_ncaa"
+        ],
+        "count": 2,
+        "examples": [
+          "Urban Meyer calls for uniform scheduling to fix 'failed' College Football Playoff"
+        ]
+      },
+      {
+        "interest": "Car enthusiast news",
+        "source": "news",
+        "keys": [
+          "autosenthusiasts"
+        ],
+        "count": 2,
+        "examples": [
+          "Chevrolet Performance Reveals New Small Block Crate Engine"
+        ]
+      },
+      {
+        "interest": "Travel news",
+        "source": "news",
+        "keys": [
+          "travelnews"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Crime news",
+        "source": "news",
+        "keys": [
+          "newscrime"
+        ],
+        "count": 2,
+        "examples": [
+          "Authorities: 2 indicted in deputy slaying in US illegally"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 53,
+        "lift": 1.81,
+        "examples": [
+          "Tomorrow Never Dies (1997)",
+          "Die Hard (1988)"
+        ]
+      },
+      {
+        "interest": "Science fiction films",
+        "source": "movies",
+        "keys": [
+          "Sci-Fi"
+        ],
+        "count": 28,
+        "lift": 1.6,
+        "examples": [
+          "Back to the Future Part III (1990)",
+          "Back to the Future (1985)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 35,
+        "lift": 1.51,
+        "examples": [
+          "Tomorrow Never Dies (1997)",
+          "Back to the Future Part III (1990)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 16,
+        "lift": 1.42,
+        "examples": [
+          "Hobbit: An Unexpected Journey, The (2012)",
+          "Lord of the Rings: The Fellowship of the Ring, The (2001)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 22,
+        "lift": 1.38,
+        "examples": [
+          "Die Hard (1988)",
+          "Godfather, The (1972)"
+        ]
+      },
+      {
+        "interest": "Thrillers",
+        "source": "movies",
+        "keys": [
+          "Thriller"
+        ],
+        "count": 32,
+        "lift": 1.24,
+        "examples": [
+          "Tomorrow Never Dies (1997)",
+          "Die Hard (1988)"
+        ]
+      },
+      {
+        "interest": "horse books",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 14,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Pets & Animal Care"
+        ],
+        "examples": [
+          "Where the Bluegrass Grows",
+          "Showdown (Red Rock Ranch, book 2)",
+          "The Cowgirl Jumped Over the Moon"
+        ]
+      },
+      {
+        "interest": "horse romance novels",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Literature & Fiction > Women's Fiction"
+        ],
+        "examples": [
+          "Dead Heat",
+          "Wild at Heart: A Novel (The Simple Wild)",
+          "Indian Summer (Aspen Eyes)"
+        ]
+      },
+      {
+        "interest": "movie soundtracks",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19"
+        ],
+        "count": 4,
+        "categories": [
+          "CDs & Vinyl > Pop"
+        ],
+        "examples": [
+          "If I Stay Soundtrack",
+          "The Longest Ride Original Score Album",
+          "25"
+        ]
+      },
+      {
+        "interest": "writing",
+        "source": "reviews",
+        "keys": [
+          "P20",
+          "P21",
+          "P22"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Reference > Writing, Research & Publishing Guides"
+        ],
+        "examples": [
+          "On Writing: A Memoir of the Craft",
+          "Self-Publisher's Legal Handbook: The Step-by-Step Guide to the Legal Issues of S",
+          "Audio For Authors: Audiobooks, Podcasting, And Voice Technologies (Creative Busi"
+        ]
+      },
+      {
+        "interest": "country music",
+        "source": "reviews",
+        "keys": [
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 3,
+        "categories": [
+          "CDs & Vinyl > Country"
+        ],
+        "examples": [
+          "Little Big Town Breaker",
+          "Tornado",
+          "Golden Hour"
+        ]
+      },
+      {
+        "interest": "equestrian mysteries",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Mystery"
+        ],
+        "examples": [
+          "Thoroughbreds and Trailer Trash (Second Chance Series)",
+          "The Opium Equation: A Cat Enright Equestrian Mystery (A Cat Enright Mystery)",
+          "Saddle Tramps (Pepper Kane Mysteries)"
+        ]
+      },
+      {
+        "interest": "horse care",
+        "source": "reviews",
+        "keys": [
+          "P29",
+          "P30",
+          "P31"
+        ],
+        "count": 3,
+        "categories": [
+          "Sports & Outdoors > Sports > Other Sports"
+        ],
+        "examples": [
+          "Mayatex New Phoenix Saddle Blanket",
+          "Shires Airflow Fly Boots (Pack of 4)",
+          "Knotty Girlz Premium 1/2\" Samson Eq Braid Yacht Natural Horse Training Lead Rope"
+        ]
+      },
+      {
+        "interest": "financial management",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy: average (57th percentile)"
+        ]
+      },
+      {
+        "interest": "horseback riding",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "horses -> riding"
+        ]
+      },
+      {
+        "interest": "fast cars and speed",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "cars -> fast -> speed"
+        ]
+      },
+      {
+        "interest": "goal setting and achievement",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "goal"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Top sports cars in the world": "news",
+      "Best retirement planning strategies": "news",
+      "New car releases": "news",
+      "Saving and investing": "news",
+      "Top action movies": "news",
+      "Top music stars in the world": "news",
+      "Top college football teams": "news",
+      "Top car enthusiast stories": "news",
+      "Top travel destinations in the world": "news",
+      "Top crime news": "news",
+      "Action movie review": "movies",
+      "Science fiction film analysis": "movies",
+      "Adventure director interview": "movies",
+      "Fantasy movie review": "movies",
+      "Crime film analysis": "movies",
+      "Thriller director interview": "movies",
+      "Top horse books": "reviews",
+      "Top horse romance novels": "reviews",
+      "soundtracks movie review": "reviews",
+      "Top writing tips": "reviews",
+      "Top country music": "reviews",
+      "Top equestrian mysteries": "reviews",
+      "Top horse care tips": "reviews",
+      "Top financial management strategies": "twin",
+      "Top horseback riding tips": "twin",
+      "Top fast cars and speed stories": "twin",
+      "Top goal setting and achievement stories": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "prefers simple, straightforward headlines",
+    "writes reviews in a calm, descriptive manner",
+    "praises the plot and characters in movies",
+    "enjoys detailed descriptions of products and their features",
+    "prefers positive reviews with personal anecdotes",
+    "uses a casual, conversational tone"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "low",
+    "extraversion": "low",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness low (prefers the familiar and conventional); extraversion low (reserved and quiet); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "925",
+    "additional_context": "Age 65+; Retired; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 18,
+      "openness": 15,
+      "extraversion": 15,
+      "conscientiousness": 92
+    },
+    "twin_interests": [
+      "retirement planning",
+      "financial management",
+      "horseback riding",
+      "fast cars and speed",
+      "goal setting and achievement"
+    ],
+    "twin_background_knowledge": "This person is likely knowledgeable about financial management and has a strong focus on relationships, which may influence their approach to financial decisions."
+  }
+}

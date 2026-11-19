@@ -1,0 +1,599 @@
+{
+  "user_id": "twin_final_1813",
+  "interests": [
+    "Wellness",
+    "US news",
+    "World news",
+    "Crime news",
+    "Personal finance",
+    "Nutrition",
+    "Westerns",
+    "Comedy films",
+    "Musicals",
+    "Family and kids' movies",
+    "Fantasy films",
+    "Adventure films",
+    "Action movies",
+    "weightlifting",
+    "marketing",
+    "yoga and ab workouts",
+    "ETF investing",
+    "Business Management",
+    "Stock Market Investing",
+    "coin collecting",
+    "writing and publishing",
+    "Strength Training",
+    "Historical Fiction",
+    "skiing",
+    "health and wellness",
+    "finance and economics"
+  ],
+  "preferred_topics": [
+    "skiing techniques and tips",
+    "health benefits of outdoor activities",
+    "personal finance management",
+    "space exploration",
+    "environmental news",
+    "police misconduct",
+    "economic policies",
+    "drug trafficking",
+    "weather events",
+    "personal finance tips",
+    "nutrition science",
+    "historical fiction",
+    "fitness and wellness",
+    "investment strategies",
+    "strength training"
+  ],
+  "style_preferences": [
+    "Clear, moderately detailed explanations"
+  ],
+  "podcast_focus_keywords": [
+    "space",
+    "environment",
+    "police",
+    "economy",
+    "drugs",
+    "weather",
+    "finance",
+    "nutrition",
+    "history",
+    "fitness",
+    "investment",
+    "strength"
+  ],
+  "recommended_news_queries": [
+    "latest wellness trends",
+    "latest US news headlines",
+    "latest world news",
+    "latest crime news",
+    "personal finance tips",
+    "latest nutrition studies",
+    "Western movie review",
+    "Comedy film analysis",
+    "Musical director interview",
+    "Family and kids' movie review",
+    "Fantasy film analysis",
+    "Adventure director interview",
+    "Action movie review",
+    "latest weightlifting trends",
+    "latest marketing trends",
+    "latest yoga and ab workouts",
+    "latest ETF investing trends",
+    "latest business management trends",
+    "latest stock market trends",
+    "latest coin collecting trends",
+    "latest writing and publishing trends",
+    "latest strength training trends",
+    "latest historical fiction",
+    "latest skiing trends",
+    "latest health and wellness trends",
+    "latest finance and economics trends"
+  ],
+  "youtube_search_queries": [
+    "top wellness routines",
+    "US news analysis",
+    "world news highlights",
+    "crime news updates",
+    "personal finance advice",
+    "nutrition tips",
+    "Western movie review",
+    "Comedy film analysis",
+    "Musical director interview",
+    "Family and kids' movie review",
+    "Fantasy film analysis",
+    "Adventure director interview",
+    "Action movie review",
+    "best weightlifting routines",
+    "best marketing strategies",
+    "best yoga and ab workouts",
+    "best ETF investing strategies",
+    "best business management practices",
+    "best stock market investing strategies",
+    "best coin collecting tips",
+    "best writing and publishing advice",
+    "best strength training routines",
+    "best historical fiction",
+    "best skiing tips",
+    "best health and wellness routines",
+    "best finance and economics advice"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with personal finance, nutrition, and fitness topics.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U5011",
+    "movielens_user": "93270",
+    "amazon_user": "AHBHKMKIKGGYFTNP7QDIF3G6XGQA",
+    "interests_by_source": {
+      "news": 6,
+      "movies": 7,
+      "reviews": 10,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Wellness",
+        "source": "news",
+        "keys": [
+          "wellness"
+        ],
+        "count": 5,
+        "examples": [
+          "Worst Things For Your Health According to Doctors",
+          "What your heart rate can tell you about your health"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 4,
+        "examples": [
+          "Lost hiker rescued in Oregon snowstorm: 'I wouldn't have survived another night'",
+          "A 2,000-pound great white shark is swimming off the coast of Florida"
+        ]
+      },
+      {
+        "interest": "World news",
+        "source": "news",
+        "keys": [
+          "newsworld"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Crime news",
+        "source": "news",
+        "keys": [
+          "newscrime"
+        ],
+        "count": 2,
+        "examples": [
+          "420 Pounds Of Marijuana Found In Truck At Darien Rest Stop: CSP",
+          "Massive fentanyl seizure 'enough to kill everyone' in Ohio, officials say"
+        ]
+      },
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 2,
+        "examples": [
+          "Here's how the Fed rate cut affects you",
+          "How the 'Avalanche Method' Can Help You Shed Debt"
+        ]
+      },
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 2,
+        "examples": [
+          "Nutrients That Surprisingly You Can't Obtain From Plants"
+        ]
+      },
+      {
+        "interest": "Westerns",
+        "source": "movies",
+        "keys": [
+          "Western"
+        ],
+        "count": 8,
+        "lift": 4.23,
+        "examples": [
+          "City Slickers (1991)",
+          "Unforgiven (1992)"
+        ]
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 63,
+        "lift": 1.75,
+        "examples": [
+          "Without a Paddle (2004)",
+          "Space Cowboys (2000)"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 6,
+        "lift": 1.59,
+        "examples": []
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 13,
+        "lift": 1.46,
+        "examples": [
+          "Ice Age (2002)",
+          "Field of Dreams (1989)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 15,
+        "lift": 1.23,
+        "examples": [
+          "Field of Dreams (1989)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 27,
+        "lift": 1.09,
+        "examples": [
+          "Space Cowboys (2000)",
+          "Ice Age (2002)"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 32,
+        "lift": 1.02,
+        "examples": [
+          "Space Cowboys (2000)",
+          "Black Hawk Down (2001)"
+        ]
+      },
+      {
+        "interest": "weightlifting",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 50,
+        "categories": [
+          "Books > Health, Fitness & Dieting > Exercise & Fitness"
+        ],
+        "examples": [
+          "Fabulously Fit Forever Expanded",
+          "Strength Training Anatomy - 2nd Edition",
+          "The New Rules of Lifting: Six Basic Moves for Maximum Muscle"
+        ]
+      },
+      {
+        "interest": "marketing",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 26,
+        "categories": [
+          "Books > Business & Money > Marketing & Sales"
+        ],
+        "examples": [
+          "Permission Marketing: Turning Strangers into Friends and Friends into Customers",
+          "Triggers: 30 Sales Tools you can use to Control the Mind of your Prospect to Mot",
+          "Creative Leaps: 10 Lessons in Effective Advertising Inspired at Saatchi & Saatch"
+        ]
+      },
+      {
+        "interest": "yoga and ab workouts",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 13,
+        "categories": [
+          "Movies & TV > Genre for Featured Categories > Exercise & Fitness"
+        ],
+        "examples": [
+          "CURL [VHS]",
+          "Abs of Steel for Men VHS",
+          "Zone - Body Sculpt Big Ball Workout [VHS]"
+        ]
+      },
+      {
+        "interest": "ETF investing",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 11,
+        "categories": [
+          "Books > Business & Money > Economics"
+        ],
+        "examples": [
+          "The Little Book That Makes You Rich: A Proven Market-Beating Formula for Growth ",
+          "The ETF Book: All You Need to Know About Exchange-Traded Funds",
+          "Understanding Exchange-Traded Funds"
+        ]
+      },
+      {
+        "interest": "Business Management",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Business & Money > Management & Leadership"
+        ],
+        "examples": [
+          "E-Mail Rules: A Business Guide to Managing Policies, Security, and Legal Issues ",
+          "The Science of Success: How Market-Based Management Built the World's Largest Pr",
+          "Outsmart the MBA Clones: The Alternative Guide to Competitive Strategy, Marketin"
+        ]
+      },
+      {
+        "interest": "Stock Market Investing",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Business & Money > Investing"
+        ],
+        "examples": [
+          "All About Asset Allocation",
+          "The Neatest Little Guide to Stock Market Investing",
+          "Investing for Income: A Bond Mutual Fund Approach to High-Return, Low-Risk Profi"
+        ]
+      },
+      {
+        "interest": "coin collecting",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42",
+          "P43",
+          "P44",
+          "P45"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Antiques & Collectibles"
+        ],
+        "examples": [
+          "Gold Rush: How to Collect, Invest and Profit With Gold Coins",
+          "Scott Travers' Top 88 Coins to Buy and Sell: 44 Winners and 44 Losers",
+          "A Guide Book of United States Coins 2008"
+        ]
+      },
+      {
+        "interest": "writing and publishing",
+        "source": "reviews",
+        "keys": [
+          "P46",
+          "P47",
+          "P48",
+          "P49",
+          "P50"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Reference > Writing, Research & Publishing Guides"
+        ],
+        "examples": [
+          "Web Copy That Sells: The Revolutionary Formula for Creating Killer Copy Every Ti",
+          "Writing White Papers: How to Capture Readers and Keep Them Engaged",
+          "The One-Page Proposal: How to Get Your Business Pitch onto One Persuasive Page"
+        ]
+      },
+      {
+        "interest": "Strength Training",
+        "source": "reviews",
+        "keys": [
+          "P51",
+          "P52",
+          "P53",
+          "P54",
+          "P55"
+        ],
+        "count": 7,
+        "categories": [
+          "Sports & Outdoors > Exercise & Fitness > Strength Training Equipment"
+        ],
+        "examples": [
+          "Danskin Space Saver Bench with Total Toning System and DVD",
+          "Perfect Pushup - Original",
+          "SPRI Xertube Resistance Bands with Handles – All Exercise Cords Sold Separately "
+        ]
+      },
+      {
+        "interest": "Historical Fiction",
+        "source": "reviews",
+        "keys": [
+          "P56",
+          "P57",
+          "P58",
+          "P59",
+          "P60"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "Fixer",
+          "Farewell Alexandria",
+          "Arrival of the Prince"
+        ]
+      },
+      {
+        "interest": "skiing",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "snow -> ski -> medal -> gold -> silver"
+        ]
+      },
+      {
+        "interest": "health and wellness",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "environmental concern -> air -> heart -> lungs"
+        ]
+      },
+      {
+        "interest": "finance and economics",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy -> very high"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "top wellness routines": "news",
+      "US news analysis": "news",
+      "world news highlights": "news",
+      "crime news updates": "news",
+      "personal finance advice": "news",
+      "nutrition tips": "news",
+      "Western movie review": "movies",
+      "Comedy film analysis": "movies",
+      "Musical director interview": "movies",
+      "Family and kids' movie review": "movies",
+      "Fantasy film analysis": "movies",
+      "Adventure director interview": "movies",
+      "Action movie review": "movies",
+      "best weightlifting routines": "reviews",
+      "best marketing strategies": "reviews",
+      "best yoga and ab workouts": "reviews",
+      "best ETF investing strategies": "reviews",
+      "best business management practices": "reviews",
+      "best stock market investing strategies": "reviews",
+      "best coin collecting tips": "reviews",
+      "best writing and publishing advice": "reviews",
+      "best strength training routines": "reviews",
+      "best historical fiction": "reviews",
+      "best skiing tips": "twin",
+      "best health and wellness routines": "twin",
+      "best finance and economics advice": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "brief and straightforward headlines",
+    "simple and easy-to-understand explanations",
+    "positive and uplifting tone",
+    "practical and actionable advice"
+  ],
+  "preferred_detail": "moderate",
+  "tone": "Friendly and conversational",
+  "personality": {
+    "need_for_cognition": "average",
+    "openness": "low",
+    "extraversion": "average",
+    "conscientiousness": "average"
+  },
+  "personality_summary": "Compared with US adults: need for cognition average (enjoys some thinking but not heavy material); openness low (prefers the familiar and conventional); extraversion average (neither especially outgoing nor reserved); conscientiousness average (reasonably organized).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1813",
+    "additional_context": "Age 30-49; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 61,
+      "openness": 22,
+      "extraversion": 47,
+      "conscientiousness": 41
+    },
+    "twin_interests": [
+      "skiing",
+      "health and wellness",
+      "finance and economics"
+    ],
+    "twin_background_knowledge": "This person likely enjoys outdoor activities, particularly skiing, and is well-versed in financial matters."
+  }
+}

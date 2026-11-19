@@ -1,0 +1,643 @@
+{
+  "user_id": "twin_final_369",
+  "interests": [
+    "Recipes and cooking",
+    "Food news",
+    "Nutrition",
+    "TV stars",
+    "Lifestyle buzz",
+    "CMA Awards",
+    "Documentaries",
+    "Film noir",
+    "Drama films",
+    "Romantic films",
+    "Horror films",
+    "War films",
+    "Crime films",
+    "Musicals",
+    "French Cooking",
+    "cookie baking",
+    "Classic Cooking",
+    "historical fiction",
+    "business strategy",
+    "Ancient Cuisine",
+    "soap making",
+    "European Peasant Cooking",
+    "meat and poultry cooking",
+    "paper crafting",
+    "history",
+    "cooking and food preparation",
+    "fairness and negotiation",
+    "home and kitchen"
+  ],
+  "preferred_topics": [
+    "cooking shows",
+    "food preparation techniques",
+    "fairness in transactions",
+    "negotiation strategies",
+    "home appliance tips",
+    "cooking techniques",
+    "food nutrition",
+    "recipe recommendations",
+    "food industry trends",
+    "documentaries on food",
+    "film noir",
+    "drama films",
+    "horror films",
+    "war films",
+    "crime films",
+    "musicals",
+    "cooking tools and gadgets"
+  ],
+  "style_preferences": [
+    "Clear, moderately detailed explanations"
+  ],
+  "podcast_focus_keywords": [
+    "cooking",
+    "food",
+    "recipes",
+    "nutrition",
+    "documentaries",
+    "film noir",
+    "drama",
+    "horror",
+    "war",
+    "crime",
+    "musicals",
+    "crafting"
+  ],
+  "recommended_news_queries": [
+    "new recipe trends this week",
+    "latest food industry news",
+    "latest nutrition studies",
+    "TV stars news",
+    "trending lifestyle tips",
+    "CMA Awards highlights",
+    "Documentary movie review",
+    "noir film analysis",
+    "Drama director interview",
+    "Romantic movie review",
+    "Horror film analysis",
+    "War director interview",
+    "Crime movie review",
+    "Musical film analysis",
+    "French Cooking news",
+    "new cookie recipes",
+    "Classic Cooking news",
+    "historical fiction news",
+    "business strategy trends",
+    "ancient cuisine discoveries",
+    "soap making news",
+    "European peasant cooking traditions",
+    "new meat and poultry recipes",
+    "new paper crafting trends",
+    "history news",
+    "cooking and food preparation tips",
+    "negotiation strategies",
+    "home and kitchen trends"
+  ],
+  "youtube_search_queries": [
+    "European peasant cooking recipes",
+    "food industry updates",
+    "top nutrition trends",
+    "TV stars",
+    "lifestyle trends",
+    "CMA Awards performances",
+    "Documentary movie review",
+    "noir film analysis",
+    "Drama director interview",
+    "Romantic movie review",
+    "Horror film analysis",
+    "War director interview",
+    "Crime movie review",
+    "Musical film analysis",
+    "French Cooking",
+    "top cookie recipes",
+    "Classic Cooking",
+    "historical fiction",
+    "top business strategies",
+    "ancient cuisine recipes",
+    "soap making",
+    "top cooking and food preparation techniques",
+    "top meat and poultry recipes",
+    "top paper crafting projects",
+    "history",
+    "top food documentaries",
+    "fairness in negotiations",
+    "top home and kitchen products"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "autos"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with cooking techniques, food nutrition, and some business strategy concepts.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U70557",
+    "movielens_user": "195054",
+    "amazon_user": "AHG34BLPBFJAZLKSZTRSVPBYMNQA",
+    "interests_by_source": {
+      "news": 6,
+      "movies": 8,
+      "reviews": 11,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Recipes and cooking",
+        "source": "news",
+        "keys": [
+          "recipes"
+        ],
+        "count": 9,
+        "examples": [
+          "50 Thanksgiving Appetizer & Dip Recipes That Won't Spoil Your Appetite",
+          "Dunkin' Unveiled Its Festive Holiday Menu and It Looks Insanely Delicious"
+        ]
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 5,
+        "examples": [
+          "Walmart Is Starting Black Friday Early This Year With Deals On Instant Pots, Air Fryers, And More",
+          "Joanna Gaines reveals her family's favorite recipes in new cookbook"
+        ]
+      },
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 2,
+        "examples": [
+          "Here's What Kate Hudson Eats in a Day to Stay Sculpted at 40"
+        ]
+      },
+      {
+        "interest": "TV stars",
+        "source": "news",
+        "keys": [
+          "tv-celebrity"
+        ],
+        "count": 2,
+        "examples": [
+          "Kaitlynn Carter Recalls Falling in Love With Miley Cyrus in Candid Essay"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 2,
+        "examples": [
+          "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture"
+        ]
+      },
+      {
+        "interest": "CMA Awards",
+        "source": "news",
+        "keys": [
+          "cma-awards"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 9,
+        "lift": 2.91,
+        "examples": []
+      },
+      {
+        "interest": "Film noir",
+        "source": "movies",
+        "keys": [
+          "Film-Noir"
+        ],
+        "count": 5,
+        "lift": 2.03,
+        "examples": []
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 208,
+        "lift": 1.86,
+        "examples": [
+          "New Jersey Drive (1995)",
+          "Flashdance (1983)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 76,
+        "lift": 1.7,
+        "examples": [
+          "Flashdance (1983)",
+          "Barry Lyndon (1975)"
+        ]
+      },
+      {
+        "interest": "Horror films",
+        "source": "movies",
+        "keys": [
+          "Horror"
+        ],
+        "count": 25,
+        "lift": 1.27,
+        "examples": []
+      },
+      {
+        "interest": "War films",
+        "source": "movies",
+        "keys": [
+          "War"
+        ],
+        "count": 16,
+        "lift": 1.24,
+        "examples": [
+          "Barry Lyndon (1975)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 52,
+        "lift": 1.2,
+        "examples": [
+          "New Jersey Drive (1995)",
+          "Twin Peaks: Fire Walk with Me (1992)"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 10,
+        "lift": 1.05,
+        "examples": []
+      },
+      {
+        "interest": "French Cooking",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 29,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Regional & International"
+        ],
+        "examples": [
+          "Early French Cookery: Sources, History, Original Recipes and Modern Adaptations",
+          "The Best Recipe",
+          "Saveur Cooks Authentic French: Rediscovering the Recipes, Traditions, and Flavor"
+        ]
+      },
+      {
+        "interest": "cookie baking",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10",
+          "P41",
+          "P42",
+          "P43",
+          "P44",
+          "P45"
+        ],
+        "count": 31,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Baking",
+          "Grocery & Gourmet Food > Pantry Staples > Cooking & Baking"
+        ],
+        "examples": [
+          "Mrs. Fields Best Cookie Book Ever!: 130 Delicious Cookie and Dessert Recipes fro",
+          "Betty Crocker's Good and Easy Cookbook",
+          "Betty Crocker's Best of Baking: More Than 350 of America's Favorite Recipes"
+        ],
+        "merged": [
+          "baking"
+        ]
+      },
+      {
+        "interest": "Classic Cooking",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 19,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Cooking Education & Reference"
+        ],
+        "examples": [
+          "Cotton Country Collection",
+          "The Anne of Green Gables Cookbook",
+          "Classic Home Cooking"
+        ]
+      },
+      {
+        "interest": "historical fiction",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 14,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "The Painter from Shanghai: A Novel",
+          "Undiscovered Gyrl (Vintage Contemporaries Orig)",
+          "Cleopatra's Daughter: A Novel"
+        ]
+      },
+      {
+        "interest": "business strategy",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 13,
+        "categories": [
+          "Books > Business & Money > Management & Leadership"
+        ],
+        "examples": [
+          "The Ultimate Competitive Advantage: Secrets of Continually Developing a More Pro",
+          "The Profit Zone: How Strategic Business Design Will Lead You to Tomorrow's Profi",
+          "Predictable Magic: Unleash the Power of Design Strategy to Transform Your Busine"
+        ]
+      },
+      {
+        "interest": "Ancient Cuisine",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 11,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Cooking Methods"
+        ],
+        "examples": [
+          "Fabulous Feasts (Medieval Cookery and Ceremony)",
+          "Large Quantity Recipes, Fourth Edition",
+          "The Freezer Cooking Manual from 30 Day Gourmet : A Month of Meals Made Easy"
+        ]
+      },
+      {
+        "interest": "soap making",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 9,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Crafts & Hobbies"
+        ],
+        "examples": [
+          "Essentially Soap: The Elegant Art of Handmade Soap Making, Scenting, Coloring & ",
+          "Better Homes and Gardens New Cook Book (Three Ring Binder Edition)",
+          "Soap: Making It, Enjoying It"
+        ]
+      },
+      {
+        "interest": "European Peasant Cooking",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 9,
+        "categories": [
+          "Books > Cookbooks, Food & Wine"
+        ],
+        "examples": [
+          "Make-a-mix",
+          "Betty Crocker's Cookbook: Everything You Need to Know to Cook Today",
+          "The Old World Kitchen: The Rich Tradition of European Peasant Cooking"
+        ]
+      },
+      {
+        "interest": "meat and poultry cooking",
+        "source": "reviews",
+        "keys": [
+          "P46",
+          "P47",
+          "P48",
+          "P49",
+          "P50"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Cooking by Ingredient"
+        ],
+        "examples": [
+          "The Cook's Illustrated Complete Book of Poultry",
+          "The Complete Book of Pasta and Noodles",
+          "The Complete Meat Cookbook"
+        ]
+      },
+      {
+        "interest": "paper crafting",
+        "source": "reviews",
+        "keys": [
+          "P51",
+          "P52",
+          "P53",
+          "P54",
+          "P55"
+        ],
+        "count": 6,
+        "categories": [
+          "Arts, Crafts & Sewing > Crafting"
+        ],
+        "examples": [
+          "Westcott 13901 8-Inch Titanium Scissors For Office and Home, Yellow/Gray, 2 Pack",
+          "Sealing Wax Beads Set, Yoption 120 Pieces Bronze Star Shape Seal Wax Kit with 1 ",
+          "GLUE DOTS INTERNATIONAL Glue Dot, Clear"
+        ]
+      },
+      {
+        "interest": "history",
+        "source": "reviews",
+        "keys": [
+          "P56",
+          "P57",
+          "P58",
+          "P59",
+          "P60"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > History > Europe"
+        ],
+        "examples": [
+          "The Art of Cookery in the Middle Ages (Studies in Anglo-Saxon History)",
+          "After Elizabeth: The Rise of James of Scotland and the Struggle for the Throne o",
+          "For All the Tea in China: How England Stole the World's Favorite Drink and Chang"
+        ]
+      },
+      {
+        "interest": "cooking and food preparation",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "tacos, ground beef, tomatos, cheese, sour cream, baked potato"
+        ]
+      },
+      {
+        "interest": "fairness and negotiation",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "being fair to myself and the other person, split the money evenly, not giving the other person the most money since it w"
+        ]
+      },
+      {
+        "interest": "home and kitchen",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "toaster, bread, butter, fridge, cold, ice, drink, soda, can, trash, take out, food"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "European peasant cooking recipes": "news",
+      "food industry updates": "news",
+      "top nutrition trends": "news",
+      "TV stars": "news",
+      "lifestyle trends": "news",
+      "CMA Awards performances": "news",
+      "Documentary movie review": "movies",
+      "noir film analysis": "movies",
+      "Drama director interview": "movies",
+      "Romantic movie review": "movies",
+      "Horror film analysis": "movies",
+      "War director interview": "movies",
+      "Crime movie review": "movies",
+      "Musical film analysis": "movies",
+      "French Cooking": "reviews",
+      "top cookie recipes": "reviews",
+      "Classic Cooking": "reviews",
+      "historical fiction": "reviews",
+      "top business strategies": "reviews",
+      "ancient cuisine recipes": "reviews",
+      "soap making": "reviews",
+      "top cooking and food preparation techniques": "reviews",
+      "top meat and poultry recipes": "reviews",
+      "top paper crafting projects": "reviews",
+      "history": "reviews",
+      "top food documentaries": "twin",
+      "fairness in negotiations": "twin",
+      "top home and kitchen products": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "informative and straightforward",
+    "engaging storytelling",
+    "personal anecdotes",
+    "brief and to the point",
+    "casual and friendly tone",
+    "focus on practical tips"
+  ],
+  "preferred_detail": "moderate",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "average",
+    "openness": "low",
+    "extraversion": "high",
+    "conscientiousness": "average"
+  },
+  "personality_summary": "Compared with US adults: need for cognition average (enjoys some thinking but not heavy material); openness low (prefers the familiar and conventional); extraversion high (outgoing, lively and energetic); conscientiousness average (reasonably organized).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "369",
+    "additional_context": "Age 30-49; Self-employed; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 55,
+      "openness": 2,
+      "extraversion": 71,
+      "conscientiousness": 58
+    },
+    "twin_interests": [
+      "cooking and food preparation",
+      "fairness and negotiation",
+      "home and kitchen"
+    ],
+    "twin_background_knowledge": "This person likely has a basic understanding of cooking and food preparation, and values fairness in transactions and negotiations."
+  }
+}

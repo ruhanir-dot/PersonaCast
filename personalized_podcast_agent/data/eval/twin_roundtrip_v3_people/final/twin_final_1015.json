@@ -1,0 +1,647 @@
+{
+  "user_id": "twin_final_1015",
+  "interests": [
+    "Opinion and commentary",
+    "Food news",
+    "Holiday shopping",
+    "Political news",
+    "US news",
+    "Personal finance",
+    "Company and business news",
+    "Travel ideas",
+    "Travel news",
+    "Stock market news",
+    "Taxes",
+    "Saving money",
+    "Real estate",
+    "Tips and life hacks",
+    "NFL football",
+    "Musicals",
+    "Family and kids' movies",
+    "Comedy films",
+    "Thrillers",
+    "Adventure films",
+    "Crime films",
+    "Action movies",
+    "history",
+    "bicycle riding",
+    "pop culture",
+    "Tempe Crabtree Mysteries",
+    "Historical Fiction",
+    "outdoor adventures",
+    "spy/thriller",
+    "cozy winter activities",
+    "family traditions and gatherings",
+    "financial decision-making"
+  ],
+  "preferred_topics": [
+    "cozy winter travel",
+    "holiday traditions",
+    "financial psychology",
+    "financial news",
+    "personal finance tips",
+    "stock market updates",
+    "holiday shopping deals",
+    "travel tips and destinations",
+    "NFL football updates",
+    "cozy winter activities",
+    "family traditions",
+    "real estate trends",
+    "book recommendations",
+    "historical fiction",
+    "musicals and theater"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples"
+  ],
+  "podcast_focus_keywords": [
+    "finance",
+    "investment",
+    "taxes",
+    "travel",
+    "NFL",
+    "holiday shopping",
+    "book reviews",
+    "historical fiction",
+    "cozy activities",
+    "family traditions",
+    "real estate",
+    "adventure"
+  ],
+  "recommended_news_queries": [
+    "latest political opinion pieces",
+    "latest food trends",
+    "best holiday shopping deals",
+    "latest political news",
+    "latest US news headlines",
+    "Personal finance news",
+    "latest business news",
+    "best travel destinations",
+    "latest travel news",
+    "latest stock market trends",
+    "Taxes news",
+    "Saving money news",
+    "latest real estate trends",
+    "latest life hacks",
+    "latest NFL news",
+    "Musical movie review",
+    "Family and kids' film analysis",
+    "Comedy director interview",
+    "Thriller movie review",
+    "Adventure film analysis",
+    "Crime director interview",
+    "Action movie review",
+    "history news",
+    "bicycle riding news",
+    "latest pop culture news",
+    "latest Tempe Crabtree mystery news",
+    "latest historical fiction news",
+    "latest outdoor adventure news",
+    "latest spy thriller news",
+    "latest cozy winter activities",
+    "latest family traditions",
+    "latest financial decision-making news"
+  ],
+  "youtube_search_queries": [
+    "political commentary videos",
+    "food news and trends",
+    "holiday shopping tips",
+    "political news updates",
+    "US news highlights",
+    "Personal finance",
+    "business news updates",
+    "travel destination recommendations",
+    "travel news updates",
+    "stock market analysis",
+    "Taxes",
+    "Saving money",
+    "real estate market updates",
+    "life hack tutorials",
+    "NFL game highlights",
+    "Musical movie review",
+    "Family and kids' film analysis",
+    "Comedy director interview",
+    "Thriller movie review",
+    "Adventure film analysis",
+    "Crime director interview",
+    "Action movie review",
+    "history",
+    "bicycle riding",
+    "pop culture trends",
+    "Tempe Crabtree mystery book reviews",
+    "historical fiction book reviews",
+    "outdoor adventure tips",
+    "spy thriller movie reviews",
+    "cozy winter activity ideas",
+    "family gathering ideas",
+    "financial decision-making tips"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like religion and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from.",
+    "Political news is kept only because this listener's own news clicks show it."
+  ],
+  "background_knowledge": "Familiar with financial news, travel tips, NFL updates, and historical fiction.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U26262",
+    "movielens_user": "155895",
+    "amazon_user": "AHHSXU6N35VIU6KZP3DAWLLT5TBA",
+    "interests_by_source": {
+      "news": 15,
+      "movies": 7,
+      "reviews": 7,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Opinion and commentary",
+        "source": "news",
+        "keys": [
+          "newsopinion"
+        ],
+        "count": 13,
+        "examples": [
+          "The News In Cartoons",
+          "Can Warren Actually Avoid Taxing the Middle Class?"
+        ]
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 6,
+        "examples": []
+      },
+      {
+        "interest": "Holiday shopping",
+        "source": "news",
+        "keys": [
+          "shop-holidays"
+        ],
+        "count": 6,
+        "examples": [
+          "50 Unique Holiday Gift Ideas for Him Under $50",
+          "Here Are the Biggest Deals We're Anticipating for Black Friday"
+        ]
+      },
+      {
+        "interest": "Political news",
+        "source": "news",
+        "keys": [
+          "newspolitics"
+        ],
+        "count": 5,
+        "examples": [
+          "Excerpts and Analysis From 2 Impeachment Inquiry Transcripts"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 5,
+        "examples": []
+      },
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 4,
+        "examples": [
+          "Never spend more than this amount of your income on a car, says finance expert and millionaire"
+        ]
+      },
+      {
+        "interest": "Company and business news",
+        "source": "news",
+        "keys": [
+          "finance-companies"
+        ],
+        "count": 4,
+        "examples": [
+          "Stores that opened for business the year you were born"
+        ]
+      },
+      {
+        "interest": "Travel ideas",
+        "source": "news",
+        "keys": [
+          "traveltripideas"
+        ],
+        "count": 3,
+        "examples": [
+          "11 Unique Holiday Traditions From Around The World"
+        ]
+      },
+      {
+        "interest": "Travel news",
+        "source": "news",
+        "keys": [
+          "travelnews"
+        ],
+        "count": 3,
+        "examples": []
+      },
+      {
+        "interest": "Stock market news",
+        "source": "news",
+        "keys": [
+          "markets"
+        ],
+        "count": 3,
+        "examples": [
+          "As Warren Gains in Race, Wall Street Sounds the Alarm"
+        ]
+      },
+      {
+        "interest": "Taxes",
+        "source": "news",
+        "keys": [
+          "finance-taxes"
+        ],
+        "count": 2,
+        "examples": [
+          "Here are the new income tax brackets for 2020"
+        ]
+      },
+      {
+        "interest": "Saving money",
+        "source": "news",
+        "keys": [
+          "finance-savemoney"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Tips and life hacks",
+        "source": "news",
+        "keys": [
+          "tipsandtricks"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "NFL football",
+        "source": "news",
+        "keys": [
+          "football_nfl"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 49,
+        "lift": 2.0,
+        "examples": [
+          "Winnie the Pooh and the Blustery Day (1968)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 79,
+        "lift": 1.36,
+        "examples": [
+          "Bambi (1942)",
+          "Winnie the Pooh and the Blustery Day (1968)"
+        ]
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 278,
+        "lift": 1.18,
+        "examples": [
+          "Mystery Men (1999)",
+          "Trouble with Harry, The (1955)"
+        ]
+      },
+      {
+        "interest": "Thrillers",
+        "source": "movies",
+        "keys": [
+          "Thriller"
+        ],
+        "count": 195,
+        "lift": 1.08,
+        "examples": [
+          "Others, The (2001)",
+          "Dial M for Murder (1954)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 169,
+        "lift": 1.04,
+        "examples": [
+          "Flight of the Phoenix, The (1965)",
+          "Mad Max (1979)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 114,
+        "lift": 1.02,
+        "examples": [
+          "Dial M for Murder (1954)",
+          "Gangs of New York (2002)"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 206,
+        "lift": 1.0,
+        "examples": [
+          "Mystery Men (1999)",
+          "Flight of the Phoenix, The (1965)"
+        ]
+      },
+      {
+        "interest": "history",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 10,
+        "categories": [
+          "Books > History > Americas"
+        ],
+        "examples": [
+          "Close to Shore: The Terrifying Shark Attacks of 1916",
+          "The Soiling of Old Glory: The Story of a Photograph That Shocked America",
+          "Mouse Tales: A Behind-The-Ears Look at Disneyland"
+        ]
+      },
+      {
+        "interest": "bicycle riding",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 6,
+        "categories": [
+          "Sports & Outdoors > Sports > Cycling"
+        ],
+        "examples": [
+          "Sunlite Cloud-9 Bicycle Suspension Cruiser Saddle, Cruiser Gel, Tri-color Black",
+          "Mirrycle MTB Bar End Mountain Bicycle Mirror , Black",
+          "Ibera Bike Rack - Bicycle Touring Carrier Plus+ for Disc Brake/Non-Disc Brake Mo"
+        ]
+      },
+      {
+        "interest": "pop culture",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Biographies & Memoirs > Arts & Literature"
+        ],
+        "examples": [
+          "Rin Tin Tin: The Life and the Legend",
+          "Jeannie Out of the Bottle",
+          "As You Wish: Inconceivable Tales from the Making of The Princess Bride"
+        ]
+      },
+      {
+        "interest": "Tempe Crabtree Mysteries",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Mystery"
+        ],
+        "examples": [
+          "Invisible Path",
+          "Not As It Seems",
+          "The Third Medallion: A Tyler West Novel (Tyler West Series)"
+        ]
+      },
+      {
+        "interest": "Historical Fiction",
+        "source": "reviews",
+        "keys": [
+          "P30",
+          "P31",
+          "P32",
+          "P33"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "Caleb's Crossing: A Novel",
+          "It Can't Happen Here",
+          "Mary's Son: A Tale of Christmas"
+        ]
+      },
+      {
+        "interest": "outdoor adventures",
+        "source": "reviews",
+        "keys": [
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Reference > Writing, Research & Publishing Guides"
+        ],
+        "examples": [
+          "Hey Ranger 2: More True Tales of Humor & Misadventure from the Great Outdoors",
+          "Extreme Encounters: How It Feels to Be Drowned in Quicksand, Shredded by Piranha",
+          "Wreck This Journal (Duct Tape) Expanded Edition"
+        ]
+      },
+      {
+        "interest": "spy/thriller",
+        "source": "reviews",
+        "keys": [
+          "P44",
+          "P45",
+          "P46"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Thrillers & Suspense"
+        ],
+        "examples": [
+          "The Huut",
+          "Red Fortress ob der Tauber (Mark Springfield)",
+          "Blind Allegiance (Mark Springfield)"
+        ]
+      },
+      {
+        "interest": "cozy winter activities",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "snow -> flake -> icicle -> cold -> fireplace -> warm -> cozy -> blankets -> holidays -> December -> winter -> freezing -"
+        ]
+      },
+      {
+        "interest": "family traditions and gatherings",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "grandmother -> family -> missing -> distance -> gatherings -> tradition"
+        ]
+      },
+      {
+        "interest": "financial decision-making",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "How much money it was; How much money they would get; How it would split; If they'd give money back to me; If they would"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "political commentary videos": "news",
+      "food news and trends": "news",
+      "holiday shopping tips": "news",
+      "political news updates": "news",
+      "US news highlights": "news",
+      "Personal finance": "news",
+      "business news updates": "news",
+      "travel destination recommendations": "news",
+      "travel news updates": "news",
+      "stock market analysis": "news",
+      "Taxes": "news",
+      "Saving money": "news",
+      "real estate market updates": "news",
+      "life hack tutorials": "news",
+      "NFL game highlights": "news",
+      "Musical movie review": "movies",
+      "Family and kids' film analysis": "movies",
+      "Comedy director interview": "movies",
+      "Thriller movie review": "movies",
+      "Adventure film analysis": "movies",
+      "Crime director interview": "movies",
+      "Action movie review": "movies",
+      "history": "reviews",
+      "bicycle riding": "reviews",
+      "pop culture trends": "reviews",
+      "Tempe Crabtree mystery book reviews": "reviews",
+      "historical fiction book reviews": "reviews",
+      "outdoor adventure tips": "reviews",
+      "spy thriller movie reviews": "reviews",
+      "cozy winter activity ideas": "twin",
+      "family gathering ideas": "twin",
+      "financial decision-making tips": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "informative and detailed",
+    "engaging and conversational",
+    "uses personal anecdotes",
+    "focuses on practical advice",
+    "highly opinionated"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "average",
+    "extraversion": "high",
+    "conscientiousness": "average"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness average (open to some new experiences); extraversion high (outgoing, lively and energetic); conscientiousness average (reasonably organized).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1015",
+    "additional_context": "Age 18-29; Student; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 77,
+      "openness": 64,
+      "extraversion": 93,
+      "conscientiousness": 37
+    },
+    "twin_interests": [
+      "cozy winter activities",
+      "family traditions and gatherings",
+      "financial decision-making"
+    ],
+    "twin_background_knowledge": "This person likely enjoys spending time in cozy settings during winter and values family traditions and gatherings, especially during the holiday season."
+  }
+}

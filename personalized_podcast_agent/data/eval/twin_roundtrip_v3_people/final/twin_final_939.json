@@ -1,0 +1,562 @@
+{
+  "user_id": "twin_final_939",
+  "interests": [
+    "College football",
+    "US news",
+    "NFL football",
+    "TV stars",
+    "Health news",
+    "Crime news",
+    "Political news",
+    "Travel news",
+    "Music awards",
+    "Science fiction films",
+    "Action movies",
+    "Adventure films",
+    "Thrillers",
+    "sustainability leadership",
+    "higher education",
+    "business psychology",
+    "Resistance Training",
+    "drama",
+    "historical films",
+    "camping",
+    "paleo lifestyle",
+    "outdoor activities",
+    "sports",
+    "minimalist lifestyle",
+    "fairness and equality"
+  ],
+  "preferred_topics": [
+    "outdoor survival skills",
+    "minimalist living tips",
+    "fairness in society",
+    "sports psychology",
+    "athlete training and nutrition",
+    "College football",
+    "NFL football",
+    "US news",
+    "Health news",
+    "Crime news",
+    "Political news",
+    "Travel news",
+    "Music awards",
+    "Science fiction films",
+    "Action movies",
+    "Adventure films",
+    "Thrillers"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "football",
+    "news",
+    "health",
+    "crime",
+    "politics",
+    "travel",
+    "movies",
+    "books",
+    "fitness",
+    "leadership",
+    "history"
+  ],
+  "recommended_news_queries": [
+    "College football scores this week",
+    "Top US news stories this week",
+    "NFL standings this week",
+    "TV stars news",
+    "Latest health news updates",
+    "Recent crime news stories",
+    "Latest political news updates",
+    "Travel news and updates",
+    "Latest music award winners",
+    "Science fiction movie review",
+    "Action film analysis",
+    "Adventure director interview",
+    "Thriller movie review",
+    "Leaders in sustainability",
+    "Higher education trends",
+    "Business psychology insights",
+    "Resistance training tips",
+    "Top drama films of the year",
+    "historical film analysis",
+    "Camping tips and tricks",
+    "Paleo lifestyle updates",
+    "Outdoor activities trends",
+    "Top sports news",
+    "Minimalist lifestyle trends",
+    "Fairness and equality updates"
+  ],
+  "youtube_search_queries": [
+    "Top college football plays of the week",
+    "US political debates highlights",
+    "Best NFL moments of the season",
+    "TV stars",
+    "Health tips and advice",
+    "Crime investigation videos",
+    "Political debates highlights",
+    "Travel vlogs and destinations",
+    "Music award performances",
+    "Science fiction movie review",
+    "Action film analysis",
+    "Adventure director interview",
+    "Thriller movie review",
+    "Sustainability leadership talks",
+    "Higher education discussions",
+    "Business psychology talks",
+    "Resistance training workouts",
+    "Drama film trailers",
+    "historical film analysis",
+    "Camping vlogs",
+    "Paleo lifestyle tips",
+    "Outdoor activities videos",
+    "Sports highlights",
+    "Minimalist lifestyle tips",
+    "Fairness and equality discussions"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "religion",
+    "personal medical details",
+    "weather"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like religion and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from.",
+    "Political news is kept only because this listener's own news clicks show it."
+  ],
+  "background_knowledge": "Familiar with college football, NFL, US news, health, crime, politics, travel, music awards, science fiction films, action movies, adventure films, thrillers, sustainability leadership, higher education, business psychology, resistance training, drama, historical films, camping, paleo lifestyle, outdoor activities, sports, minimalist lifestyle, and fairness and equality.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U77961",
+    "movielens_user": "153327",
+    "amazon_user": "AHGNLKKFIJKADROIJYI47XH6HPLA",
+    "interests_by_source": {
+      "news": 9,
+      "movies": 4,
+      "reviews": 8,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "College football",
+        "source": "news",
+        "keys": [
+          "football_ncaa"
+        ],
+        "count": 14,
+        "examples": [
+          "4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup",
+          "College football Week 11: 15 players to watch"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 8,
+        "examples": [
+          "Supt. Johnson Announces Retirement: 'Time for Someone Else'"
+        ]
+      },
+      {
+        "interest": "NFL football",
+        "source": "news",
+        "keys": [
+          "football_nfl"
+        ],
+        "count": 7,
+        "examples": [
+          "Luke Falk files injury grievance against Jets",
+          "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis"
+        ]
+      },
+      {
+        "interest": "TV stars",
+        "source": "news",
+        "keys": [
+          "tv-celebrity"
+        ],
+        "count": 5,
+        "examples": []
+      },
+      {
+        "interest": "Health news",
+        "source": "news",
+        "keys": [
+          "medical"
+        ],
+        "count": 4,
+        "examples": [
+          "He Never Smoked a Day in His Life. At 28, He Was Diagnosed With Lung Cancer."
+        ]
+      },
+      {
+        "interest": "Crime news",
+        "source": "news",
+        "keys": [
+          "newscrime"
+        ],
+        "count": 3,
+        "examples": [
+          "Florida man demands deputies take down his mug shot. They replaced it with his booking photo."
+        ]
+      },
+      {
+        "interest": "Political news",
+        "source": "news",
+        "keys": [
+          "newspolitics"
+        ],
+        "count": 3,
+        "examples": [
+          "Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment"
+        ]
+      },
+      {
+        "interest": "Travel news",
+        "source": "news",
+        "keys": [
+          "travelnews"
+        ],
+        "count": 2,
+        "examples": [
+          "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside."
+        ]
+      },
+      {
+        "interest": "Music awards",
+        "source": "news",
+        "keys": [
+          "music-awards"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Science fiction films",
+        "source": "movies",
+        "keys": [
+          "Sci-Fi"
+        ],
+        "count": 73,
+        "lift": 1.99,
+        "examples": [
+          "Avatar (2009)",
+          "Minority Report (2002)"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 84,
+        "lift": 1.37,
+        "examples": [
+          "Avatar (2009)",
+          "Swordfish (2001)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 59,
+        "lift": 1.22,
+        "examples": [
+          "Avatar (2009)",
+          "Divergent (2014)"
+        ]
+      },
+      {
+        "interest": "Thrillers",
+        "source": "movies",
+        "keys": [
+          "Thriller"
+        ],
+        "count": 61,
+        "lift": 1.13,
+        "examples": [
+          "Ghost (1990)",
+          "Minority Report (2002)"
+        ]
+      },
+      {
+        "interest": "sustainability leadership",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 27,
+        "categories": [
+          "Books > Business & Money > Management & Leadership"
+        ],
+        "examples": [
+          "A Higher Standard of Leadership: Lessons from the Life of Gandhi",
+          "The Responsibility Revolution: How the Next Generation of Businesses Will Win",
+          "Lead with LUV: A Different Way to Create Real Success"
+        ]
+      },
+      {
+        "interest": "higher education",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 26,
+        "categories": [
+          "Books > Education & Teaching > Schools & Teaching"
+        ],
+        "examples": [
+          "DIY U: Edupunks, Edupreneurs, and the Coming Transformation of Higher Education",
+          "College Unbound: The Future of Higher Education and What It Means for Students",
+          "How to Teach Your Children Shakespeare"
+        ]
+      },
+      {
+        "interest": "business psychology",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 17,
+        "categories": [
+          "Books > Business & Money > Business Culture"
+        ],
+        "examples": [
+          "Thinking in Systems: International Bestseller",
+          "The Power of Habit: Why We Do What We Do in Life and Business",
+          "Beyond Office Politics: The Hidden Story of Power, Affiliation & Achievement in "
+        ]
+      },
+      {
+        "interest": "Resistance Training",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 7,
+        "categories": [
+          "Sports & Outdoors > Exercise & Fitness > Strength Training Equipment"
+        ],
+        "examples": [
+          "Resistance Band Exercise Loop Cords - by FILA Accessories | Superband for Assist",
+          "BERTER Resistance Bands for Legs and Butt, Workout Exercise Hip Bands, Fitness B",
+          "Adjustable Ankle Weights for Men/Women 1 2 3 4 5 6 8 10 LBS Pair , Strength Trai"
+        ]
+      },
+      {
+        "interest": "drama",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 6,
+        "categories": [
+          "Movies & TV > Art House & International > By Country"
+        ],
+        "examples": [
+          "The Lion in Winter [VHS]",
+          "Voices From a Locked Room VHS",
+          "Bent [VHS]"
+        ]
+      },
+      {
+        "interest": "historical films",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 5,
+        "categories": [
+          "Movies & TV > Genre for Featured Categories > Drama"
+        ],
+        "examples": [
+          "Mr & Mrs Loving VHS",
+          "Harvest of Fire VHS",
+          "Where the Rivers Flow North VHS"
+        ]
+      },
+      {
+        "interest": "camping",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42",
+          "P43",
+          "P44",
+          "P45"
+        ],
+        "count": 5,
+        "categories": [
+          "Sports & Outdoors > Outdoor Recreation > Camping & Hiking"
+        ],
+        "examples": [
+          "Nite Ize R170RC-01-R7 Radiant 170 Rechargeable Clip Strap and Cap Light, Black",
+          "Autocastle Men Women Electric Heated GlovesTouchscreen Heating Gloves with 2200m",
+          "PackIt Freezable Utility Cooler, 18 Can, Charcoal Grey"
+        ]
+      },
+      {
+        "interest": "paleo lifestyle",
+        "source": "reviews",
+        "keys": [
+          "P55",
+          "P56",
+          "P57"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Health, Fitness & Dieting > Diets & Weight Loss"
+        ],
+        "examples": [
+          "Trick And Treat - how 'healthy eating' is making us ill",
+          "Your Primal Body: The Paleo Way to Living Lean, Fit, and Healthy at Any Age",
+          "The 90-Day Weight Training Plan: An Effective Workout and Nutrition Program to B"
+        ]
+      },
+      {
+        "interest": "outdoor activities",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "outdoors, camping, campfire, marshmallows, sweets, food, dinner, restaurant"
+        ]
+      },
+      {
+        "interest": "sports",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "sport, athlete, person, girl, little"
+        ]
+      },
+      {
+        "interest": "minimalist lifestyle",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "minimalism"
+        ]
+      },
+      {
+        "interest": "fairness and equality",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "fairness, equality, generosity"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Top college football plays of the week": "news",
+      "US political debates highlights": "news",
+      "Best NFL moments of the season": "news",
+      "TV stars": "news",
+      "Health tips and advice": "news",
+      "Crime investigation videos": "news",
+      "Political debates highlights": "news",
+      "Travel vlogs and destinations": "news",
+      "Music award performances": "news",
+      "Science fiction movie review": "movies",
+      "Action film analysis": "movies",
+      "Adventure director interview": "movies",
+      "Thriller movie review": "movies",
+      "Sustainability leadership talks": "reviews",
+      "Higher education discussions": "reviews",
+      "Business psychology talks": "reviews",
+      "Resistance training workouts": "reviews",
+      "Drama film trailers": "reviews",
+      "historical film analysis": "reviews",
+      "Camping vlogs": "reviews",
+      "Paleo lifestyle tips": "reviews",
+      "Outdoor activities videos": "twin",
+      "Sports highlights": "twin",
+      "Minimalist lifestyle tips": "twin",
+      "Fairness and equality discussions": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Brief and straightforward",
+    "Casual and conversational",
+    "Focuses on practical advice",
+    "Engaging storytelling"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "low",
+    "extraversion": "high",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness low (prefers the familiar and conventional); extraversion high (outgoing, lively and energetic); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "939",
+    "additional_context": "Age 50-64; Unemployed; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 5,
+      "openness": 15,
+      "extraversion": 96,
+      "conscientiousness": 67
+    },
+    "twin_interests": [
+      "outdoor activities",
+      "sports",
+      "minimalist lifestyle",
+      "fairness and equality"
+    ],
+    "twin_background_knowledge": "This person likely enjoys outdoor activities and minimalism, and values fairness and equality."
+  }
+}

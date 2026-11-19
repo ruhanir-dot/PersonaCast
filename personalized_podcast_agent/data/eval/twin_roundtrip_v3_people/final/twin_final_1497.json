@@ -1,0 +1,576 @@
+{
+  "user_id": "twin_final_1497",
+  "interests": [
+    "Political news",
+    "TV stars",
+    "Personal essays",
+    "US news",
+    "Retirement planning",
+    "Documentaries",
+    "Film noir",
+    "Drama films",
+    "Mystery films",
+    "Romantic films",
+    "Crime films",
+    "Animated films",
+    "horse training",
+    "tropical plants",
+    "dog toys",
+    "business leadership",
+    "history",
+    "horse hoof trimming",
+    "writing",
+    "data science",
+    "data mining",
+    "Historical Fiction",
+    "fair distribution of resources",
+    "environmental conservation",
+    "education and learning",
+    "fairness and generosity"
+  ],
+  "preferred_topics": [
+    "fair distribution mechanisms",
+    "environmental sustainability practices",
+    "educational strategies and methods",
+    "generosity and altruism in society",
+    "political news",
+    "financial planning",
+    "real estate",
+    "personal finance",
+    "film noir",
+    "drama films",
+    "mystery films",
+    "romantic films",
+    "crime films",
+    "horse training",
+    "tropical plants",
+    "dog care"
+  ],
+  "style_preferences": [
+    "Clear, moderately detailed explanations"
+  ],
+  "podcast_focus_keywords": [
+    "investing",
+    "real estate",
+    "financial advice",
+    "film analysis",
+    "horse care",
+    "orchid care",
+    "data science",
+    "history",
+    "personal essays",
+    "tropical plants",
+    "dog toys",
+    "retirement planning"
+  ],
+  "recommended_news_queries": [
+    "latest political scandals",
+    "TV stars news",
+    "personal essays on social issues",
+    "latest US political news",
+    "retirement planning tips",
+    "Documentary movie review",
+    "noir film analysis",
+    "Drama director interview",
+    "Mystery movie review",
+    "Romantic film analysis",
+    "Crime director interview",
+    "Animated movie review",
+    "horse training techniques",
+    "care tips for tropical plants",
+    "best dog toys",
+    "leadership in business",
+    "history news",
+    "horse hoof trimming techniques",
+    "writing tips",
+    "data science applications",
+    "data mining techniques",
+    "best historical fiction",
+    "fairness in resource distribution",
+    "environmental conservation efforts",
+    "latest in education",
+    "fairness in society"
+  ],
+  "youtube_search_queries": [
+    "current political events",
+    "TV stars",
+    "personal essays on YouTube",
+    "US news updates",
+    "retirement planning strategies",
+    "Documentary movie review",
+    "noir film analysis",
+    "Drama director interview",
+    "Mystery movie review",
+    "Romantic film analysis",
+    "Crime director interview",
+    "Animated movie review",
+    "horse training tips",
+    "tropical plant care",
+    "dog toy reviews",
+    "business leadership tips",
+    "history",
+    "horse hoof trimming tips",
+    "writing advice",
+    "data science tutorials",
+    "data mining examples",
+    "historical fiction book recommendations",
+    "fair distribution of resources",
+    "environmental conservation projects",
+    "education trends",
+    "fairness in society"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "religion",
+    "personal medical details",
+    "travel"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like religion and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from.",
+    "Political news is kept only because this listener's own news clicks show it."
+  ],
+  "background_knowledge": "Familiar with financial planning, real estate, and horse care.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U12024",
+    "movielens_user": "39684",
+    "amazon_user": "AFF3LDW3F3E2GUIQY2FKLHTJKZCA",
+    "interests_by_source": {
+      "news": 5,
+      "movies": 7,
+      "reviews": 10,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Political news",
+        "source": "news",
+        "keys": [
+          "newspolitics"
+        ],
+        "count": 3,
+        "examples": [
+          "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony",
+          "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'"
+        ]
+      },
+      {
+        "interest": "TV stars",
+        "source": "news",
+        "keys": [
+          "tv-celebrity"
+        ],
+        "count": 2,
+        "examples": [
+          "Jenelle Evans files for divorce: 'The kids and I have moved away'"
+        ]
+      },
+      {
+        "interest": "Personal essays",
+        "source": "news",
+        "keys": [
+          "voices"
+        ],
+        "count": 2,
+        "examples": [
+          "Early to Bed, Early to Rise, Makes Me Diabetic, Depressed and Sick"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 2,
+        "examples": [
+          "A 2,000-pound great white shark is swimming off the coast of Florida",
+          "She Fought for Muslim Women. Then She Was Found Dead."
+        ]
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 23,
+        "lift": 6.2,
+        "examples": [
+          "AlphaGo (2017)"
+        ]
+      },
+      {
+        "interest": "Film noir",
+        "source": "movies",
+        "keys": [
+          "Film-Noir"
+        ],
+        "count": 7,
+        "lift": 2.37,
+        "examples": []
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 257,
+        "lift": 1.92,
+        "examples": [
+          "Witness for the Prosecution (1957)",
+          "Parasite (2019)"
+        ]
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 42,
+        "lift": 1.64,
+        "examples": [
+          "Witness for the Prosecution (1957)",
+          "Reservoir Dogs (1992)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 65,
+        "lift": 1.21,
+        "examples": []
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 60,
+        "lift": 1.15,
+        "examples": [
+          "Reservoir Dogs (1992)",
+          "Uncut Gems (2019)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 22,
+        "lift": 1.0,
+        "examples": [
+          "Junk Head (2021)"
+        ]
+      },
+      {
+        "interest": "horse training",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 24,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Pets & Animal Care"
+        ],
+        "examples": [
+          "The Eighty-Dollar Champion: Snowman, The Horse That Inspired a Nation",
+          "Scales of Training Workbook for Dressage and Jumping: Understanding the Scales o",
+          "Training with Treats: Transform Your Communication, Trust and Relationship"
+        ]
+      },
+      {
+        "interest": "tropical plants",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 13,
+        "categories": [
+          "Gardening"
+        ],
+        "examples": [
+          "Lawn Leveling Rake, 30\" x 10\" Wide Ground Leveler, 5 FT Lawn and Garden Tools wi",
+          "9EzTropical - Mexican Papaya - Great Fruit Tree - 8\" to 1 Feet Tall - Ship in 4\"",
+          "9EzTropical - Green Tea (Camellia sinensis) - 1 Plants - 2 Feet Fall - Ship in 1"
+        ]
+      },
+      {
+        "interest": "dog toys",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 5,
+        "categories": [
+          "Dogs"
+        ],
+        "examples": [
+          "Hyper Pet Doggie Tail Interactive Plush (Wiggles, Vibrates, and Barks – Dog Toys",
+          "Wobble Wag Giggle Ball,Interactive Dog Toy",
+          "EquiGroomer Deshedding Brush for Horses | Undercoat Deshedding Tool for Large Pe"
+        ]
+      },
+      {
+        "interest": "business leadership",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Business & Money > Business Culture"
+        ],
+        "examples": [
+          "The Advantage: Why Organizational Health Trumps Everything Else In Business",
+          "The Four Obsessions of an Extraordinary Executive: A Leadership Fable",
+          "The Positive Dog: A Story About the Power of Positivity"
+        ]
+      },
+      {
+        "interest": "history",
+        "source": "reviews",
+        "keys": [
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 3,
+        "categories": [
+          "Movies & TV > Genre for Featured Categories > Documentary"
+        ],
+        "examples": [
+          "Heavy Horsepower With Martin Clunes [DVD]",
+          "No Safe Spaces",
+          "The Man Who Saved The World"
+        ]
+      },
+      {
+        "interest": "horse hoof trimming",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33"
+        ],
+        "count": 3,
+        "categories": [
+          "Pet Supplies > Horses > Farrier Supplies"
+        ],
+        "examples": [
+          "Cody James Dymondback Refill ONLY - use with Dymondback Rasp Frame - Choose Fine",
+          "Equinox Pet Supplies Farrier Loop Knife Extra Small Bakelite Plastic Handle Hoof",
+          "Cody James Dymondback Rasp - A Quality File That Doesn't Clog - Aggressive"
+        ]
+      },
+      {
+        "interest": "writing",
+        "source": "reviews",
+        "keys": [
+          "P34",
+          "P35"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Reference > Writing, Research & Publishing Guides"
+        ],
+        "examples": [
+          "Writing FAST: How to Write Anything with Lightning Speed",
+          "Speed Writing for Nonfiction Writers: How to Double or Triple Your Daily Word Co"
+        ]
+      },
+      {
+        "interest": "data science",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Science & Math > Mathematics"
+        ],
+        "examples": [
+          "Data Science for Business: What You Need to Know about Data Mining and Data-Anal",
+          "Deep Simplicity: Bringing Order to Chaos and Complexity"
+        ]
+      },
+      {
+        "interest": "data mining",
+        "source": "reviews",
+        "keys": [
+          "P38",
+          "P39"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Computers & Technology > Programming"
+        ],
+        "examples": [
+          "Mining the Social Web: Data Mining Facebook, Twitter, LinkedIn, Google+, GitHub,",
+          "Big Data, Big Dupe: A little book about a big bunch of nonsense"
+        ]
+      },
+      {
+        "interest": "Historical Fiction",
+        "source": "reviews",
+        "keys": [
+          "P40",
+          "P41"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "Fairy Tale",
+          "Sarah's Key"
+        ]
+      },
+      {
+        "interest": "fair distribution of resources",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "I wanted to make it so that both of us would receive a similar amount based on the total money available; I wanted the a"
+        ]
+      },
+      {
+        "interest": "environmental conservation",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "environmental concern: very high (90th percentile)"
+        ]
+      },
+      {
+        "interest": "education and learning",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "school -> education -> knowledge -> depth -> understanding -> empathy"
+        ]
+      },
+      {
+        "interest": "fairness and generosity",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "I wanted to reward people who were more generous; I was upset by the idea somebody would be so selfish as to not send a "
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "current political events": "news",
+      "TV stars": "news",
+      "personal essays on YouTube": "news",
+      "US news updates": "news",
+      "retirement planning strategies": "news",
+      "Documentary movie review": "movies",
+      "noir film analysis": "movies",
+      "Drama director interview": "movies",
+      "Mystery movie review": "movies",
+      "Romantic film analysis": "movies",
+      "Crime director interview": "movies",
+      "Animated movie review": "movies",
+      "horse training tips": "reviews",
+      "tropical plant care": "reviews",
+      "dog toy reviews": "reviews",
+      "business leadership tips": "reviews",
+      "history": "reviews",
+      "horse hoof trimming tips": "reviews",
+      "writing advice": "reviews",
+      "data science tutorials": "reviews",
+      "data mining examples": "reviews",
+      "historical fiction book recommendations": "reviews",
+      "fair distribution of resources": "twin",
+      "environmental conservation projects": "twin",
+      "education trends": "twin",
+      "fairness in society": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "thoughtful and introspective",
+    "brief and to the point",
+    "calm and measured",
+    "factual and straightforward",
+    "personal and anecdotal"
+  ],
+  "preferred_detail": "moderate",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "average",
+    "openness": "low",
+    "extraversion": "low",
+    "conscientiousness": "low"
+  },
+  "personality_summary": "Compared with US adults: need for cognition average (enjoys some thinking but not heavy material); openness low (prefers the familiar and conventional); extraversion low (reserved and quiet); conscientiousness low (spontaneous, less concerned with order).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1497",
+    "additional_context": "Age 30-49; Unemployed; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 53,
+      "openness": 8,
+      "extraversion": 3,
+      "conscientiousness": 28
+    },
+    "twin_interests": [
+      "fair distribution of resources",
+      "environmental conservation",
+      "education and learning",
+      "fairness and generosity"
+    ],
+    "twin_background_knowledge": "This person likely values fairness, generosity, and environmental conservation, and may be interested in educational content that emphasizes depth and understanding."
+  }
+}

@@ -1,0 +1,761 @@
+{
+  "user_id": "twin_final_170",
+  "interests": [
+    "US news",
+    "Home and garden",
+    "Food news",
+    "Parenting",
+    "TV stars",
+    "Personal finance",
+    "SUVs",
+    "Lifestyle buzz",
+    "Recipes and cooking",
+    "Holiday shopping",
+    "Crime news",
+    "British royal family",
+    "Company and business news",
+    "Family and kids' movies",
+    "Animated films",
+    "Fantasy films",
+    "Adventure films",
+    "Comedy films",
+    "Science fiction films",
+    "Action movies",
+    "Romantic films",
+    "family dinners",
+    "Italian cooking",
+    "baseball/softball",
+    "Make-Ahead Meals",
+    "cooking and entertaining",
+    "psychological thriller",
+    "cake baking",
+    "Home Cooking",
+    "wine and moonshine",
+    "BBQ and Smoking",
+    "Home Workouts",
+    "grilling and tailgating",
+    "home cooking and meal planning",
+    "family and parenting",
+    "personal finance and budgeting"
+  ],
+  "preferred_topics": [
+    "home cooking tips",
+    "meal planning strategies",
+    "budgeting and saving money",
+    "family meal ideas",
+    "parenting and family dynamics",
+    "Black Friday deals",
+    "DIY home projects",
+    "Family-friendly recipes",
+    "Personal finance tips",
+    "SUV reviews",
+    "Holiday shopping guides",
+    "Crime news",
+    "British royal family updates",
+    "Company news",
+    "Family movies",
+    "Fantasy films",
+    "Adventure films"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "deals",
+    "recipes",
+    "budgeting",
+    "home improvement",
+    "family",
+    "finance",
+    "entertainment",
+    "adventure",
+    "fantasy",
+    "holiday",
+    "crime",
+    "royal family"
+  ],
+  "recommended_news_queries": [
+    "US news news",
+    "DIY home improvement tips",
+    "Top food trends",
+    "Parenting advice for busy moms and dads",
+    "Latest TV star gossip",
+    "Personal finance tips for beginners",
+    "Top SUV models",
+    "Lifestyle trends to try this season",
+    "New recipe ideas for the week",
+    "Best holiday shopping deals",
+    "Latest crime news updates",
+    "British royal family news",
+    "Top business news of the week",
+    "Family and kids' movie review",
+    "Animated film analysis",
+    "Fantasy director interview",
+    "Adventure movie review",
+    "Comedy film analysis",
+    "Science fiction director interview",
+    "Action movie review",
+    "Romantic film analysis",
+    "Family dinner ideas for the week",
+    "Italian cooking trends",
+    "Baseball and softball news",
+    "Make-Ahead meal ideas",
+    "Cooking and entertaining tips",
+    "Psychological thriller news",
+    "Cake baking trends",
+    "Home cooking tips",
+    "Wine and moonshine trends",
+    "BBQ and smoking trends",
+    "Home workout tips",
+    "Grilling and tailgating tips",
+    "Home cooking and meal planning tips",
+    "Family and parenting advice",
+    "Personal finance and budgeting tips"
+  ],
+  "youtube_search_queries": [
+    "US news highlights this week",
+    "DIY home projects for beginners",
+    "Food news",
+    "Parenting hacks for busy families",
+    "TV star interviews and updates",
+    "Personal finance and budgeting tutorials",
+    "SUV reviews and comparisons",
+    "Lifestyle tips for a better life",
+    "Italian cooking tutorials and recipes",
+    "Holiday shopping tips and tricks",
+    "Crime stories and investigations",
+    "Royal family updates and events",
+    "Business trends and insights",
+    "Family and kids' movie review",
+    "Animated film analysis",
+    "Fantasy director interview",
+    "Adventure movie review",
+    "Comedy film analysis",
+    "Science fiction director interview",
+    "Action movie review",
+    "Romantic film analysis",
+    "Family dinner recipes and tips",
+    "Cooking tutorials for beginners",
+    "Baseball and softball highlights",
+    "Make-Ahead meal tutorials and recipes",
+    "Cooking and entertaining ideas",
+    "Psychological thriller movie trailers",
+    "Cake baking tutorials and recipes",
+    "Home cooking tutorials and recipes",
+    "Wine and moonshine tasting guides",
+    "BBQ and smoking tutorials and recipes",
+    "Home workout tutorials and routines",
+    "Grilling and tailgating tutorials and recipes",
+    "Home cooking and meal planning tutorials",
+    "Family and parenting tips",
+    "personal finance and budgeting"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "music",
+    "weather"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with home improvement, cooking, family entertainment, and personal finance topics.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U48978",
+    "movielens_user": "47485",
+    "amazon_user": "AEQKWYUMGE4XQ2LIM43ACOBFGRKA",
+    "interests_by_source": {
+      "news": 13,
+      "movies": 8,
+      "reviews": 12,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 4,
+        "examples": [
+          "Minnesota School Districts Considering 'Online Snow Days'",
+          "A girl who begged for her dad's release after the Mississippi ICE raids reunited with her father"
+        ]
+      },
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 3,
+        "examples": [
+          "What It Was Like Inside the Homes of the Pilgrims",
+          "100 Incredible Christmas Tree Decorating Ideas"
+        ]
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Parenting",
+        "source": "news",
+        "keys": [
+          "lifestyleparenting"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "TV stars",
+        "source": "news",
+        "keys": [
+          "tv-celebrity"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "SUVs",
+        "source": "news",
+        "keys": [
+          "autossuvs"
+        ],
+        "count": 2,
+        "examples": [
+          "2020 Hyundai Venue Priced Well under $19,000"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Recipes and cooking",
+        "source": "news",
+        "keys": [
+          "recipes"
+        ],
+        "count": 2,
+        "examples": [
+          "50 Make-Ahead Weeknight Dinners You'll Be Eating All Winter Long",
+          "81 Bean Recipes You'll Be Making All Year Long"
+        ]
+      },
+      {
+        "interest": "Holiday shopping",
+        "source": "news",
+        "keys": [
+          "shop-holidays"
+        ],
+        "count": 2,
+        "examples": [
+          "Here Are the Biggest Deals We're Anticipating for Black Friday",
+          "Here Are the Biggest Deals We're Anticipating for Black Friday"
+        ]
+      },
+      {
+        "interest": "Crime news",
+        "source": "news",
+        "keys": [
+          "newscrime"
+        ],
+        "count": 2,
+        "examples": [
+          "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees."
+        ]
+      },
+      {
+        "interest": "British royal family",
+        "source": "news",
+        "keys": [
+          "lifestyleroyals"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Company and business news",
+        "source": "news",
+        "keys": [
+          "finance-companies"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 32,
+        "lift": 1.78,
+        "examples": [
+          "Toy Story 3 (2010)",
+          "Goonies, The (1985)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 25,
+        "lift": 1.71,
+        "examples": [
+          "Toy Story 3 (2010)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 36,
+        "lift": 1.47,
+        "examples": [
+          "Toy Story 3 (2010)",
+          "Harry Potter and the Deathly Hallows: Part 1 (2010)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 70,
+        "lift": 1.4,
+        "examples": [
+          "Cowspiracy: The Sustainability Secret (2014)",
+          "Toy Story 3 (2010)"
+        ]
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 87,
+        "lift": 1.2,
+        "examples": [
+          "Cowspiracy: The Sustainability Secret (2014)",
+          "Toy Story 3 (2010)"
+        ]
+      },
+      {
+        "interest": "Science fiction films",
+        "source": "movies",
+        "keys": [
+          "Sci-Fi"
+        ],
+        "count": 44,
+        "lift": 1.16,
+        "examples": []
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 66,
+        "lift": 1.04,
+        "examples": [
+          "Pearl Harbor (2001)",
+          "Harry Potter and the Deathly Hallows: Part 1 (2010)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 36,
+        "lift": 1.01,
+        "examples": [
+          "Pearl Harbor (2001)",
+          "Chocolat (2000)"
+        ]
+      },
+      {
+        "interest": "family dinners",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 12,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Quick & Easy"
+        ],
+        "examples": [
+          "Betty Crocker Easy Family Dinners: Simple Recipes and Fun Ideas to Turn Meal Tim",
+          "Sandra Lee Semi-Homemade Cooking 3",
+          "You've Got It Made: Deliciously Easy Meals to Make Now and Bake Later"
+        ]
+      },
+      {
+        "interest": "Italian cooking",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 12,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Regional & International"
+        ],
+        "examples": [
+          "Kabobs: 52 Easy Recipes for Year-Round Grilling (Recipe of the Week)",
+          "The Spice Merchant's Daughter: Recipes and Simple Spice Blends for the American ",
+          "Urban Italian: Simple Recipes and True Stories from a Life in Food"
+        ]
+      },
+      {
+        "interest": "baseball/softball",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 9,
+        "categories": [
+          "Sports & Outdoors > Sports > Team Sports"
+        ],
+        "examples": [
+          "ATEC Pro Pitcher's Practice Screen",
+          "SKLZ Quickster Portable Baseball Hitting Net for Baseball and Softball",
+          "Spalding TF-1000 Legacy Indoor Composite Basketball"
+        ]
+      },
+      {
+        "interest": "Make-Ahead Meals",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Cooking Methods"
+        ],
+        "examples": [
+          "Don't Panic - Dinner's in the Freezer: Great-Tasting Meals You Can Make Ahead",
+          "Fix, Freeze, Feast: Prepare in Bulk and Enjoy by the Serving - More than 125 Rec",
+          "Girlfriends on the Go - A Busy Mom's Guide to Make-Ahead Meals"
+        ]
+      },
+      {
+        "interest": "cooking and entertaining",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Cooking by Ingredient"
+        ],
+        "examples": [
+          "Simple 1-2-3 Entertaining",
+          "Rosalind Creasy's Recipes from the Garden: 200 Exciting Recipes from the Author ",
+          "In Season: Cooking with Vegetables and Fruits"
+        ]
+      },
+      {
+        "interest": "psychological thriller",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Teen & Young Adult > Literature & Fiction"
+        ],
+        "examples": [
+          "The Eye of Minds (The Mortality Doctrine, Book One)",
+          "We'll Never Be Apart",
+          "Serendipity's Footsteps"
+        ]
+      },
+      {
+        "interest": "cake baking",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Baking"
+        ],
+        "examples": [
+          "Betty Crocker's Buffets",
+          "Betty Crocker Ultimate Bisquick Cookbook: Hundreds of New Recipes Plus Back-of-t",
+          "Pillsbury Baking"
+        ]
+      },
+      {
+        "interest": "Home Cooking",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Cookbooks, Food & Wine"
+        ],
+        "examples": [
+          "Big Food: Amazing ways to cook, store, freeze, and serve everything you buy in b",
+          "Cork Jester's Wine Teasers",
+          "Let's Eat In Quick and Delicious Weekday Meals"
+        ]
+      },
+      {
+        "interest": "wine and moonshine",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42",
+          "P43",
+          "P44",
+          "P45"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Beverages & Wine"
+        ],
+        "examples": [
+          "Sharp Shooters",
+          "Small Plates, Perfect Wines: Creating Little Dishes with Big Flavors",
+          "Bordeaux"
+        ]
+      },
+      {
+        "interest": "BBQ and Smoking",
+        "source": "reviews",
+        "keys": [
+          "P46",
+          "P47",
+          "P48",
+          "P49",
+          "P50"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Main Courses & Side Dishes"
+        ],
+        "examples": [
+          "BBQ Sauces, Rubs and Marinades For Dummies",
+          "The NFL Gameday Cookbook: 150 Recipes to Feed the Hungriest Fan from Preseason t",
+          "The Good-to-Go Cookbook: Take-along Food, Quick Suppers, and Satisfying Snacks f"
+        ]
+      },
+      {
+        "interest": "Home Workouts",
+        "source": "reviews",
+        "keys": [
+          "P51",
+          "P52",
+          "P53",
+          "P54",
+          "P55"
+        ],
+        "count": 5,
+        "categories": [
+          "Sports & Outdoors > Exercise & Fitness > Strength Training Equipment"
+        ],
+        "examples": [
+          "LifeGear Inversion Table",
+          "AmazonBasics Doorway Pull-Up and Exercise Bar",
+          "Perfect Fitness Multi Gym Pro for Pullups, Pushups, and Sit-ups"
+        ]
+      },
+      {
+        "interest": "grilling and tailgating",
+        "source": "reviews",
+        "keys": [
+          "P56",
+          "P57",
+          "P58",
+          "P59"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Outdoor Cooking"
+        ],
+        "examples": [
+          "Semi-Homemade Grilling 2",
+          "The Sunset Grill: 125 Tasty Recipes for Casual Get-Togethers and Easy Weeknight ",
+          "Fox Sports Tailgating Handbook: The Gear, The Food, The Stadiums"
+        ]
+      },
+      {
+        "interest": "home cooking and meal planning",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "breakfast -> food -> oven -> bake -> cook -> dinner"
+        ]
+      },
+      {
+        "interest": "family and parenting",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "kids -> hungry -> restaurant -> reservations -> people -> parking -> car -> gas"
+        ]
+      },
+      {
+        "interest": "personal finance and budgeting",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "keep it even; if I send them more money maybe they will send me more back; I wanted to keep something for myself but giv"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "US news highlights this week": "news",
+      "DIY home projects for beginners": "news",
+      "Food news": "news",
+      "Parenting hacks for busy families": "news",
+      "TV star interviews and updates": "news",
+      "Personal finance and budgeting tutorials": "news",
+      "SUV reviews and comparisons": "news",
+      "Lifestyle tips for a better life": "news",
+      "Italian cooking tutorials and recipes": "news",
+      "Holiday shopping tips and tricks": "news",
+      "Crime stories and investigations": "news",
+      "Royal family updates and events": "news",
+      "Business trends and insights": "news",
+      "Family and kids' movie review": "movies",
+      "Animated film analysis": "movies",
+      "Fantasy director interview": "movies",
+      "Adventure movie review": "movies",
+      "Comedy film analysis": "movies",
+      "Science fiction director interview": "movies",
+      "Action movie review": "movies",
+      "Romantic film analysis": "movies",
+      "Family dinner recipes and tips": "reviews",
+      "Cooking tutorials for beginners": "reviews",
+      "Baseball and softball highlights": "reviews",
+      "Make-Ahead meal tutorials and recipes": "reviews",
+      "Cooking and entertaining ideas": "reviews",
+      "Psychological thriller movie trailers": "reviews",
+      "Cake baking tutorials and recipes": "reviews",
+      "Home cooking tutorials and recipes": "reviews",
+      "Wine and moonshine tasting guides": "reviews",
+      "BBQ and smoking tutorials and recipes": "reviews",
+      "Home workout tutorials and routines": "reviews",
+      "Grilling and tailgating tutorials and recipes": "reviews",
+      "Home cooking and meal planning tutorials": "twin",
+      "Family and parenting tips": "twin",
+      "personal finance and budgeting": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Brief and simple headlines",
+    "Casual and conversational tone",
+    "Focus on practical advice",
+    "Positive and uplifting content"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "low",
+    "extraversion": "low",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness low (prefers the familiar and conventional); extraversion low (reserved and quiet); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "170",
+    "additional_context": "Age 30-49; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 13,
+      "openness": 3,
+      "extraversion": 15,
+      "conscientiousness": 72
+    },
+    "twin_interests": [
+      "home cooking and meal planning",
+      "family and parenting",
+      "personal finance and budgeting"
+    ],
+    "twin_background_knowledge": "This person likely enjoys cooking at home, planning meals, and managing household finances, especially in a way that balances personal and shared responsibilities."
+  }
+}

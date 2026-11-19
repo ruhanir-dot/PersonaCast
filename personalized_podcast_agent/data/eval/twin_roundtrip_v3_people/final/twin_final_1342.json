@@ -1,0 +1,579 @@
+{
+  "user_id": "twin_final_1342",
+  "interests": [
+    "Recipes and cooking",
+    "Food news",
+    "Lifestyle buzz",
+    "Tips and life hacks",
+    "Opinion and commentary",
+    "Documentaries",
+    "Film noir",
+    "Comedy films",
+    "Musicals",
+    "Romantic films",
+    "Drama films",
+    "Family and kids' movies",
+    "vegetarian cooking",
+    "cat care",
+    "fabric ribbon crafting",
+    "jigsaw puzzles with thematic images",
+    "rice and grains",
+    "bird feeding",
+    "cold weather survival",
+    "deck gardening",
+    "American Cooking",
+    "pies and pastries",
+    "cooking and baking",
+    "fairness in transactions",
+    "minimalism"
+  ],
+  "preferred_topics": [
+    "cooking shows",
+    "baking tutorials",
+    "minimalist living",
+    "fair trade practices",
+    "cooking tips",
+    "food news",
+    "lifestyle hacks",
+    "documentaries on cooking",
+    "opinion on cooking shows",
+    "family-friendly movies",
+    "romantic comedies",
+    "musicals",
+    "documentaries on minimalism",
+    "fabric ribbon crafting",
+    "jigsaw puzzles",
+    "recipes for vegetarians"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms"
+  ],
+  "podcast_focus_keywords": [
+    "cooking hacks",
+    "food trends",
+    "lifestyle tips",
+    "documentary insights",
+    "minimalist living",
+    "family entertainment",
+    "romantic comedies",
+    "musicals",
+    "fabric crafts",
+    "jigsaw puzzles",
+    "vegetarian recipes",
+    "fairness in transactions"
+  ],
+  "recommended_news_queries": [
+    "new vegetarian recipes this week",
+    "latest food trends",
+    "lifestyle tips for busy people",
+    "life hacks for saving money",
+    "opinions on cooking shows",
+    "Documentary movie review",
+    "noir film analysis",
+    "Comedy director interview",
+    "Musical movie review",
+    "Romantic film analysis",
+    "Drama director interview",
+    "Family and kids' movie review",
+    "documentaries on cooking",
+    "cat care tips",
+    "fabric ribbon crafting ideas",
+    "best jigsaw puzzles",
+    "new rice and grain recipes",
+    "bird feeding tips",
+    "surviving cold weather",
+    "deck gardening ideas",
+    "American cooking traditions",
+    "new pie and pastry recipes",
+    "cooking and baking tips",
+    "fair transactions in business",
+    "minimalism news"
+  ],
+  "youtube_search_queries": [
+    "new vegetarian recipes",
+    "food trends",
+    "lifestyle hacks for busy people",
+    "money-saving life hacks",
+    "Opinion and commentary",
+    "Documentary movie review",
+    "noir film analysis",
+    "Comedy director interview",
+    "Musical movie review",
+    "Romantic film analysis",
+    "Drama director interview",
+    "Family and kids' movie review",
+    "best cooking shows",
+    "cat care tips",
+    "fabric ribbon crafting tutorials",
+    "best jigsaw puzzles for adults",
+    "new rice and grain recipes",
+    "bird feeding tips",
+    "surviving cold weather tips",
+    "deck gardening ideas",
+    "American cooking traditions",
+    "new pie and pastry recipes",
+    "cooking and baking tips",
+    "fair transactions in business",
+    "minimalism"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "sports"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with cooking techniques, vegetarian recipes, and various types of jigsaw puzzles.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U21129",
+    "movielens_user": "5205",
+    "amazon_user": "AHWTR7FCL7UPPSBJHJWCDU4AK4KA",
+    "interests_by_source": {
+      "news": 5,
+      "movies": 7,
+      "reviews": 10,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Recipes and cooking",
+        "source": "news",
+        "keys": [
+          "recipes"
+        ],
+        "count": 6,
+        "examples": [
+          "23 Easy Coconut Cookie Recipes"
+        ]
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 5,
+        "examples": [
+          "Jennifer Lawrence Hired A Food Truck For Her Wedding And The Owner Had No Idea Who She Was",
+          "When I moved from China to the US, eating out became so much more expensive I had to break the habit. Here's how I did it."
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 4,
+        "examples": [
+          "Stunning photos of redheads from around the world"
+        ]
+      },
+      {
+        "interest": "Tips and life hacks",
+        "source": "news",
+        "keys": [
+          "tipsandtricks"
+        ],
+        "count": 2,
+        "examples": [
+          "35 essential foods you should have in your pantry",
+          "A Chef Shares the Secret Ingredient Your Mac and Cheese Is Missing"
+        ]
+      },
+      {
+        "interest": "Opinion and commentary",
+        "source": "news",
+        "keys": [
+          "newsopinion"
+        ],
+        "count": 2,
+        "examples": [
+          "The News In Cartoons",
+          "The News In Cartoons"
+        ]
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 44,
+        "lift": 4.75,
+        "examples": []
+      },
+      {
+        "interest": "Film noir",
+        "source": "movies",
+        "keys": [
+          "Film-Noir"
+        ],
+        "count": 16,
+        "lift": 2.16,
+        "examples": []
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 483,
+        "lift": 1.77,
+        "examples": [
+          "Michelle Buteau: Welcome to Buteaupia (2020)",
+          "Bridesmaids (2011)"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 50,
+        "lift": 1.76,
+        "examples": [
+          "Red Shoes, The (1948)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 229,
+        "lift": 1.71,
+        "examples": [
+          "Apartment, The (1960)",
+          "Arthur (1981)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 448,
+        "lift": 1.34,
+        "examples": [
+          "Apartment, The (1960)",
+          "How to Marry a Millionaire (1953)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 70,
+        "lift": 1.04,
+        "examples": [
+          "Soul (2020)"
+        ]
+      },
+      {
+        "interest": "vegetarian cooking",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 20,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Regional & International"
+        ],
+        "examples": [
+          "Jacques Pépin Heart & Soul in the Kitchen",
+          "The Complete America's Test Kitchen TV Show Cookbook 2001-2017: Every Recipe fro",
+          "Flavor"
+        ]
+      },
+      {
+        "interest": "cat care",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 7,
+        "categories": [
+          "Cats"
+        ],
+        "examples": [
+          "Fashion's Talk Cat Toys Variety Pack for Kitty 20 Pieces",
+          "IRIS USA Cat Litter Box, Open Top Kitty Litter Box with Scatter Shield and Scoop",
+          "Arm & Hammer Super Scoop Clumping Litter, Fragrance Free 14lb"
+        ]
+      },
+      {
+        "interest": "fabric ribbon crafting",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 6,
+        "categories": [
+          "Arts, Crafts & Sewing > Sewing"
+        ],
+        "examples": [
+          "iron on fabric white 2 PACK",
+          "Creative Ideas 50-Yard Solid Grosgrain Ribbon, 5/8-Inch, White",
+          "Topenca Supplies 1/2 Inches x 50 Yards Double Face Solid Grosgrain Ribbon Roll, "
+        ]
+      },
+      {
+        "interest": "jigsaw puzzles with thematic images",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 6,
+        "categories": [
+          "Toys & Games > Puzzles > Jigsaw Puzzles"
+        ],
+        "examples": [
+          "Buffalo Games - Sky Roads - 1000 Piece Jigsaw Puzzle",
+          "Buffalo Games - Vivid Collection - Butterflies - 1000 Piece Jigsaw Puzzle , Blue",
+          "Piatnik Musical Notes 1000 piece puzzle"
+        ]
+      },
+      {
+        "interest": "rice and grains",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 5,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Dried Grains & Rice"
+        ],
+        "examples": [
+          "Lundberg Family Farms Sprouted Brown Basmati Rice, 16 Ounce",
+          "Lundberg Family Farms Organic White Long Grain Rice, 32 Oz",
+          "Kirkland Signature Organic Gluten-Free Quinoa From Andean Farmers To Your Table "
+        ]
+      },
+      {
+        "interest": "bird feeding",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34"
+        ],
+        "count": 4,
+        "categories": [
+          "Backyard birding"
+        ],
+        "examples": [
+          "Shafer Seed 84052 Sunflower Kernels, 25 Pound Bag",
+          "Aspects HummZinger HighView 12 Oz Hanging Hummingbird Feeder - 429, Red & 384 Ne",
+          "Audubon Hummingbird Feeder (NAH1)12 ounce nectar capacity"
+        ]
+      },
+      {
+        "interest": "cold weather survival",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36",
+          "P37",
+          "P38"
+        ],
+        "count": 4,
+        "categories": [
+          "Sports & Outdoors > Outdoor Recreation > Camping & Hiking"
+        ],
+        "examples": [
+          "Lightning Nuggets N100SEB Super Economy Box Fire Starter , Tan Brown, 100 Count ",
+          "HotHands Toe Warmers 40 Pair",
+          "HotHands Hand Warmers - Long Lasting Safe Natural Odorless Air Activated Warmers"
+        ]
+      },
+      {
+        "interest": "deck gardening",
+        "source": "reviews",
+        "keys": [
+          "P39",
+          "P40",
+          "P41",
+          "P42"
+        ],
+        "count": 4,
+        "categories": [
+          "Gardening"
+        ],
+        "examples": [
+          "Miracle-Gro VB25078 Potting Soil, 1 cu. ft",
+          "Garden Gloves Women and Men 2 pairs, Super Grippy Texture for Gardening and Work",
+          "G & F 1852-3 Women Soft Jersey Garden Gloves, Women Work Gloves, 3-Pairs Green/P"
+        ]
+      },
+      {
+        "interest": "American Cooking",
+        "source": "reviews",
+        "keys": [
+          "P43",
+          "P44",
+          "P45",
+          "P46"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Cooking Methods"
+        ],
+        "examples": [
+          "Silver Palate Cookbook 25th Anniversary Edition",
+          "Kristen Kish Cooking: Recipes and Techniques: A Cookbook",
+          "Favorite Recipes from Melissa Clark's Kitchen: Family Meals, Festive Gatherings,"
+        ]
+      },
+      {
+        "interest": "pies and pastries",
+        "source": "reviews",
+        "keys": [
+          "P47",
+          "P48",
+          "P49"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Baking"
+        ],
+        "examples": [
+          "The Pie and Pastry Bible",
+          "Pie It Forward: Pies, Tarts, Tortes, Galettes, and Other Pastries Reinvented",
+          "Mary Berry's Baking Bible: Over 250 Classic Recipes"
+        ]
+      },
+      {
+        "interest": "cooking and baking",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "toaster -> roaster -> chicken -> wing -> duck -> beak -> swim -> walk -> run -> hair -> text -> dinner -> face -> legs -"
+        ]
+      },
+      {
+        "interest": "fairness in transactions",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "I wouldnt want cheat the other person; I wouldn't want to cheat myself; I would try to be fair to the other person; They"
+        ]
+      },
+      {
+        "interest": "minimalism",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "preference for minimalism: high (77th percentile)"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "new vegetarian recipes": "news",
+      "food trends": "news",
+      "lifestyle hacks for busy people": "news",
+      "money-saving life hacks": "news",
+      "Opinion and commentary": "news",
+      "Documentary movie review": "movies",
+      "noir film analysis": "movies",
+      "Comedy director interview": "movies",
+      "Musical movie review": "movies",
+      "Romantic film analysis": "movies",
+      "Drama director interview": "movies",
+      "Family and kids' movie review": "movies",
+      "best cooking shows": "reviews",
+      "cat care tips": "reviews",
+      "fabric ribbon crafting tutorials": "reviews",
+      "best jigsaw puzzles for adults": "reviews",
+      "new rice and grain recipes": "reviews",
+      "bird feeding tips": "reviews",
+      "surviving cold weather tips": "reviews",
+      "deck gardening ideas": "reviews",
+      "American cooking traditions": "reviews",
+      "new pie and pastry recipes": "reviews",
+      "cooking and baking tips": "twin",
+      "fair transactions in business": "twin",
+      "minimalism": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "simple and straightforward headlines",
+    "brief reviews",
+    "praise for practical and useful products",
+    "positive tone in reviews",
+    "focus on practical benefits",
+    "casual and conversational tone"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "average",
+    "extraversion": "low",
+    "conscientiousness": "average"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness average (open to some new experiences); extraversion low (reserved and quiet); conscientiousness average (reasonably organized).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1342",
+    "additional_context": "Age 65+; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 25,
+      "openness": 46,
+      "extraversion": 22,
+      "conscientiousness": 53
+    },
+    "twin_interests": [
+      "cooking and baking",
+      "fairness in transactions",
+      "minimalism"
+    ],
+    "twin_background_knowledge": "This person likely has a good understanding of cooking techniques and minimalistic lifestyle practices."
+  }
+}

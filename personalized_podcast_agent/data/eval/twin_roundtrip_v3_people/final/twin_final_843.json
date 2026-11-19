@@ -1,0 +1,651 @@
+{
+  "user_id": "twin_final_843",
+  "interests": [
+    "Home and garden",
+    "Lifestyle buzz",
+    "TV stars",
+    "Political news",
+    "Retirement planning",
+    "Personal finance",
+    "Holiday shopping",
+    "TV news",
+    "Celebrity style",
+    "Music stars",
+    "Classic cars",
+    "Company and business news",
+    "Food news",
+    "British royal family",
+    "Stock market news",
+    "Documentaries",
+    "Westerns",
+    "Crime films",
+    "American History",
+    "lawn care",
+    "nature and microbiology",
+    "history",
+    "statistics",
+    "financial planning",
+    "musicals",
+    "travel guides",
+    "strength training",
+    "travel writing",
+    "weather",
+    "gardening"
+  ],
+  "preferred_topics": [
+    "weather forecasts",
+    "gardening tips",
+    "personal finance management",
+    "home improvement",
+    "lifestyle trends",
+    "celebrity news",
+    "politics",
+    "personal finance",
+    "holiday shopping tips",
+    "company news",
+    "stock market updates",
+    "documentaries",
+    "classic films",
+    "western movies",
+    "crime films"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms"
+  ],
+  "podcast_focus_keywords": [
+    "home improvement",
+    "lifestyle",
+    "celebrity",
+    "politics",
+    "finance",
+    "holiday shopping",
+    "company news",
+    "stock market",
+    "documentary",
+    "classic film",
+    "western movie"
+  ],
+  "recommended_news_queries": [
+    "latest home improvement trends",
+    "trending lifestyle trends",
+    "latest TV news",
+    "latest political updates",
+    "retirement planning advice",
+    "personal finance tips",
+    "Holiday shopping news",
+    "TV news news",
+    "celebrity news and gossip",
+    "latest music news",
+    "classic car history",
+    "company news and updates",
+    "latest food trends",
+    "royal family news",
+    "stock market updates",
+    "Documentary movie review",
+    "Western film analysis",
+    "Crime director interview",
+    "American history facts",
+    "lawn care tips",
+    "nature and microbiology news",
+    "history news",
+    "statistics news",
+    "financial planning advice",
+    "latest musical news",
+    "travel guides and tips",
+    "strength training tips",
+    "travel writing articles",
+    "weather updates",
+    "gardening tips"
+  ],
+  "youtube_search_queries": [
+    "top home renovation ideas",
+    "lifestyle tips and tricks",
+    "TV news highlights",
+    "political debates and analysis",
+    "retirement savings tips",
+    "Personal finance",
+    "Holiday shopping",
+    "TV news",
+    "celebrity interviews and behind-the-scenes",
+    "music industry updates",
+    "classic car restoration",
+    "business news highlights",
+    "food and beverage news",
+    "royal family updates",
+    "stock market analysis",
+    "Documentary movie review",
+    "Western film analysis",
+    "Crime director interview",
+    "American history documentaries",
+    "lawn care tutorials",
+    "nature and microbiology documentaries",
+    "history",
+    "statistics",
+    "financial planning strategies",
+    "musical performances",
+    "travel destination highlights",
+    "strength training routines",
+    "travel writing showcases",
+    "weather forecasts",
+    "gardening tutorials"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "religion",
+    "personal medical details",
+    "health",
+    "video",
+    "Family and kids' movies",
+    "Animated films"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like religion and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from.",
+    "Political news is kept only because this listener's own news clicks show it."
+  ],
+  "background_knowledge": "Familiar with home improvement, lifestyle trends, celebrity news, politics, personal finance, holiday shopping, company news, stock market updates, documentaries, classic films, western movies, crime films, American history, lawn care, nature and microbiology, history, statistics, financial planning, musicals, travel guides, strength training, travel writing, weather, and gardening.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U89241",
+    "movielens_user": "84000",
+    "amazon_user": "AGAQV7NCIYPIXAFGWR2L3MDXIN4A",
+    "interests_by_source": {
+      "news": 15,
+      "movies": 3,
+      "reviews": 10,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 7,
+        "examples": [
+          "Stylish Living Room Ideas, From Floral to Family-Friendly"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 6,
+        "examples": [
+          "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+          "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs"
+        ]
+      },
+      {
+        "interest": "TV stars",
+        "source": "news",
+        "keys": [
+          "tv-celebrity"
+        ],
+        "count": 5,
+        "examples": [
+          "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+          "'Sons Of Anarchy' Star Ron Perlman Files for Divorce After 38 Years of Marriage"
+        ]
+      },
+      {
+        "interest": "Political news",
+        "source": "news",
+        "keys": [
+          "newspolitics"
+        ],
+        "count": 4,
+        "examples": [
+          "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'"
+        ]
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 3,
+        "examples": [
+          "19 Things You'll Need To Sacrifice Now for a Healthy Retirement"
+        ]
+      },
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 3,
+        "examples": [
+          "7 Signs You Have Too Much Debt",
+          "Man who inherited 6 figures shares advice he'd give his younger self"
+        ]
+      },
+      {
+        "interest": "Holiday shopping",
+        "source": "news",
+        "keys": [
+          "shop-holidays"
+        ],
+        "count": 3,
+        "examples": [
+          "50 Unique Holiday Gift Ideas for Her Under $50"
+        ]
+      },
+      {
+        "interest": "TV news",
+        "source": "news",
+        "keys": [
+          "tvnews"
+        ],
+        "count": 3,
+        "examples": [
+          "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'"
+        ]
+      },
+      {
+        "interest": "Celebrity style",
+        "source": "news",
+        "keys": [
+          "lifestylecelebstyle"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Music stars",
+        "source": "news",
+        "keys": [
+          "music-celebrity"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Classic cars",
+        "source": "news",
+        "keys": [
+          "autosclassics"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Company and business news",
+        "source": "news",
+        "keys": [
+          "finance-companies"
+        ],
+        "count": 2,
+        "examples": [
+          "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion"
+        ]
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 2,
+        "examples": [
+          "Walmart Is Starting Black Friday Early This Year With Deals On Instant Pots, Air Fryers, And More",
+          "Joanna Gaines reveals her family's favorite recipes in new cookbook"
+        ]
+      },
+      {
+        "interest": "British royal family",
+        "source": "news",
+        "keys": [
+          "lifestyleroyals"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Stock market news",
+        "source": "news",
+        "keys": [
+          "markets"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 13,
+        "lift": 3.5,
+        "examples": [
+          "Knuckleball! (2012)",
+          "The Blue Planet (2001)"
+        ]
+      },
+      {
+        "interest": "Westerns",
+        "source": "movies",
+        "keys": [
+          "Western"
+        ],
+        "count": 11,
+        "lift": 1.92,
+        "examples": [
+          "Magnificent Seven, The (1960)",
+          "Fistful of Dollars, A (Per un pugno di dollari) (1964)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 55,
+        "lift": 1.06,
+        "examples": [
+          "Pulp Fiction (1994)",
+          "Paranoia Agent (2004)"
+        ]
+      },
+      {
+        "interest": "American History",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 15,
+        "categories": [
+          "Books > Biographies & Memoirs > Leaders & Notable People"
+        ],
+        "examples": [
+          "The Ascent of George Washington: The Hidden Political Genius of an American Icon",
+          "The Remarkable Education of John Quincy Adams",
+          "Reagan: The Life"
+        ]
+      },
+      {
+        "interest": "lawn care",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 10,
+        "categories": [
+          "Gardening"
+        ],
+        "examples": [
+          "Scotts Turf Builder Grass Seed Northeast Mix, Crafted to Withstand Harsh Winters",
+          "Ortho Weed B Gon Weed Killer for Lawns Ready-To-Spray2",
+          "Spectracide Weed & Grass Killer Concentrate, Use On Driveways, Walkways and Arou"
+        ]
+      },
+      {
+        "interest": "nature and microbiology",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Science & Math > Biological Sciences"
+        ],
+        "examples": [
+          "Allies and Enemies: How the World Depends on Bacteria",
+          "The Human Age: The World Shaped By Us",
+          "The Good Gut: Taking Control of Your Weight, Your Mood, and Your Long-term Healt"
+        ]
+      },
+      {
+        "interest": "history",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Biographies & Memoirs > Historical"
+        ],
+        "examples": [
+          "Napoleon: The Path to Power",
+          "The Invention of Air",
+          "The Witch of Lime Street: Séance, Seduction, and Houdini in the Spirit World"
+        ]
+      },
+      {
+        "interest": "statistics",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Science & Math > Mathematics"
+        ],
+        "examples": [
+          "A Career in Statistics: Beyond the Numbers",
+          "Handbook of Probability",
+          "Understanding Uncertainty"
+        ]
+      },
+      {
+        "interest": "financial planning",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Business & Money > Personal Finance"
+        ],
+        "examples": [
+          "Easy Money: How to Simplify Your Finances and Get What You Want out of Life",
+          "Nolo's Essential Retirement Tax Guide: Your Health, Home, Investments & More",
+          "The Total Money Makeover: A Proven Plan for Financial Fitness"
+        ]
+      },
+      {
+        "interest": "musicals",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Arts & Photography > Performing Arts"
+        ],
+        "examples": [
+          "Magic: The Complete Course: How to Perform Over 100 Amazing Effects, with 500 Fu",
+          "Cole Porter: Selected Lyrics: (American Poets Project #21)",
+          "Musicals: The Definitive Illustrated Story"
+        ]
+      },
+      {
+        "interest": "travel guides",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42",
+          "P43",
+          "P44",
+          "P45"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Travel > United States"
+        ],
+        "examples": [
+          "New York Washington DC & the Mid-Atlantic Trips (Regional Travel Guide)",
+          "Lonely Planet Discover New York City (Travel Guide)",
+          "Lonely Planet San Francisco (Travel Guide)"
+        ]
+      },
+      {
+        "interest": "strength training",
+        "source": "reviews",
+        "keys": [
+          "P51",
+          "P52",
+          "P53",
+          "P54",
+          "P55"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Health, Fitness & Dieting > Exercise & Fitness"
+        ],
+        "examples": [
+          "Bodyweight Strength Training Anatomy",
+          "Kettlebell Training",
+          "Paleo Workouts for Dummies"
+        ]
+      },
+      {
+        "interest": "travel writing",
+        "source": "reviews",
+        "keys": [
+          "P56",
+          "P57",
+          "P58",
+          "P59",
+          "P60"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Reference > Writing, Research & Publishing Guides"
+        ],
+        "examples": [
+          "The News Sorority: Diane Sawyer, Katie Couric, Christiane Amanpour-and the (Ongo",
+          "The Best American Travel Writing 2015",
+          "The Best American Travel Writing 2017 (The Best American Series ®)"
+        ]
+      },
+      {
+        "interest": "weather",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "weather -> sunny -> hot -> summer -> pool -> breeze -> crickets -> bugs -> dirt -> grass -> vegetables -> fruits -> refr"
+        ]
+      },
+      {
+        "interest": "gardening",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "vegetables -> fruits -> dirt -> grass"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "top home renovation ideas": "news",
+      "lifestyle tips and tricks": "news",
+      "TV news highlights": "news",
+      "political debates and analysis": "news",
+      "retirement savings tips": "news",
+      "Personal finance": "news",
+      "Holiday shopping": "news",
+      "TV news": "news",
+      "celebrity interviews and behind-the-scenes": "news",
+      "music industry updates": "news",
+      "classic car restoration": "news",
+      "business news highlights": "news",
+      "food and beverage news": "news",
+      "royal family updates": "news",
+      "stock market analysis": "news",
+      "Documentary movie review": "movies",
+      "Western film analysis": "movies",
+      "Crime director interview": "movies",
+      "American history documentaries": "reviews",
+      "lawn care tutorials": "reviews",
+      "nature and microbiology documentaries": "reviews",
+      "history": "reviews",
+      "statistics": "reviews",
+      "financial planning strategies": "reviews",
+      "musical performances": "reviews",
+      "travel destination highlights": "reviews",
+      "strength training routines": "reviews",
+      "travel writing showcases": "reviews",
+      "weather forecasts": "twin",
+      "gardening tutorials": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "informative and straightforward headlines",
+    "brief and simple reviews",
+    "praise for practical and useful products",
+    "casual and relatable tone",
+    "focus on practical benefits and user experience"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Friendly and conversational",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "average",
+    "extraversion": "average",
+    "conscientiousness": "low"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness average (open to some new experiences); extraversion average (neither especially outgoing nor reserved); conscientiousness low (spontaneous, less concerned with order).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "843",
+    "additional_context": "Age 18-29; Self-employed; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 9,
+      "openness": 59,
+      "extraversion": 37,
+      "conscientiousness": 15
+    },
+    "twin_interests": [
+      "weather",
+      "gardening",
+      "personal finance"
+    ],
+    "twin_background_knowledge": "This person likely enjoys outdoor activities and is interested in managing their personal finances."
+  }
+}

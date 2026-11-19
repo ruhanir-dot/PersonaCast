@@ -1,0 +1,639 @@
+{
+  "user_id": "twin_final_1277",
+  "interests": [
+    "Travel ideas",
+    "US news",
+    "Travel news",
+    "World news",
+    "Lifestyle buzz",
+    "Music stars",
+    "Documentaries",
+    "Comedy films",
+    "Drama films",
+    "Romantic films",
+    "Animated films",
+    "Family and kids' movies",
+    "Indonesian Culture",
+    "Asian literature",
+    "biography",
+    "Art History",
+    "Pacific Islander Culture",
+    "tropical gardening",
+    "Indian literature",
+    "humorous writing",
+    "travel stories",
+    "American Poetry",
+    "British Folk Music",
+    "tropical architecture",
+    "travel and adventure",
+    "art and drawing",
+    "environmental conservation",
+    "minimalism"
+  ],
+  "preferred_topics": [
+    "sustainable travel",
+    "eco-friendly art practices",
+    "minimalist living",
+    "travel photography",
+    "marine conservation",
+    "travel",
+    "documentaries",
+    "comedy",
+    "drama",
+    "romance",
+    "history",
+    "environment",
+    "literature",
+    "art",
+    "architecture",
+    "wildlife",
+    "indonesian culture"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Curious about new and unusual angles"
+  ],
+  "podcast_focus_keywords": [
+    "travel",
+    "documentary",
+    "comedy",
+    "drama",
+    "romance",
+    "history",
+    "environment",
+    "literature",
+    "art",
+    "architecture",
+    "wildlife",
+    "indonesian culture"
+  ],
+  "recommended_news_queries": [
+    "Top travel destinations",
+    "US news news",
+    "Adventure travel destinations",
+    "Travel stories from around the world",
+    "Minimalism in lifestyle",
+    "Upcoming music festivals",
+    "Documentary movie review",
+    "Comedy film analysis",
+    "Drama director interview",
+    "Romantic movie review",
+    "Animated film analysis",
+    "Family and kids' director interview",
+    "Indonesian Culture news",
+    "Asian literature news",
+    "biography news",
+    "Art history trends",
+    "Cultural practices in Pacific Islands",
+    "Tips for tropical gardening",
+    "Top Indian literature of the year",
+    "humorous writing news",
+    "Travel news news",
+    "Top American poetry of the year",
+    "Top British folk music of the year",
+    "Tropical architecture trends",
+    "travel and adventure news",
+    "Art and drawing trends",
+    "Documentaries about environmental conservation",
+    "minimalism news"
+  ],
+  "youtube_search_queries": [
+    "Best travel tips for first-time solo travelers",
+    "Analysis of recent US election results",
+    "Adventure travel tips",
+    "Interviews with world leaders on international relations",
+    "Lifestyle hacks for busy professionals",
+    "Behind-the-scenes of music industry",
+    "Documentary movie review",
+    "Comedy film analysis",
+    "Drama director interview",
+    "Romantic movie review",
+    "Animated film analysis",
+    "Family and kids' director interview",
+    "Indonesian Culture",
+    "Asian literature",
+    "biography",
+    "Art history documentaries",
+    "Cultural festivals in Pacific Islands",
+    "Tropical garden design ideas",
+    "Reviews of Indian literature",
+    "humorous writing",
+    "Travel vlogs",
+    "Poetry readings and analysis",
+    "Folk music performances",
+    "Tropical architecture design ideas",
+    "Travel news",
+    "Art and drawing tutorials",
+    "Documentaries on environmental conservation",
+    "Minimalism in design"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "sports"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with various travel destinations, history, and cultural practices.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U38338",
+    "movielens_user": "15131",
+    "amazon_user": "AGNEVNUR7RTJW6KH4FP3P6ASPKGA",
+    "interests_by_source": {
+      "news": 6,
+      "movies": 6,
+      "reviews": 12,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Travel ideas",
+        "source": "news",
+        "keys": [
+          "traveltripideas"
+        ],
+        "count": 3,
+        "examples": [
+          "A network of 28 tiny, one-bed hotels in Amsterdam is being called the most beautifully designed hotel of 2019   and it consists of a series of converted bridge houses. Take a look inside."
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 3,
+        "examples": [
+          "Fort Worth Police Have More Violence to Answer For, Residents Say",
+          "A man dies in Hawaii after falling into a lava tube in his yard"
+        ]
+      },
+      {
+        "interest": "Travel news",
+        "source": "news",
+        "keys": [
+          "travelnews"
+        ],
+        "count": 2,
+        "examples": [
+          "A tourist was fined for wearing a string bikini on a beach in the Philippines, but travelers get punished for the way they dress more often than you might think"
+        ]
+      },
+      {
+        "interest": "World news",
+        "source": "news",
+        "keys": [
+          "newsworld"
+        ],
+        "count": 2,
+        "examples": [
+          "Hong Kong government withdraws bill that sparked protests",
+          "Solomons vetoes Chinese 'lease' on Pacific island"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 2,
+        "examples": [
+          "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+          "A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral"
+        ]
+      },
+      {
+        "interest": "Music stars",
+        "source": "news",
+        "keys": [
+          "music-celebrity"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 11,
+        "lift": 4.03,
+        "examples": [
+          "O.J.: Made in America (2016)",
+          "The Blue Planet (2001)"
+        ]
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 128,
+        "lift": 1.59,
+        "examples": [
+          "Life Aquatic with Steve Zissou, The (2004)",
+          "Darjeeling Limited, The (2007)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 146,
+        "lift": 1.48,
+        "examples": [
+          "Hotel Rwanda (2004)",
+          "Braveheart (1995)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 49,
+        "lift": 1.24,
+        "examples": []
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 19,
+        "lift": 1.18,
+        "examples": [
+          "Wreck-It Ralph (2012)",
+          "Aladdin (1992)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 23,
+        "lift": 1.16,
+        "examples": [
+          "Aladdin (1992)"
+        ]
+      },
+      {
+        "interest": "Indonesian Culture",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 13,
+        "categories": [
+          "Books > Travel > Asia"
+        ],
+        "examples": [
+          "Indonesia (Culture Shock! A Survival Guide to Customs & Etiquette)",
+          "At Home in Bali",
+          "Balinese Architecture (Discover Indonesia Series)"
+        ]
+      },
+      {
+        "interest": "Asian literature",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 13,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "Anywhere but Here",
+          "A Tale from Bali",
+          "Memoirs of a Geisha: A Novel"
+        ]
+      },
+      {
+        "interest": "biography",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 10,
+        "categories": [
+          "Books > Biographies & Memoirs > Arts & Literature"
+        ],
+        "examples": [
+          "The Liars' Club: A Memoir",
+          "Jackson Pollock: An American Saga",
+          "The Lonely Hunter: A Biography of Carson McCullers"
+        ]
+      },
+      {
+        "interest": "Art History",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Arts & Photography > History & Criticism"
+        ],
+        "examples": [
+          "Old Masters Repainted: Wu Zhen (1280–1354), Prime Objects and Accretions",
+          "Romanticism and Art (World of Art)",
+          "The Penguin Dictionary of Art and Artists: Seventh Edition (Dictionary, Penguin)"
+        ]
+      },
+      {
+        "interest": "Pacific Islander Culture",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Literature & Fiction > Poetry"
+        ],
+        "examples": [
+          "In My Mother's House",
+          "Monsoon History: Selected Poems (Skoob Pacifica Series)",
+          "Tesserae: Memories & Suppositions"
+        ]
+      },
+      {
+        "interest": "tropical gardening",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Gardening & Landscape Design"
+        ],
+        "examples": [
+          "Tropical Garden Design",
+          "Gardening in the Tropics",
+          "A Japanese Touch for Your Garden"
+        ]
+      },
+      {
+        "interest": "Indian literature",
+        "source": "reviews",
+        "keys": [
+          "P30",
+          "P31",
+          "P32",
+          "P33"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Literature & Fiction > Literary"
+        ],
+        "examples": [
+          "Games at Twilight and Other Stories (King Penguin)",
+          "Of Love And Other Demons",
+          "Judgment Day"
+        ]
+      },
+      {
+        "interest": "humorous writing",
+        "source": "reviews",
+        "keys": [
+          "P34",
+          "P35",
+          "P36"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Humor & Entertainment > Humor"
+        ],
+        "examples": [
+          "Anguished English: An Anthology of Accidental Assaults upon Our Language",
+          "I Should Have Stayed Home: The Worst Trips of the Great Writers (Travel Literatu",
+          "Sex Tips For Girls"
+        ]
+      },
+      {
+        "interest": "travel stories",
+        "source": "reviews",
+        "keys": [
+          "P37",
+          "P38",
+          "P39"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Literature & Fiction > Short Stories & Anthologies"
+        ],
+        "examples": [
+          "The Oxford Book of Travel Stories",
+          "Cowboys Are My Weakness",
+          "Strange Pilgrims: Stories"
+        ]
+      },
+      {
+        "interest": "American Poetry",
+        "source": "reviews",
+        "keys": [
+          "P40",
+          "P41",
+          "P42"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Literature & Fiction > History & Criticism"
+        ],
+        "examples": [
+          "A Handbook to Literature",
+          "Classics Illustrated: A Cultural History, with Illustrations",
+          "The Oxford Book of American Verse Chosen and with an Introduction by F. O. Matth"
+        ]
+      },
+      {
+        "interest": "British Folk Music",
+        "source": "reviews",
+        "keys": [
+          "P43",
+          "P44",
+          "P45"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Arts & Photography > Music"
+        ],
+        "examples": [
+          "Pearl: The Obsessions and Passions of Janis Joplin",
+          "On a Cold Road: Tales of Adventure in Canadian Rock",
+          "Folk Songs of England, Ireland, Scotland and Wales"
+        ]
+      },
+      {
+        "interest": "tropical architecture",
+        "source": "reviews",
+        "keys": [
+          "P46",
+          "P47",
+          "P48"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Arts & Photography > Architecture"
+        ],
+        "examples": [
+          "Tropical Retreats: The Poetics of Place",
+          "Tropical Asian House",
+          "Seaside Interiors"
+        ]
+      },
+      {
+        "interest": "travel and adventure",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "travel -> leaving -> airplane -> flying -> ocean -> fish -> sun -> boat -> waves -> whale"
+        ]
+      },
+      {
+        "interest": "art and drawing",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "paper -> pen -> drawing -> story -> art -> letter -> book -> reading -> pencil"
+        ]
+      },
+      {
+        "interest": "environmental conservation",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "environmental concern -> very high (90th percentile)"
+        ]
+      },
+      {
+        "interest": "minimalism",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "preference for minimalism -> very high (94th percentile)"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Best travel tips for first-time solo travelers": "news",
+      "Analysis of recent US election results": "news",
+      "Adventure travel tips": "news",
+      "Interviews with world leaders on international relations": "news",
+      "Lifestyle hacks for busy professionals": "news",
+      "Behind-the-scenes of music industry": "news",
+      "Documentary movie review": "movies",
+      "Comedy film analysis": "movies",
+      "Drama director interview": "movies",
+      "Romantic movie review": "movies",
+      "Animated film analysis": "movies",
+      "Family and kids' director interview": "movies",
+      "Indonesian Culture": "reviews",
+      "Asian literature": "reviews",
+      "biography": "reviews",
+      "Art history documentaries": "reviews",
+      "Cultural festivals in Pacific Islands": "reviews",
+      "Tropical garden design ideas": "reviews",
+      "Reviews of Indian literature": "reviews",
+      "humorous writing": "reviews",
+      "Travel vlogs": "reviews",
+      "Poetry readings and analysis": "reviews",
+      "Folk music performances": "reviews",
+      "Tropical architecture design ideas": "reviews",
+      "Travel news": "twin",
+      "Art and drawing tutorials": "twin",
+      "Documentaries on environmental conservation": "twin",
+      "Minimalism in design": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "informative and educational",
+    "quirky and personal",
+    "brief and simple",
+    "humorous and light-hearted",
+    "detailed and analytical",
+    "inspiring and thought-provoking"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "high",
+    "extraversion": "low",
+    "conscientiousness": "average"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness high (curious about new, unusual and artistic experiences); extraversion low (reserved and quiet); conscientiousness average (reasonably organized).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1277",
+    "additional_context": "Age 30-49; Self-employed; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 86,
+      "openness": 83,
+      "extraversion": 5,
+      "conscientiousness": 37
+    },
+    "twin_interests": [
+      "travel and adventure",
+      "art and drawing",
+      "environmental conservation",
+      "minimalism"
+    ],
+    "twin_background_knowledge": "This person likely has a deep appreciation for nature and the environment, enjoys creative activities like drawing and writing, and values simplicity and sustainability in their lifestyle."
+  }
+}

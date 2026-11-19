@@ -1,0 +1,610 @@
+{
+  "user_id": "twin_final_996",
+  "interests": [
+    "Nutrition",
+    "Weight loss",
+    "Real estate",
+    "Saving and investing",
+    "Retirement planning",
+    "Documentaries",
+    "Family and kids' movies",
+    "Animated films",
+    "Musicals",
+    "Fantasy films",
+    "Romantic films",
+    "Comedy films",
+    "Drama films",
+    "Gifted Education",
+    "young adult fiction",
+    "gardening",
+    "horror fiction",
+    "classical music",
+    "music instruments",
+    "bass guitar",
+    "post-apocalyptic fiction",
+    "autism",
+    "Business Strategy",
+    "Family and relationships",
+    "Nature and environment",
+    "Education and learning",
+    "Financial management"
+  ],
+  "preferred_topics": [
+    "Family dynamics and parenting",
+    "Nature conservation and gardening",
+    "Educational methods and child development",
+    "Personal finance and budgeting",
+    "Mortgage strategies",
+    "Investment tips",
+    "Healthy eating habits",
+    "Family-friendly movies",
+    "Animated storytelling",
+    "Classical music",
+    "Business strategies",
+    "Personal finance",
+    "Gardening tips",
+    "Autism insights",
+    "Classical literature",
+    "Bass guitar techniques"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "finance",
+    "investment",
+    "nutrition",
+    "mortgage",
+    "classical music",
+    "classical literature",
+    "bass guitar",
+    "autism",
+    "gardening",
+    "business strategy",
+    "family",
+    "education"
+  ],
+  "recommended_news_queries": [
+    "Nutrition news",
+    "Top 5 superfoods for weight loss this week",
+    "Top real estate investment tips",
+    "Saving and investing news",
+    "Top retirement planning tips",
+    "Documentary movie review",
+    "Family and kids' film analysis",
+    "Animated director interview",
+    "Musical movie review",
+    "Fantasy film analysis",
+    "Romantic director interview",
+    "Comedy movie review",
+    "Drama film analysis",
+    "Top gifted education resources",
+    "Top young adult fiction books",
+    "Top gardening tips",
+    "Top horror fiction stories",
+    "Top classical music composers",
+    "music instruments news",
+    "Top bass guitar techniques",
+    "Top post-apocalyptic fiction stories",
+    "Latest insights on autism",
+    "Top business strategies",
+    "Top family and relationship advice",
+    "Top nature and environment stories",
+    "Top education and learning tips",
+    "Top financial management tips"
+  ],
+  "youtube_search_queries": [
+    "Nutrition",
+    "Top 5 superfoods for weight loss",
+    "Top real estate investment tips",
+    "Saving and investing",
+    "Top retirement planning tips",
+    "Documentary movie review",
+    "Family and kids' film analysis",
+    "Animated director interview",
+    "Musical movie review",
+    "Fantasy film analysis",
+    "Romantic director interview",
+    "Comedy movie review",
+    "Drama film analysis",
+    "Top gifted education resources",
+    "Top young adult fiction books",
+    "Top gardening tips",
+    "Top horror fiction stories",
+    "Top classical music composers",
+    "music instruments",
+    "Top bass guitar techniques",
+    "Top post-apocalyptic fiction stories",
+    "Latest insights on autism",
+    "Top business strategies",
+    "Top family and relationship advice",
+    "Top nature and environment stories",
+    "Top education and learning tips",
+    "Top financial management tips"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "general news",
+    "sports",
+    "travel",
+    "autos",
+    "TV",
+    "food and drink"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "The listener is familiar with various topics including nutrition, weight loss, saving and investing, family and kids' movies, animated films, musicals, fantasy films, romantic films, comedy films, classical music, classical literature, bass guitar, autism, business strategy, family and relationships, nature and environment, education and learning, and financial management.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U17825",
+    "movielens_user": "173540",
+    "amazon_user": "AFY62QQUU6Q2UQMZWQ7BIVQG6XTA",
+    "interests_by_source": {
+      "news": 5,
+      "movies": 8,
+      "reviews": 10,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 8,
+        "examples": [
+          "The Secret to Sticking with Keto",
+          "The 50 Foods That Sabotage Your Sleep"
+        ]
+      },
+      {
+        "interest": "Weight loss",
+        "source": "news",
+        "keys": [
+          "weightloss"
+        ],
+        "count": 4,
+        "examples": [
+          "3 Women Share Exactly How They Lost Up to 23 Pounds in 8 Weeks"
+        ]
+      },
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 4,
+        "examples": [
+          "3 reasons to invest in real estate, according to a financial planner who owns 10 rental properties",
+          "How to pay off your mortgage early: 4 methods that work"
+        ]
+      },
+      {
+        "interest": "Saving and investing",
+        "source": "news",
+        "keys": [
+          "finance-saving-investing"
+        ],
+        "count": 3,
+        "examples": [
+          "Do not try this at home: How to turn $3,000 into $1.7 million"
+        ]
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 3,
+        "examples": [
+          "The 5 biggest retirement mistakes people make all the time"
+        ]
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 27,
+        "lift": 2.89,
+        "examples": [
+          "The Rescue (2021)",
+          "David Attenborough: A Life on Our Planet (2020)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 175,
+        "lift": 2.58,
+        "examples": [
+          "For the Birds (2000)",
+          "Soul (2020)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 127,
+        "lift": 2.3,
+        "examples": [
+          "For the Birds (2000)",
+          "Lou (2017)"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 63,
+        "lift": 2.2,
+        "examples": []
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 131,
+        "lift": 1.42,
+        "examples": [
+          "Soul (2020)",
+          "Partly Cloudy (2009)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 180,
+        "lift": 1.33,
+        "examples": [
+          "Ladies in Lavender (2004)",
+          "Paperman (2012)"
+        ]
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 339,
+        "lift": 1.24,
+        "examples": [
+          "Ladies in Lavender (2004)",
+          "Parasite (2019)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 407,
+        "lift": 1.21,
+        "examples": [
+          "Ladies in Lavender (2004)",
+          "Just Mercy (2019)"
+        ]
+      },
+      {
+        "interest": "Gifted Education",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Education & Teaching > Schools & Teaching"
+        ],
+        "examples": [
+          "Teach Your Kids to Think!: Simple Tools You Can Use Every Day",
+          "Alphabet Meditations for Teachers: Everyday Wisdom for Educators",
+          "Serving Gifted Students within an RtI Framework: A Practical Guide"
+        ]
+      },
+      {
+        "interest": "young adult fiction",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Teen & Young Adult > Literature & Fiction"
+        ],
+        "examples": [
+          "Variant (Variant, 1)",
+          "Freak Magnet",
+          "Cracked"
+        ]
+      },
+      {
+        "interest": "gardening",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Gardening & Landscape Design"
+        ],
+        "examples": [
+          "The Complete Guide to Companion Planting: Everything You Need to Know to Make Yo",
+          "The Complete Guide to Growing Healing and Medicinal Herbs: Everything You Need t",
+          "The Complete Guide to Growing Your Own Fruits and Berries Everything You Need to"
+        ]
+      },
+      {
+        "interest": "horror fiction",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "Journalstone's 2011 Warped Words: 90 Minutes to Live",
+          "Running the Maze (Kyle Swanson Sniper Novels)",
+          "Camp Colorblind"
+        ]
+      },
+      {
+        "interest": "classical music",
+        "source": "reviews",
+        "keys": [
+          "P20",
+          "P21",
+          "P22",
+          "P23"
+        ],
+        "count": 4,
+        "categories": [
+          "CDs & Vinyl > Classical"
+        ],
+        "examples": [
+          "Pepper's Waltz",
+          "First Dance",
+          "Perpetual Motion"
+        ]
+      },
+      {
+        "interest": "music instruments",
+        "source": "reviews",
+        "keys": [
+          "P27",
+          "P28",
+          "P29"
+        ],
+        "count": 3,
+        "categories": [
+          "Musical Instruments > Instrument Accessories"
+        ],
+        "examples": [
+          "Ingles Adjustable Folding Cello/Bass Stand (SA-22) Grey",
+          "Vio Music Bass Bow Case for One French or One German Bass Bow, With Shoulder Str",
+          "Leblanc 7860 Bliss Bb Clarinet Case (Case Only)"
+        ]
+      },
+      {
+        "interest": "bass guitar",
+        "source": "reviews",
+        "keys": [
+          "P30",
+          "P31",
+          "P32"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Arts & Photography > Music"
+        ],
+        "examples": [
+          "Brian Jones: The Making of the Rolling Stones",
+          "Ricordi New Didactic Approach to the Double Bass String Method Series Written by",
+          "Ultimate Bass Play-Along Rush: Play Along with 6 Great Demonstration Tracks (Aut"
+        ]
+      },
+      {
+        "interest": "post-apocalyptic fiction",
+        "source": "reviews",
+        "keys": [
+          "P33",
+          "P34"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Thrillers & Suspense"
+        ],
+        "examples": [
+          "The Orphan Master's Son: A Novel",
+          "Into the End"
+        ]
+      },
+      {
+        "interest": "autism",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Biographies & Memoirs > Community & Culture"
+        ],
+        "examples": [
+          "Dancing with Autism: Choosing Joy over Fear",
+          "The Reason I Jump: The Inner Voice of a Thirteen-Year-Old Boy with Autism"
+        ]
+      },
+      {
+        "interest": "Business Strategy",
+        "source": "reviews",
+        "keys": [
+          "P39",
+          "P40"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Business & Money > Business Development & Entrepreneurship"
+        ],
+        "examples": [
+          "Business Structures and Incorporation: How-to and Do-It-Yourself",
+          "Shift: Innovation That Disrupts Markets, Topples Giants, and Makes You #1"
+        ]
+      },
+      {
+        "interest": "Family and relationships",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "spouse, marriage, family, children, grandchildren, love, romance, fair, equality"
+        ]
+      },
+      {
+        "interest": "Nature and environment",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "forest, trees, plant, flower, pretty, heart"
+        ]
+      },
+      {
+        "interest": "Education and learning",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "playful, learner, school, arts & crafts"
+        ]
+      },
+      {
+        "interest": "Financial management",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy, very high"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Nutrition": "news",
+      "Top 5 superfoods for weight loss": "news",
+      "Top real estate investment tips": "news",
+      "Saving and investing": "news",
+      "Top retirement planning tips": "news",
+      "Documentary movie review": "movies",
+      "Family and kids' film analysis": "movies",
+      "Animated director interview": "movies",
+      "Musical movie review": "movies",
+      "Fantasy film analysis": "movies",
+      "Romantic director interview": "movies",
+      "Comedy movie review": "movies",
+      "Drama film analysis": "movies",
+      "Top gifted education resources": "reviews",
+      "Top young adult fiction books": "reviews",
+      "Top gardening tips": "reviews",
+      "Top horror fiction stories": "reviews",
+      "Top classical music composers": "reviews",
+      "music instruments": "reviews",
+      "Top bass guitar techniques": "reviews",
+      "Top post-apocalyptic fiction stories": "reviews",
+      "Latest insights on autism": "reviews",
+      "Top business strategies": "reviews",
+      "Top family and relationship advice": "twin",
+      "Top nature and environment stories": "twin",
+      "Top education and learning tips": "twin",
+      "Top financial management tips": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Detailed explanations",
+    "Engaging storytelling",
+    "Personal anecdotes",
+    "Informative and educational",
+    "Highly detailed reviews",
+    "Positive and enthusiastic"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "low",
+    "extraversion": "high",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness low (prefers the familiar and conventional); extraversion high (outgoing, lively and energetic); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "996",
+    "additional_context": "Age 30-49; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 89,
+      "openness": 10,
+      "extraversion": 83,
+      "conscientiousness": 67
+    },
+    "twin_interests": [
+      "Family and relationships",
+      "Nature and environment",
+      "Education and learning",
+      "Financial management"
+    ],
+    "twin_background_knowledge": "This person likely values family and relationships, appreciates nature and the environment, enjoys learning and education, and has a strong grasp of financial management."
+  }
+}
