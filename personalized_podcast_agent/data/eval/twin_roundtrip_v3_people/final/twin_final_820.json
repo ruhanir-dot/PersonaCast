@@ -1,0 +1,672 @@
+{
+  "user_id": "twin_final_820",
+  "interests": [
+    "Home and garden",
+    "Nutrition",
+    "Personal essays",
+    "Wellness",
+    "Weight loss",
+    "Lifestyle buzz",
+    "Holiday shopping",
+    "US news",
+    "Tips and life hacks",
+    "DIY projects",
+    "Fitness",
+    "Recipes and cooking",
+    "War films",
+    "Drama films",
+    "Romantic films",
+    "Crime films",
+    "Fantasy films",
+    "keto snacks",
+    "Espresso",
+    "biking",
+    "strength training",
+    "camping",
+    "dog care",
+    "rice and grains",
+    "disc golf",
+    "spicy seasonings",
+    "Tea and Kombucha",
+    "military shooter",
+    "Mountain sports",
+    "Coffee and hot chocolate",
+    "Personal and moral values"
+  ],
+  "preferred_topics": [
+    "Mountain sports equipment reviews",
+    "Coffee and hot chocolate recipes",
+    "Ethical consumerism and minimalism",
+    "home improvement",
+    "nutrition",
+    "personal development",
+    "wellness",
+    "weight loss",
+    "lifestyle tips",
+    "holiday shopping",
+    "fitness",
+    "cooking and recipes",
+    "personal essays",
+    "military history",
+    "outdoor activities"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms"
+  ],
+  "podcast_focus_keywords": [
+    "home decor",
+    "diet plans",
+    "self-improvement",
+    "mental health",
+    "exercise routines",
+    "holiday deals",
+    "cooking hacks",
+    "personal stories",
+    "outdoor adventures",
+    "nutrition tips",
+    "wellness practices",
+    "strength training"
+  ],
+  "recommended_news_queries": [
+    "DIY home improvement projects for the winter",
+    "Nutrition news",
+    "personal stories of overcoming challenges",
+    "Wellness news",
+    "effective weight loss strategies",
+    "trending lifestyle trends",
+    "best holiday gift ideas",
+    "US news news",
+    "Tips and life hacks news",
+    "DIY projects news",
+    "new fitness trends",
+    "new recipe trends",
+    "War movie review",
+    "Drama film analysis",
+    "Romantic director interview",
+    "Crime movie review",
+    "Fantasy film analysis",
+    "latest keto snack trends",
+    "new espresso trends",
+    "new biking trends",
+    "new strength training trends",
+    "new camping trends",
+    "new dog care trends",
+    "new rice and grain trends",
+    "new disc golf trends",
+    "new spicy seasoning trends",
+    "new tea and kombucha trends",
+    "new military shooter trends",
+    "new mountain sports trends",
+    "new coffee and hot chocolate trends",
+    "current discussions on personal and moral values"
+  ],
+  "youtube_search_queries": [
+    "best home decor ideas for small spaces",
+    "Nutrition",
+    "inspiring personal essays on YouTube",
+    "Wellness",
+    "weight loss success stories",
+    "lifestyle hacks for busy people",
+    "holiday shopping tips and tricks",
+    "US news",
+    "Tips and life hacks",
+    "DIY projects",
+    "Fitness",
+    "keto-friendly recipes for beginners",
+    "War movie review",
+    "Drama film analysis",
+    "Romantic director interview",
+    "Crime movie review",
+    "Fantasy film analysis",
+    "keto-friendly snack ideas",
+    "how to make the perfect espresso",
+    "best biking routes for beginners",
+    "home strength training routines",
+    "best camping gear for beginners",
+    "dog training tips for beginners",
+    "healthy rice and grain recipes",
+    "best disc golf courses for beginners",
+    "best spicy seasonings for cooking",
+    "best tea and kombucha brands",
+    "best military shooter games",
+    "best mountain sports for beginners",
+    "best coffee and hot chocolate brands",
+    "videos on personal and moral values"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with home improvement, nutrition, personal development, wellness, weight loss, lifestyle tips, holiday shopping, fitness, cooking and recipes, personal essays, and outdoor activities.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U80014",
+    "movielens_user": "133571",
+    "amazon_user": "AHHLTGESVKQVOHKAURKEZBRHMF6A",
+    "interests_by_source": {
+      "news": 12,
+      "movies": 5,
+      "reviews": 11,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 13,
+        "examples": [
+          "10 Landscaping Must-Dos to Help Your Plants Survive the Winter",
+          "Designer-Approved Ideas to Transform a Small Bedroom"
+        ]
+      },
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 8,
+        "examples": [
+          "If You're Trying to Cut Down on Sugar, Use This Simple Ice Cube Hack",
+          "30 Foods That Are Never Worth The Calories"
+        ]
+      },
+      {
+        "interest": "Personal essays",
+        "source": "news",
+        "keys": [
+          "voices"
+        ],
+        "count": 6,
+        "examples": [
+          "I Tried A Lash Lift And I'm Never Going Back To Mascara",
+          "'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'"
+        ]
+      },
+      {
+        "interest": "Wellness",
+        "source": "news",
+        "keys": [
+          "wellness"
+        ],
+        "count": 4,
+        "examples": [
+          "Chin Hair: 7 Embarrassing Red Flags No Woman Should Ever Ignore",
+          "Chin Hair: 7 Embarrassing Red Flags No Woman Should Ever Ignore"
+        ]
+      },
+      {
+        "interest": "Weight loss",
+        "source": "news",
+        "keys": [
+          "weightloss"
+        ],
+        "count": 3,
+        "examples": [
+          "24 Ways to Shrink Your Belly in 24 Hours",
+          "Adele Lost 20 Pounds with Pilates and Cardio After Splitting From Simon Konecki"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 3,
+        "examples": []
+      },
+      {
+        "interest": "Holiday shopping",
+        "source": "news",
+        "keys": [
+          "shop-holidays"
+        ],
+        "count": 3,
+        "examples": [
+          "98 Cool Gifts Rising in Sales on the Internet - They're Less Than $25, After All",
+          "98 Cool Gifts Rising in Sales on the Internet - They're Less Than $25, After All"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Tips and life hacks",
+        "source": "news",
+        "keys": [
+          "tipsandtricks"
+        ],
+        "count": 2,
+        "examples": [
+          "This Sturdy Cutting Board Will Last for a Lifetime and It's On Super Sale Right Now"
+        ]
+      },
+      {
+        "interest": "DIY projects",
+        "source": "news",
+        "keys": [
+          "lifestylediy"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Fitness",
+        "source": "news",
+        "keys": [
+          "fitness"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Recipes and cooking",
+        "source": "news",
+        "keys": [
+          "recipes"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "War films",
+        "source": "movies",
+        "keys": [
+          "War"
+        ],
+        "count": 7,
+        "lift": 1.86,
+        "examples": [
+          "Hotel Rwanda (2004)",
+          "Cold Mountain (2003)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 55,
+        "lift": 1.68,
+        "examples": [
+          "Life as a House (2001)",
+          "Road to Perdition (2002)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 19,
+        "lift": 1.45,
+        "examples": [
+          "Cold Mountain (2003)",
+          "Chocolat (2000)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 17,
+        "lift": 1.34,
+        "examples": [
+          "Road to Perdition (2002)",
+          "Green Mile, The (1999)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 10,
+        "lift": 1.12,
+        "examples": []
+      },
+      {
+        "interest": "keto snacks",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 29,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Cooking & Baking"
+        ],
+        "examples": [
+          "Joolies Organic Medjool Date Syrup | Award Winning Original, 10.8 Oz (2 Pack) | ",
+          "Daily Crunch Sprouted Almonds, Cinnamon Java and Coffee Soaked, Non GMO, 5 Ounce",
+          "B. Fine Foods Keto Nut Mix Variety Pack, 1.2oz (Pack of 6) | 3g Net Carbs | Glut"
+        ]
+      },
+      {
+        "interest": "Espresso",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 25,
+        "categories": [
+          "Grocery & Gourmet Food > Beverages > Coffee"
+        ],
+        "examples": [
+          "Great Basin Coffee Co. Fresh Whole Bean Medium Dark Roast Coffee. Gourmet Small ",
+          "Ricks Roasters Coffee | Kickstart “Black & Tan” Specialty Blend | 1 Pound (1 lb)",
+          "Ethical Bean Fairtrade Organic Coffee, Whole Bean Espresso Coffee (12 Oz Bag), S"
+        ]
+      },
+      {
+        "interest": "biking",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 16,
+        "categories": [
+          "Sports & Outdoors > Sports > Cycling"
+        ],
+        "examples": [
+          "Avenir Metro III Panniers, Black",
+          "Blackburn Flea 2.0 Front Headlight with USB and Solar Chargers, Black",
+          "Plus Rear Translucent"
+        ]
+      },
+      {
+        "interest": "strength training",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 13,
+        "categories": [
+          "Sports & Outdoors > Exercise & Fitness > Strength Training Equipment"
+        ],
+        "examples": [
+          "CAP Barbell Vinyl Coated Cement Kettlebell | Multiple Sizes",
+          "Zenooze Power Twister Bar, The Ultimate Upper Body Exercise Equipment for Streng",
+          "PINROYAL Bumper Plate 10LB/15LB/25LB/35LB/45LB/55LB, Olympic Weight Plate with 2"
+        ]
+      },
+      {
+        "interest": "camping",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 11,
+        "categories": [
+          "Sports & Outdoors > Outdoor Recreation > Camping & Hiking"
+        ],
+        "examples": [
+          "Sleeping Bag – Envelope Lightweight Portable, Comfort with Compression Sack - Gr",
+          "CamelBak Horizon 12 oz Camp Mug - Insulated Stainless Steel - Tri-Mode Lid",
+          "SIWANAMU Pop Up Tent Portable Toilet Small Tent Waterproof and Sun-Proof Durable"
+        ]
+      },
+      {
+        "interest": "dog care",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 8,
+        "categories": [
+          "Dogs"
+        ],
+        "examples": [
+          "Pet Jerky Factory Premium Dog Treats | 100% Human Grade | USA Made | Grain Free ",
+          "DUMSAMKER Dog & Cat Pets Nail Clippers and Trimmers with Safety Stop and Plug - ",
+          "PLATO Thinkers Salmon 6.5oz, Natural (850002221749)"
+        ]
+      },
+      {
+        "interest": "rice and grains",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 6,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Dried Grains & Rice"
+        ],
+        "examples": [
+          "Nature's Intent Organic Tri-Color Quinoa - 3 Pack- 16 Ounce - USDA Organic, Non-",
+          "Khazana ORGANIC Ready To Heat Basmati Rice (6-Pack) Turmeric Coconut - 8.8oz Pou",
+          "Heritage Select Premium Basmati Rice - Roasted Garlic & Herbs 6.5oz Box (6-Pack)"
+        ]
+      },
+      {
+        "interest": "disc golf",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 5,
+        "categories": [
+          "Sports & Outdoors > Sports > Leisure Sports & Game Room"
+        ],
+        "examples": [
+          "Dart World Piranha Razor Grip 90% Tungsten Dart (24-Gram)",
+          "Amazon Basics Disc Golf Basket",
+          "VINSGUIR Steel Tip Darts Set of 6 Brass Barrels, 22g Professional Darts Metal Ti"
+        ]
+      },
+      {
+        "interest": "spicy seasonings",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42",
+          "P43",
+          "P44"
+        ],
+        "count": 4,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Herbs, Spices & Seasonings"
+        ],
+        "examples": [
+          "Dehydrated and Minced Korean Chili Pepper - Cheongyang Pepper - Resealable - 3 p",
+          "Tetsujin Japanese Premium EX Wasabi Powder, Wild & HOT In Bulk | 2.2 Lb",
+          "The New Primal Noble Made by Seasoning Spice & Dry Rub, USDA Organic, Whole30, G"
+        ]
+      },
+      {
+        "interest": "Tea and Kombucha",
+        "source": "reviews",
+        "keys": [
+          "P45",
+          "P46",
+          "P47",
+          "P48"
+        ],
+        "count": 4,
+        "categories": [
+          "Grocery & Gourmet Food > Beverages > Tea"
+        ],
+        "examples": [
+          "Ancestral Roots Organic Matcha Powder - 100% Pure, USDA Certified Organic Matcha",
+          "Honest Tea Mango White Tea, Mango White Tea, 59 Fl Oz (Pack of 8)",
+          "Honest Tea Variety Pack (Honey Green, Peach Oolong, Half & Half), 16.9 Fl Ounce "
+        ]
+      },
+      {
+        "interest": "military shooter",
+        "source": "reviews",
+        "keys": [
+          "P49",
+          "P50",
+          "P51"
+        ],
+        "count": 3,
+        "categories": [
+          "Video Games > PC"
+        ],
+        "examples": [
+          "Battlefield 3 - Limited Edition - Preload Available [Download]",
+          "JLab Play Pro Gaming Wireless Headset | 60+ Hour Bluetooth 5 Playtime 60ms Super",
+          "Turtle Beach Stealth 600 Gen 2 MAX Wireless Multiplatform Amplified Gaming Heads"
+        ]
+      },
+      {
+        "interest": "Mountain sports",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "snow -> board -> mountain -> hill -> trick -> speed -> down -> ramp -> goggles -> cold -> gloves -> boots -> fog -> fros"
+        ]
+      },
+      {
+        "interest": "Coffee and hot chocolate",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "hot chocolate -> coffee -> mug"
+        ]
+      },
+      {
+        "interest": "Personal and moral values",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "worth; personal; trust; moral; greed; giving; needs; wants; kindess; morals; happiness"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "best home decor ideas for small spaces": "news",
+      "Nutrition": "news",
+      "inspiring personal essays on YouTube": "news",
+      "Wellness": "news",
+      "weight loss success stories": "news",
+      "lifestyle hacks for busy people": "news",
+      "holiday shopping tips and tricks": "news",
+      "US news": "news",
+      "Tips and life hacks": "news",
+      "DIY projects": "news",
+      "Fitness": "news",
+      "keto-friendly recipes for beginners": "news",
+      "War movie review": "movies",
+      "Drama film analysis": "movies",
+      "Romantic director interview": "movies",
+      "Crime movie review": "movies",
+      "Fantasy film analysis": "movies",
+      "keto-friendly snack ideas": "reviews",
+      "how to make the perfect espresso": "reviews",
+      "best biking routes for beginners": "reviews",
+      "home strength training routines": "reviews",
+      "best camping gear for beginners": "reviews",
+      "dog training tips for beginners": "reviews",
+      "healthy rice and grain recipes": "reviews",
+      "best disc golf courses for beginners": "reviews",
+      "best spicy seasonings for cooking": "reviews",
+      "best tea and kombucha brands": "reviews",
+      "best military shooter games": "reviews",
+      "best mountain sports for beginners": "twin",
+      "best coffee and hot chocolate brands": "twin",
+      "videos on personal and moral values": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "informative and straightforward",
+    "personal anecdotes",
+    "brief and to the point",
+    "positive and uplifting",
+    "casual and relatable",
+    "practical advice"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "average",
+    "extraversion": "high",
+    "conscientiousness": "low"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness average (open to some new experiences); extraversion high (outgoing, lively and energetic); conscientiousness low (spontaneous, less concerned with order).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "820",
+    "additional_context": "Age 18-29; Student; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 20,
+      "openness": 59,
+      "extraversion": 79,
+      "conscientiousness": 15
+    },
+    "twin_interests": [
+      "Mountain sports",
+      "Coffee and hot chocolate",
+      "Personal and moral values"
+    ],
+    "twin_background_knowledge": "This person likely enjoys outdoor winter activities and values personal and moral integrity."
+  }
+}

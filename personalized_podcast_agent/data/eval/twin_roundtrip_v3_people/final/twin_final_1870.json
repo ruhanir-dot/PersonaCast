@@ -1,0 +1,598 @@
+{
+  "user_id": "twin_final_1870",
+  "interests": [
+    "Recipes and cooking",
+    "Food news",
+    "Nutrition",
+    "Tips and life hacks",
+    "Trending news",
+    "Quick and easy recipes",
+    "Horror films",
+    "Mystery films",
+    "Drama films",
+    "Thrillers",
+    "Animated films",
+    "Crime films",
+    "cooking techniques",
+    "cooking and cuisine",
+    "gluten-free baking",
+    "cooking and baking",
+    "sewing and quilting",
+    "dog care",
+    "herbal teas",
+    "Drawing",
+    "seasoning",
+    "pressure cooking",
+    "mystery novels",
+    "home cooking",
+    "breakfast recipes",
+    "sourdough bread"
+  ],
+  "preferred_topics": [
+    "sourdough bread making",
+    "home cooking tips",
+    "breakfast recipes",
+    "cooking techniques",
+    "quick and easy recipes",
+    "trending food news",
+    "nutrition",
+    "gluten-free baking",
+    "dog care",
+    "seasoning",
+    "pressure cooking",
+    "mystery films",
+    "thrillers",
+    "animated films",
+    "horror films"
+  ],
+  "style_preferences": [
+    "Clear, moderately detailed explanations"
+  ],
+  "podcast_focus_keywords": [
+    "cooking tips",
+    "seasoning secrets",
+    "quick recipes",
+    "dog training",
+    "pressure cooking",
+    "gluten-free baking",
+    "mystery films",
+    "thrillers",
+    "animated films",
+    "horror films",
+    "cooking techniques",
+    "seasoning"
+  ],
+  "recommended_news_queries": [
+    "Top 5 quick and easy recipes for the week",
+    "Trending food news this week",
+    "Nutrition news",
+    "Life hacks for better cooking",
+    "Trending news news",
+    "5 quick and easy recipes for busy weeknights",
+    "Horror movie review",
+    "Mystery film analysis",
+    "Drama director interview",
+    "Thriller movie review",
+    "Animated film analysis",
+    "Crime director interview",
+    "Top cooking techniques",
+    "Top tips for cooking and cuisine",
+    "Top tips for gluten-free baking",
+    "Top tips for cooking and baking",
+    "sewing and quilting news",
+    "Top tips for dog care",
+    "herbal teas news",
+    "Drawing news",
+    "Top tips for seasoning",
+    "Top tips for pressure cooking",
+    "Top mystery novels of the year",
+    "Top tips for home cooking",
+    "Top breakfast recipes",
+    "Top tips for making sourdough bread"
+  ],
+  "youtube_search_queries": [
+    "Best pressure cooking techniques",
+    "Top trending food stories",
+    "Nutrition",
+    "10 kitchen hacks you need to know",
+    "Trending news",
+    "Best breakfast recipes",
+    "Horror movie review",
+    "Mystery film analysis",
+    "Drama director interview",
+    "Thriller movie review",
+    "Animated film analysis",
+    "Crime director interview",
+    "Best cooking techniques",
+    "Best cooking and cuisine techniques",
+    "Best gluten-free baking techniques",
+    "Best cooking and baking techniques",
+    "sewing and quilting",
+    "Best dog care tips",
+    "herbal teas",
+    "Drawing",
+    "Best seasoning techniques",
+    "Best home cooking techniques",
+    "Best mystery novels of all time",
+    "home cooking",
+    "breakfast recipes",
+    "Best sourdough bread techniques"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with cooking techniques, recipes, and various food products.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U71053",
+    "movielens_user": "80180",
+    "amazon_user": "AFL4XCNJOVG7NOVUUFTG3LNPSU3Q",
+    "interests_by_source": {
+      "news": 6,
+      "movies": 6,
+      "reviews": 11,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Recipes and cooking",
+        "source": "news",
+        "keys": [
+          "recipes"
+        ],
+        "count": 10,
+        "examples": [
+          "The Absolute Best Casseroles of 2019",
+          "The Tastiest, Most Festive Snacks To Serve On Christmas Eve"
+        ]
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 5,
+        "examples": [
+          "Reese's is unveiling its first new holiday shapes in 20 years",
+          "These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED"
+        ]
+      },
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 3,
+        "examples": []
+      },
+      {
+        "interest": "Tips and life hacks",
+        "source": "news",
+        "keys": [
+          "tipsandtricks"
+        ],
+        "count": 3,
+        "examples": [
+          "Unexpected ingredients that go great with eggs",
+          "The 16 Best Italian Foods You Can Get at Trader Joe's"
+        ]
+      },
+      {
+        "interest": "Trending news",
+        "source": "news",
+        "keys": [
+          "newstrends"
+        ],
+        "count": 2,
+        "examples": [
+          "Glendora's Iconic Donut Man Shop Coming to Grand Central Market"
+        ]
+      },
+      {
+        "interest": "Quick and easy recipes",
+        "source": "news",
+        "keys": [
+          "quickandeasy"
+        ],
+        "count": 2,
+        "examples": [
+          "52 Easy Thanksgiving Recipes, Because You Deserve to Be Stress-Free"
+        ]
+      },
+      {
+        "interest": "Horror films",
+        "source": "movies",
+        "keys": [
+          "Horror"
+        ],
+        "count": 151,
+        "lift": 1.63,
+        "examples": []
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 109,
+        "lift": 1.09,
+        "examples": [
+          "Side Effects (2013)",
+          "Vanilla Sky (2001)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 560,
+        "lift": 1.07,
+        "examples": [
+          "Raging Bull (1980)",
+          "Official Secrets (2019)"
+        ]
+      },
+      {
+        "interest": "Thrillers",
+        "source": "movies",
+        "keys": [
+          "Thriller"
+        ],
+        "count": 343,
+        "lift": 1.04,
+        "examples": [
+          "Official Secrets (2019)",
+          "Personal Shopper (2016)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 89,
+        "lift": 1.04,
+        "examples": [
+          "Waking Life (2001)",
+          "Your Name. (2016)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 211,
+        "lift": 1.04,
+        "examples": [
+          "Side Effects (2013)",
+          "I Saw the Devil (Akmareul boatda) (2010)"
+        ]
+      },
+      {
+        "interest": "cooking techniques",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Cooking Education & Reference"
+        ],
+        "examples": [
+          "How to Cook Everything: The Basics: All You Need to Make Great Food--With 1,000 ",
+          "The Lost Art of Real Cooking: Rediscovering the Pleasures of Traditional Food On",
+          "The Lost Arts of Hearth and Home: The Happy Luddite's Guide to Domestic Self-Suf"
+        ]
+      },
+      {
+        "interest": "cooking and cuisine",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Regional & International"
+        ],
+        "examples": [
+          "The French Laundry Cookbook (The Thomas Keller Library)",
+          "The Plimoth Colony Cook Book",
+          "The James Beard Foundation's Best of the Best: A 25th Anniversary Celebration of"
+        ]
+      },
+      {
+        "interest": "gluten-free baking",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 6,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Cooking & Baking"
+        ],
+        "examples": [
+          "Chebe Bread All-Purpose Mix, Gluten Free, 7.5-Ounce Bags (Pack of 8)",
+          "Erythritol Granules | Made From Non GMO Pears In France | Not From Corn Sludge i",
+          "King Arthur, Better Cheddar Cheese Powder (formerly known as Vermont Cheddar Che"
+        ]
+      },
+      {
+        "interest": "cooking and baking",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Cooking by Ingredient"
+        ],
+        "examples": [
+          "Fearless Broths and Soups: Ditch the Boxes and Cans with 60 Simple Recipes for R",
+          "Home Cheese Making: Recipes for 75 Homemade Cheeses",
+          "The Best Sauce Recipes Ever!: Easy Ways to Jazz Up Your Meals with Amazing Sauce"
+        ]
+      },
+      {
+        "interest": "sewing and quilting",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 5,
+        "categories": [
+          "Arts, Crafts & Sewing > Sewing"
+        ],
+        "examples": [
+          "Brother Sewing and Quilting Machine, CS7000i, 70 Built-in Stitches, 2.0\" LCD Dis",
+          "Set of 2 Bobbin Box Organizers",
+          "Thread Magic Thread Conditioner Combo, CLEAR"
+        ]
+      },
+      {
+        "interest": "dog care",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 5,
+        "categories": [
+          "Dogs"
+        ],
+        "examples": [
+          "PetFusion Ultimate Dog Bed, Orthopedic Memory Foam, Multiple Sizes/Colors, Mediu",
+          "SPOT by Ethical Products – Ceramic Stoneware Pet Bowl for Cats and Small Dogs, C",
+          "Jiminy's Cricket Treats - Chewy Hypoallergenic Dog Treats, 100% Made in The USA,"
+        ]
+      },
+      {
+        "interest": "herbal teas",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36",
+          "P37"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Beverages & Wine"
+        ],
+        "examples": [
+          "The Flavor Bible: The Essential Guide to Culinary Creativity, Based on the Wisdo",
+          "Vintage Cakes: Timeless Recipes for Cupcakes, Flips, Rolls, Layer, Angel, Bundt,",
+          "Healing Herbal Teas: Learn to Blend 101 Specially Formulated Teas for Stress Man"
+        ]
+      },
+      {
+        "interest": "Drawing",
+        "source": "reviews",
+        "keys": [
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 3,
+        "categories": [
+          "Arts, Crafts & Sewing > Painting, Drawing & Art Supplies"
+        ],
+        "examples": [
+          "Sax Sulphite Drawing Paper, 80 lb, 9 x 12 Inches, Extra-White, Pack of 500 - 053",
+          "Daveliou Paint Brush Set, Oil and Acrylic Paint Brushes with Canvas Brush Holder",
+          "Masterclass Premium 9 Inch by 12 Inch Spiral Bound Hardcover Sketchbook, 100-She"
+        ]
+      },
+      {
+        "interest": "seasoning",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42",
+          "P43"
+        ],
+        "count": 3,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Herbs, Spices & Seasonings"
+        ],
+        "examples": [
+          "Sabatino Tartufi Truffle Zest Seasoning, The Original All Purpose Gourmet Truffl",
+          "Frontier Co-op Organic Salt-Free Lemon Pepper 1lb",
+          "A. Vogel Herbamare Herbed Sea Salt - Natural Fine Sea Salt Infused with 12 Herbs"
+        ]
+      },
+      {
+        "interest": "pressure cooking",
+        "source": "reviews",
+        "keys": [
+          "P44",
+          "P45",
+          "P46"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Kitchen Appliances"
+        ],
+        "examples": [
+          "The Lectin Free Cookbook: Easy and Fast Lectin Free Recipes for Your Instant Pot",
+          "The Essential Instant Pot Cookbook: Fresh and Foolproof Recipes for Your Electri",
+          "Air Fry Everything: Foolproof Recipes for Fried Favorites and Easy Fresh Ideas b"
+        ]
+      },
+      {
+        "interest": "mystery novels",
+        "source": "reviews",
+        "keys": [
+          "P47",
+          "P48",
+          "P49"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Mystery"
+        ],
+        "examples": [
+          "In the Market for Murder: Lady Hardcastle, Book 2",
+          "Death Around the Bend: A Lady Hardcastle Mystery, Book 3",
+          "A Cold Nose for Murder (A Chatty Corgi Mystery)"
+        ]
+      },
+      {
+        "interest": "home cooking",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "I just kept the original base amount and sent the extraback to them; They were nice enough to send me some in the first "
+        ]
+      },
+      {
+        "interest": "breakfast recipes",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "I just kept the original base amount and sent the extraback to them; They were nice enough to send me some in the first "
+        ]
+      },
+      {
+        "interest": "sourdough bread",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "toaster -> toast -> butter -> jelly -> crumbs -> bread -> knife -> plate -> food -> breakfast -> unplug -> juice -> milk"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Best pressure cooking techniques": "news",
+      "Top trending food stories": "news",
+      "Nutrition": "news",
+      "10 kitchen hacks you need to know": "news",
+      "Trending news": "news",
+      "Best breakfast recipes": "news",
+      "Horror movie review": "movies",
+      "Mystery film analysis": "movies",
+      "Drama director interview": "movies",
+      "Thriller movie review": "movies",
+      "Animated film analysis": "movies",
+      "Crime director interview": "movies",
+      "Best cooking techniques": "reviews",
+      "Best cooking and cuisine techniques": "reviews",
+      "Best gluten-free baking techniques": "reviews",
+      "Best cooking and baking techniques": "reviews",
+      "sewing and quilting": "reviews",
+      "Best dog care tips": "reviews",
+      "herbal teas": "reviews",
+      "Drawing": "reviews",
+      "Best seasoning techniques": "reviews",
+      "Best home cooking techniques": "reviews",
+      "Best mystery novels of all time": "reviews",
+      "home cooking": "twin",
+      "breakfast recipes": "twin",
+      "Best sourdough bread techniques": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "brief and simple material",
+    "calm delivery",
+    "praise for quality and taste",
+    "focus on practical tips and techniques",
+    "positive and enthusiastic tone",
+    "informative and straightforward"
+  ],
+  "preferred_detail": "moderate",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "average",
+    "openness": "low",
+    "extraversion": "low",
+    "conscientiousness": "low"
+  },
+  "personality_summary": "Compared with US adults: need for cognition average (enjoys some thinking but not heavy material); openness low (prefers the familiar and conventional); extraversion low (reserved and quiet); conscientiousness low (spontaneous, less concerned with order).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1870",
+    "additional_context": "Age 30-49; Part-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 46,
+      "openness": 15,
+      "extraversion": 26,
+      "conscientiousness": 5
+    },
+    "twin_interests": [
+      "home cooking",
+      "breakfast recipes",
+      "sourdough bread"
+    ],
+    "twin_background_knowledge": "This person likely enjoys cooking at home, particularly making sourdough bread and preparing breakfast meals."
+  }
+}

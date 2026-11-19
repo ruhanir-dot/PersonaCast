@@ -1,0 +1,618 @@
+{
+  "user_id": "twin_final_1576",
+  "interests": [
+    "Lifestyle buzz",
+    "Weather news",
+    "Company and business news",
+    "Fitness",
+    "Retirement planning",
+    "Political news",
+    "Musicals",
+    "War films",
+    "Westerns",
+    "Romantic films",
+    "Fantasy films",
+    "Mystery films",
+    "Drama films",
+    "Adventure films",
+    "Animated films",
+    "palm tree care",
+    "travel and culture",
+    "bird watching",
+    "boating",
+    "dog stories",
+    "novel",
+    "golf fitness",
+    "biking",
+    "European Hiking",
+    "camping",
+    "weather",
+    "outdoor activities",
+    "financial management"
+  ],
+  "preferred_topics": [
+    "weather forecasts",
+    "autumn outdoor activities",
+    "personal finance management",
+    "weather updates",
+    "financial news",
+    "lifestyle tips",
+    "retirement planning",
+    "movie reviews",
+    "outdoor activities",
+    "travel destinations",
+    "golf fitness",
+    "dog care",
+    "palm tree maintenance",
+    "book recommendations",
+    "hiking trails"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "weather forecast",
+    "investment advice",
+    "lifestyle hacks",
+    "retirement strategies",
+    "movie analysis",
+    "outdoor adventures",
+    "golf training",
+    "dog care tips",
+    "palm tree care",
+    "travel guides",
+    "book summaries",
+    "hiking tips"
+  ],
+  "recommended_news_queries": [
+    "latest lifestyle trends",
+    "upcoming weather patterns",
+    "latest business news",
+    "new fitness trends",
+    "retirement planning strategies",
+    "latest political updates",
+    "Musical movie review",
+    "War film analysis",
+    "Western director interview",
+    "Romantic movie review",
+    "Fantasy film analysis",
+    "Mystery director interview",
+    "Drama movie review",
+    "Adventure film analysis",
+    "Animated director interview",
+    "palm tree care tips",
+    "travel destinations",
+    "bird watching tips",
+    "boating tips",
+    "dog stories",
+    "new novels",
+    "golf fitness tips",
+    "biking tips",
+    "European hiking trails",
+    "camping tips",
+    "weather updates",
+    "outdoor activities",
+    "financial management tips"
+  ],
+  "youtube_search_queries": [
+    "top lifestyle hacks",
+    "weather forecast tips",
+    "business trends",
+    "fitness tips",
+    "retirement savings tips",
+    "political analysis",
+    "Musical movie review",
+    "War film analysis",
+    "Western director interview",
+    "Romantic movie review",
+    "Fantasy film analysis",
+    "Mystery director interview",
+    "Drama movie review",
+    "Adventure film analysis",
+    "Animated director interview",
+    "palm tree maintenance",
+    "cultural travel guides",
+    "bird watching guides",
+    "boating guides",
+    "dog training tips",
+    "novel recommendations",
+    "golf training",
+    "biking guides",
+    "European hiking guides",
+    "camping guides",
+    "weather",
+    "outdoor adventure guides",
+    "financial management"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "religion",
+    "personal medical details",
+    "autos"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like religion and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from.",
+    "Political news is kept only because this listener's own news clicks show it."
+  ],
+  "background_knowledge": "Familiar with weather patterns, financial management strategies, and outdoor activities.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U48331",
+    "movielens_user": "17416",
+    "amazon_user": "AHTRTKBDSQCRKM6AHMQVVF5BIROA",
+    "interests_by_source": {
+      "news": 6,
+      "movies": 9,
+      "reviews": 10,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 4,
+        "examples": [
+          "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs"
+        ]
+      },
+      {
+        "interest": "Weather news",
+        "source": "news",
+        "keys": [
+          "weathertopstories"
+        ],
+        "count": 3,
+        "examples": [
+          "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+          "Several blasts of arctic cold will bring an early winter to millions across the US"
+        ]
+      },
+      {
+        "interest": "Company and business news",
+        "source": "news",
+        "keys": [
+          "finance-companies"
+        ],
+        "count": 3,
+        "examples": [
+          "Bank of America hiking minimum wage to $20 an hour",
+          "Here are the 96 Sears and Kmart stores that are closing next"
+        ]
+      },
+      {
+        "interest": "Fitness",
+        "source": "news",
+        "keys": [
+          "fitness"
+        ],
+        "count": 2,
+        "examples": [
+          "Britney Spears' Abs Are on Full Display In Her Newest Workout Video"
+        ]
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 2,
+        "examples": [
+          "How much Social Security you could get from a $75,000 salary"
+        ]
+      },
+      {
+        "interest": "Political news",
+        "source": "news",
+        "keys": [
+          "newspolitics"
+        ],
+        "count": 2,
+        "examples": [
+          "Analysis: The House is not voting on impeaching Trump today. But here's why the vote still matters",
+          "Two House Democrats break ranks with Pelosi on impeachment rules vote"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 33,
+        "lift": 2.71,
+        "examples": []
+      },
+      {
+        "interest": "War films",
+        "source": "movies",
+        "keys": [
+          "War"
+        ],
+        "count": 38,
+        "lift": 2.3,
+        "examples": []
+      },
+      {
+        "interest": "Westerns",
+        "source": "movies",
+        "keys": [
+          "Western"
+        ],
+        "count": 14,
+        "lift": 2.29,
+        "examples": [
+          "Man of the West (1958)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 80,
+        "lift": 1.39,
+        "examples": [
+          "Sense and Sensibility (1995)",
+          "Illusionist, The (2006)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 49,
+        "lift": 1.24,
+        "examples": [
+          "Illusionist, The (2006)",
+          "Midnight in Paris (2011)"
+        ]
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 32,
+        "lift": 1.17,
+        "examples": [
+          "Memento (2000)",
+          "Donnie Darko (2001)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 157,
+        "lift": 1.09,
+        "examples": [
+          "Sense and Sensibility (1995)",
+          "Noah (2014)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 86,
+        "lift": 1.07,
+        "examples": [
+          "Noah (2014)",
+          "Nebraska (2013)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 24,
+        "lift": 1.02,
+        "examples": []
+      },
+      {
+        "interest": "palm tree care",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 5,
+        "categories": [
+          "Gardening"
+        ],
+        "examples": [
+          "Jobe’s, 01660, Fertilizer Spikes, Tree & Shrubs, Includes 15 Spikes, 12 ounces, ",
+          "2 Pack Tree Protector Wraps, Total 130 Foot Winter-Proof Tree Trunk Guard Shrub ",
+          "Dimex EasyFlex Plastic Tree Trunk Protectors, 12 Count, Grey (1131-12C)"
+        ]
+      },
+      {
+        "interest": "travel and culture",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > History > Americas"
+        ],
+        "examples": [
+          "Harvey Penick's Little Red Book: Lessons And Teachings From A Lifetime In Golf",
+          "The Forgotten 500: The Untold Story of the Men Who Risked All for the Greatest R",
+          "Rick Steves Travel as a Political Act"
+        ]
+      },
+      {
+        "interest": "bird watching",
+        "source": "reviews",
+        "keys": [
+          "P10",
+          "P11",
+          "P12"
+        ],
+        "count": 3,
+        "categories": [
+          "Backyard birding"
+        ],
+        "examples": [
+          "Coveside Mounted Downy Woodpecker Bird Nest House",
+          "Coveside Bird Habitats Three Woodpeckers House",
+          "Stovall 4H Woodpecker House"
+        ]
+      },
+      {
+        "interest": "boating",
+        "source": "reviews",
+        "keys": [
+          "P13",
+          "P14",
+          "P15",
+          "P19",
+          "P20",
+          "P21"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Sports & Outdoors > Water Sports",
+          "Books > Engineering & Transportation > Transportation"
+        ],
+        "examples": [
+          "The Nature of Boats: Insights and Esoterica for the Nautically Obsessed",
+          "Voyaging Under Power, 4th Edition",
+          "How Boat Things Work: An Illustrated Guide"
+        ],
+        "merged": [
+          "sailing"
+        ]
+      },
+      {
+        "interest": "dog stories",
+        "source": "reviews",
+        "keys": [
+          "P22",
+          "P23",
+          "P24"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Travel > United States"
+        ],
+        "examples": [
+          "Following Atticus: Forty-eight High Peaks, One Little Dog, and an Extraordinary ",
+          "Exploring the Appalachian Trail: Hikes in the Southern Appalachians",
+          "Will's Red Coat: The Story of One Old Dog Who Chose to Live Again"
+        ]
+      },
+      {
+        "interest": "novel",
+        "source": "reviews",
+        "keys": [
+          "P25",
+          "P26",
+          "P27"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "A Man Called Ove: A Novel",
+          "The Shadow of the Crescent Moon: A Novel",
+          "The Poisonwood Bible: A Novel"
+        ]
+      },
+      {
+        "interest": "golf fitness",
+        "source": "reviews",
+        "keys": [
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 3,
+        "categories": [
+          "Movies & TV > Genre for Featured Categories > Exercise & Fitness"
+        ],
+        "examples": [
+          "Classical Stretch by ESSENTRICS: Season 12 Aging Backwards",
+          "ESSENTRICS Full Body Workout Vol. 3 with Miranda Esmonde-White",
+          "Classical Stretch by ESSENTRICS: Season 10 Strength & Flexibility"
+        ]
+      },
+      {
+        "interest": "biking",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33"
+        ],
+        "count": 3,
+        "categories": [
+          "Sports & Outdoors > Sports > Cycling"
+        ],
+        "examples": [
+          "BV Bike Panniers 26L With Adjustable Hooks - Panniers For Bicycles With Carrying",
+          "Kryptonite New York Fahgettaboutit Mini Bike U-Lock, Heavy Duty Anti-Theft Bicyc",
+          "JXFUKAL Rear Bike Rack Bag with Rain Cover, 7L/9L/10L/12L Waterproof Bicycle Ebi"
+        ]
+      },
+      {
+        "interest": "European Hiking",
+        "source": "reviews",
+        "keys": [
+          "P34",
+          "P35"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Travel > Europe"
+        ],
+        "examples": [
+          "Rick Steves' Italy 2014",
+          "Walking on the Azores: 70 Routes across Sao Miguel, Santa Maria, Terceria, Graci"
+        ]
+      },
+      {
+        "interest": "camping",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37"
+        ],
+        "count": 2,
+        "categories": [
+          "Sports & Outdoors > Outdoor Recreation > Camping & Hiking"
+        ],
+        "examples": [
+          "Coleman Evanston Screened Camping Tent, 6/8 Person Weatherproof Tent with Roomy ",
+          "BornFeel Trekking Pole Replacement Tips 16 Pack Hiking Pole Rubber Tips Walking "
+        ]
+      },
+      {
+        "interest": "weather",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "weather -> clouds -> water -> cool -> autumn -> leaves -> rustle"
+        ]
+      },
+      {
+        "interest": "outdoor activities",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "outdoors -> walking -> shoes -> sole -> rubber -> traction -> friction -> force -> mass"
+        ]
+      },
+      {
+        "interest": "financial management",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy: very high (91th percentile)"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "top lifestyle hacks": "news",
+      "weather forecast tips": "news",
+      "business trends": "news",
+      "fitness tips": "news",
+      "retirement savings tips": "news",
+      "political analysis": "news",
+      "Musical movie review": "movies",
+      "War film analysis": "movies",
+      "Western director interview": "movies",
+      "Romantic movie review": "movies",
+      "Fantasy film analysis": "movies",
+      "Mystery director interview": "movies",
+      "Drama movie review": "movies",
+      "Adventure film analysis": "movies",
+      "Animated director interview": "movies",
+      "palm tree maintenance": "reviews",
+      "cultural travel guides": "reviews",
+      "bird watching guides": "reviews",
+      "boating guides": "reviews",
+      "dog training tips": "reviews",
+      "novel recommendations": "reviews",
+      "golf training": "reviews",
+      "biking guides": "reviews",
+      "European hiking guides": "reviews",
+      "camping guides": "reviews",
+      "weather": "twin",
+      "outdoor adventure guides": "twin",
+      "financial management": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "brief and straightforward",
+    "informative and practical",
+    "casual and relatable",
+    "focused on benefits",
+    "minimalistic design",
+    "simple language"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "low",
+    "extraversion": "low",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness low (prefers the familiar and conventional); extraversion low (reserved and quiet); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1576",
+    "additional_context": "Age 65+; Retired; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 92,
+      "openness": 31,
+      "extraversion": 10,
+      "conscientiousness": 87
+    },
+    "twin_interests": [
+      "weather",
+      "outdoor activities",
+      "financial management"
+    ],
+    "twin_background_knowledge": "This person likely has a good understanding of financial management and enjoys outdoor activities, especially in autumn."
+  }
+}

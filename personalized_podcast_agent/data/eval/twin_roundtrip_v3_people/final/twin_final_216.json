@@ -1,0 +1,628 @@
+{
+  "user_id": "twin_final_216",
+  "interests": [
+    "Lifestyle buzz",
+    "Nutrition",
+    "Tips and life hacks",
+    "TV stars",
+    "Music stars",
+    "Travel ideas",
+    "Food news",
+    "Movie stars",
+    "British royal family",
+    "Home and garden",
+    "Health news",
+    "Science fiction films",
+    "Action movies",
+    "Mystery films",
+    "Crime films",
+    "leadership development",
+    "Business Marketing",
+    "science fiction",
+    "career development",
+    "rose pruning",
+    "American History",
+    "social media marketing",
+    "IT management and security",
+    "biking",
+    "entrepreneurship",
+    "technology and innovation",
+    "entrepreneurship and business",
+    "social media and lifestyle",
+    "positivity and personal growth"
+  ],
+  "preferred_topics": [
+    "innovative technologies",
+    "entrepreneurial success stories",
+    "lifestyle and fashion trends",
+    "social media marketing",
+    "personal development and self-improvement",
+    "Leadership development",
+    "Business marketing",
+    "Science fiction",
+    "Action movies",
+    "Mystery films",
+    "Crime films",
+    "Rose pruning",
+    "American history",
+    "Technology and innovation",
+    "Entrepreneurship",
+    "Social media marketing",
+    "IT management and security"
+  ],
+  "style_preferences": [
+    "Clear, moderately detailed explanations"
+  ],
+  "podcast_focus_keywords": [
+    "Leadership",
+    "Marketing",
+    "Innovation",
+    "Entrepreneurship",
+    "Technology",
+    "Strategy",
+    "Business",
+    "Science fiction",
+    "Action",
+    "Mystery",
+    "Crime",
+    "Rose pruning"
+  ],
+  "recommended_news_queries": [
+    "Lifestyle buzz news",
+    "Latest nutrition trends",
+    "Life hacks and tips",
+    "Latest news about TV stars",
+    "Latest news about music stars",
+    "Travel ideas and destinations",
+    "Latest food news and trends",
+    "Latest news about movie stars",
+    "Latest news about the British royal family",
+    "Home and garden trends",
+    "Latest health news",
+    "Science fiction movie review",
+    "Action film analysis",
+    "Mystery director interview",
+    "Crime movie review",
+    "Top leadership development trends",
+    "Latest marketing strategies for small businesses",
+    "Upcoming science fiction movies and TV shows",
+    "career development news",
+    "Tips for pruning roses in spring",
+    "Key events in American history",
+    "Social media marketing trends",
+    "Latest IT security threats",
+    "Biking tips and tricks",
+    "Entrepreneurship success stories",
+    "Latest tech innovations and trends",
+    "Entrepreneurship and business tips",
+    "Social media trends and lifestyle tips",
+    "Positivity and personal growth tips"
+  ],
+  "youtube_search_queries": [
+    "Lifestyle buzz",
+    "Nutrition",
+    "Best life hacks for everyday use",
+    "TV star interviews and behind-the-scenes footage",
+    "Music star interviews and performances",
+    "Travel vlogs and destination guides",
+    "Food and drink reviews",
+    "Movie star interviews and performances",
+    "Royal family documentaries and interviews",
+    "Home and garden renovation ideas",
+    "Health and wellness tips",
+    "Science fiction movie review",
+    "Action film analysis",
+    "Mystery director interview",
+    "Crime movie review",
+    "Leadership development strategies for success",
+    "Effective marketing techniques for startups",
+    "Best science fiction movies of all time",
+    "career development",
+    "How to prune roses for maximum blooms",
+    "Documentaries on American history",
+    "Best social media marketing strategies",
+    "Top IT security practices",
+    "Best biking routes for beginners",
+    "entrepreneurship",
+    "technology and innovation",
+    "How to start a successful business",
+    "Lifestyle hacks for social media users",
+    "positivity and personal growth"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "autos",
+    "Comedy films",
+    "Fantasy films"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with leadership development, business marketing, science fiction, action movies, mystery films, crime films, rose pruning, American history, technology and innovation, entrepreneurship, social media marketing, IT management and security, and has read several books on these topics.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U3953",
+    "movielens_user": "21587",
+    "amazon_user": "AFKQDPTVJZZVBBGRFL6EZQBCDBTQ",
+    "interests_by_source": {
+      "news": 11,
+      "movies": 4,
+      "reviews": 10,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 9,
+        "examples": [
+          "Target is offering a 10% military discount for Veterans Day. Here's how to sign up",
+          "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?"
+        ]
+      },
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 7,
+        "examples": [
+          "The keto diet is hard work   but this hack makes it so much easier"
+        ]
+      },
+      {
+        "interest": "Tips and life hacks",
+        "source": "news",
+        "keys": [
+          "tipsandtricks"
+        ],
+        "count": 4,
+        "examples": []
+      },
+      {
+        "interest": "TV stars",
+        "source": "news",
+        "keys": [
+          "tv-celebrity"
+        ],
+        "count": 3,
+        "examples": []
+      },
+      {
+        "interest": "Music stars",
+        "source": "news",
+        "keys": [
+          "music-celebrity"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Travel ideas",
+        "source": "news",
+        "keys": [
+          "traveltripideas"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Movie stars",
+        "source": "news",
+        "keys": [
+          "movies-celebrity"
+        ],
+        "count": 2,
+        "examples": [
+          "Jada and Will Smith Share Touching Tributes for Daughter Willow's 19th Birthday"
+        ]
+      },
+      {
+        "interest": "British royal family",
+        "source": "news",
+        "keys": [
+          "lifestyleroyals"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Health news",
+        "source": "news",
+        "keys": [
+          "medical"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Science fiction films",
+        "source": "movies",
+        "keys": [
+          "Sci-Fi"
+        ],
+        "count": 26,
+        "lift": 2.04,
+        "examples": [
+          "In Time (2011)",
+          "Matrix, The (1999)"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 28,
+        "lift": 1.31,
+        "examples": [
+          "Matrix, The (1999)",
+          "Baby Driver (2017)"
+        ]
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 7,
+        "lift": 1.22,
+        "examples": [
+          "Now You See Me (2013)",
+          "Prestige, The (2006)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 12,
+        "lift": 1.03,
+        "examples": [
+          "In Time (2011)",
+          "Baby Driver (2017)"
+        ]
+      },
+      {
+        "interest": "leadership development",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 48,
+        "categories": [
+          "Books > Business & Money > Management & Leadership"
+        ],
+        "examples": [
+          "Leaders Make the Future: Ten New Leadership Skills for an Uncertain World",
+          "Harvard Business Review on Managing Through a Downturn (Harvard Business Review ",
+          "Big Shoes: How Successful Leaders Grow into New Roles"
+        ]
+      },
+      {
+        "interest": "Business Marketing",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Business & Money > Marketing & Sales"
+        ],
+        "examples": [
+          "Friends with Benefits: A Social Media Marketing Handbook",
+          "Escape Velocity: Free Your Company's Future from the Pull of the Past",
+          "Contextual Pricing: The Death of List Price and the New Market Reality"
+        ]
+      },
+      {
+        "interest": "science fiction",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "Dreaming Again: Thirty-five New Stories Celebrating the Wild Side of Australian ",
+          "Emperor's Mercy (Warhammer 40,000)",
+          "Dark Creed (Word Bearers)"
+        ]
+      },
+      {
+        "interest": "career development",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Business & Money > Business Culture"
+        ],
+        "examples": [
+          "The Knockoff Economy: How Imitation Sparks Innovation",
+          "The Year Without Pants: WordPress.com and the Future of Work",
+          "Selling Vision: The X-XY-Y Formula for Driving Results by Selling Change"
+        ]
+      },
+      {
+        "interest": "rose pruning",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 5,
+        "categories": [
+          "Gardening"
+        ],
+        "examples": [
+          "Rose Pruning Gloves for Men and Women - Thorn Proof Goatskin Leather Gardening G",
+          "OXO 1070519 Good Grips Outdoor Pour & Store Watering Can, Fuchsia",
+          "Byhagern Garden Pruning Scissors for Flowers, 2 PCS Garden Flower Snips with Zin"
+        ]
+      },
+      {
+        "interest": "American History",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > History > Americas"
+        ],
+        "examples": [
+          "Descartes' Bones: A Skeletal History of the Conflict between Faith and Reason",
+          "Perilous Fight: America's Intrepid War with Britain on the High Seas, 1812-1815",
+          "Must Win: A Season of Survival for a Town and Its Team"
+        ]
+      },
+      {
+        "interest": "social media marketing",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36",
+          "P37",
+          "P38"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Business & Money > Processes & Infrastructure"
+        ],
+        "examples": [
+          "Perspectives on Social Media Marketing",
+          "The Dragonfly Effect: Quick, Effective, and Powerful Ways To Use Social Media to",
+          "Jugaad Innovation: Think Frugal, Be Flexible, Generate Breakthrough Growth"
+        ]
+      },
+      {
+        "interest": "IT management and security",
+        "source": "reviews",
+        "keys": [
+          "P39",
+          "P40",
+          "P41",
+          "P42"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Computers & Technology > Networking & Cloud Computing"
+        ],
+        "examples": [
+          "IT Manager's Handbook: The Business Edition",
+          "Securing the Cloud: Cloud Computer Security Techniques and Tactics",
+          "Blockchain For Dummies (For Dummies (Computer/Tech))"
+        ]
+      },
+      {
+        "interest": "biking",
+        "source": "reviews",
+        "keys": [
+          "P47",
+          "P48",
+          "P49",
+          "P50"
+        ],
+        "count": 4,
+        "categories": [
+          "Sports & Outdoors > Sports > Cycling"
+        ],
+        "examples": [
+          "Saris The Hottie Two Bike Home Storage, White",
+          "LucidBrake Bicycle Brake Light",
+          "Crankbrothers Doubleshot Hybrid Bike Pedal - Flat/Clipped-In City Bicycle Pedal,"
+        ]
+      },
+      {
+        "interest": "entrepreneurship",
+        "source": "reviews",
+        "keys": [
+          "P51",
+          "P52",
+          "P53",
+          "P54"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Business & Money > Finance"
+        ],
+        "examples": [
+          "New World, Inc.: The Making of America by England's Merchant Adventurers",
+          "Built, Not Born: A Self-Made Billionaire's No-Nonsense Guide for Entrepreneurs",
+          "Capitalism without Capital: The Rise of the Intangible Economy"
+        ]
+      },
+      {
+        "interest": "technology and innovation",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "tesla, google, amazon, apple, samsung"
+        ]
+      },
+      {
+        "interest": "entrepreneurship and business",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "apple, tesla, amazon, google, bmw, netflix, cocacola, mcdonalds"
+        ]
+      },
+      {
+        "interest": "social media and lifestyle",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "instagram, disney, starbucks, netflix, cocacola, mcdonalds"
+        ]
+      },
+      {
+        "interest": "positivity and personal growth",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "myself, positivity, sharing"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Lifestyle buzz": "news",
+      "Nutrition": "news",
+      "Best life hacks for everyday use": "news",
+      "TV star interviews and behind-the-scenes footage": "news",
+      "Music star interviews and performances": "news",
+      "Travel vlogs and destination guides": "news",
+      "Food and drink reviews": "news",
+      "Movie star interviews and performances": "news",
+      "Royal family documentaries and interviews": "news",
+      "Home and garden renovation ideas": "news",
+      "Health and wellness tips": "news",
+      "Science fiction movie review": "movies",
+      "Action film analysis": "movies",
+      "Mystery director interview": "movies",
+      "Crime movie review": "movies",
+      "Leadership development strategies for success": "reviews",
+      "Effective marketing techniques for startups": "reviews",
+      "Best science fiction movies of all time": "reviews",
+      "career development": "reviews",
+      "How to prune roses for maximum blooms": "reviews",
+      "Documentaries on American history": "reviews",
+      "Best social media marketing strategies": "reviews",
+      "Top IT security practices": "reviews",
+      "Best biking routes for beginners": "reviews",
+      "entrepreneurship": "reviews",
+      "technology and innovation": "twin",
+      "How to start a successful business": "twin",
+      "Lifestyle hacks for social media users": "twin",
+      "positivity and personal growth": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Brief and straightforward",
+    "Informative and practical",
+    "Engaging and energetic",
+    "Positive and uplifting",
+    "Focus on actionable insights",
+    "Concise and to the point"
+  ],
+  "preferred_detail": "moderate",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "average",
+    "openness": "low",
+    "extraversion": "high",
+    "conscientiousness": "low"
+  },
+  "personality_summary": "Compared with US adults: need for cognition average (enjoys some thinking but not heavy material); openness low (prefers the familiar and conventional); extraversion high (outgoing, lively and energetic); conscientiousness low (spontaneous, less concerned with order).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "216",
+    "additional_context": "Age 18-29; Part-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 41,
+      "openness": 18,
+      "extraversion": 71,
+      "conscientiousness": 21
+    },
+    "twin_interests": [
+      "technology and innovation",
+      "entrepreneurship and business",
+      "social media and lifestyle",
+      "positivity and personal growth"
+    ],
+    "twin_background_knowledge": "This person likely follows news and content related to the latest technological advancements, business strategies, and personal growth trends."
+  }
+}

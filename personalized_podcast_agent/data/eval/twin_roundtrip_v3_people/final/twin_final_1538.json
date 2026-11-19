@@ -1,0 +1,621 @@
+{
+  "user_id": "twin_final_1538",
+  "interests": [
+    "TV",
+    "Trending news",
+    "TV stars",
+    "Travel ideas",
+    "Wellness",
+    "Movie stars",
+    "US news",
+    "Science fiction films",
+    "Horror films",
+    "Fantasy films",
+    "Adventure films",
+    "Romantic films",
+    "Action movies",
+    "thriller",
+    "YA and Paranormal Fiction",
+    "poetic prose",
+    "mystery novels",
+    "fantasy literature",
+    "writing",
+    "sci-fi",
+    "crime fiction",
+    "memoir",
+    "children's education",
+    "celebrity memoirs",
+    "Fantasy literature and storytelling",
+    "Horror and suspense",
+    "Journaling and creative writing",
+    "Science fiction"
+  ],
+  "preferred_topics": [
+    "Fantasy book reviews",
+    "Horror movie analysis",
+    "Creative writing workshops",
+    "Science fiction podcasts",
+    "TV shows",
+    "Halloween-themed TV episodes",
+    "Celebrity news",
+    "Travel destinations",
+    "Wellness trends",
+    "Movie stars",
+    "US current events",
+    "Science fiction movies",
+    "Horror movies",
+    "Fantasy movies",
+    "Adventure movies",
+    "Romantic movies"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Curious about new and unusual angles",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "TV series",
+    "Halloween specials",
+    "Celebrity gossip",
+    "Travel tips",
+    "Wellness tips",
+    "Movie stars",
+    "US news",
+    "Sci-fi films",
+    "Horror films",
+    "Fantasy films",
+    "Adventure films",
+    "Romantic films"
+  ],
+  "recommended_news_queries": [
+    "Top TV shows of the month",
+    "Top trending news stories",
+    "Top movie stars in the news",
+    "Top travel destinations",
+    "Latest wellness trends",
+    "Action movies news",
+    "US current events",
+    "Science fiction movie review",
+    "Horror film analysis",
+    "Fantasy director interview",
+    "Adventure movie review",
+    "Romantic film analysis",
+    "Action director interview",
+    "thriller news",
+    "YA and Paranormal Fiction news",
+    "poetic prose news",
+    "mystery novels news",
+    "Top fantasy literature news",
+    "Top journaling and creative writing news",
+    "sci-fi news",
+    "Top crime fiction news",
+    "Top memoirs in the news",
+    "Top educational resources for children",
+    "Top celebrity memoirs in the news",
+    "fantasy literature news",
+    "Top horror and suspense news",
+    "Top writing news",
+    "Top science fiction films of the year"
+  ],
+  "youtube_search_queries": [
+    "Best TV series",
+    "Trending news",
+    "TV stars",
+    "Travel vlogs and destination guides",
+    "Wellness tips and routines",
+    "Science fiction movie trailers",
+    "US news highlights",
+    "Science fiction movie review",
+    "Horror film analysis",
+    "Fantasy director interview",
+    "Adventure movie review",
+    "Romantic film analysis",
+    "Action director interview",
+    "thriller",
+    "YA and Paranormal Fiction",
+    "poetic prose",
+    "mystery novels",
+    "Fantasy literature book reviews",
+    "Creative writing tips and tutorials",
+    "sci-fi",
+    "Crime fiction book reviews",
+    "Memoir book reviews",
+    "children's education",
+    "Celebrity memoir book reviews",
+    "fantasy literature",
+    "Horror and suspense book reviews",
+    "Writing tips and tutorials",
+    "Science fiction movie reviews"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "sports"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with a variety of TV shows, movies, and books, particularly in the genres of science fiction, horror, fantasy, and romance. Also knowledgeable about current events, celebrity news, and wellness trends.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U78397",
+    "movielens_user": "107295",
+    "amazon_user": "AGSHRJKDKJMYVEXQGX7Z3JJD2MCQ",
+    "interests_by_source": {
+      "news": 7,
+      "movies": 6,
+      "reviews": 11,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "TV",
+        "source": "news",
+        "keys": [
+          "tv-gallery"
+        ],
+        "count": 5,
+        "examples": [
+          "The 26 best Halloween-themed TV episodes",
+          "31 TV reboots, remakes, and spin-offs that are in the works"
+        ]
+      },
+      {
+        "interest": "Trending news",
+        "source": "news",
+        "keys": [
+          "newstrends"
+        ],
+        "count": 3,
+        "examples": []
+      },
+      {
+        "interest": "TV stars",
+        "source": "news",
+        "keys": [
+          "tv-celebrity"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Travel ideas",
+        "source": "news",
+        "keys": [
+          "traveltripideas"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Wellness",
+        "source": "news",
+        "keys": [
+          "wellness"
+        ],
+        "count": 2,
+        "examples": [
+          "A wellness influencer told her Instagram followers that shampoo causes weight gain, but nutrition experts are calling her comments 'madness'"
+        ]
+      },
+      {
+        "interest": "Movie stars",
+        "source": "news",
+        "keys": [
+          "movies-celebrity"
+        ],
+        "count": 2,
+        "examples": [
+          "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 2,
+        "examples": [
+          "Cornell student, 18, found dead in gorge after frat party, reports say",
+          "One-handed Chicago pianist Norman Malone   who was injured in childhood   takes on a new challenge"
+        ]
+      },
+      {
+        "interest": "Science fiction films",
+        "source": "movies",
+        "keys": [
+          "Sci-Fi"
+        ],
+        "count": 20,
+        "lift": 2.02,
+        "examples": []
+      },
+      {
+        "interest": "Horror films",
+        "source": "movies",
+        "keys": [
+          "Horror"
+        ],
+        "count": 7,
+        "lift": 1.7,
+        "examples": []
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 9,
+        "lift": 1.41,
+        "examples": []
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 15,
+        "lift": 1.14,
+        "examples": []
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 10,
+        "lift": 1.07,
+        "examples": [
+          "L.A. Story (1991)"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 17,
+        "lift": 1.02,
+        "examples": []
+      },
+      {
+        "interest": "thriller",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 146,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Thrillers & Suspense"
+        ],
+        "examples": [
+          "Sinema: The Northumberland Massacre",
+          "Life After: The Basement: (Short 2) (The ‘Life After’ Series)",
+          "LAST STRAW"
+        ]
+      },
+      {
+        "interest": "YA and Paranormal Fiction",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 128,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "Adorned: The Trinity of Souls Series",
+          "Where the Secret Lies: When she met her ghostly past",
+          "White Jasmine: A Story of Power and Love"
+        ]
+      },
+      {
+        "interest": "poetic prose",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 20,
+        "categories": [
+          "Books > Literature & Fiction > Poetry"
+        ],
+        "examples": [
+          "Answer to My Ellipsis",
+          "Underwater Fistfight",
+          "Selfhood: Varieties of Experience: an anthology for the faint of heart"
+        ]
+      },
+      {
+        "interest": "mystery novels",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 18,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Mystery"
+        ],
+        "examples": [
+          "Tracking A Shadow: A Jarvis Mann Private Detective HardBoiled Mystery Novel (Jar",
+          "Engadine Aerie: A Hardy Durkin Travel Mystery",
+          "The Atlas Defect: A Medical Supernatural Mystery (NightShade Forensic FBI Files "
+        ]
+      },
+      {
+        "interest": "fantasy literature",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 9,
+        "categories": [
+          "Books > Teen & Young Adult > Science Fiction & Fantasy"
+        ],
+        "examples": [
+          "The Alienation of Courtney Hoffman: A Novel",
+          "The Emblem Throne: The Runes of Issalia, Book II",
+          "The Demon's Angel"
+        ]
+      },
+      {
+        "interest": "writing",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Reference > Writing, Research & Publishing Guides"
+        ],
+        "examples": [
+          "The Renegade Writer",
+          "River Queens: Saucy boat, stout mates, spotted dog, America",
+          "Purple Snowflake Marketing: How to Make Your Book Stand Out in the Crowd"
+        ]
+      },
+      {
+        "interest": "sci-fi",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Science Fiction & Fantasy > Science Fiction"
+        ],
+        "examples": [
+          "The Arc of the Universe: Book Two",
+          "Fraction in Time (The Stelladaur Series)",
+          "Nocturne Variations"
+        ]
+      },
+      {
+        "interest": "crime fiction",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42",
+          "P43",
+          "P44",
+          "P45"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Literature & Fiction > Action & Adventure"
+        ],
+        "examples": [
+          "Beyond the Amaranthine Veil",
+          "El Capo de Capos",
+          "White Oaks (Trapnell Thriller)"
+        ]
+      },
+      {
+        "interest": "memoir",
+        "source": "reviews",
+        "keys": [
+          "P46",
+          "P47",
+          "P48",
+          "P49"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Biographies & Memoirs > Community & Culture"
+        ],
+        "examples": [
+          "Born in Sarajevo",
+          "No More Crying Angels: A True Story of Survival Despite Overwhelming Odds",
+          "Forever Herself: A Son's Memoir of a Remarkable Woman"
+        ]
+      },
+      {
+        "interest": "children's education",
+        "source": "reviews",
+        "keys": [
+          "P50",
+          "P51",
+          "P52",
+          "P53"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Education & Teaching > Schools & Teaching"
+        ],
+        "examples": [
+          "Gifted and Talented Test Preparation: Gifted test prep book for the OLSAT, NNAT2",
+          "Good Kid in Trouble",
+          "Talking Tales: Catch that Chinchilla"
+        ]
+      },
+      {
+        "interest": "celebrity memoirs",
+        "source": "reviews",
+        "keys": [
+          "P54",
+          "P55",
+          "P56"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Biographies & Memoirs > Arts & Literature"
+        ],
+        "examples": [
+          "Still Me: With a New Afterword for this Edition",
+          "Meryl Streep: On the Couch (On the Couch, 6)",
+          "Carrie and Me: A Mother-Daughter Love Story"
+        ]
+      },
+      {
+        "interest": "Fantasy literature and storytelling",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "novel, story, character, adventure, tragedy, comedy, imagination, magic, science"
+        ]
+      },
+      {
+        "interest": "Horror and suspense",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "horror, landscapes"
+        ]
+      },
+      {
+        "interest": "Journaling and creative writing",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "journal, novel, story, character, imagination, memories"
+        ]
+      },
+      {
+        "interest": "Science fiction",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "science, imagination, magic"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Best TV series": "news",
+      "Trending news": "news",
+      "TV stars": "news",
+      "Travel vlogs and destination guides": "news",
+      "Wellness tips and routines": "news",
+      "Science fiction movie trailers": "news",
+      "US news highlights": "news",
+      "Science fiction movie review": "movies",
+      "Horror film analysis": "movies",
+      "Fantasy director interview": "movies",
+      "Adventure movie review": "movies",
+      "Romantic film analysis": "movies",
+      "Action director interview": "movies",
+      "thriller": "reviews",
+      "YA and Paranormal Fiction": "reviews",
+      "poetic prose": "reviews",
+      "mystery novels": "reviews",
+      "Fantasy literature book reviews": "reviews",
+      "Creative writing tips and tutorials": "reviews",
+      "sci-fi": "reviews",
+      "Crime fiction book reviews": "reviews",
+      "Memoir book reviews": "reviews",
+      "children's education": "reviews",
+      "Celebrity memoir book reviews": "reviews",
+      "fantasy literature": "twin",
+      "Horror and suspense book reviews": "twin",
+      "Writing tips and tutorials": "twin",
+      "Science fiction movie reviews": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Detailed and descriptive writing",
+    "Engaging storytelling",
+    "Complex and thought-provoking content",
+    "Highly detailed reviews",
+    "In-depth analysis of characters and plot",
+    "Exploration of unique and artistic experiences"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "high",
+    "extraversion": "high",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness high (curious about new, unusual and artistic experiences); extraversion high (outgoing, lively and energetic); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1538",
+    "additional_context": "Age 30-49; Unemployed; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 72,
+      "openness": 92,
+      "extraversion": 83,
+      "conscientiousness": 67
+    },
+    "twin_interests": [
+      "Fantasy literature and storytelling",
+      "Horror and suspense",
+      "Journaling and creative writing",
+      "Science fiction"
+    ],
+    "twin_background_knowledge": "This person likely enjoys immersive storytelling and creative writing, with a particular interest in fantasy, horror, and science fiction genres."
+  }
+}

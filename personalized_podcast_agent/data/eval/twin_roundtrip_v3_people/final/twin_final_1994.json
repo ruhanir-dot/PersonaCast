@@ -1,0 +1,655 @@
+{
+  "user_id": "twin_final_1994",
+  "interests": [
+    "Real estate",
+    "NFL football",
+    "Retirement planning",
+    "Home and garden",
+    "TV stars",
+    "Music news",
+    "Health news",
+    "Personal finance",
+    "Musicals",
+    "Family and kids' movies",
+    "Romantic films",
+    "Animated films",
+    "Fantasy films",
+    "Adventure films",
+    "Action movies",
+    "family dynamics",
+    "health and wellness",
+    "grief and loss",
+    "psychology of happiness",
+    "lacrosse",
+    "Jim Harrison",
+    "Alternative Rock",
+    "menopause",
+    "sibling relationships",
+    "obesity",
+    "parenting",
+    "beauty and self-acceptance",
+    "Personal finance management",
+    "Relationship dynamics and fairness",
+    "Family and relationships"
+  ],
+  "preferred_topics": [
+    "Personal finance strategies",
+    "Fairness in financial transactions",
+    "Building and maintaining strong family relationships",
+    "Real estate trends",
+    "NFL game analysis",
+    "Retirement savings strategies",
+    "Home improvement tips",
+    "Celebrity gossip",
+    "Music industry news",
+    "Health tips and wellness",
+    "Personal finance advice",
+    "Musical theater reviews",
+    "Family movie recommendations",
+    "Romantic film analysis",
+    "Animated film reviews"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "house flipping",
+    "NFL scores",
+    "retirement planning",
+    "home decor",
+    "celebrity news",
+    "music charts",
+    "health tips",
+    "personal finance",
+    "musical reviews",
+    "family movies",
+    "romantic films",
+    "animated films"
+  ],
+  "recommended_news_queries": [
+    "Top real estate markets to watch this year",
+    "Upcoming NFL season predictions",
+    "Retirement savings tips",
+    "DIY home improvement projects",
+    "TV stars news",
+    "Top new music releases",
+    "Latest health and wellness trends",
+    "Personal finance management",
+    "Musical movie review",
+    "Family and kids' film analysis",
+    "Romantic director interview",
+    "Animated movie review",
+    "Fantasy film analysis",
+    "Adventure director interview",
+    "Action movie review",
+    "Best family movies of the year",
+    "Latest health trends",
+    "Dealing with grief",
+    "Happiness and well-being",
+    "Top lacrosse teams",
+    "Jim Harrison's life and work",
+    "Top alternative rock bands",
+    "Menopause and health",
+    "Sibling relationships",
+    "Obesity and health",
+    "Parenting tips",
+    "Beauty and self-acceptance",
+    "Money management tips",
+    "Relationship dynamics",
+    "Understanding family relationships"
+  ],
+  "youtube_search_queries": [
+    "Real estate",
+    "Top NFL players of all time",
+    "How to plan for a comfortable retirement",
+    "Best home decor trends",
+    "Behind-the-scenes of popular TV shows",
+    "Music industry trends and news",
+    "Health news",
+    "Personal finance",
+    "Musical movie review",
+    "Family and kids' film analysis",
+    "Romantic director interview",
+    "Animated movie review",
+    "Fantasy film analysis",
+    "Adventure director interview",
+    "Action movie review",
+    "Family dynamics in movies and TV",
+    "Wellness tips",
+    "Grief and loss support",
+    "Happiness and psychology",
+    "Lacrosse game highlights",
+    "Jim Harrison readings",
+    "Alternative rock music",
+    "Menopause support",
+    "Sibling relationships in movies",
+    "Obesity prevention",
+    "Parenting advice",
+    "Self-acceptance tips",
+    "Money management tips",
+    "Fairness in relationships",
+    "Family and relationships in movies"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with real estate trends, NFL football, retirement planning, home and garden, TV stars, music news, health and wellness, personal finance, musical theater, family and kids' movies, romantic films, animated films, fantasy films, adventure films, action movies, family dynamics, health and wellness, grief and loss, psychology of happiness, lacrosse, Jim Harrison, alternative rock, menopause, sibling relationships, obesity, parenting, beauty and self-acceptance, personal finance management, relationship dynamics and fairness, family and relationships.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U72778",
+    "movielens_user": "177299",
+    "amazon_user": "AGJ3Z55T6ALVOR5B6AGQAHV66MKQ",
+    "interests_by_source": {
+      "news": 8,
+      "movies": 7,
+      "reviews": 12,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 3,
+        "examples": [
+          "Heatherland Homes Opens Model Home at Cedar Grove Village",
+          "10 questions you should always ask at an open house"
+        ]
+      },
+      {
+        "interest": "NFL football",
+        "source": "news",
+        "keys": [
+          "football_nfl"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 2,
+        "examples": [
+          "How much Social Security you could get from a $75,000 salary"
+        ]
+      },
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "TV stars",
+        "source": "news",
+        "keys": [
+          "tv-celebrity"
+        ],
+        "count": 2,
+        "examples": [
+          "The Fabulous Life of Judge Judy: Multiple Estates, Celebrity BFFs, Yachts and More"
+        ]
+      },
+      {
+        "interest": "Music news",
+        "source": "news",
+        "keys": [
+          "musicnews"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Health news",
+        "source": "news",
+        "keys": [
+          "medical"
+        ],
+        "count": 2,
+        "examples": [
+          "What Happens to Your Blood After You Donate It"
+        ]
+      },
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 2,
+        "examples": [
+          "My father's estate is worth $2 million, and he says our stepmother will take care of us",
+          "My late sister stole my inheritance and swindled our mother"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 25,
+        "lift": 1.32,
+        "examples": [
+          "Prince of Egypt, The (1998)",
+          "Peter Pan (1953)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 57,
+        "lift": 1.27,
+        "examples": [
+          "Tarzan (1999)",
+          "Emperor's New Groove, The (2000)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 112,
+        "lift": 1.25,
+        "examples": [
+          "Sex and the City (2008)",
+          "Circle of Friends (1995)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 45,
+        "lift": 1.24,
+        "examples": [
+          "Tarzan (1999)",
+          "Emperor's New Groove, The (2000)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 72,
+        "lift": 1.18,
+        "examples": [
+          "Emperor's New Groove, The (2000)",
+          "Peter Pan (1953)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 133,
+        "lift": 1.06,
+        "examples": [
+          "Tarzan (1999)",
+          "Emperor's New Groove, The (2000)"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 160,
+        "lift": 1.01,
+        "examples": []
+      },
+      {
+        "interest": "family dynamics",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Self-Help > Relationships"
+        ],
+        "examples": [
+          "Toxic In-Laws: Loving Strategies for Protecting Your Marriage",
+          "The Sociopath Next Door",
+          "Adult Children Secrets of Dysfunctional Families: The Secrets of Dysfunctional F"
+        ]
+      },
+      {
+        "interest": "health and wellness",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Medical Books > Medicine"
+        ],
+        "examples": [
+          "What Doctors Feel: How Emotions Affect the Practice of Medicine",
+          "Take Charge of Your Child's Health: A Parent's Guide to Recognizing Symptoms and",
+          "Craniosacral Therapy"
+        ]
+      },
+      {
+        "interest": "grief and loss",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Self-Help > Death & Grief"
+        ],
+        "examples": [
+          "Voices of Strength: Sons and Daughters of Suicide Speak Out",
+          "Grief: Overcome The Loss of A Friend or Family Member - Death, Bereavement, Fami",
+          "Good Grief: 50th Anniversary Edition"
+        ]
+      },
+      {
+        "interest": "psychology of happiness",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Health, Fitness & Dieting > Psychology & Counseling"
+        ],
+        "examples": [
+          "Everything Happens for a Reason: Finding the True Meaning of the Events in Our L",
+          "The Nurture Assumption: Why Children Turn Out the Way They Do, Revised and Updat",
+          "The High Price of Materialism"
+        ]
+      },
+      {
+        "interest": "lacrosse",
+        "source": "reviews",
+        "keys": [
+          "P20",
+          "P21",
+          "P22",
+          "P23"
+        ],
+        "count": 4,
+        "categories": [
+          "Sports & Outdoors > Sports > Team Sports"
+        ],
+        "examples": [
+          "Shock Doctor Men's Core Loose Hockey Shorts with Bio-Flex Cup",
+          "Brine Lacrosse Balls, Pack of 6",
+          "Brine Uprising Lacrosse Rib Pad"
+        ]
+      },
+      {
+        "interest": "Jim Harrison",
+        "source": "reviews",
+        "keys": [
+          "P24",
+          "P25",
+          "P26"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Literature & Fiction > Poetry"
+        ],
+        "examples": [
+          "In Search of Small Gods",
+          "Dead Man's Float",
+          "The Selected Poetry of Rainer Maria Rilke: Bilingual Edition (English and German"
+        ]
+      },
+      {
+        "interest": "Alternative Rock",
+        "source": "reviews",
+        "keys": [
+          "P27",
+          "P28",
+          "P29"
+        ],
+        "count": 3,
+        "categories": [
+          "CDs & Vinyl > Pop"
+        ],
+        "examples": [
+          "Mylo Xyloto",
+          "One eskimO",
+          "You And I"
+        ]
+      },
+      {
+        "interest": "menopause",
+        "source": "reviews",
+        "keys": [
+          "P30",
+          "P31",
+          "P32"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Health, Fitness & Dieting > Women's Health"
+        ],
+        "examples": [
+          "The Wisdom of Menopause: Creating Physical and Emotional Health and Healing Duri",
+          "Red Moon Passage: The Power and Wisdom of Menopause",
+          "The Womanly Art of Breastfeeding: Completely Revised and Updated 8th Edition"
+        ]
+      },
+      {
+        "interest": "sibling relationships",
+        "source": "reviews",
+        "keys": [
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Parenting & Relationships > Family Relationships"
+        ],
+        "examples": [
+          "My Sister, My Self: Understanding the Sibling Relationship That Shapes Our Lives",
+          "Mothering and Daughtering: Keeping Your Bond Strong Through the Teen Years",
+          "Healing From Family Rifts : Ten Steps to Finding Peace After Being Cut Off From "
+        ]
+      },
+      {
+        "interest": "obesity",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Health, Fitness & Dieting > Diets & Weight Loss"
+        ],
+        "examples": [
+          "Killer Fat: Media, Medicine, and Morals in the American \"Obesity Epidemic”",
+          "Overweight: What Kids Say: What's Really Causing the Childhood Obesity Epidemic",
+          "Eat Q: Unlock the Weight-Loss Power of Emotional Intelligence"
+        ]
+      },
+      {
+        "interest": "parenting",
+        "source": "reviews",
+        "keys": [
+          "P39",
+          "P40"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Humor & Entertainment > Humor"
+        ],
+        "examples": [
+          "The Trustafarian Handbook: A Field Guide to the Neo-Hippie Lifestyle - Funded by",
+          "Empty Nesters: ...Lose the Guilt!"
+        ]
+      },
+      {
+        "interest": "beauty and self-acceptance",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Health, Fitness & Dieting > Mental Health"
+        ],
+        "examples": [
+          "Exuberance: The Passion for Life",
+          "Beauty and the Soul: The Extraordinary Power of Everyday Beauty to Heal Your Lif"
+        ]
+      },
+      {
+        "interest": "Personal finance management",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy: very high (91th percentile)"
+        ]
+      },
+      {
+        "interest": "Relationship dynamics and fairness",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "Should I be fair or keep more for myself; What if they send me a bigger amount; How much will the other person feel is f"
+        ]
+      },
+      {
+        "interest": "Family and relationships",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "family -> love -> heart -> care -> help -> friend -> support -> trust -> loyalty -> bond -> meaning"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Real estate": "news",
+      "Top NFL players of all time": "news",
+      "How to plan for a comfortable retirement": "news",
+      "Best home decor trends": "news",
+      "Behind-the-scenes of popular TV shows": "news",
+      "Music industry trends and news": "news",
+      "Health news": "news",
+      "Personal finance": "news",
+      "Musical movie review": "movies",
+      "Family and kids' film analysis": "movies",
+      "Romantic director interview": "movies",
+      "Animated movie review": "movies",
+      "Fantasy film analysis": "movies",
+      "Adventure director interview": "movies",
+      "Action movie review": "movies",
+      "Family dynamics in movies and TV": "reviews",
+      "Wellness tips": "reviews",
+      "Grief and loss support": "reviews",
+      "Happiness and psychology": "reviews",
+      "Lacrosse game highlights": "reviews",
+      "Jim Harrison readings": "reviews",
+      "Alternative rock music": "reviews",
+      "Menopause support": "reviews",
+      "Sibling relationships in movies": "reviews",
+      "Obesity prevention": "reviews",
+      "Parenting advice": "reviews",
+      "Self-acceptance tips": "reviews",
+      "Money management tips": "twin",
+      "Fairness in relationships": "twin",
+      "Family and relationships in movies": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Brief and straightforward headlines",
+    "Personal anecdotes in reviews",
+    "Positive and uplifting tone",
+    "Simple and relatable language",
+    "Focus on practical advice and solutions",
+    "Casual and conversational style"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Friendly and conversational",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "low",
+    "extraversion": "average",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness low (prefers the familiar and conventional); extraversion average (neither especially outgoing nor reserved); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1994",
+    "additional_context": "Age 18-29; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 17,
+      "openness": 12,
+      "extraversion": 42,
+      "conscientiousness": 82
+    },
+    "twin_interests": [
+      "Personal finance management",
+      "Relationship dynamics and fairness",
+      "Family and relationships"
+    ],
+    "twin_background_knowledge": "This person likely has a strong understanding of financial management and is sensitive to the dynamics of fairness and relationships."
+  }
+}

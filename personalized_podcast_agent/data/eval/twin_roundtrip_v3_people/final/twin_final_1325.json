@@ -1,0 +1,673 @@
+{
+  "user_id": "twin_final_1325",
+  "interests": [
+    "Real estate",
+    "Home and garden",
+    "US news",
+    "Lifestyle buzz",
+    "Saving money",
+    "DIY projects",
+    "World news",
+    "Stock market news",
+    "Animated films",
+    "Documentaries",
+    "Fantasy films",
+    "Family and kids' movies",
+    "Adventure films",
+    "Drama films",
+    "Mystery films",
+    "Romantic films",
+    "Science fiction films",
+    "paper crafting",
+    "haiku",
+    "Tarot and Witchcraft",
+    "YA Fiction",
+    "fictional stories about childhood and family",
+    "Victorian-era fiction",
+    "soft-sculpture dolls",
+    "mystery fiction",
+    "journalism",
+    "California History",
+    "entrepreneurship",
+    "environmental sustainability",
+    "minimalism",
+    "crafts and DIY"
+  ],
+  "preferred_topics": [
+    "entrepreneurship and small business",
+    "sustainable living",
+    "minimalist lifestyle",
+    "handmade crafts and DIY projects",
+    "real estate trends",
+    "home improvement tips",
+    "current US news",
+    "lifestyle trends",
+    "stock market updates",
+    "animated films",
+    "documentaries",
+    "family-friendly movies",
+    "adventure films",
+    "drama films",
+    "mystery films",
+    "romantic films"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Curious about new and unusual angles",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "real estate",
+    "home improvement",
+    "US news",
+    "lifestyle",
+    "stock market",
+    "animated films",
+    "documentaries",
+    "family movies",
+    "adventure films",
+    "drama films",
+    "mystery films",
+    "romantic films"
+  ],
+  "recommended_news_queries": [
+    "Real estate news",
+    "Home and garden news",
+    "US news news",
+    "trending lifestyle trends",
+    "Saving money news",
+    "DIY project ideas",
+    "World news news",
+    "Stock market news news",
+    "Animated movie review",
+    "Documentary film analysis",
+    "Fantasy director interview",
+    "Family and kids' movie review",
+    "Adventure film analysis",
+    "Drama director interview",
+    "Mystery movie review",
+    "Romantic film analysis",
+    "Science fiction director interview",
+    "paper crafting trends",
+    "haiku poetry updates",
+    "Tarot and Witchcraft trends",
+    "new YA fiction releases",
+    "fictional stories about childhood and family",
+    "Victorian-era fiction updates",
+    "soft-sculpture doll trends",
+    "mystery fiction news",
+    "journalism updates",
+    "California history updates",
+    "entrepreneurship trends",
+    "environmental sustainability news",
+    "minimalism lifestyle updates",
+    "DIY projects news"
+  ],
+  "youtube_search_queries": [
+    "Real estate",
+    "Home and garden",
+    "US news",
+    "latest lifestyle trends",
+    "Saving money",
+    "DIY project tutorials",
+    "world news highlights",
+    "Stock market news",
+    "Animated movie review",
+    "Documentary film analysis",
+    "Fantasy director interview",
+    "Family and kids' movie review",
+    "Adventure film analysis",
+    "Drama director interview",
+    "Mystery movie review",
+    "Romantic film analysis",
+    "Science fiction director interview",
+    "paper crafting tutorials",
+    "haiku poetry readings",
+    "Tarot and Witchcraft practices",
+    "top YA fiction books",
+    "stories about childhood and family",
+    "Victorian-era fiction stories",
+    "soft-sculpture doll making tutorials",
+    "mystery fiction",
+    "journalism documentaries",
+    "California history documentaries",
+    "entrepreneurship success stories",
+    "sustainability tips and tricks",
+    "minimalism living tips",
+    "DIY projects"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with real estate trends, home improvement tips, US news, lifestyle trends, stock market updates, animated films, documentaries, family-friendly movies, adventure films, drama films, mystery films, romantic films, California history, entrepreneurship, environmental sustainability, minimalism, crafts and DIY, Tarot and Witchcraft, fictional stories about childhood and family, Victorian-era fiction, soft-sculpture dolls, journalism.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U25974",
+    "movielens_user": "15477",
+    "amazon_user": "AGJIKQXXM2ELQ7FVHILD76SPK22Q",
+    "interests_by_source": {
+      "news": 8,
+      "movies": 9,
+      "reviews": 10,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 9,
+        "examples": [
+          "20 home renovations that kill your home's value",
+          "9 renovation tips to boost resale value"
+        ]
+      },
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 8,
+        "examples": [
+          "10 Best Home Renovations to Squeeze in Before Winter",
+          "13 Ways to Prep Your Yard Before Snow Season"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 5,
+        "examples": [
+          "'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 3,
+        "examples": [
+          "News anchor calls out body-shaming comments after being told she looks 'mighty big on TV'"
+        ]
+      },
+      {
+        "interest": "Saving money",
+        "source": "news",
+        "keys": [
+          "finance-savemoney"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "DIY projects",
+        "source": "news",
+        "keys": [
+          "lifestylediy"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "World news",
+        "source": "news",
+        "keys": [
+          "newsworld"
+        ],
+        "count": 2,
+        "examples": [
+          "ISIS names successor to slain leader al-Baghdadi"
+        ]
+      },
+      {
+        "interest": "Stock market news",
+        "source": "news",
+        "keys": [
+          "markets"
+        ],
+        "count": 2,
+        "examples": [
+          "China Casts Doubts Long-Term Trade Deal Possible With Trump",
+          "Warren's wealth tax could drive billionaires to funds she hates"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 36,
+        "lift": 2.48,
+        "examples": [
+          "Wind Rises, The (Kaze tachinu) (2013)",
+          "Nausicaä of the Valley of the Wind (Kaze no tani no Naushika) (1984)"
+        ]
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 6,
+        "lift": 2.44,
+        "examples": [
+          "Brief History of Time, A (1991)",
+          "Planet Earth (2006)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 36,
+        "lift": 1.48,
+        "examples": [
+          "Nausicaä of the Valley of the Wind (Kaze no tani no Naushika) (1984)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 25,
+        "lift": 1.4,
+        "examples": [
+          "Little Mermaid, The (1989)",
+          "Mulan (1998)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 58,
+        "lift": 1.17,
+        "examples": [
+          "Nausicaä of the Valley of the Wind (Kaze no tani no Naushika) (1984)",
+          "Mulan (1998)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 102,
+        "lift": 1.15,
+        "examples": [
+          "Wind Rises, The (Kaze tachinu) (2013)",
+          "Nausicaä of the Valley of the Wind (Kaze no tani no Naushika) (1984)"
+        ]
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 18,
+        "lift": 1.06,
+        "examples": []
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 37,
+        "lift": 1.04,
+        "examples": [
+          "Wind Rises, The (Kaze tachinu) (2013)",
+          "Little Mermaid, The (1989)"
+        ]
+      },
+      {
+        "interest": "Science fiction films",
+        "source": "movies",
+        "keys": [
+          "Sci-Fi"
+        ],
+        "count": 38,
+        "lift": 1.01,
+        "examples": [
+          "Nausicaä of the Valley of the Wind (Kaze no tani no Naushika) (1984)",
+          "Iron Man (2008)"
+        ]
+      },
+      {
+        "interest": "paper crafting",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 11,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Crafts & Hobbies"
+        ],
+        "examples": [
+          "The Envelope Mill: Recycle Magazines into Beautifully Crafted Envelopes/Book and",
+          "Midnight in the Dollhouse",
+          "Simple Wisdom (RP Minis)"
+        ]
+      },
+      {
+        "interest": "haiku",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 9,
+        "categories": [
+          "Books > Literature & Fiction > Poetry"
+        ],
+        "examples": [
+          "Redneck Haiku",
+          "Seeds From a Birch Tree: Writing Haiku and the Spiritual Journey",
+          "Haiku Picturebook for Children"
+        ]
+      },
+      {
+        "interest": "Tarot and Witchcraft",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Religion & Spirituality > New Age & Spirituality"
+        ],
+        "examples": [
+          "Erotic Tarot of Manara",
+          "Girlfriend's Tarot",
+          "The Essential Lenormand: Your Guide to Precise & Practical Fortunetelling"
+        ]
+      },
+      {
+        "interest": "YA Fiction",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Teen & Young Adult > Literature & Fiction"
+        ],
+        "examples": [
+          "The Jazz Kid",
+          "When Dad Killed Mom",
+          "The Wee Free Men (Tiffany Aching, 1)"
+        ]
+      },
+      {
+        "interest": "fictional stories about childhood and family",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Literature & Fiction > United States"
+        ],
+        "examples": [
+          "The Everlasting Story of Nory",
+          "Without Falling",
+          "The Unchangeable Spots of Leopards: A Novel (ALA Notable Books for Adults)"
+        ]
+      },
+      {
+        "interest": "Victorian-era fiction",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "Laura Blundy",
+          "A Dirty Job: A Novel",
+          "The Tale of the Unknown Island"
+        ]
+      },
+      {
+        "interest": "soft-sculpture dolls",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38",
+          "P39"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Arts & Photography"
+        ],
+        "examples": [
+          "The Weepeeple: A Unique Adventure in Crafts and Americana",
+          "Drawing Without Fear",
+          "Where Quirky Meets Menacing: an autobiography in collage"
+        ]
+      },
+      {
+        "interest": "mystery fiction",
+        "source": "reviews",
+        "keys": [
+          "P40",
+          "P41",
+          "P42",
+          "P43"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Literature & Fiction"
+        ],
+        "examples": [
+          "Plumb",
+          "The Book of Eve (New Canadian Library)",
+          "Missing Angel Juan"
+        ]
+      },
+      {
+        "interest": "journalism",
+        "source": "reviews",
+        "keys": [
+          "P44",
+          "P45",
+          "P46"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Humor & Entertainment > Humor"
+        ],
+        "examples": [
+          "The Pull of the Moon",
+          "Watch Your F*cking Language: How to swear effectively, explained in explicit det",
+          "I Date a Hooker"
+        ]
+      },
+      {
+        "interest": "California History",
+        "source": "reviews",
+        "keys": [
+          "P47",
+          "P48",
+          "P49"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > History > Americas"
+        ],
+        "examples": [
+          "Drawing Without Fear",
+          "Sonoma County: The River of Time",
+          "Santa Rosa: A nineteenth century town"
+        ]
+      },
+      {
+        "interest": "entrepreneurship",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "having big tripple; making profit; sharing equal; making others happy; having a good repo; keeping trust"
+        ]
+      },
+      {
+        "interest": "environmental sustainability",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "environmental concern: very high (100th percentile)"
+        ]
+      },
+      {
+        "interest": "minimalism",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "preference for minimalism: very high (95th percentile)"
+        ]
+      },
+      {
+        "interest": "crafts and DIY",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "candle -> handle -> hat -> bat -> house -> tree -> poll -> box -> bucket -> basin -> jug -> cap -> plat -> pan -> pot ->"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Real estate": "news",
+      "Home and garden": "news",
+      "US news": "news",
+      "latest lifestyle trends": "news",
+      "Saving money": "news",
+      "DIY project tutorials": "news",
+      "world news highlights": "news",
+      "Stock market news": "news",
+      "Animated movie review": "movies",
+      "Documentary film analysis": "movies",
+      "Fantasy director interview": "movies",
+      "Family and kids' movie review": "movies",
+      "Adventure film analysis": "movies",
+      "Drama director interview": "movies",
+      "Mystery movie review": "movies",
+      "Romantic film analysis": "movies",
+      "Science fiction director interview": "movies",
+      "paper crafting tutorials": "reviews",
+      "haiku poetry readings": "reviews",
+      "Tarot and Witchcraft practices": "reviews",
+      "top YA fiction books": "reviews",
+      "stories about childhood and family": "reviews",
+      "Victorian-era fiction stories": "reviews",
+      "soft-sculpture doll making tutorials": "reviews",
+      "mystery fiction": "reviews",
+      "journalism documentaries": "reviews",
+      "California history documentaries": "reviews",
+      "entrepreneurship success stories": "twin",
+      "sustainability tips and tricks": "twin",
+      "minimalism living tips": "twin",
+      "DIY projects": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "informative and detailed",
+    "engaging and conversational",
+    "curious about new and unusual experiences",
+    "outgoing and energetic"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "high",
+    "extraversion": "high",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness high (curious about new, unusual and artistic experiences); extraversion high (outgoing, lively and energetic); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1325",
+    "additional_context": "Age 18-29; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 93,
+      "openness": 74,
+      "extraversion": 96,
+      "conscientiousness": 100
+    },
+    "twin_interests": [
+      "entrepreneurship",
+      "environmental sustainability",
+      "minimalism",
+      "crafts and DIY"
+    ],
+    "twin_background_knowledge": "This person likely has a strong interest in starting and managing a small business, with a focus on sustainability and minimalism."
+  }
+}

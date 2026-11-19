@@ -1,0 +1,742 @@
+{
+  "user_id": "twin_final_795",
+  "interests": [
+    "Wellness",
+    "Personal finance",
+    "US news",
+    "Horoscopes",
+    "Personal essays",
+    "Travel tips",
+    "Food news",
+    "Retirement planning",
+    "Real estate",
+    "Movie stars",
+    "Video",
+    "Saving and investing",
+    "Film noir",
+    "Animated films",
+    "Drama films",
+    "War films",
+    "Mystery films",
+    "Romantic films",
+    "Fantasy films",
+    "Crime films",
+    "Thrillers",
+    "finance history",
+    "home fitness",
+    "trading",
+    "business leadership",
+    "finance and economics",
+    "camping",
+    "houseplants",
+    "aquarium care",
+    "Brain Teasers",
+    "adult puzzles",
+    "hedge fund activism",
+    "Finance and personal money management",
+    "Writing and storytelling",
+    "Economics and distribution of resources"
+  ],
+  "preferred_topics": [
+    "Personal finance management",
+    "Economic theories on resource distribution",
+    "Storytelling techniques and narrative structure",
+    "finance and economics",
+    "personal finance",
+    "retirement planning",
+    "real estate",
+    "money management",
+    "investment strategies",
+    "personal essays",
+    "travel tips",
+    "wellness",
+    "movie reviews",
+    "film noir",
+    "animated films"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms"
+  ],
+  "podcast_focus_keywords": [
+    "finance",
+    "money management",
+    "investment",
+    "real estate",
+    "personal essays",
+    "travel",
+    "wellness",
+    "film noir",
+    "animated films",
+    "money",
+    "real life advice",
+    "investment strategies"
+  ],
+  "recommended_news_queries": [
+    "Top wellness trends",
+    "Top personal finance tips for millennials",
+    "Latest US economic news",
+    "Weekly horoscopes for different zodiac signs",
+    "Popular personal essays of the month",
+    "Best travel destinations",
+    "Latest food trends in the US",
+    "Retirement planning tips for millennials",
+    "Real estate market trends",
+    "Top movie stars of the year",
+    "Top video content creators",
+    "Best saving and investing strategies",
+    "noir movie review",
+    "Animated film analysis",
+    "Drama director interview",
+    "War movie review",
+    "Mystery film analysis",
+    "Romantic director interview",
+    "Fantasy movie review",
+    "Crime film analysis",
+    "Thriller director interview",
+    "Key events in finance history",
+    "Top home fitness trends",
+    "Top trading strategies",
+    "Top business leaders of the year",
+    "Latest developments in finance and economics",
+    "Top camping destinations",
+    "Top houseplants for beginners",
+    "Top aquarium care tips",
+    "Top brain teaser challenges",
+    "Top adult puzzles",
+    "Top hedge fund activists",
+    "Top personal finance tips",
+    "Top writing and storytelling tips",
+    "Top economic theories"
+  ],
+  "youtube_search_queries": [
+    "Top wellness tips for beginners",
+    "How to manage your personal finances effectively",
+    "US economic outlook",
+    "Best horoscopes for the week",
+    "Top personal essays of the year",
+    "Travel tips for budget travelers",
+    "Top food blogs to follow",
+    "How to plan for a comfortable retirement",
+    "Top real estate investment strategies",
+    "Interviews with famous movie stars",
+    "How to create engaging video content",
+    "Saving and investing",
+    "noir movie review",
+    "Animated film analysis",
+    "Drama director interview",
+    "War movie review",
+    "Mystery film analysis",
+    "Romantic director interview",
+    "Fantasy movie review",
+    "Crime film analysis",
+    "Thriller director interview",
+    "Interviews with historians of finance",
+    "Home fitness routines for beginners",
+    "trading",
+    "Interviews with business leaders",
+    "Economic outlook for the future",
+    "Camping tips for beginners",
+    "How to care for houseplants",
+    "How to set up an aquarium",
+    "How to solve brain teasers",
+    "How to solve adult puzzles",
+    "Interviews with hedge fund activists",
+    "How to manage your personal finances",
+    "Writing and storytelling",
+    "Economics and distribution of resources"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "sports"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Understands basic concepts of finance, personal finance, and real estate. Familiar with various investment strategies and real estate market trends. Knows about different film genres and has read several finance and personal finance books.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U12028",
+    "movielens_user": "81416",
+    "amazon_user": "AHVLCYZ3QGGQUKVCJWJJ5PC543SQ",
+    "interests_by_source": {
+      "news": 12,
+      "movies": 9,
+      "reviews": 11,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Wellness",
+        "source": "news",
+        "keys": [
+          "wellness"
+        ],
+        "count": 13,
+        "examples": [
+          "Miranda Lambert Says She's 'Terrified' Of The Gym, And Tbh, I Can Relate",
+          "Simple Tricks To Deal With Stress"
+        ]
+      },
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 5,
+        "examples": [
+          "28 Dumb Ways You Could Lose It All by Trying To Get Rich",
+          "Man who inherited 6 figures shares advice he'd give his younger self"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 4,
+        "examples": [
+          "Severe weather shifts boat stuck on Niagara Falls rocks for 101 years",
+          "LA firefighter banked $360,010 in overtime pay in one year, city audit finds"
+        ]
+      },
+      {
+        "interest": "Horoscopes",
+        "source": "news",
+        "keys": [
+          "lifestylehoroscope"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Personal essays",
+        "source": "news",
+        "keys": [
+          "voices"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Travel tips",
+        "source": "news",
+        "keys": [
+          "traveltips"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 2,
+        "examples": [
+          "Pensions Venture Into Risky Corners of the Market in Hunt for Returns"
+        ]
+      },
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 2,
+        "examples": [
+          "More Americans say now is a bad time to buy a home"
+        ]
+      },
+      {
+        "interest": "Movie stars",
+        "source": "news",
+        "keys": [
+          "movies-celebrity"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Video",
+        "source": "news",
+        "keys": [
+          "video"
+        ],
+        "count": 2,
+        "examples": [
+          "Traveling Abroad? Here are the Cheapest Ways to Exchange Currency"
+        ]
+      },
+      {
+        "interest": "Saving and investing",
+        "source": "news",
+        "keys": [
+          "finance-saving-investing"
+        ],
+        "count": 2,
+        "examples": [
+          "4 mistakes that'll stunt your 401(k)'s growth"
+        ]
+      },
+      {
+        "interest": "Film noir",
+        "source": "movies",
+        "keys": [
+          "Film-Noir"
+        ],
+        "count": 6,
+        "lift": 1.75,
+        "examples": [
+          "Trou, Le (Hole, The) (Night Watch, The) (1960)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 34,
+        "lift": 1.34,
+        "examples": [
+          "Waltz with Bashir (Vals im Bashir) (2008)",
+          "Kung Fu Panda (2008)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 208,
+        "lift": 1.34,
+        "examples": [
+          "Martha Marcy May Marlene (2011)",
+          "Skin I Live In, The (La piel que habito) (2011)"
+        ]
+      },
+      {
+        "interest": "War films",
+        "source": "movies",
+        "keys": [
+          "War"
+        ],
+        "count": 23,
+        "lift": 1.29,
+        "examples": [
+          "Waltz with Bashir (Vals im Bashir) (2008)"
+        ]
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 38,
+        "lift": 1.28,
+        "examples": [
+          "Mother (Madeo) (2009)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 75,
+        "lift": 1.21,
+        "examples": [
+          "Notebook, The (2004)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 50,
+        "lift": 1.18,
+        "examples": [
+          "Where the Wild Things Are (2009)",
+          "Lord of the Rings: The Two Towers, The (2002)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 70,
+        "lift": 1.16,
+        "examples": [
+          "Burn After Reading (2008)",
+          "Bourne Supremacy, The (2004)"
+        ]
+      },
+      {
+        "interest": "Thrillers",
+        "source": "movies",
+        "keys": [
+          "Thriller"
+        ],
+        "count": 100,
+        "lift": 1.03,
+        "examples": [
+          "Martha Marcy May Marlene (2011)",
+          "Bourne Supremacy, The (2004)"
+        ]
+      },
+      {
+        "interest": "finance history",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 11,
+        "categories": [
+          "Books > Business & Money > Economics"
+        ],
+        "examples": [
+          "More Than a Numbers Game: A Brief History of Accounting",
+          "Gold: The Race for the World's Most Seductive Metal",
+          "Devil Take the Hindmost: A History of Financial Speculation"
+        ]
+      },
+      {
+        "interest": "home fitness",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 10,
+        "categories": [
+          "Sports & Outdoors > Exercise & Fitness > Strength Training Equipment"
+        ],
+        "examples": [
+          "Perfect Fitness Ab Carver Pro Roller Wheel With Built In Spring Resistance, At H",
+          "Python Power Twister Bar - Upper Body Exercise for Chest, Shoulder, Forearm, Bic",
+          "Lebert Fitness Dip Bar Stand - Original Equalizer Total Body Strengthener Pull U"
+        ]
+      },
+      {
+        "interest": "trading",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Business & Money > Investing"
+        ],
+        "examples": [
+          "Choose Stocks Wisely: A Formula That Produced Amazing Returns",
+          "Inside the House of Money: Top Hedge Fund Traders on Profiting in the Global Mar",
+          "The Complete TurtleTrader: The Legend, the Lessons, the Results"
+        ]
+      },
+      {
+        "interest": "business leadership",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20",
+          "P43",
+          "P44",
+          "P45",
+          "P46"
+        ],
+        "count": 12,
+        "categories": [
+          "Books > Biographies & Memoirs > Professionals & Academics",
+          "Books > Business & Money > Management & Leadership"
+        ],
+        "examples": [
+          "Body Uptown: Customer Service Fairytales from the Financial Print IPO Market",
+          "It's How We Play the Game: Build a Business. Take a Stand. Make a Difference.",
+          "Banker to the World: Leadership Lessons From the Front Lines of Global Finance"
+        ],
+        "merged": [
+          "leadership"
+        ]
+      },
+      {
+        "interest": "finance and economics",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Science & Math > Mathematics"
+        ],
+        "examples": [
+          "GDP: A Brief but Affectionate History",
+          "The (Mis)behavior of Markets",
+          "How to Read and Do Proofs: An Introduction to Mathematical Thought Processes"
+        ]
+      },
+      {
+        "interest": "camping",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 5,
+        "categories": [
+          "Sports & Outdoors > Outdoor Recreation > Camping & Hiking"
+        ],
+        "examples": [
+          "King Koil Luxury Air Mattress with Built-in High Speed Pump for Camping, Home & ",
+          "Coleman ComfortSmart Cot",
+          "1 Pack LuminAID Solar Inflatable Light, Version 1"
+        ]
+      },
+      {
+        "interest": "houseplants",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34"
+        ],
+        "count": 4,
+        "categories": [
+          "Gardening"
+        ],
+        "examples": [
+          "CTS Air Plants 5 Pack Assorted Tillandsia Ionantha Air Plants",
+          "Jobe’s Organics 09126 Palm Tree Granular Plant Food, 4 lb",
+          "Hirt's Victorian Parlor Palm - Chamaedorea - 4\" Pot - Live Plant"
+        ]
+      },
+      {
+        "interest": "aquarium care",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36",
+          "P37",
+          "P38"
+        ],
+        "count": 4,
+        "categories": [
+          "Aquariums and fishkeeping"
+        ],
+        "examples": [
+          "Spectrastone Shallow Creek Regular for Freshwater Aquariums, 5-Pound Bag",
+          "API STRESS COAT Aquarium Water Conditioner 16-Ounce Bottle",
+          "Hikari Betta Revive.08oz"
+        ]
+      },
+      {
+        "interest": "Brain Teasers",
+        "source": "reviews",
+        "keys": [
+          "P39",
+          "P40",
+          "P41",
+          "P42"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Humor & Entertainment > Puzzles & Games"
+        ],
+        "examples": [
+          "Fortune's Formula: The Untold Story of the Scientific Betting System That Beat t",
+          "So You Think You're Smart: 150 Fun and Challenging Brain Teasers",
+          "Brain Teasers"
+        ]
+      },
+      {
+        "interest": "adult puzzles",
+        "source": "reviews",
+        "keys": [
+          "P47",
+          "P48",
+          "P49"
+        ],
+        "count": 3,
+        "categories": [
+          "Toys & Games > Puzzles > Jigsaw Puzzles"
+        ],
+        "examples": [
+          "Ravensburger Vintage Flora 500 Piece Jigsaw Puzzle for Adults – Every Piece is U",
+          "Ravensburger Time for Lunch - 1000 Piece Jigsaw Puzzle for Adults – Every Piece ",
+          "Ravensburger Times Square - 1000 Piece Jigsaw Puzzle for Adults – Every Piece is"
+        ]
+      },
+      {
+        "interest": "hedge fund activism",
+        "source": "reviews",
+        "keys": [
+          "P50",
+          "P51",
+          "P52"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Business & Money > Finance"
+        ],
+        "examples": [
+          "King Icahn: The Biography of a Renegade Capitalist",
+          "Financial Modeling - 2nd Edition: Includes CD",
+          "King of Capital: The Remarkable Rise, Fall, and Rise Again of Steve Schwarzman a"
+        ]
+      },
+      {
+        "interest": "Finance and personal money management",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy: average (57th percentile), need for uniqueness: high (66th percentile), drive for achievement: high "
+        ]
+      },
+      {
+        "interest": "Writing and storytelling",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "paper -> lined -> ink -> pen -> write -> words -> sentences -> paragraphs -> story -> introduction -> rising action -> c"
+        ]
+      },
+      {
+        "interest": "Economics and distribution of resources",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "I would like to keep the biggest sum; I would for it to be equal; I want to have enough; Thinking with myself in mind fi"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Top wellness tips for beginners": "news",
+      "How to manage your personal finances effectively": "news",
+      "US economic outlook": "news",
+      "Best horoscopes for the week": "news",
+      "Top personal essays of the year": "news",
+      "Travel tips for budget travelers": "news",
+      "Top food blogs to follow": "news",
+      "How to plan for a comfortable retirement": "news",
+      "Top real estate investment strategies": "news",
+      "Interviews with famous movie stars": "news",
+      "How to create engaging video content": "news",
+      "Saving and investing": "news",
+      "noir movie review": "movies",
+      "Animated film analysis": "movies",
+      "Drama director interview": "movies",
+      "War movie review": "movies",
+      "Mystery film analysis": "movies",
+      "Romantic director interview": "movies",
+      "Fantasy movie review": "movies",
+      "Crime film analysis": "movies",
+      "Thriller director interview": "movies",
+      "Interviews with historians of finance": "reviews",
+      "Home fitness routines for beginners": "reviews",
+      "trading": "reviews",
+      "Interviews with business leaders": "reviews",
+      "Economic outlook for the future": "reviews",
+      "Camping tips for beginners": "reviews",
+      "How to care for houseplants": "reviews",
+      "How to set up an aquarium": "reviews",
+      "How to solve brain teasers": "reviews",
+      "How to solve adult puzzles": "reviews",
+      "Interviews with hedge fund activists": "reviews",
+      "How to manage your personal finances": "twin",
+      "Writing and storytelling": "twin",
+      "Economics and distribution of resources": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "informative and straightforward",
+    "light and easy to read",
+    "personal anecdotes",
+    "practical advice",
+    "brief and to the point",
+    "casual tone"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "average",
+    "extraversion": "high",
+    "conscientiousness": "average"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness average (open to some new experiences); extraversion high (outgoing, lively and energetic); conscientiousness average (reasonably organized).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "795",
+    "additional_context": "Age 18-29; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 22,
+      "openness": 64,
+      "extraversion": 83,
+      "conscientiousness": 41
+    },
+    "twin_interests": [
+      "Finance and personal money management",
+      "Writing and storytelling",
+      "Economics and distribution of resources"
+    ],
+    "twin_background_knowledge": "This person likely has a good understanding of personal finance and is interested in achieving financial stability and success."
+  }
+}

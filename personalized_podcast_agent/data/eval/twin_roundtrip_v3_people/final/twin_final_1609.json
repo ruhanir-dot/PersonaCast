@@ -1,0 +1,583 @@
+{
+  "user_id": "twin_final_1609",
+  "interests": [
+    "Nutrition",
+    "Lifestyle buzz",
+    "Music stars",
+    "Home and garden",
+    "Pets and animals",
+    "Retirement planning",
+    "Musicals",
+    "Romantic films",
+    "Family and kids' movies",
+    "Animated films",
+    "Comedy films",
+    "Fantasy films",
+    "gardening",
+    "dyslexia education",
+    "Young Adult Fiction",
+    "sustainability and social justice",
+    "Historical Fiction",
+    "Drawing",
+    "dog grooming and training",
+    "Marriage",
+    "European travel",
+    "fairness in relationships",
+    "plant care and gardening",
+    "relationship building",
+    "financial management"
+  ],
+  "preferred_topics": [
+    "fairness in personal relationships",
+    "plant care and gardening tips",
+    "relationship building strategies",
+    "personal finance management",
+    "car technology",
+    "pet care",
+    "relationship advice",
+    "financial planning",
+    "garden design",
+    "pest control",
+    "social justice",
+    "young adult literature",
+    "European travel guides",
+    "dyslexia support",
+    "tarot card creation",
+    "organic gardening"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "pest management",
+    "garden design",
+    "financial advice",
+    "relationship tips",
+    "tarot card making",
+    "organic gardening",
+    "pet care",
+    "social justice",
+    "young adult books",
+    "European travel",
+    "dyslexia support",
+    "car technology"
+  ],
+  "recommended_news_queries": [
+    "Nutrition news",
+    "Top lifestyle trends to try this month",
+    "Latest music news and updates",
+    "DIY home improvement projects for the weekend",
+    "Pet care tips and advice",
+    "Retirement savings tips and strategies",
+    "Musical movie review",
+    "Romantic film analysis",
+    "Family and kids' director interview",
+    "Animated movie review",
+    "Comedy film analysis",
+    "Fantasy director interview",
+    "Gardening tips and tricks",
+    "Latest dyslexia education news",
+    "Top young adult books to read",
+    "Latest news on sustainability and social justice",
+    "Top historical fiction books to read",
+    "Top drawing techniques and tips",
+    "Top dog grooming and training tips",
+    "Marriage news",
+    "Top travel destinations in Europe",
+    "Latest news on fairness in relationships",
+    "Top plant care tips and tricks",
+    "Latest relationship building tips",
+    "Top financial management tips and strategies"
+  ],
+  "youtube_search_queries": [
+    "Nutrition",
+    "Lifestyle hacks to make your life easier",
+    "Top music videos of the week",
+    "Garden design ideas for small spaces",
+    "Pet grooming and training tips",
+    "Retirement planning for beginners",
+    "Musical movie review",
+    "Romantic film analysis",
+    "Family and kids' director interview",
+    "Animated movie review",
+    "Comedy film analysis",
+    "Fantasy director interview",
+    "gardening",
+    "Best dyslexia support strategies",
+    "Best young adult book series",
+    "Best documentaries on social justice",
+    "Best historical fiction movies",
+    "Best drawing tutorials",
+    "Best dog grooming techniques",
+    "Marriage",
+    "Best travel guides for Europe",
+    "Best relationship fairness tips",
+    "Best plant care tutorials",
+    "Best relationship building strategies",
+    "Best financial management videos"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "The listener knows about gardening, pet care, relationship advice, financial planning, and dyslexia support.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U90883",
+    "movielens_user": "18873",
+    "amazon_user": "AG3P2M3PYIWQAIGYUSPHL5VQ5RUA",
+    "interests_by_source": {
+      "news": 6,
+      "movies": 6,
+      "reviews": 9,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 3,
+        "examples": []
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 3,
+        "examples": [
+          "10 Unexpected Ways To Bond With A Cat"
+        ]
+      },
+      {
+        "interest": "Music stars",
+        "source": "news",
+        "keys": [
+          "music-celebrity"
+        ],
+        "count": 2,
+        "examples": [
+          "Bette Midler mocks Lori Loughlin's college admission scandal"
+        ]
+      },
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 2,
+        "examples": [
+          "12 Fall Landscaping Mistakes to Know and Avoid"
+        ]
+      },
+      {
+        "interest": "Pets and animals",
+        "source": "news",
+        "keys": [
+          "lifestylepetsanimals"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 2,
+        "examples": [
+          "Should you retire abroad? 13 things to consider",
+          "How much Social Security you could get from a $75,000 salary"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 67,
+        "lift": 7.38,
+        "examples": []
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 131,
+        "lift": 3.05,
+        "examples": [
+          "Saint, The (1997)",
+          "Never Been Kissed (1999)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 51,
+        "lift": 2.37,
+        "examples": [
+          "Jungle Book, The (1994)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 28,
+        "lift": 1.6,
+        "examples": []
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 127,
+        "lift": 1.46,
+        "examples": [
+          "Never Been Kissed (1999)",
+          "I.Q. (1994)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 30,
+        "lift": 1.02,
+        "examples": []
+      },
+      {
+        "interest": "gardening",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5",
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35",
+          "P36",
+          "P37",
+          "P38",
+          "P39"
+        ],
+        "count": 35,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Gardening & Landscape Design",
+          "Gardening",
+          "Books > Crafts, Hobbies & Home > Crafts & Hobbies"
+        ],
+        "examples": [
+          "The Flower Farmer: An Organic Grower's Guide to Raising and Selling Cut Flowers,",
+          "Cool Flowers: How to Grow and Enjoy Long-Blooming Hardy Annual Flowers Using Coo",
+          "Kitchen Garden Revival: A modern guide to creating a stylish, small-scale, low-m"
+        ],
+        "merged": [
+          "organic gardening",
+          "flower gardening"
+        ]
+      },
+      {
+        "interest": "dyslexia education",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Education & Teaching > Schools & Teaching"
+        ],
+        "examples": [
+          "Overcoming Dyslexia (2020 Edition): Second Edition, Completely Revised and Updat",
+          "Exploring Science with Dyslexic Children and Teens",
+          "Assertive Discipline: Positive Behavior Management for Today's Classroom (Buildi"
+        ]
+      },
+      {
+        "interest": "Young Adult Fiction",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Teen & Young Adult > Literature & Fiction"
+        ],
+        "examples": [
+          "Let's Get Lost (English Edition)",
+          "The Miseducation of Cameron Post",
+          "Playlist for the Dead"
+        ]
+      },
+      {
+        "interest": "sustainability and social justice",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20",
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 11,
+        "categories": [
+          "Books > Politics & Social Sciences > Politics & Government",
+          "Books > Politics & Social Sciences > Social Sciences"
+        ],
+        "examples": [
+          "Daring Democracy: Igniting Power, Meaning, and Connection for the America We Wan",
+          "Resilient Agriculture: Cultivating Food Systems for a Changing Climate",
+          "The Farm on the Roof: What Brooklyn Grange Taught Us About Entrepreneurship, Com"
+        ],
+        "merged": [
+          "social justice"
+        ]
+      },
+      {
+        "interest": "Historical Fiction",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "The Light Between Oceans",
+          "Paris: The Novel",
+          "Rise and Shine, Benedict Stone"
+        ]
+      },
+      {
+        "interest": "Drawing",
+        "source": "reviews",
+        "keys": [
+          "P40",
+          "P41",
+          "P42"
+        ],
+        "count": 3,
+        "categories": [
+          "Arts, Crafts & Sewing > Painting, Drawing & Art Supplies"
+        ],
+        "examples": [
+          "Mr. Sketch Scented Stix Markers, Fine Tip, Assorted Colors, 10-Count",
+          "Sakura XEP12 Cray-Pas Junior Artist Oil Pastels, 12 Count (Pack of 1), Multicolo",
+          "Bachmore 9”x12” Artist’s Tracing Paper Pad, 75 Sheets – Translucent Tracing Pape"
+        ]
+      },
+      {
+        "interest": "dog grooming and training",
+        "source": "reviews",
+        "keys": [
+          "P43",
+          "P44",
+          "P45"
+        ],
+        "count": 3,
+        "categories": [
+          "Dogs"
+        ],
+        "examples": [
+          "Downtown Pet Supply Adjustable Dog Muzzle for Grooming - Pet Care & Dog Grooming",
+          "Red Dingo Classic Dog Harness, X-Large, Red",
+          "Eagloo Dog Harness No Pull, Walking Pet Harness with 2 Metal Rings and Handle Ad"
+        ]
+      },
+      {
+        "interest": "Marriage",
+        "source": "reviews",
+        "keys": [
+          "P46",
+          "P47",
+          "P48"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Self-Help > Relationships"
+        ],
+        "examples": [
+          "Relationship Rescue: A Seven-Step Strategy for Reconnecting with Your Partner",
+          "The Relationship Rescue Workbook: A Seven Step Strategy For Reconnecting with Yo",
+          "Weed Mom: The Canna-Curious Woman's Guide to Healthier Relaxation, Happier Paren"
+        ]
+      },
+      {
+        "interest": "European travel",
+        "source": "reviews",
+        "keys": [
+          "P49",
+          "P50",
+          "P51"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Travel > Europe"
+        ],
+        "examples": [
+          "Fodor's Paris (Full-color Travel Guide)",
+          "From Scratch: A Memoir of Love, Sicily, and Finding Home",
+          "Gap Year: Rambling Through Brambles in England and Scotland"
+        ]
+      },
+      {
+        "interest": "fairness in relationships",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "Would the other person think I wasn't being fair; Didn't want the other person to think I was greedy"
+        ]
+      },
+      {
+        "interest": "plant care and gardening",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "flowers -> budding -> relationship -> bonding -> glue -> gun -> rights -> violated -> space -> suit"
+        ]
+      },
+      {
+        "interest": "relationship building",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "relationship -> bonding -> glue -> gun -> rights -> violated"
+        ]
+      },
+      {
+        "interest": "financial management",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy: very high (91th percentile)"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Nutrition": "news",
+      "Lifestyle hacks to make your life easier": "news",
+      "Top music videos of the week": "news",
+      "Garden design ideas for small spaces": "news",
+      "Pet grooming and training tips": "news",
+      "Retirement planning for beginners": "news",
+      "Musical movie review": "movies",
+      "Romantic film analysis": "movies",
+      "Family and kids' director interview": "movies",
+      "Animated movie review": "movies",
+      "Comedy film analysis": "movies",
+      "Fantasy director interview": "movies",
+      "gardening": "reviews",
+      "Best dyslexia support strategies": "reviews",
+      "Best young adult book series": "reviews",
+      "Best documentaries on social justice": "reviews",
+      "Best historical fiction movies": "reviews",
+      "Best drawing tutorials": "reviews",
+      "Best dog grooming techniques": "reviews",
+      "Marriage": "reviews",
+      "Best travel guides for Europe": "reviews",
+      "Best relationship fairness tips": "twin",
+      "Best plant care tutorials": "twin",
+      "Best relationship building strategies": "twin",
+      "Best financial management videos": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "informative and educational",
+    "concise and straightforward",
+    "practical tips and advice",
+    "personal anecdotes and stories",
+    "step-by-step guides",
+    "user-friendly and accessible"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "low",
+    "extraversion": "low",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness low (prefers the familiar and conventional); extraversion low (reserved and quiet); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1609",
+    "additional_context": "Age 65+; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 88,
+      "openness": 26,
+      "extraversion": 26,
+      "conscientiousness": 100
+    },
+    "twin_interests": [
+      "fairness in relationships",
+      "plant care and gardening",
+      "relationship building",
+      "financial management"
+    ],
+    "twin_background_knowledge": "This person likely values fairness and trust in relationships and has a high level of financial literacy."
+  }
+}

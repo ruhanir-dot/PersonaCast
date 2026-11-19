@@ -1,0 +1,664 @@
+{
+  "user_id": "twin_final_1888",
+  "interests": [
+    "Home and garden",
+    "Cleaning and organizing",
+    "Recipes and cooking",
+    "Nutrition",
+    "Weather news",
+    "Health news",
+    "US news",
+    "Tips and life hacks",
+    "Documentaries",
+    "Mystery films",
+    "War films",
+    "Thrillers",
+    "Crime films",
+    "Action movies",
+    "Science fiction films",
+    "Adventure films",
+    "Drama films",
+    "vegetarian cooking",
+    "gardening",
+    "witchcraft fiction",
+    "healthy eating",
+    "paper craft",
+    "fly fishing",
+    "Spices",
+    "Watercolor Painting",
+    "humor writing",
+    "Celtic Music",
+    "Cooking and food",
+    "Environmental issues",
+    "Financial management",
+    "Nature and weather"
+  ],
+  "preferred_topics": [
+    "sustainable cooking",
+    "environmental impact of food production",
+    "financial planning for small businesses",
+    "weather patterns and their effects on agriculture",
+    "home organization",
+    "cooking techniques",
+    "healthy eating",
+    "weather updates",
+    "documentaries",
+    "film analysis",
+    "crafting",
+    "gardening tips",
+    "environmental issues",
+    "financial advice",
+    "nature photography",
+    "Celtic music"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Curious about new and unusual angles"
+  ],
+  "podcast_focus_keywords": [
+    "cooking hacks",
+    "weather forecasts",
+    "documentary insights",
+    "crafting tutorials",
+    "gardening secrets",
+    "film reviews",
+    "financial tips",
+    "nature wonders",
+    "healthy recipes",
+    "environmental news",
+    "Celtic music",
+    "home organization"
+  ],
+  "recommended_news_queries": [
+    "home organization tips",
+    "best cleaning hacks",
+    "healthy cooking methods",
+    "Nutrition news",
+    "upcoming weather patterns",
+    "latest health studies",
+    "US news news",
+    "daily life hacks",
+    "Documentary movie review",
+    "Mystery film analysis",
+    "War director interview",
+    "Thriller movie review",
+    "Crime film analysis",
+    "Action director interview",
+    "Science fiction movie review",
+    "Adventure film analysis",
+    "Drama director interview",
+    "vegetarian cooking tips",
+    "gardening tips",
+    "witchcraft in literature",
+    "healthy eating trends",
+    "paper craft tutorials",
+    "fly fishing tips",
+    "spice usage in cooking",
+    "watercolor painting techniques",
+    "humor writing tips",
+    "Celtic music history",
+    "cooking trends",
+    "environmental news",
+    "Financial management news",
+    "documentaries on nature"
+  ],
+  "youtube_search_queries": [
+    "best garden design ideas",
+    "Cleaning and organizing",
+    "cooking with spices",
+    "Nutrition",
+    "weather forecasting techniques",
+    "Health news",
+    "US election updates",
+    "healthy lifestyle tips",
+    "Documentary movie review",
+    "Mystery film analysis",
+    "War director interview",
+    "Thriller movie review",
+    "Crime film analysis",
+    "Action director interview",
+    "Science fiction movie review",
+    "Adventure film analysis",
+    "Drama director interview",
+    "vegetarian recipe ideas",
+    "gardening",
+    "witchcraft in movies",
+    "healthy meal prep",
+    "paper craft ideas",
+    "fly fishing techniques",
+    "spice blending techniques",
+    "watercolor painting tutorials",
+    "humor writing examples",
+    "Celtic music performances",
+    "cooking challenges",
+    "Environmental issues",
+    "Financial management",
+    "weather phenomena"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "Animated films",
+    "Family and kids' movies"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "The listener is familiar with various cooking techniques, gardening tips, and environmental issues.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U34669",
+    "movielens_user": "189869",
+    "amazon_user": "AFMR4N7NWU3FS6QS6NYSQ652HISQ",
+    "interests_by_source": {
+      "news": 8,
+      "movies": 9,
+      "reviews": 10,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 7,
+        "examples": [
+          "27 Essential Home Security Measures You're Not Doing",
+          "The Best Things to Add to Your Home For Fall Décor"
+        ]
+      },
+      {
+        "interest": "Cleaning and organizing",
+        "source": "news",
+        "keys": [
+          "lifestylecleaningandorganizing"
+        ],
+        "count": 3,
+        "examples": [
+          "11 Fall Cleaning Tasks Every Smart Homeowner Tackles",
+          "12 Surprising Things You Should Never Clean with Water"
+        ]
+      },
+      {
+        "interest": "Recipes and cooking",
+        "source": "news",
+        "keys": [
+          "recipes"
+        ],
+        "count": 3,
+        "examples": [
+          "The Best Throwback Soups from the 1950s",
+          "19 Super Delicious Fall Soups Made From Scratch to Try Now (Including Pumpkin!)"
+        ]
+      },
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 3,
+        "examples": [
+          "Here's What You Really Need to Know About the Faux Meat Burger Trend, According to Dietitians",
+          "This is Exactly How Long You Should Keep Thanksgiving Leftovers"
+        ]
+      },
+      {
+        "interest": "Weather news",
+        "source": "news",
+        "keys": [
+          "weathertopstories"
+        ],
+        "count": 2,
+        "examples": [
+          "1st snowflakes expected across interior Northeast as clipper system approaches"
+        ]
+      },
+      {
+        "interest": "Health news",
+        "source": "news",
+        "keys": [
+          "medical"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Tips and life hacks",
+        "source": "news",
+        "keys": [
+          "tipsandtricks"
+        ],
+        "count": 2,
+        "examples": [
+          "The 3 Things Ina Garten Always Has in Her Freezer",
+          "What Is Brown Butter and Should You Be Using It?"
+        ]
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 8,
+        "lift": 1.5,
+        "examples": [
+          "Cowspiracy: The Sustainability Secret (2014)"
+        ]
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 52,
+        "lift": 1.42,
+        "examples": [
+          "Mother! (2017)",
+          "The Killing of a Sacred Deer (2017)"
+        ]
+      },
+      {
+        "interest": "War films",
+        "source": "movies",
+        "keys": [
+          "War"
+        ],
+        "count": 30,
+        "lift": 1.35,
+        "examples": [
+          "Darkest Hour (2017)"
+        ]
+      },
+      {
+        "interest": "Thrillers",
+        "source": "movies",
+        "keys": [
+          "Thriller"
+        ],
+        "count": 149,
+        "lift": 1.23,
+        "examples": [
+          "Mother! (2017)",
+          "The Killing of a Sacred Deer (2017)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 89,
+        "lift": 1.19,
+        "examples": [
+          "Shot Caller (2017)",
+          "Wind River (2017)"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 162,
+        "lift": 1.18,
+        "examples": [
+          "Shot Caller (2017)",
+          "Wind River (2017)"
+        ]
+      },
+      {
+        "interest": "Science fiction films",
+        "source": "movies",
+        "keys": [
+          "Sci-Fi"
+        ],
+        "count": 96,
+        "lift": 1.17,
+        "examples": [
+          "Jurassic World (2015)",
+          "Life (2017)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 120,
+        "lift": 1.11,
+        "examples": [
+          "Cowspiracy: The Sustainability Secret (2014)",
+          "Jurassic World (2015)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 210,
+        "lift": 1.09,
+        "examples": [
+          "Mother! (2017)",
+          "The Killing of a Sacred Deer (2017)"
+        ]
+      },
+      {
+        "interest": "vegetarian cooking",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Regional & International"
+        ],
+        "examples": [
+          "Washoku: Recipes from the Japanese Home Kitchen [A Cookbook]",
+          "The America's Test Kitchen Cooking School Cookbook: Everything You Need to Know ",
+          "The Madhur Jaffrey Cookbook: Over 650 Indian, Vegetarian and Eastern Recipes"
+        ]
+      },
+      {
+        "interest": "gardening",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Gardening & Landscape Design"
+        ],
+        "examples": [
+          "365 Days of Gardening: A Day-By-Day Book of More Than 1000 Terrific Facts, Tips,",
+          "All New Square Foot Gardening Cookbook",
+          "Grow All You Can Eat in 3 Square Feet: Inventive Ideas for Growing Food in a Sma"
+        ]
+      },
+      {
+        "interest": "witchcraft fiction",
+        "source": "reviews",
+        "keys": [
+          "P9",
+          "P10",
+          "P11"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "Magic and the Modern Girl (Washington Witches (Magical Washington) Book 3)",
+          "Single Witch's Survival Guide (Washington Witches (Magical Washington) Book 4)",
+          "Finding Casey: A Novel"
+        ]
+      },
+      {
+        "interest": "healthy eating",
+        "source": "reviews",
+        "keys": [
+          "P12",
+          "P13",
+          "P14"
+        ],
+        "count": 3,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Cooking & Baking"
+        ],
+        "examples": [
+          "Monk Drops - 100% Monkfruit Liquid Sweetener, Zero Glycemic, Zero Calories, Zero",
+          "Great Lakes Unflavored Gelatin, Kosher, 16-Ounce Can = Pack of 2 + Free PRACTIK ",
+          "Baron's Pure Tahini Sesame Paste | Rich Creamy Taste for Hummus, Dips & Baba Gha"
+        ]
+      },
+      {
+        "interest": "paper craft",
+        "source": "reviews",
+        "keys": [
+          "P15",
+          "P16",
+          "P17"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Crafts & Hobbies"
+        ],
+        "examples": [
+          "Paper Craft: 50 Projects Including Card Making, Gift Wrapping, Scrapbooking, and",
+          "Finally It Fits",
+          "Indian Basketry"
+        ]
+      },
+      {
+        "interest": "fly fishing",
+        "source": "reviews",
+        "keys": [
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Sports & Outdoors > Hunting & Fishing"
+        ],
+        "examples": [
+          "Steelhead Flies",
+          "Northwest Fly Fishing Trout and Beyond",
+          "Fishing in Oregon, Eleventh Edition"
+        ]
+      },
+      {
+        "interest": "Spices",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23"
+        ],
+        "count": 3,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Herbs, Spices & Seasonings"
+        ],
+        "examples": [
+          "Goup Premium Quality Whole Asafetida Asafoetida Heeng",
+          "CORIANDER SEED WHOLE REFILL - FRESHLY PACKED IN FOOD GRADE HEAT SEALED POUCHES",
+          "Badia Cumin Seed Whole, 16 Ounce"
+        ]
+      },
+      {
+        "interest": "Watercolor Painting",
+        "source": "reviews",
+        "keys": [
+          "P24",
+          "P25",
+          "P26"
+        ],
+        "count": 3,
+        "categories": [
+          "Arts, Crafts & Sewing > Painting, Drawing & Art Supplies"
+        ],
+        "examples": [
+          "Castle Art Supplies Gold Standard 72 Colored Pencils Set - Quality Oil-based Col",
+          "Rembrandt Watercolor Paint Metal Tin Deluxe Set, 48 Pans + 1 Brush, General Colo",
+          "Caran d'Ache Grafcube Graphite Stick, 15mm, 3B (782.253)"
+        ]
+      },
+      {
+        "interest": "humor writing",
+        "source": "reviews",
+        "keys": [
+          "P27",
+          "P28"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Humor & Entertainment > Humor"
+        ],
+        "examples": [
+          "The Deer on a Bicycle: Excursions into the Writing of Humor",
+          "The Bear in the Attic"
+        ]
+      },
+      {
+        "interest": "Celtic Music",
+        "source": "reviews",
+        "keys": [
+          "P29",
+          "P30"
+        ],
+        "count": 2,
+        "categories": [
+          "CDs & Vinyl > International Music"
+        ],
+        "examples": [
+          "Paddy In The Smoke",
+          "Celtic Favorites"
+        ]
+      },
+      {
+        "interest": "Cooking and food",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "plants -> food -> cooking -> stove -> appliance -> electric -> current -> river -> rapids -> rock -> smooth -> silk"
+        ]
+      },
+      {
+        "interest": "Environmental issues",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "environmental concern: high (68th percentile)"
+        ]
+      },
+      {
+        "interest": "Financial management",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "drive for achievement: high (77th percentile)"
+        ]
+      },
+      {
+        "interest": "Nature and weather",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "paper -> pen -> ink -> blue -> sky -> clouds -> storm -> rain -> plants"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "best garden design ideas": "news",
+      "Cleaning and organizing": "news",
+      "cooking with spices": "news",
+      "Nutrition": "news",
+      "weather forecasting techniques": "news",
+      "Health news": "news",
+      "US election updates": "news",
+      "healthy lifestyle tips": "news",
+      "Documentary movie review": "movies",
+      "Mystery film analysis": "movies",
+      "War director interview": "movies",
+      "Thriller movie review": "movies",
+      "Crime film analysis": "movies",
+      "Action director interview": "movies",
+      "Science fiction movie review": "movies",
+      "Adventure film analysis": "movies",
+      "Drama director interview": "movies",
+      "vegetarian recipe ideas": "reviews",
+      "gardening": "reviews",
+      "witchcraft in movies": "reviews",
+      "healthy meal prep": "reviews",
+      "paper craft ideas": "reviews",
+      "fly fishing techniques": "reviews",
+      "spice blending techniques": "reviews",
+      "watercolor painting tutorials": "reviews",
+      "humor writing examples": "reviews",
+      "Celtic music performances": "reviews",
+      "cooking challenges": "twin",
+      "Environmental issues": "twin",
+      "Financial management": "twin",
+      "weather phenomena": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "informative and educational",
+    "concise and straightforward",
+    "engaging and entertaining",
+    "detailed and insightful",
+    "humorous and light-hearted",
+    "inspirational and motivational"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "high",
+    "extraversion": "high",
+    "conscientiousness": "average"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness high (curious about new, unusual and artistic experiences); extraversion high (outgoing, lively and energetic); conscientiousness average (reasonably organized).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1888",
+    "additional_context": "Age 65+; Self-employed; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 88,
+      "openness": 83,
+      "extraversion": 79,
+      "conscientiousness": 41
+    },
+    "twin_interests": [
+      "Cooking and food",
+      "Environmental issues",
+      "Financial management",
+      "Nature and weather"
+    ],
+    "twin_background_knowledge": "This person likely has a keen interest in sustainable and efficient cooking methods, as well as financial management and environmental issues."
+  }
+}

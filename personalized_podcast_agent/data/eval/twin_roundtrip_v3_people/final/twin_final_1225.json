@@ -1,0 +1,561 @@
+{
+  "user_id": "twin_final_1225",
+  "interests": [
+    "Home and garden",
+    "Real estate",
+    "US news",
+    "Cleaning and organizing",
+    "Political news",
+    "Personal finance",
+    "Romantic films",
+    "Comedy films",
+    "Musicals",
+    "Family and kids' movies",
+    "Drama films",
+    "interior design",
+    "home decorating",
+    "history",
+    "gardening",
+    "photography",
+    "vegetarian cooking",
+    "estate planning",
+    "American history",
+    "Early Childhood Education",
+    "military fiction",
+    "home maintenance and improvement",
+    "cooking and baking",
+    "financial management"
+  ],
+  "preferred_topics": [
+    "home repair tips",
+    "baking recipes",
+    "financial planning strategies",
+    "Home improvement",
+    "Real estate",
+    "Personal finance",
+    "Family movies",
+    "Political news",
+    "Cleaning tips",
+    "Interior design",
+    "History",
+    "Gardening",
+    "Estate planning",
+    "Vegetarian recipes",
+    "Military fiction"
+  ],
+  "style_preferences": [
+    "Clear, moderately detailed explanations",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "home improvement",
+    "real estate",
+    "personal finance",
+    "family movies",
+    "political news",
+    "cleaning tips",
+    "interior design",
+    "history",
+    "gardening",
+    "estate planning",
+    "vegetarian recipes",
+    "military fiction"
+  ],
+  "recommended_news_queries": [
+    "latest home improvement trends",
+    "real estate market updates",
+    "US news news",
+    "top cleaning hacks",
+    "latest political developments",
+    "personal finance tips",
+    "Romantic movie review",
+    "Comedy film analysis",
+    "Musical director interview",
+    "Family and kids' movie review",
+    "Drama film analysis",
+    "latest interior design trends",
+    "top home decorating ideas",
+    "history news",
+    "gardening tips for the season",
+    "photography news",
+    "new vegetarian recipes",
+    "estate planning strategies",
+    "American history news",
+    "latest early childhood education trends",
+    "new military fiction books",
+    "home maintenance tips",
+    "new cooking trends",
+    "financial management news"
+  ],
+  "youtube_search_queries": [
+    "top garden design ideas",
+    "how to invest in real estate",
+    "US news",
+    "best organizing tips",
+    "Political news",
+    "Personal finance",
+    "Romantic movie review",
+    "Comedy film analysis",
+    "Musical director interview",
+    "Family and kids' movie review",
+    "Drama film analysis",
+    "best interior design ideas",
+    "best home decorating tips",
+    "history",
+    "gardening",
+    "photography",
+    "best vegetarian cookbooks",
+    "how politics affect real estate",
+    "American history",
+    "best early childhood education programs",
+    "best military fiction novels",
+    "best home improvement projects",
+    "best baking techniques",
+    "best financial management strategies"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "religion",
+    "personal medical details",
+    "Mystery films",
+    "War films",
+    "IMAX films"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like religion and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from.",
+    "Political news is kept only because this listener's own news clicks show it."
+  ],
+  "background_knowledge": "Familiar with home improvement, real estate, personal finance, family movies, political news, cleaning tips, interior design, history, gardening, estate planning, vegetarian recipes, and military fiction.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U33726",
+    "movielens_user": "42017",
+    "amazon_user": "AFUS6JV5VTKFF7C54JUHAO5SPFPA",
+    "interests_by_source": {
+      "news": 6,
+      "movies": 5,
+      "reviews": 10,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 5,
+        "examples": [
+          "Unlock the secrets of this puzzle house with 13 floors"
+        ]
+      },
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 4,
+        "examples": [
+          "7 Surprising Features That Boost Your Home Value",
+          "Your home may not be a mansion. But you might still have to pay a 'mansion' tax"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 4,
+        "examples": [
+          "Fentanyl kills more in the East, meth in the West",
+          "Woman in 'Carrie' costume totals car, terrifies first responders"
+        ]
+      },
+      {
+        "interest": "Cleaning and organizing",
+        "source": "news",
+        "keys": [
+          "lifestylecleaningandorganizing"
+        ],
+        "count": 2,
+        "examples": [
+          "96 Household Vinegar Uses You Never Knew About"
+        ]
+      },
+      {
+        "interest": "Political news",
+        "source": "news",
+        "keys": [
+          "newspolitics"
+        ],
+        "count": 2,
+        "examples": [
+          "Kellyanne Conway defends her comments in viral phone interview: 'Exactly none of it is anyone's business'",
+          "Trump says poor treatment and high taxes prompted permanent residence change"
+        ]
+      },
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 2,
+        "examples": [
+          "Man left his wife nothing, and her stepchildren told her to scram"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 177,
+        "lift": 3.06,
+        "examples": [
+          "Bride Wars (2009)",
+          "American Pie (1999)"
+        ]
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 258,
+        "lift": 2.2,
+        "examples": [
+          "Divine Secrets of the Ya-Ya Sisterhood (2002)",
+          "Bride Wars (2009)"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 24,
+        "lift": 1.96,
+        "examples": [
+          "Enchanted (2007)",
+          "Bye Bye Birdie (1963)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 38,
+        "lift": 1.31,
+        "examples": [
+          "Home Alone (1990)",
+          "Enchanted (2007)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 147,
+        "lift": 1.02,
+        "examples": [
+          "Divine Secrets of the Ya-Ya Sisterhood (2002)",
+          "Parenthood (1989)"
+        ]
+      },
+      {
+        "interest": "interior design",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 10,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Crafts & Hobbies"
+        ],
+        "examples": [
+          "Strip Quilting",
+          "Upholstering Methods",
+          "Materials and Components of Interior Design"
+        ]
+      },
+      {
+        "interest": "home decorating",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 10,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Home Improvement & Design"
+        ],
+        "examples": [
+          "Time-Life Book of Repair and Restoration: Making the House You Own the Home of Y",
+          "Ideas for Great Home Decorating",
+          "The Weekend Woodworker"
+        ]
+      },
+      {
+        "interest": "history",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Engineering & Transportation > Engineering"
+        ],
+        "examples": [
+          "Coal: A contemporary energy story",
+          "100 Years of the Automobile",
+          "The Search for Sunken Treasure (Treasure Hunters)"
+        ]
+      },
+      {
+        "interest": "gardening",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Gardening & Landscape Design"
+        ],
+        "examples": [
+          "A Busy Person's Guide to the 20 Minute Garden",
+          "Orchids in Colour",
+          "Ortho's All About Successful Perennial Gardening"
+        ]
+      },
+      {
+        "interest": "photography",
+        "source": "reviews",
+        "keys": [
+          "P20",
+          "P21",
+          "P22"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Arts & Photography > Photography & Video"
+        ],
+        "examples": [
+          "Small Town America: The Missouri Photo Workshops 1949-1991",
+          "A Guide to Photographing the Art of Nature",
+          "Max Waldman on Dance: Photographs"
+        ]
+      },
+      {
+        "interest": "vegetarian cooking",
+        "source": "reviews",
+        "keys": [
+          "P29",
+          "P30",
+          "P31"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Cooking by Ingredient"
+        ],
+        "examples": [
+          "Quick from Scratch Herbs & Spices Cookbook",
+          "The Moosewood Restaurant Cooking for Health: More Than 200 New Vegetarian and Ve",
+          "Pasta: A Cook's Guide to the Delicious World of Pasta and Noodles, with 500 Reci"
+        ]
+      },
+      {
+        "interest": "estate planning",
+        "source": "reviews",
+        "keys": [
+          "P32",
+          "P33",
+          "P34"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Business & Money > Personal Finance"
+        ],
+        "examples": [
+          "The Mom's Guide to Wills and Estate Planning",
+          "Get It Together: Organize Your Records So Your Family Won't Have To",
+          "The Wealthy Barber, Updated 2nd Edition: Everyone's Common-Sense Guide to Becomi"
+        ]
+      },
+      {
+        "interest": "American history",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36",
+          "P37"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Politics & Social Sciences > Politics & Government"
+        ],
+        "examples": [
+          "SOMETHING FOR NOTHING",
+          "The Industrial Worker, 1840-1860: The Reaction of American Industrial Society to",
+          "Africa Rising: How 900 Million African Consumers Offer More Than You Think"
+        ]
+      },
+      {
+        "interest": "Early Childhood Education",
+        "source": "reviews",
+        "keys": [
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Education & Teaching > Schools & Teaching"
+        ],
+        "examples": [
+          "Learning About Teaching: An Interactive Tutorial Program to Facilitate the Study",
+          "100 Small Group Experiences: Teachers Idea Book 3 (High/Scope Teacher's Idea Boo",
+          "Early Childhood Themes Through The Year"
+        ]
+      },
+      {
+        "interest": "military fiction",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42",
+          "P43"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "SEAL Team 13",
+          "The Toss of a Lemon",
+          "The Girl in the Garden"
+        ]
+      },
+      {
+        "interest": "home maintenance and improvement",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "rake -> mow"
+        ]
+      },
+      {
+        "interest": "cooking and baking",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "bread -> butter -> jam -> jelly -> donut -> coffee -> tea -> milk -> sugar -> sweet -> honey"
+        ]
+      },
+      {
+        "interest": "financial management",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy: very high (100th percentile)"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "top garden design ideas": "news",
+      "how to invest in real estate": "news",
+      "US news": "news",
+      "best organizing tips": "news",
+      "Political news": "news",
+      "Personal finance": "news",
+      "Romantic movie review": "movies",
+      "Comedy film analysis": "movies",
+      "Musical director interview": "movies",
+      "Family and kids' movie review": "movies",
+      "Drama film analysis": "movies",
+      "best interior design ideas": "reviews",
+      "best home decorating tips": "reviews",
+      "history": "reviews",
+      "gardening": "reviews",
+      "photography": "reviews",
+      "best vegetarian cookbooks": "reviews",
+      "how politics affect real estate": "reviews",
+      "American history": "reviews",
+      "best early childhood education programs": "reviews",
+      "best military fiction novels": "reviews",
+      "best home improvement projects": "twin",
+      "best baking techniques": "twin",
+      "best financial management strategies": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Informative and practical",
+    "Casual and relatable",
+    "Brief and to the point",
+    "Positive and uplifting"
+  ],
+  "preferred_detail": "moderate",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "average",
+    "openness": "low",
+    "extraversion": "high",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition average (enjoys some thinking but not heavy material); openness low (prefers the familiar and conventional); extraversion high (outgoing, lively and energetic); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1225",
+    "additional_context": "Age 65+; Self-employed; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 38,
+      "openness": 5,
+      "extraversion": 79,
+      "conscientiousness": 100
+    },
+    "twin_interests": [
+      "home maintenance and improvement",
+      "cooking and baking",
+      "financial management"
+    ],
+    "twin_background_knowledge": "This person likely has a strong background in financial management and enjoys home maintenance and improvement tasks such as mowing and raking."
+  }
+}

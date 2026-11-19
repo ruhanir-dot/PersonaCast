@@ -1,0 +1,728 @@
+{
+  "user_id": "twin_final_327",
+  "interests": [
+    "Golf",
+    "Nutrition",
+    "US news",
+    "Health news",
+    "NFL football",
+    "Fitness",
+    "Retirement planning",
+    "Crime news",
+    "Sports",
+    "Personal finance",
+    "MLB baseball",
+    "Science and technology news",
+    "Wellness",
+    "Personal essays",
+    "Political news",
+    "Documentaries",
+    "Comedy films",
+    "Westerns",
+    "Crime films",
+    "Romantic films",
+    "hydroponics",
+    "golf training",
+    "dog care",
+    "guitar maintenance",
+    "cat care",
+    "survival meals",
+    "Weightlifting",
+    "craft projects",
+    "Poker",
+    "sewing repairs",
+    "prepping",
+    "Jewelry Making",
+    "helping others",
+    "cooking and food",
+    "winter activities"
+  ],
+  "preferred_topics": [
+    "golf tips and strategies",
+    "cooking shows and recipes",
+    "winter sports and activities",
+    "community service and volunteering",
+    "golf training",
+    "fitness",
+    "nutrition",
+    "personal finance",
+    "retirement planning",
+    "NFL football",
+    "crime news",
+    "science and technology",
+    "wellness",
+    "sports",
+    "pet care",
+    "craft projects"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "golf tips",
+    "nutrition advice",
+    "personal finance",
+    "retirement strategies",
+    "NFL updates",
+    "crime stories",
+    "science news",
+    "wellness routines",
+    "fitness hacks",
+    "pet care",
+    "craft ideas",
+    "gaming and tech"
+  ],
+  "recommended_news_queries": [
+    "Golf tournament results this week",
+    "New nutrition studies this week",
+    "US political news this week",
+    "Latest health news this week",
+    "NFL standings this week",
+    "Fitness news",
+    "Retirement planning news",
+    "Recent crime news this week",
+    "Top sports news this week",
+    "Personal finance tips this week",
+    "MLB standings this week",
+    "Latest science and tech news this week",
+    "Wellness trends this week",
+    "Personal essays news",
+    "Political news news",
+    "Documentary movie review",
+    "Comedy film analysis",
+    "Western director interview",
+    "Crime movie review",
+    "Romantic film analysis",
+    "hydroponics news",
+    "Golf training tips this week",
+    "Dog care tips this week",
+    "Guitar maintenance tips this week",
+    "Cat care tips this week",
+    "Survival meal ideas this week",
+    "Weightlifting tips this week",
+    "Craft project ideas this week",
+    "Poker tournament results this week",
+    "Sewing tips this week",
+    "Prepping tips this week",
+    "Jewelry making trends this week",
+    "helping others news",
+    "Food and cooking trends this week",
+    "Winter activities this week"
+  ],
+  "youtube_search_queries": [
+    "Top golf tips for beginners",
+    "Nutrition",
+    "US election updates",
+    "Top health tips",
+    "Top NFL players of all time",
+    "Fitness",
+    "Retirement planning",
+    "True crime stories",
+    "Best sports moments of the week",
+    "Personal essays",
+    "Top MLB players of all time",
+    "Science and technology news",
+    "Top wellness routines",
+    "Political news",
+    "Documentary movie review",
+    "Comedy film analysis",
+    "Western director interview",
+    "Crime movie review",
+    "Romantic film analysis",
+    "hydroponics",
+    "Pet training tips",
+    "Top dog breeds",
+    "Best guitar brands",
+    "Top cat breeds",
+    "Healthy meal prep ideas",
+    "Top weightlifting techniques",
+    "DIY sewing projects",
+    "Top poker strategies",
+    "sewing repairs",
+    "prepping",
+    "DIY jewelry projects",
+    "helping others",
+    "Best survival foods",
+    "Best winter sports"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "religion",
+    "personal medical details",
+    "travel",
+    "weather",
+    "video"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like religion and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from.",
+    "Political news is kept only because this listener's own news clicks show it."
+  ],
+  "background_knowledge": "Familiar with golf, nutrition, personal finance, and pet care.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U70492",
+    "movielens_user": "116231",
+    "amazon_user": "AHVYKT6XKZJWNI3JF7P6E5G4CZYA",
+    "interests_by_source": {
+      "news": 15,
+      "movies": 5,
+      "reviews": 12,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Golf",
+        "source": "news",
+        "keys": [
+          "golf"
+        ],
+        "count": 31,
+        "examples": [
+          "Colin Montgomerie wins playoff when Bernhard Langer needs four bunker shots to reach the green",
+          "Giving advice on the golf course? You won't see it 'thousands of times'"
+        ]
+      },
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 6,
+        "examples": [
+          "Sorry, But Beyond Burgers Are No Better Nutritionally Than A Beef Burger",
+          "This Is How Much It Really Takes to Lose One Pound"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 5,
+        "examples": [
+          "LA firefighter banked $360,010 in overtime pay in one year, city audit finds"
+        ]
+      },
+      {
+        "interest": "Health news",
+        "source": "news",
+        "keys": [
+          "health-news"
+        ],
+        "count": 4,
+        "examples": [
+          "Most Food in America is Hyper-Palatable and 'Difficult to Stop Eating,' Scientists Say"
+        ]
+      },
+      {
+        "interest": "NFL football",
+        "source": "news",
+        "keys": [
+          "football_nfl"
+        ],
+        "count": 3,
+        "examples": [
+          "Tom Brady explains why he's angry at this point in the football season"
+        ]
+      },
+      {
+        "interest": "Fitness",
+        "source": "news",
+        "keys": [
+          "fitness"
+        ],
+        "count": 3,
+        "examples": [
+          "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos"
+        ]
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 3,
+        "examples": [
+          "Don't Save Too Little, or Too Much"
+        ]
+      },
+      {
+        "interest": "Crime news",
+        "source": "news",
+        "keys": [
+          "newscrime"
+        ],
+        "count": 3,
+        "examples": [
+          "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees."
+        ]
+      },
+      {
+        "interest": "Sports",
+        "source": "news",
+        "keys": [
+          "more_sports"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "MLB baseball",
+        "source": "news",
+        "keys": [
+          "baseball_mlb"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Science and technology news",
+        "source": "news",
+        "keys": [
+          "newsscienceandtechnology"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Wellness",
+        "source": "news",
+        "keys": [
+          "wellness"
+        ],
+        "count": 2,
+        "examples": [
+          "Daphne Oz Just Shared the Most Relatable Abs Photo 10 Weeks After Giving Birth"
+        ]
+      },
+      {
+        "interest": "Personal essays",
+        "source": "news",
+        "keys": [
+          "voices"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Political news",
+        "source": "news",
+        "keys": [
+          "newspolitics"
+        ],
+        "count": 2,
+        "examples": [
+          "Trump Tax Return Case Confronts Supreme Court With a Momentous Choice"
+        ]
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 20,
+        "lift": 5.05,
+        "examples": []
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 163,
+        "lift": 1.4,
+        "examples": [
+          "Pineapple Express (2008)",
+          "As Good as It Gets (1997)"
+        ]
+      },
+      {
+        "interest": "Westerns",
+        "source": "movies",
+        "keys": [
+          "Western"
+        ],
+        "count": 8,
+        "lift": 1.31,
+        "examples": []
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 64,
+        "lift": 1.15,
+        "examples": [
+          "Pineapple Express (2008)",
+          "Blow (2001)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 62,
+        "lift": 1.08,
+        "examples": [
+          "As Good as It Gets (1997)",
+          "Before Sunset (2004)"
+        ]
+      },
+      {
+        "interest": "hydroponics",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 40,
+        "categories": [
+          "Gardening"
+        ],
+        "examples": [
+          "Fiskars 99216935J Pruning Softouch Micro-Tip Snip, Non-Coated Blades, Gray",
+          "Dramm 12380 Heavy-Duty Brass Adjustable Hose Nozzle",
+          "FoxFarm FX14053 + FX14054 Ocean Forest Organic Plant Potting Soil with Happy Fro"
+        ]
+      },
+      {
+        "interest": "golf training",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 29,
+        "categories": [
+          "Sports & Outdoors > Sports > Golf"
+        ],
+        "examples": [
+          "BirdieBall Practice Golf Balls, Limited Flight Golf Balls, Golf Training Balls (",
+          "Real Feel Golf Mats The Original Country Club Elite Hitting Strip 10\"x30\" Indoor",
+          "The Net Return Pro Series Golf Net"
+        ]
+      },
+      {
+        "interest": "dog care",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 14,
+        "categories": [
+          "Dogs"
+        ],
+        "examples": [
+          "Hill'S Science Diet Adult Advanced Fitness Chicken & Barley Recipe Dry Dog Food,",
+          "HONEY CARE All-Absorb Dog Pee Pads 22\" x 23\" (Pack of 14), Ultra Absorbent and O",
+          "Nutri-Vet Aspirin for Dogs | Medium to Large Dogs | 300mg | 75 count"
+        ]
+      },
+      {
+        "interest": "guitar maintenance",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 9,
+        "categories": [
+          "Musical Instruments > Instrument Accessories"
+        ],
+        "examples": [
+          "On Stage SM7311W Music Stand",
+          "MusicNomad MN150 Guitar ONE All-in-1 Cleaner, Polish, and Wax, 12 oz & F-ONE Fre",
+          "MusicNomad F-ONE Fretboard Oil Cleaner & Conditioner 2 oz (MN105)"
+        ]
+      },
+      {
+        "interest": "cat care",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 7,
+        "categories": [
+          "Cats"
+        ],
+        "examples": [
+          "Perfect Pet Cat Flap Door with 4 way Lock Pet Door, 6 1/4 x 6 1/4\" Flap Size",
+          "CK Cat Scratching Post, 8.5\"L x 8.5\" W x 30\"H (NA49020)",
+          "DYBEN Pet Can Covers/Dog Cat Food Can Lids/Universal BPA Free/3 Pack/Silicone Pe"
+        ]
+      },
+      {
+        "interest": "survival meals",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 6,
+        "categories": [
+          "Sports & Outdoors > Outdoor Recreation > Camping & Hiking"
+        ],
+        "examples": [
+          "Mountain House Breakfast Skillet",
+          "Mountain House Beef Stroganoff with Noodles | Freeze Dried Backpacking & Camping",
+          "Mountain House Biscuits & Gravy | Freeze Dried Backpacking & Camping Food"
+        ]
+      },
+      {
+        "interest": "Weightlifting",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 5,
+        "categories": [
+          "Sports & Outdoors > Exercise & Fitness > Strength Training Equipment"
+        ],
+        "examples": [
+          "Valeo 4-Foot Long Stretch Exercise Resistance Bands, Pack of 3, Color Coded For ",
+          "Bodylastics Resistance Band Handles, Ergonomic Gym Handles with Upgraded TPR Waf",
+          "RDX Cow Hide Leather 6\" Weight Lifting Belt Back Gym Training Support Fitness Ex"
+        ]
+      },
+      {
+        "interest": "craft projects",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38"
+        ],
+        "count": 3,
+        "categories": [
+          "Arts, Crafts & Sewing > Crafting"
+        ],
+        "examples": [
+          "Elmer's All Purpose Glue Sticks, Washable, 22 Grams, 3 Count",
+          "Boardwalk K2440900 Kraft Paper, 24 in x 900 ft, Brown",
+          "Printworks White Cardstock, 67 lb, 92 Bright, FSC Certified, Perfect for School "
+        ]
+      },
+      {
+        "interest": "Poker",
+        "source": "reviews",
+        "keys": [
+          "P39",
+          "P40",
+          "P41"
+        ],
+        "count": 3,
+        "categories": [
+          "Toys & Games > Games & Accessories > Casino Equipment"
+        ],
+        "examples": [
+          "Brybelly 10 Clear Acrylic Poker Chip Trays | for Standard Size Chips & Clay Chip",
+          "Trademark Poker Clay Laser Las Vegas Poker Chips",
+          "Brybelly, Casino Grade Poker Dealer Button Puck - Large 3 Inch Diameter!"
+        ]
+      },
+      {
+        "interest": "sewing repairs",
+        "source": "reviews",
+        "keys": [
+          "P42",
+          "P43",
+          "P44"
+        ],
+        "count": 3,
+        "categories": [
+          "Arts, Crafts & Sewing > Sewing"
+        ],
+        "examples": [
+          "VelloStar Sewing Kit for Adults – Easy to Use Needle and Thread Kit, 24 Color Th",
+          "Denser 2 Inch Hook and Loop Tape Sticky Back - 5 Yards (15 Feet) - Strips Adhesi",
+          "A+DAY Large Safety Pins 2.2 Inch (56mm), Size 4, 80-Count, Nickel Finish"
+        ]
+      },
+      {
+        "interest": "prepping",
+        "source": "reviews",
+        "keys": [
+          "P45",
+          "P46",
+          "P47"
+        ],
+        "count": 3,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Herbs, Spices & Seasonings"
+        ],
+        "examples": [
+          "Mountain House Italian Style Pepper Steak with Rice",
+          "SaltWorks Sel Gris French Grey Sea Salt, Sel Gris (Fine), 16 Oz",
+          "Cayenne Pepper 20 lb by International Spice"
+        ]
+      },
+      {
+        "interest": "Jewelry Making",
+        "source": "reviews",
+        "keys": [
+          "P48",
+          "P49"
+        ],
+        "count": 2,
+        "categories": [
+          "Arts, Crafts & Sewing > Beading & Jewelry Making"
+        ],
+        "examples": [
+          "Beadaholique 2 by 3-Inch 100 Self Sealing Plastic Bags, Clear",
+          "Hillman Steel Wire 100' 24 Ga Galvanized 10 Lb Carded"
+        ]
+      },
+      {
+        "interest": "helping others",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "own_words"
+        ]
+      },
+      {
+        "interest": "cooking and food",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "food; eating; lying"
+        ]
+      },
+      {
+        "interest": "winter activities",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "snow -> ball -> plow -> job -> flake -> white -> man -> storm -> bank -> season -> fall -> help -> shovel -> machine -> "
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Top golf tips for beginners": "news",
+      "Nutrition": "news",
+      "US election updates": "news",
+      "Top health tips": "news",
+      "Top NFL players of all time": "news",
+      "Fitness": "news",
+      "Retirement planning": "news",
+      "True crime stories": "news",
+      "Best sports moments of the week": "news",
+      "Personal essays": "news",
+      "Top MLB players of all time": "news",
+      "Science and technology news": "news",
+      "Top wellness routines": "news",
+      "Political news": "news",
+      "Documentary movie review": "movies",
+      "Comedy film analysis": "movies",
+      "Western director interview": "movies",
+      "Crime movie review": "movies",
+      "Romantic film analysis": "movies",
+      "hydroponics": "reviews",
+      "Pet training tips": "reviews",
+      "Top dog breeds": "reviews",
+      "Best guitar brands": "reviews",
+      "Top cat breeds": "reviews",
+      "Healthy meal prep ideas": "reviews",
+      "Top weightlifting techniques": "reviews",
+      "DIY sewing projects": "reviews",
+      "Top poker strategies": "reviews",
+      "sewing repairs": "reviews",
+      "prepping": "reviews",
+      "DIY jewelry projects": "reviews",
+      "helping others": "twin",
+      "Best survival foods": "twin",
+      "Best winter sports": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "brief and straightforward",
+    "casual and relatable",
+    "practical tips and advice",
+    "personal anecdotes and experiences"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Friendly and conversational",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "average",
+    "extraversion": "average",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness average (open to some new experiences); extraversion average (neither especially outgoing nor reserved); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "327",
+    "additional_context": "Age 65+; Retired; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 27,
+      "openness": 46,
+      "extraversion": 47,
+      "conscientiousness": 67
+    },
+    "twin_interests": [
+      "golf",
+      "helping others",
+      "cooking and food",
+      "winter activities"
+    ],
+    "twin_background_knowledge": "This person likely enjoys outdoor activities, particularly in winter, and values helping others."
+  }
+}

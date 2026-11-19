@@ -1,0 +1,561 @@
+{
+  "user_id": "twin_final_574",
+  "interests": [
+    "Travel ideas",
+    "Saving money",
+    "Nutrition",
+    "Documentaries",
+    "Westerns",
+    "Adventure films",
+    "Animated films",
+    "Thrillers",
+    "War films",
+    "Fantasy films",
+    "stock market investing",
+    "emergency preparedness",
+    "dog training and care",
+    "biking",
+    "landscaping",
+    "nonprofit management",
+    "word games",
+    "barbecue grilling",
+    "Painting",
+    "Real Estate Investing",
+    "legal defense",
+    "outdoor activities",
+    "finance and money management",
+    "adventure and exploration"
+  ],
+  "preferred_topics": [
+    "budgeting and saving",
+    "investment strategies",
+    "outdoor survival skills",
+    "travel destinations",
+    "budget travel tips",
+    "nutrition tips",
+    "documentary series",
+    "western films",
+    "adventure films",
+    "animated films",
+    "thriller movies",
+    "war films",
+    "fantasy films",
+    "stock market trends",
+    "emergency preparedness tips"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples"
+  ],
+  "podcast_focus_keywords": [
+    "travel hacks",
+    "nutrition advice",
+    "documentary insights",
+    "western adventures",
+    "adventure films",
+    "animated stories",
+    "thriller narratives",
+    "war history",
+    "fantasy worlds",
+    "stock market updates",
+    "emergency preparedness",
+    "dog care tips"
+  ],
+  "recommended_news_queries": [
+    "Top 5 off-the-beaten-path travel destinations",
+    "Best ways to save money on groceries",
+    "Nutrition news",
+    "Documentary movie review",
+    "Western film analysis",
+    "Adventure director interview",
+    "Animated movie review",
+    "Thriller film analysis",
+    "War director interview",
+    "Fantasy movie review",
+    "Stock market trends this week",
+    "Emergency preparedness tips",
+    "Top tips for dog training",
+    "Best biking routes",
+    "Landscaping ideas for your garden",
+    "Nonprofit management tips",
+    "New word games to play",
+    "Best barbecue grilling techniques",
+    "New painting techniques",
+    "Real estate investing trends",
+    "Legal defense tips",
+    "Top outdoor activities",
+    "Money management tips",
+    "Adventure and exploration tips"
+  ],
+  "youtube_search_queries": [
+    "5 hidden gems for budget travel",
+    "10 money-saving tips for everyday life",
+    "Nutrition",
+    "Documentary movie review",
+    "Western film analysis",
+    "Adventure director interview",
+    "Animated movie review",
+    "Thriller film analysis",
+    "War director interview",
+    "Fantasy movie review",
+    "Top 5 stocks to watch",
+    "Top 10 emergency kits to build",
+    "Best dog training techniques",
+    "Top 10 biking destinations",
+    "landscaping",
+    "Top 10 nonprofit management strategies",
+    "Top 10 word games of all time",
+    "Top 10 barbecue recipes",
+    "Top 10 painting styles",
+    "Top 10 real estate investment strategies",
+    "Top 10 legal defense strategies",
+    "Top 10 outdoor activities",
+    "Top 10 money management strategies",
+    "Top 10 adventure and exploration destinations"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "sports"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with various travel destinations, nutrition tips, and stock market trends, but not deeply knowledgeable about politics, religion, or health issues.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U80799",
+    "movielens_user": "150900",
+    "amazon_user": "AEQQDI2NXBNCPLJUJFJXWKIGU4UA",
+    "interests_by_source": {
+      "news": 3,
+      "movies": 7,
+      "reviews": 11,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Travel ideas",
+        "source": "news",
+        "keys": [
+          "traveltripideas"
+        ],
+        "count": 3,
+        "examples": [
+          "50 underrated state parks across the US that everyone should visit in their lifetime"
+        ]
+      },
+      {
+        "interest": "Saving money",
+        "source": "news",
+        "keys": [
+          "finance-savemoney"
+        ],
+        "count": 2,
+        "examples": [
+          "18 things to avoid at the dollar store"
+        ]
+      },
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 2,
+        "examples": [
+          "3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian",
+          "Nutritionists share their favorite packaged foods for quick meals"
+        ]
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 18,
+        "lift": 1.7,
+        "examples": [
+          "14 Peaks: Nothing Is Impossible (2021)",
+          "The Alpinist (2021)"
+        ]
+      },
+      {
+        "interest": "Westerns",
+        "source": "movies",
+        "keys": [
+          "Western"
+        ],
+        "count": 25,
+        "lift": 1.54,
+        "examples": [
+          "Firefly (2002)",
+          "Hostiles (2017)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 272,
+        "lift": 1.27,
+        "examples": [
+          "Firefly (2002)",
+          "The Martian (2015)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 74,
+        "lift": 1.19,
+        "examples": [
+          "Team America: World Police (2004)"
+        ]
+      },
+      {
+        "interest": "Thrillers",
+        "source": "movies",
+        "keys": [
+          "Thriller"
+        ],
+        "count": 283,
+        "lift": 1.18,
+        "examples": [
+          "Conspiracy Theory (1997)"
+        ]
+      },
+      {
+        "interest": "War films",
+        "source": "movies",
+        "keys": [
+          "War"
+        ],
+        "count": 48,
+        "lift": 1.09,
+        "examples": []
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 106,
+        "lift": 1.01,
+        "examples": [
+          "Monty Python and the Holy Grail (1975)"
+        ]
+      },
+      {
+        "interest": "stock market investing",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 11,
+        "categories": [
+          "Books > Business & Money > Investing"
+        ],
+        "examples": [
+          "How to Make $1,000,000 in the Stock Market Automatically: (4th Edition)",
+          "Get Rich With Options: Four Winning Strategies Straight from the Exchange Floor",
+          "The Motley Fool Million Dollar Portfolio: How to Build and Grow a Panic-Proof In"
+        ]
+      },
+      {
+        "interest": "emergency preparedness",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 8,
+        "categories": [
+          "Sports & Outdoors > Outdoor Recreation > Camping & Hiking"
+        ],
+        "examples": [
+          "Mountain House New York Style Cheesecake Bites",
+          "Augason Farms 1-Week 1-Person Emergency Food Supply Kit 6 lbs 15 oz",
+          "Augason Farms 72-Hour 1-Person Emergency Food Supply Kit 4 lbs 1 oz"
+        ]
+      },
+      {
+        "interest": "dog training and care",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 7,
+        "categories": [
+          "Dogs"
+        ],
+        "examples": [
+          "Motorola SCOUTTRAINER100 Rechargeable Advanced Remote Training System with 3 Tra",
+          "Medium Dog Crate | MidWest Life Stages 30\" Folding Metal Dog Crate | Divider Pan",
+          "16 ft Black Retractable Dog Leash with Dispenser and LED Light for Small Medium "
+        ]
+      },
+      {
+        "interest": "biking",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 6,
+        "categories": [
+          "Sports & Outdoors > Sports > Cycling"
+        ],
+        "examples": [
+          "iBert Child Bicycle Safe-T-Seat",
+          "YLG Oversized Comfort Bike Seat Comfortable Replacement Bike Saddle Memory Foam ",
+          "Schwinn Halcyon ERT Youth/Adult Bike Helmet, Fits Head Circumferences 54-62 cm, "
+        ]
+      },
+      {
+        "interest": "landscaping",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 5,
+        "categories": [
+          "Gardening"
+        ],
+        "examples": [
+          "Paumco Products Quick Spade - Model Number 1100-Quick Spade",
+          "Gorilla Carts GOR400-COM Steel Garden Cart, Steel Mesh Removable Sides, 3 cu ft,",
+          "Hydro Life 52700 Inline Water Filter (with Flexible Hose Protector, Hydroponics "
+        ]
+      },
+      {
+        "interest": "nonprofit management",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Business & Money > Business Development & Entrepreneurship"
+        ],
+        "examples": [
+          "Nonprofit Meetings, Minutes & Records: How to Run Your Nonprofit Corporation So ",
+          "Every Nonprofit's Tax Guide: How to Keep Your Tax Exempt Status and Avoid IRS Pr",
+          "The Corporate Records Handbook: Meetings, Minutes & Resolutions"
+        ]
+      },
+      {
+        "interest": "word games",
+        "source": "reviews",
+        "keys": [
+          "P30",
+          "P31",
+          "P32"
+        ],
+        "count": 3,
+        "categories": [
+          "Toys & Games > Games & Accessories > Board Games"
+        ],
+        "examples": [
+          "Learning Resources Riddle Moo This - A Silly Riddle Word Game, 150 Cards, 4 Buzz",
+          "Learning Resources tri-FACTa Addition and Subtraction Game, Early Math Skills, A",
+          "Hasbro Scrabble Deluxe Edition (Amazon Exclusive)"
+        ]
+      },
+      {
+        "interest": "barbecue grilling",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38"
+        ],
+        "count": 3,
+        "categories": [
+          "Grilling and barbecue"
+        ],
+        "examples": [
+          "Nostalgia BCN6BK Bacon Express Crispy Bacon Grill",
+          "Commercial Quality Stainless Steel Grill Cleaning Brush and Scraper Tool Combo B",
+          "BBQ Gas Grill Cover, 600D Expert Barbecue Grill Cover 58 Inch, BBQ Cover Fade & "
+        ]
+      },
+      {
+        "interest": "Painting",
+        "source": "reviews",
+        "keys": [
+          "P39",
+          "P40",
+          "P41"
+        ],
+        "count": 3,
+        "categories": [
+          "Arts, Crafts & Sewing > Painting, Drawing & Art Supplies"
+        ],
+        "examples": [
+          "Acrylic Paint Brush Set,60 Piece Professional Painting Set,Includes 24 Acrylic P",
+          "Junrife Diamond Painting Coasters with Holder, DIY Mandala & Fruit & Ocean & Dog",
+          "RUNSOS Acrylic Paint Set 24 Colors, 24 Tube x 1.18oz(35mL), Art Craft Paint Supp"
+        ]
+      },
+      {
+        "interest": "Real Estate Investing",
+        "source": "reviews",
+        "keys": [
+          "P42",
+          "P43"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Business & Money > Economics"
+        ],
+        "examples": [
+          "An Army of Davids: How Markets and Technology Empower Ordinary People to Beat Bi",
+          "The Landlord's Kit: A Complete Set of Ready-To-Use Forms, Letters, and Notices t"
+        ]
+      },
+      {
+        "interest": "legal defense",
+        "source": "reviews",
+        "keys": [
+          "P44",
+          "P45"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Law > Business"
+        ],
+        "examples": [
+          "The Foreclosure Survival Guide: Keep Your House or Walk Away With Money in Your ",
+          "Beat Your Ticket: Go to Court & Win"
+        ]
+      },
+      {
+        "interest": "outdoor activities",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "camping -> hiking -> backpacking -> walking -> nature -> biking"
+        ]
+      },
+      {
+        "interest": "finance and money management",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy: very high (91th percentile)"
+        ]
+      },
+      {
+        "interest": "adventure and exploration",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "I should be fiar; Fair would mean split the money; I'll give them money and hope they send it back; If they send it back"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "5 hidden gems for budget travel": "news",
+      "10 money-saving tips for everyday life": "news",
+      "Nutrition": "news",
+      "Documentary movie review": "movies",
+      "Western film analysis": "movies",
+      "Adventure director interview": "movies",
+      "Animated movie review": "movies",
+      "Thriller film analysis": "movies",
+      "War director interview": "movies",
+      "Fantasy movie review": "movies",
+      "Top 5 stocks to watch": "reviews",
+      "Top 10 emergency kits to build": "reviews",
+      "Best dog training techniques": "reviews",
+      "Top 10 biking destinations": "reviews",
+      "landscaping": "reviews",
+      "Top 10 nonprofit management strategies": "reviews",
+      "Top 10 word games of all time": "reviews",
+      "Top 10 barbecue recipes": "reviews",
+      "Top 10 painting styles": "reviews",
+      "Top 10 real estate investment strategies": "reviews",
+      "Top 10 legal defense strategies": "reviews",
+      "Top 10 outdoor activities": "twin",
+      "Top 10 money management strategies": "twin",
+      "Top 10 adventure and exploration destinations": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "informative and educational headlines",
+    "detailed reviews with pros and cons",
+    "positive and enthusiastic tone",
+    "personal anecdotes and experiences"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "average",
+    "extraversion": "high",
+    "conscientiousness": "average"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness average (open to some new experiences); extraversion high (outgoing, lively and energetic); conscientiousness average (reasonably organized).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "574",
+    "additional_context": "Age 18-29; Student; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 79,
+      "openness": 41,
+      "extraversion": 75,
+      "conscientiousness": 53
+    },
+    "twin_interests": [
+      "outdoor activities",
+      "finance and money management",
+      "adventure and exploration"
+    ],
+    "twin_background_knowledge": "This person likely has a good understanding of financial concepts and enjoys outdoor activities, particularly those that involve nature and adventure."
+  }
+}

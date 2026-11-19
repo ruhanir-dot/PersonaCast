@@ -1,0 +1,606 @@
+{
+  "user_id": "twin_final_50",
+  "interests": [
+    "Tips and life hacks",
+    "Cleaning and organizing",
+    "Home and garden",
+    "Lifestyle buzz",
+    "Recipes and cooking",
+    "DIY projects",
+    "Fantasy films",
+    "Animated films",
+    "Family and kids' movies",
+    "Musicals",
+    "Adventure films",
+    "Romantic films",
+    "Action movies",
+    "quilting",
+    "Jewelry Making",
+    "bookbinding and crafting",
+    "cat care",
+    "country music",
+    "RPG Dice",
+    "hand lettering and coloring",
+    "candy making",
+    "supernatural fiction",
+    "salted caramel",
+    "Batik quilting",
+    "crafting with natural materials",
+    "sustainability and nature",
+    "fairness and reciprocity"
+  ],
+  "preferred_topics": [
+    "crafting with natural materials",
+    "sustainability and nature",
+    "fairness and reciprocity",
+    "crafting techniques",
+    "home improvement tips",
+    "DIY projects",
+    "cooking recipes",
+    "quilting patterns",
+    "craft supplies",
+    "movie reviews",
+    "fantasy film analysis",
+    "country music",
+    "sustainability practices",
+    "hand lettering tutorials"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Curious about new and unusual angles",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "crafting",
+    "home improvement",
+    "cooking",
+    "quilting",
+    "movie reviews",
+    "fantasy films",
+    "country music",
+    "sustainability",
+    "hand lettering",
+    "natural materials",
+    "DIY projects"
+  ],
+  "recommended_news_queries": [
+    "Top 10 life hacks for organizing your home",
+    "Best cleaning products for your home",
+    "Home and garden news",
+    "Lifestyle buzz news",
+    "Easy recipes for busy weeknights",
+    "DIY projects for beginners",
+    "Fantasy movie review",
+    "Animated film analysis",
+    "Family and kids' director interview",
+    "Musical movie review",
+    "Adventure film analysis",
+    "Romantic director interview",
+    "Action movie review",
+    "New quilting techniques and patterns",
+    "Jewelry Making news",
+    "bookbinding and crafting news",
+    "Top cat care tips",
+    "Top country music artists of the year",
+    "Best RPG dice for gaming",
+    "New hand lettering trends",
+    "New candy recipes",
+    "Top supernatural fiction books",
+    "Salted caramel recipes",
+    "New Batik quilting techniques",
+    "Sustainable crafting techniques",
+    "sustainability and nature news",
+    "fairness and reciprocity news"
+  ],
+  "youtube_search_queries": [
+    "10 genius life hacks you need to try today",
+    "DIY cleaning hacks for a spotless home",
+    "Fall garden planning and planting guide",
+    "Lifestyle buzz",
+    "Easy candy making recipes",
+    "10 easy DIY projects to try at home",
+    "Fantasy movie review",
+    "Animated film analysis",
+    "Family and kids' director interview",
+    "Musical movie review",
+    "Adventure film analysis",
+    "Romantic director interview",
+    "Action movie review",
+    "Quilting tutorials for beginners",
+    "Jewelry Making",
+    "bookbinding and crafting",
+    "Cat care tips and tricks",
+    "Country music concerts to watch online",
+    "How to choose the right RPG dice",
+    "Hand lettering tutorials for beginners",
+    "candy making",
+    "Best supernatural fiction movies",
+    "Best salted caramel recipes",
+    "Batik quilting tutorials",
+    "Crafting with natural materials",
+    "sustainability and nature",
+    "fairness and reciprocity"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "sports"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with crafting, quilting, cooking, and home improvement projects.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U21079",
+    "movielens_user": "126226",
+    "amazon_user": "AGKCITJLK6TMSLQQHGSHIBFBSLWA",
+    "interests_by_source": {
+      "news": 6,
+      "movies": 7,
+      "reviews": 11,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Tips and life hacks",
+        "source": "news",
+        "keys": [
+          "tipsandtricks"
+        ],
+        "count": 5,
+        "examples": [
+          "How To Open a Can Without a Can Opener",
+          "This Is the Mess-Free Way to Clean Your Microwave"
+        ]
+      },
+      {
+        "interest": "Cleaning and organizing",
+        "source": "news",
+        "keys": [
+          "lifestylecleaningandorganizing"
+        ],
+        "count": 5,
+        "examples": [
+          "11 Powerful Products That Cut Your Cleaning Time in Half",
+          "12 Surprising Things You Should Never Clean with Water"
+        ]
+      },
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 4,
+        "examples": [
+          "60+ No-Carve Pumpkin Ideas for Halloween",
+          "35 Landscaping Plants You'll Love If You Hate Fall Yard Work"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 3,
+        "examples": [
+          "This Man's Excitement Over Folding Shirts Is Truly Contagious"
+        ]
+      },
+      {
+        "interest": "Recipes and cooking",
+        "source": "news",
+        "keys": [
+          "recipes"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "DIY projects",
+        "source": "news",
+        "keys": [
+          "lifestylediy"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 64,
+        "lift": 2.58,
+        "examples": [
+          "Your Highness (2011)",
+          "Practical Magic (1998)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 27,
+        "lift": 1.82,
+        "examples": [
+          "Fantasia (1940)",
+          "Alice in Wonderland (1951)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 31,
+        "lift": 1.7,
+        "examples": [
+          "Secret Garden, The (1993)",
+          "Bedknobs and Broomsticks (1971)"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 11,
+        "lift": 1.43,
+        "examples": [
+          "Bedknobs and Broomsticks (1971)",
+          "Into the Woods (2014)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 63,
+        "lift": 1.24,
+        "examples": [
+          "Bedknobs and Broomsticks (1971)",
+          "Your Highness (2011)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 40,
+        "lift": 1.1,
+        "examples": [
+          "Practical Magic (1998)",
+          "Cinderella (2015)"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 65,
+        "lift": 1.01,
+        "examples": [
+          "Your Highness (2011)",
+          "Big Trouble in Little China (1986)"
+        ]
+      },
+      {
+        "interest": "quilting",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 14,
+        "categories": [
+          "Arts, Crafts & Sewing > Sewing"
+        ],
+        "examples": [
+          "18in x 24in SELF HEALING CUTTING MAT IN GREEN - MAT-1824",
+          "Pellon B-96 Nature’s Touch Bamboo Blend Batting W/Scrim - Queen 96\" X 108\"",
+          "Star Thread V38-841 3-Ply 30wt T-35 Cotton Quilting & Craft Variegated Thread, 1"
+        ]
+      },
+      {
+        "interest": "Jewelry Making",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 7,
+        "categories": [
+          "Arts, Crafts & Sewing > Beading & Jewelry Making"
+        ],
+        "examples": [
+          "4 pcs Swarovski Crystal 5714 Star Bead Spacer Light Amethyst 8mm / Findings/Crys",
+          "1pc Swarovski Crystal 6110 Navette Amethyst Charm Pendant Bead 30mm / Findings/C",
+          "Hemp Cord Spool 10# Purple 205 Feet"
+        ]
+      },
+      {
+        "interest": "bookbinding and crafting",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 5,
+        "categories": [
+          "Arts, Crafts & Sewing > Crafting"
+        ],
+        "examples": [
+          "Books by Hand, Bone Folder, for Bookbinding Craft Tool, 6 Inches",
+          "Fiskars Square Block Party Squeeze Punch, Large (01-003775)",
+          "BLACK COQUE Rooster Tail Feathers: 6-9\" Length - Per 1 Foot Strung"
+        ]
+      },
+      {
+        "interest": "cat care",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19"
+        ],
+        "count": 4,
+        "categories": [
+          "Cats"
+        ],
+        "examples": [
+          "Pioneer Pet Pump Replacement for Smartcat Fountains",
+          "Coastal - Figure H Adjustable Cat Harness, Blue, 3/8\" x 10\"-18\"",
+          "Pioneer Pet Replacement Filters for Ceramic & Stainless Steel Fountains, Raindro"
+        ]
+      },
+      {
+        "interest": "country music",
+        "source": "reviews",
+        "keys": [
+          "P20",
+          "P21",
+          "P22"
+        ],
+        "count": 3,
+        "categories": [
+          "CDs & Vinyl > Pop"
+        ],
+        "examples": [
+          "Singles+",
+          "Rare",
+          "Bridges Deluxe"
+        ]
+      },
+      {
+        "interest": "RPG Dice",
+        "source": "reviews",
+        "keys": [
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 3,
+        "categories": [
+          "Toys & Games > Games & Accessories > Game Accessories"
+        ],
+        "examples": [
+          "IvyFieldDice Dice Holder PU Leather Folding Rectangle Tray w/Purple Velvet for R",
+          "Haxtec Glitter DND Dice Set 7PCS Polyhedral D D Dice for Roleplaying Dice Games ",
+          "Chessex Dice: Polyhedral 7-Die Borealis Dice Set - Purple w/White CHX-27407"
+        ]
+      },
+      {
+        "interest": "hand lettering and coloring",
+        "source": "reviews",
+        "keys": [
+          "P29",
+          "P30",
+          "P31"
+        ],
+        "count": 3,
+        "categories": [
+          "Arts, Crafts & Sewing > Painting, Drawing & Art Supplies"
+        ],
+        "examples": [
+          "Ohuhu 48-color Calligraphy Brush REFILLABLE and Bonus 3 Ink Refills, Artist Call",
+          "SAKURA Pigma Micron Brush Pens - Archival Black and Colored Ink Pens - Pens for ",
+          "Mobicus 5D Diamond Painting Kits Rose Diamond Art for Adults Mosaic Diamond Embr"
+        ]
+      },
+      {
+        "interest": "candy making",
+        "source": "reviews",
+        "keys": [
+          "P32",
+          "P33",
+          "P34"
+        ],
+        "count": 3,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Cooking & Baking"
+        ],
+        "examples": [
+          "Oasis Supply 200 Piece O-Grade Wafer Paper Pack, 8\" by 11\"",
+          "Dried Wild Blueberries, No Added Sugar, Oils, Or Preservatives, Pure & Simple, C",
+          "Whole Foods Market, Premium Super Dense Balsamic Vinegar, 8.5 Fl Oz"
+        ]
+      },
+      {
+        "interest": "supernatural fiction",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Mystery"
+        ],
+        "examples": [
+          "You Only Live Nine Times (Supernatural Enforcers Agency Book 3)",
+          "To Catch A Snake (Supernatural Bounty Hunters Book 3)"
+        ]
+      },
+      {
+        "interest": "salted caramel",
+        "source": "reviews",
+        "keys": [
+          "P37",
+          "P38"
+        ],
+        "count": 2,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Herbs, Spices & Seasonings"
+        ],
+        "examples": [
+          "Saltverk Flaky Sea Salt, 3.17 Ounces of Handcrafted Gourmet Salt Flakes from Ice",
+          "Light Grey Celtic Sea Salt 1 Pound Resealable Bag – Additive-Free, Delicious Sea"
+        ]
+      },
+      {
+        "interest": "Batik quilting",
+        "source": "reviews",
+        "keys": [
+          "P39",
+          "P40"
+        ],
+        "count": 2,
+        "categories": [
+          "Arts, Crafts & Sewing > Fabric"
+        ],
+        "examples": [
+          "Hoffman Fabrics Bali Hand Dyed Watercolors Batik Belle",
+          "Hoffman Fabrics Bali Hand Dyed Watercolors Batik January"
+        ]
+      },
+      {
+        "interest": "crafting with natural materials",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "wood -> tree -> leaves -> green -> sun -> stars -> moon -> light -> candle -> wax -> bee -> honey -> sweet -> tea -> lea"
+        ]
+      },
+      {
+        "interest": "sustainability and nature",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "tree -> leaves -> green -> sun -> stars -> moon -> light -> candle -> wax -> bee -> honey -> sweet -> tea -> leaves -> c"
+        ]
+      },
+      {
+        "interest": "fairness and reciprocity",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "I would send some money back to a person because they sent something to me; I would send half of what a person sent to m"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "10 genius life hacks you need to try today": "news",
+      "DIY cleaning hacks for a spotless home": "news",
+      "Fall garden planning and planting guide": "news",
+      "Lifestyle buzz": "news",
+      "Easy candy making recipes": "news",
+      "10 easy DIY projects to try at home": "news",
+      "Fantasy movie review": "movies",
+      "Animated film analysis": "movies",
+      "Family and kids' director interview": "movies",
+      "Musical movie review": "movies",
+      "Adventure film analysis": "movies",
+      "Romantic director interview": "movies",
+      "Action movie review": "movies",
+      "Quilting tutorials for beginners": "reviews",
+      "Jewelry Making": "reviews",
+      "bookbinding and crafting": "reviews",
+      "Cat care tips and tricks": "reviews",
+      "Country music concerts to watch online": "reviews",
+      "How to choose the right RPG dice": "reviews",
+      "Hand lettering tutorials for beginners": "reviews",
+      "candy making": "reviews",
+      "Best supernatural fiction movies": "reviews",
+      "Best salted caramel recipes": "reviews",
+      "Batik quilting tutorials": "reviews",
+      "Crafting with natural materials": "twin",
+      "sustainability and nature": "twin",
+      "fairness and reciprocity": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "brief and straightforward",
+    "practical and actionable",
+    "informative and educational",
+    "positive and encouraging",
+    "simple and easy to follow",
+    "focused on results"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "high",
+    "extraversion": "low",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness high (curious about new, unusual and artistic experiences); extraversion low (reserved and quiet); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "50",
+    "additional_context": "Age 65+; Retired; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 92,
+      "openness": 69,
+      "extraversion": 10,
+      "conscientiousness": 92
+    },
+    "twin_interests": [
+      "crafting with natural materials",
+      "sustainability and nature",
+      "fairness and reciprocity"
+    ],
+    "twin_background_knowledge": "This person likely has a strong interest in crafting with natural materials and sustainability, possibly involving the use of beeswax, honey, and other natural elements."
+  }
+}

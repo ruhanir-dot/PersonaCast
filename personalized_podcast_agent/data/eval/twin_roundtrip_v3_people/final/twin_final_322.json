@@ -1,0 +1,566 @@
+{
+  "user_id": "twin_final_322",
+  "interests": [
+    "Stock market news",
+    "Food news",
+    "Personal essays",
+    "World news",
+    "Retirement planning",
+    "Tips and life hacks",
+    "Company and business news",
+    "US news",
+    "Drama films",
+    "Crime films",
+    "Science fiction films",
+    "Romantic films",
+    "journaling",
+    "self-help",
+    "agarest war",
+    "self-improvement",
+    "Final Fantasy strategy guides",
+    "de-cluttering",
+    "Self-Reflection",
+    "action movies",
+    "young adult literature",
+    "Finance and investing",
+    "Minimalism",
+    "Work and productivity",
+    "Environmental issues"
+  ],
+  "preferred_topics": [
+    "Personal finance management",
+    "Investment strategies",
+    "Minimalist living",
+    "Productivity hacks",
+    "Sustainable living",
+    "Stock market updates",
+    "Personal finance tips",
+    "Business news",
+    "Environmental news",
+    "Self-help books",
+    "Personal development",
+    "Drama films",
+    "Crime films",
+    "Science fiction films",
+    "Young adult literature",
+    "Minimalism",
+    "Work productivity"
+  ],
+  "style_preferences": [
+    "Clear, moderately detailed explanations",
+    "Curious about new and unusual angles"
+  ],
+  "podcast_focus_keywords": [
+    "investment strategies",
+    "entrepreneurship",
+    "mental health",
+    "environmental sustainability",
+    "self-improvement",
+    "productivity hacks",
+    "book reviews",
+    "film analysis",
+    "personal finance",
+    "minimalist living",
+    "work-life balance",
+    "journaling techniques"
+  ],
+  "recommended_news_queries": [
+    "latest stock market trends",
+    "food industry news",
+    "personal essays on self-improvement",
+    "World news news",
+    "retirement planning tips",
+    "life hacks for productivity",
+    "company news updates",
+    "latest US news",
+    "Drama movie review",
+    "Crime film analysis",
+    "Science fiction director interview",
+    "Romantic movie review",
+    "journaling prompts",
+    "self-help books",
+    "agarest war strategy",
+    "self-improvement tips",
+    "Final Fantasy strategy",
+    "de-cluttering tips",
+    "self-reflection exercises",
+    "action film analysis",
+    "young adult books",
+    "Finance and investing news",
+    "Minimalism news",
+    "productivity hacks",
+    "environmental news"
+  ],
+  "youtube_search_queries": [
+    "stock market predictions",
+    "latest food trends",
+    "personal growth stories",
+    "world events today",
+    "best retirement savings strategies",
+    "time management tips",
+    "business news highlights",
+    "US news",
+    "Drama movie review",
+    "Crime film analysis",
+    "Science fiction director interview",
+    "Romantic movie review",
+    "journaling techniques",
+    "self-improvement tips",
+    "agarest war gameplay",
+    "self-improvement",
+    "Final Fantasy gameplay",
+    "de-cluttering",
+    "Self-Reflection",
+    "action film analysis",
+    "best young adult novels",
+    "Finance and investing",
+    "Minimalism",
+    "Work and productivity",
+    "Environmental issues"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Already knows about stock market trends, personal finance, self-help books, and minimalism.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U67145",
+    "movielens_user": "84779",
+    "amazon_user": "AFI2IGRKZ5DWTPJP6AMP35OBPYVQ",
+    "interests_by_source": {
+      "news": 8,
+      "movies": 4,
+      "reviews": 9,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Stock market news",
+        "source": "news",
+        "keys": [
+          "markets"
+        ],
+        "count": 5,
+        "examples": [
+          "Eric Tse, 24, just became a billionaire overnight",
+          "Goldman predicts the Fed will make 2 big changes next week"
+        ]
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 4,
+        "examples": [
+          "Chick-fil-A is giving the entire state of Utah free food, and it's a brilliant marketing ploy"
+        ]
+      },
+      {
+        "interest": "Personal essays",
+        "source": "news",
+        "keys": [
+          "voices"
+        ],
+        "count": 2,
+        "examples": [
+          "I tried to live like I was in the '80s for a day. Here's what happened."
+        ]
+      },
+      {
+        "interest": "World news",
+        "source": "news",
+        "keys": [
+          "newsworld"
+        ],
+        "count": 2,
+        "examples": [
+          "Our Republic Is Under Attack From the President"
+        ]
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 2,
+        "examples": [
+          "Opinion: Social Security has cheated seniors out of $15,000 over the past decade"
+        ]
+      },
+      {
+        "interest": "Tips and life hacks",
+        "source": "news",
+        "keys": [
+          "tipsandtricks"
+        ],
+        "count": 2,
+        "examples": [
+          "Are You Using the Right Pasta for Your Sauce?"
+        ]
+      },
+      {
+        "interest": "Company and business news",
+        "source": "news",
+        "keys": [
+          "finance-companies"
+        ],
+        "count": 2,
+        "examples": [
+          "Two women joined GM more than a decade ago. Their futures couldn't be more different"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 2,
+        "examples": [
+          "Prosecutors want black judge who criticized incarceration rates of African Americans removed",
+          "LA firefighter banked $360,010 in overtime pay in one year, city audit finds"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 40,
+        "lift": 1.65,
+        "examples": [
+          "Giver, The (2014)",
+          "Transcendence (2014)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 15,
+        "lift": 1.6,
+        "examples": [
+          "Focus (2015)",
+          "Wolf of Wall Street, The (2013)"
+        ]
+      },
+      {
+        "interest": "Science fiction films",
+        "source": "movies",
+        "keys": [
+          "Sci-Fi"
+        ],
+        "count": 16,
+        "lift": 1.56,
+        "examples": [
+          "Giver, The (2014)",
+          "Transcendence (2014)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 12,
+        "lift": 1.24,
+        "examples": [
+          "Passengers (2016)",
+          "Focus (2015)"
+        ]
+      },
+      {
+        "interest": "journaling",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Crafts & Hobbies"
+        ],
+        "examples": [
+          "Visual Journaling: Going Deeper than Words",
+          "stART Journaling: An Art Journaling Workbook",
+          "Art Doodle Love: A Journal of Self-Discovery"
+        ]
+      },
+      {
+        "interest": "self-help",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Self-Help > Relationships"
+        ],
+        "examples": [
+          "Rage: A Step-By-Step Guide to Overcoming Explosive Anger",
+          "The Language of Letting Go: Daily Meditations for Codependents (Hazelden Meditat",
+          "The Intimacy Factor: The Ground Rules for Overcoming the Obstacles to Truth, Res"
+        ]
+      },
+      {
+        "interest": "agarest war",
+        "source": "reviews",
+        "keys": [
+          "P15",
+          "P16",
+          "P17",
+          "P18"
+        ],
+        "count": 4,
+        "categories": [
+          "Video Games > Legacy Systems"
+        ],
+        "examples": [
+          "Saga Frontier",
+          "Record of Agarest War 2 - Playstation 3",
+          "Parasite Eve"
+        ]
+      },
+      {
+        "interest": "self-improvement",
+        "source": "reviews",
+        "keys": [
+          "P19",
+          "P20",
+          "P21",
+          "P22"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Business & Money > Business Culture"
+        ],
+        "examples": [
+          "Never Check E-Mail In the Morning: And Other Unexpected Strategies for Making Yo",
+          "Motivation (The Brian Tracy Success Library)",
+          "Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Lov"
+        ]
+      },
+      {
+        "interest": "Final Fantasy strategy guides",
+        "source": "reviews",
+        "keys": [
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Computers & Technology > Games & Strategy Guides"
+        ],
+        "examples": [
+          "Official Saga Frontier Strategy Guide",
+          "Final Fantasy VII Official Strategy Guide",
+          "Final Fantasy XIII-2: The Complete Official Guide"
+        ]
+      },
+      {
+        "interest": "de-cluttering",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Home Improvement & Design"
+        ],
+        "examples": [
+          "Organizing from the Right Side of the Brain: A Creative Approach to Getting Orga",
+          "One Thing at a Time: 100 Simple Ways to Live Clutter-Free Every Day",
+          "Organize Now!: A Week-by-Week Guide to Simplify Your Space and Your Life"
+        ]
+      },
+      {
+        "interest": "Self-Reflection",
+        "source": "reviews",
+        "keys": [
+          "P32",
+          "P33",
+          "P34"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Reference > Writing, Research & Publishing Guides"
+        ],
+        "examples": [
+          "The Book of Myself A Do-It-Yourself Autobiography In 201 Questions",
+          "How to Be an Explorer of the World: Portable Life Museum",
+          "Finish This Book"
+        ]
+      },
+      {
+        "interest": "action movies",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36",
+          "P37"
+        ],
+        "count": 3,
+        "categories": [
+          "Movies & TV > Genre for Featured Categories > Action & Adventure"
+        ],
+        "examples": [
+          "Pulp Fiction",
+          "Belly 2: Millionaire Boyz Club [DVD]",
+          "Inglourious Basterds (Single-Disc Edition)"
+        ]
+      },
+      {
+        "interest": "young adult literature",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42",
+          "P43"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Teen & Young Adult > Literature & Fiction"
+        ],
+        "examples": [
+          "Thirteen Reasons Why",
+          "Paper Towns",
+          "Speak"
+        ]
+      },
+      {
+        "interest": "Finance and investing",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "The person mentions financial terms and concepts like 'triples', 'money', and 'triple' in the context of a game, indicat"
+        ]
+      },
+      {
+        "interest": "Minimalism",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "The person shows a high level of preference for minimalism, which could extend to financial and organizational aspects o"
+        ]
+      },
+      {
+        "interest": "Work and productivity",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "The person mentions 'work' multiple times and discusses financial concepts, suggesting an interest in work-related topic"
+        ]
+      },
+      {
+        "interest": "Environmental issues",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "The person has a high level of environmental concern, which could extend to topics like sustainability and green living."
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "stock market predictions": "news",
+      "latest food trends": "news",
+      "personal growth stories": "news",
+      "world events today": "news",
+      "best retirement savings strategies": "news",
+      "time management tips": "news",
+      "business news highlights": "news",
+      "US news": "news",
+      "Drama movie review": "movies",
+      "Crime film analysis": "movies",
+      "Science fiction director interview": "movies",
+      "Romantic movie review": "movies",
+      "journaling techniques": "reviews",
+      "self-improvement tips": "reviews",
+      "agarest war gameplay": "reviews",
+      "self-improvement": "reviews",
+      "Final Fantasy gameplay": "reviews",
+      "de-cluttering": "reviews",
+      "Self-Reflection": "reviews",
+      "action film analysis": "reviews",
+      "best young adult novels": "reviews",
+      "Finance and investing": "twin",
+      "Minimalism": "twin",
+      "Work and productivity": "twin",
+      "Environmental issues": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Brief and straightforward",
+    "Casual and relatable",
+    "Positive and uplifting",
+    "Focus on practical advice",
+    "Engaging storytelling",
+    "Personal anecdotes"
+  ],
+  "preferred_detail": "moderate",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "average",
+    "openness": "high",
+    "extraversion": "high",
+    "conscientiousness": "average"
+  },
+  "personality_summary": "Compared with US adults: need for cognition average (enjoys some thinking but not heavy material); openness high (curious about new, unusual and artistic experiences); extraversion high (outgoing, lively and energetic); conscientiousness average (reasonably organized).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "322",
+    "additional_context": "Age 50-64; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 41,
+      "openness": 69,
+      "extraversion": 98,
+      "conscientiousness": 62
+    },
+    "twin_interests": [
+      "Finance and investing",
+      "Minimalism",
+      "Work and productivity",
+      "Environmental issues"
+    ],
+    "twin_background_knowledge": "The person likely has a good understanding of financial concepts and enjoys exploring ways to manage and grow their money."
+  }
+}

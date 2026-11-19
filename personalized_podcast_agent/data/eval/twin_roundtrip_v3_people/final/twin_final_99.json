@@ -1,0 +1,576 @@
+{
+  "user_id": "twin_final_99",
+  "interests": [
+    "Real estate",
+    "Lifestyle buzz",
+    "Stock market news",
+    "Drinks and beverages",
+    "Romantic films",
+    "Drama films",
+    "Science fiction films",
+    "Action movies",
+    "Thrillers",
+    "Comedy films",
+    "Mystery films",
+    "finance",
+    "rock and roll",
+    "Mathematical Finance",
+    "psychobilly",
+    "espionage novels",
+    "pop music",
+    "memoir",
+    "satire",
+    "American Prose and Social History",
+    "horror literature",
+    "Finance and Investing",
+    "Surfing and Beach Culture",
+    "Economics and Behavioral Finance"
+  ],
+  "preferred_topics": [
+    "Personal finance management",
+    "Behavioral economics",
+    "Investment psychology",
+    "Surfing techniques and equipment",
+    "Beach lifestyle and culture",
+    "finance",
+    "stock market",
+    "real estate",
+    "investment strategies",
+    "economic trends",
+    "behavioral finance",
+    "psychobilly music",
+    "rock and roll",
+    "horror literature",
+    "memoir",
+    "survival skills",
+    "cruise ship industry"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms"
+  ],
+  "podcast_focus_keywords": [
+    "finance",
+    "investment",
+    "real estate",
+    "stock market",
+    "behavioral finance",
+    "psychobilly",
+    "rock and roll",
+    "horror literature",
+    "memoir",
+    "survival",
+    "cruise ship"
+  ],
+  "recommended_news_queries": [
+    "Real estate market trends this week",
+    "Lifestyle buzz news",
+    "Stock market predictions for next month",
+    "New drink trends in the market",
+    "Romantic movie review",
+    "Drama film analysis",
+    "Science fiction director interview",
+    "Action movie review",
+    "Thriller film analysis",
+    "Comedy director interview",
+    "Mystery movie review",
+    "Latest developments in mathematical finance",
+    "Top rock and roll songs of the year",
+    "Latest finance and investing news",
+    "Latest psychobilly music trends",
+    "Top espionage novels of the year",
+    "Top pop music trends of the year",
+    "Top memoirs of the year",
+    "satire news",
+    "Top works of American prose and social history",
+    "Top horror literature of the year",
+    "Latest developments in behavioral finance",
+    "Top surfing and beach culture trends",
+    "Economics and Behavioral Finance news"
+  ],
+  "youtube_search_queries": [
+    "Real estate market analysis",
+    "Lifestyle buzz",
+    "Stock market analysis and predictions",
+    "Best drinks of the season",
+    "Romantic movie review",
+    "Drama film analysis",
+    "Science fiction director interview",
+    "Action movie review",
+    "Thriller film analysis",
+    "Comedy director interview",
+    "Mystery movie review",
+    "Top mathematical finance lectures",
+    "Best rock and roll songs of all time",
+    "Top finance and investing channels",
+    "Best psychobilly bands",
+    "Best espionage novels of all time",
+    "Best pop music of all time",
+    "Best memoirs of all time",
+    "satire",
+    "Best American prose and social history",
+    "Best horror literature of all time",
+    "Top behavioral finance lectures",
+    "Best surfing and beach culture",
+    "Economics and Behavioral Finance"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "general news",
+    "sports"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Understands complex financial concepts and enjoys detailed analysis of market trends and investment strategies.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U78995",
+    "movielens_user": "94799",
+    "amazon_user": "AFJRPZYSXTNGVALSYVDRUX6PPUYQ",
+    "interests_by_source": {
+      "news": 4,
+      "movies": 7,
+      "reviews": 10,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 6,
+        "examples": [
+          "Homes for sale in America's most exclusive ZIP codes",
+          "Your home may not be a mansion. But you might still have to pay a 'mansion' tax"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 3,
+        "examples": [
+          "Narcissists may be bad friends and partners, but they're likely happier than you",
+          "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead"
+        ]
+      },
+      {
+        "interest": "Stock market news",
+        "source": "news",
+        "keys": [
+          "markets"
+        ],
+        "count": 3,
+        "examples": [
+          "The toxic bubble of technical debt threatening America",
+          "Stocks rally to record close after strong October jobs report"
+        ]
+      },
+      {
+        "interest": "Drinks and beverages",
+        "source": "news",
+        "keys": [
+          "beverages"
+        ],
+        "count": 2,
+        "examples": [
+          "Bartenders share 13 things they'd love to tell customers but can't"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 116,
+        "lift": 1.22,
+        "examples": [
+          "La La Land (2016)",
+          "Before Midnight (2013)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 284,
+        "lift": 1.2,
+        "examples": [
+          "Hell or High Water (2016)",
+          "Dunkirk (2017)"
+        ]
+      },
+      {
+        "interest": "Science fiction films",
+        "source": "movies",
+        "keys": [
+          "Sci-Fi"
+        ],
+        "count": 107,
+        "lift": 1.07,
+        "examples": [
+          "Arrival (2016)",
+          "Ant-Man (2015)"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 179,
+        "lift": 1.06,
+        "examples": [
+          "Dunkirk (2017)",
+          "Ant-Man (2015)"
+        ]
+      },
+      {
+        "interest": "Thrillers",
+        "source": "movies",
+        "keys": [
+          "Thriller"
+        ],
+        "count": 152,
+        "lift": 1.02,
+        "examples": [
+          "Dunkirk (2017)",
+          "Bridge of Spies (2015)"
+        ]
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 197,
+        "lift": 1.02,
+        "examples": [
+          "Wolf of Wall Street, The (2013)",
+          "La La Land (2016)"
+        ]
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 46,
+        "lift": 1.02,
+        "examples": []
+      },
+      {
+        "interest": "finance",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 18,
+        "categories": [
+          "Books > Business & Money > Economics"
+        ],
+        "examples": [
+          "Quantitative Financial Economics: Stocks, Bonds and Foreign Exchange",
+          "Principles of Finance with Excel: Includes CD",
+          "The Little Book That Beats the Market"
+        ]
+      },
+      {
+        "interest": "rock and roll",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 12,
+        "categories": [
+          "CDs & Vinyl > Indie & Alternative"
+        ],
+        "examples": [
+          "Fire of Love",
+          "Third / Sister Lovers",
+          "Nig-Heist"
+        ]
+      },
+      {
+        "interest": "Mathematical Finance",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 12,
+        "categories": [
+          "Books > Science & Math > Mathematics"
+        ],
+        "examples": [
+          "The Concepts and Practice of Mathematical Finance (Mathematics, Finance and Risk",
+          "Methods of Mathematical Finance (Stochastic Modelling and Applied Probability)",
+          "Prime Obsession: Bernhard Riemann and the Greatest Unsolved Problem in Mathemati"
+        ]
+      },
+      {
+        "interest": "psychobilly",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 11,
+        "categories": [
+          "CDs & Vinyl > Rock"
+        ],
+        "examples": [
+          "Midtown",
+          "Wanna Meet the Scruffs",
+          "Behind the Magnolia Curtain / Blow Your Top"
+        ]
+      },
+      {
+        "interest": "espionage novels",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 11,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Thrillers & Suspense"
+        ],
+        "examples": [
+          "The Miernik Dossier",
+          "Hannibal Rising (Hannibal Lecter Series)",
+          "The Portrait"
+        ]
+      },
+      {
+        "interest": "pop music",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 8,
+        "categories": [
+          "CDs & Vinyl > Pop"
+        ],
+        "examples": [
+          "Black Coffee Pt.1",
+          "Married to the Mob",
+          "United"
+        ]
+      },
+      {
+        "interest": "memoir",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Biographies & Memoirs > Arts & Literature"
+        ],
+        "examples": [
+          "Ignatius Rising: The Life of John Kennedy Toole",
+          "Night",
+          "The Real Animal House: The Awesomely Depraved Saga of the Fraternity That Inspir"
+        ]
+      },
+      {
+        "interest": "satire",
+        "source": "reviews",
+        "keys": [
+          "P46",
+          "P47",
+          "P48",
+          "P49",
+          "P50"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Humor & Entertainment > Humor"
+        ],
+        "examples": [
+          "Titters: The first collection of humor by women",
+          "Let's Pave the Stupid Rainforests & Give School Teachers Stun Guns: And Other Wa",
+          "Bat Boy Lives!: The WEEKLY WORLD NEWS Guide to Politics, Culture, Celebrities, A"
+        ]
+      },
+      {
+        "interest": "American Prose and Social History",
+        "source": "reviews",
+        "keys": [
+          "P51",
+          "P52",
+          "P53",
+          "P54",
+          "P55"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Politics & Social Sciences > Social Sciences"
+        ],
+        "examples": [
+          "License to Steal: The Untold Story of Michael Milken and the Conspiracy to Bilk ",
+          "The Redneck Manifesto: How Hillbillies, Hicks, and White Trash Became America's ",
+          "ANSWER ME!"
+        ]
+      },
+      {
+        "interest": "horror literature",
+        "source": "reviews",
+        "keys": [
+          "P56",
+          "P57",
+          "P58",
+          "P59",
+          "P60"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Mystery"
+        ],
+        "examples": [
+          "Somebody Owes Me Money",
+          "Supernatural Horror in Literature",
+          "The Long Lavender Look"
+        ]
+      },
+      {
+        "interest": "Finance and Investing",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "financial literacy: very high (100th percentile)"
+        ]
+      },
+      {
+        "interest": "Surfing and Beach Culture",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "surfboard -> beach -> waves -> foam"
+        ]
+      },
+      {
+        "interest": "Economics and Behavioral Finance",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "odds weren't worth it; risking 5 to win 2; 5 on even split (7; 5); i dont trust people with money; human nature leans to"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Real estate market analysis": "news",
+      "Lifestyle buzz": "news",
+      "Stock market analysis and predictions": "news",
+      "Best drinks of the season": "news",
+      "Romantic movie review": "movies",
+      "Drama film analysis": "movies",
+      "Science fiction director interview": "movies",
+      "Action movie review": "movies",
+      "Thriller film analysis": "movies",
+      "Comedy director interview": "movies",
+      "Mystery movie review": "movies",
+      "Top mathematical finance lectures": "reviews",
+      "Best rock and roll songs of all time": "reviews",
+      "Top finance and investing channels": "reviews",
+      "Best psychobilly bands": "reviews",
+      "Best espionage novels of all time": "reviews",
+      "Best pop music of all time": "reviews",
+      "Best memoirs of all time": "reviews",
+      "satire": "reviews",
+      "Best American prose and social history": "reviews",
+      "Best horror literature of all time": "reviews",
+      "Top behavioral finance lectures": "twin",
+      "Best surfing and beach culture": "twin",
+      "Economics and Behavioral Finance": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "brief and straightforward",
+    "calm and measured tone",
+    "focus on practical applications",
+    "light-hearted and humorous",
+    "informative and educational",
+    "minimal detail"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "average",
+    "extraversion": "low",
+    "conscientiousness": "low"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness average (open to some new experiences); extraversion low (reserved and quiet); conscientiousness low (spontaneous, less concerned with order).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "99",
+    "additional_context": "Age 30-49; Self-employed; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 18,
+      "openness": 64,
+      "extraversion": 18,
+      "conscientiousness": 32
+    },
+    "twin_interests": [
+      "Finance and Investing",
+      "Surfing and Beach Culture",
+      "Economics and Behavioral Finance"
+    ],
+    "twin_background_knowledge": "This person likely has a deep understanding of financial concepts and enjoys exploring the psychological aspects of money and investment decisions."
+  }
+}

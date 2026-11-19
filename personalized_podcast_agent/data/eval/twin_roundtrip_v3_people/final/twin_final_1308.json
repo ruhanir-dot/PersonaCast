@@ -1,0 +1,566 @@
+{
+  "user_id": "twin_final_1308",
+  "interests": [
+    "Travel news",
+    "Travel ideas",
+    "Travel tips",
+    "Real estate",
+    "Retirement planning",
+    "Thrillers",
+    "Drama films",
+    "War films",
+    "Crime films",
+    "Mystery films",
+    "Action movies",
+    "GIS",
+    "social and economic issues",
+    "sustainable architecture",
+    "dog care",
+    "sustainability entrepreneurship",
+    "environmentalism",
+    "Social Justice",
+    "project management",
+    "sustainable communities",
+    "writing and storytelling",
+    "local community and social interactions",
+    "environmental issues",
+    "fairness and generosity"
+  ],
+  "preferred_topics": [
+    "local community development",
+    "sustainable living",
+    "ethical business practices",
+    "personal finance and budgeting",
+    "writing and publishing",
+    "project management",
+    "sustainability",
+    "travel",
+    "real estate",
+    "retirement planning",
+    "environmentalism",
+    "social justice",
+    "dog care",
+    "thrillers",
+    "drama films",
+    "war films",
+    "crime films"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms",
+    "Curious about new and unusual angles"
+  ],
+  "podcast_focus_keywords": [
+    "project management",
+    "sustainability",
+    "travel",
+    "real estate",
+    "retirement planning",
+    "environmentalism",
+    "social justice",
+    "dog care",
+    "thrillers",
+    "drama films",
+    "war films",
+    "crime films"
+  ],
+  "recommended_news_queries": [
+    "Top travel destinations for the summer",
+    "Tips for budget travel",
+    "Dog care tips",
+    "Real estate trends in major cities",
+    "Retirement savings strategies",
+    "Thriller movie review",
+    "Drama film analysis",
+    "War director interview",
+    "Crime movie review",
+    "Mystery film analysis",
+    "Action director interview",
+    "GIS technology updates",
+    "social and economic issues news",
+    "Sustainable architecture trends",
+    "dog care news",
+    "Sustainability in business",
+    "environmentalism news",
+    "Social justice movements",
+    "Project management trends",
+    "Creative ways to explore local communities",
+    "Writing and storytelling techniques",
+    "Sustainable community initiatives",
+    "Environmental issues",
+    "Fairness and generosity in society"
+  ],
+  "youtube_search_queries": [
+    "Best travel destinations for summer",
+    "Off the beaten path travel ideas",
+    "Budget travel hacks",
+    "Real estate market updates",
+    "Retirement planning tips",
+    "Thriller movie review",
+    "Drama film analysis",
+    "War director interview",
+    "Crime movie review",
+    "Mystery film analysis",
+    "Action director interview",
+    "GIS technology trends",
+    "social and economic issues",
+    "Sustainable architecture designs",
+    "Top dog care tips",
+    "sustainability entrepreneurship",
+    "environmentalism",
+    "Social justice updates",
+    "Top project management tools",
+    "Sustainable business practices",
+    "Top writing and storytelling tips",
+    "Sustainable community projects",
+    "Top environmental issues",
+    "Fairness and generosity in action"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with project management practices, sustainability concepts, travel destinations, real estate trends, retirement planning strategies, environmental issues, social justice movements, and dog care tips.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U67849",
+    "movielens_user": "89951",
+    "amazon_user": "AFV2JJNKCU6GPVWKUZAFBPEX54MQ",
+    "interests_by_source": {
+      "news": 5,
+      "movies": 6,
+      "reviews": 9,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Travel news",
+        "source": "news",
+        "keys": [
+          "travelnews"
+        ],
+        "count": 12,
+        "examples": [
+          "Why Are Dressers Vanishing from Hotel Rooms?",
+          "Southwest Airlines pilots union: Airplane bathroom camera video a 'poor attempt at humor'"
+        ]
+      },
+      {
+        "interest": "Travel ideas",
+        "source": "news",
+        "keys": [
+          "traveltripideas"
+        ],
+        "count": 12,
+        "examples": [
+          "The best time to visit Iceland and 49 other top travel destinations",
+          "Why is this Bronze Age town so popular today?"
+        ]
+      },
+      {
+        "interest": "Travel tips",
+        "source": "news",
+        "keys": [
+          "traveltips"
+        ],
+        "count": 5,
+        "examples": [
+          "These five mistakes could blow your holiday travel budget"
+        ]
+      },
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 4,
+        "examples": []
+      },
+      {
+        "interest": "Retirement planning",
+        "source": "news",
+        "keys": [
+          "finance-retirement"
+        ],
+        "count": 4,
+        "examples": [
+          "What it's really like to retire in an RV",
+          "This is what a comfortable retirement will cost you in every state"
+        ]
+      },
+      {
+        "interest": "Thrillers",
+        "source": "movies",
+        "keys": [
+          "Thriller"
+        ],
+        "count": 275,
+        "lift": 1.57,
+        "examples": [
+          "Inception (2010)",
+          "Game, The (1997)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 426,
+        "lift": 1.52,
+        "examples": [
+          "Air: Courting a Legend (2023)",
+          "Falling Down (1993)"
+        ]
+      },
+      {
+        "interest": "War films",
+        "source": "movies",
+        "keys": [
+          "War"
+        ],
+        "count": 49,
+        "lift": 1.52,
+        "examples": [
+          "Little Boy (2015)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 164,
+        "lift": 1.51,
+        "examples": [
+          "Godfather: Part II, The (1974)",
+          "Inception (2010)"
+        ]
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 74,
+        "lift": 1.38,
+        "examples": [
+          "Awakenings (1990)",
+          "Inception (2010)"
+        ]
+      },
+      {
+        "interest": "Action movies",
+        "source": "movies",
+        "keys": [
+          "Action"
+        ],
+        "count": 218,
+        "lift": 1.09,
+        "examples": [
+          "Falling Down (1993)",
+          "Inception (2010)"
+        ]
+      },
+      {
+        "interest": "GIS",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 9,
+        "categories": [
+          "Books > Engineering & Transportation > Engineering"
+        ],
+        "examples": [
+          "Designing Geodatabases for Transportation",
+          "Boy Who Harnessed the Wind: Creating Currents of Electricity and Hope",
+          "GIS for Decision Support and Public Policy Making"
+        ]
+      },
+      {
+        "interest": "social and economic issues",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15",
+          "P21",
+          "P22",
+          "P23",
+          "P24"
+        ],
+        "count": 10,
+        "categories": [
+          "Books > Politics & Social Sciences > Politics & Government",
+          "Books > Politics & Social Sciences > Social Sciences"
+        ],
+        "examples": [
+          "The Future of Reputation: Gossip, Rumor, and Privacy on the Internet",
+          "The Bully of Bentonville",
+          "The Curious Incident of the Dog in the Night-Time"
+        ],
+        "merged": [
+          "social issues"
+        ]
+      },
+      {
+        "interest": "sustainable architecture",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Arts & Photography > Architecture"
+        ],
+        "examples": [
+          "Wrestling with Moses: How Jane Jacobs Took On New York's Master Builder and Tran",
+          "Guide to the LEED AP Building Design and Construction (BD&C) Exam",
+          "Urban Green: Architecture for the Future"
+        ]
+      },
+      {
+        "interest": "dog care",
+        "source": "reviews",
+        "keys": [
+          "P25",
+          "P26",
+          "P27",
+          "P28"
+        ],
+        "count": 4,
+        "categories": [
+          "Dogs"
+        ],
+        "examples": [
+          "IRIS USA Large \"WOOF\" Feeding Mat with Raised Edges and Non-Slip Rubber Feet, Ea",
+          "Outward Hound Nina Ottosson Dog Smart Orange Composite Interactive Treat Puzzle ",
+          "Adventure Medical Kits Workin' Dog Canine First Aid Kit with QuikClot"
+        ]
+      },
+      {
+        "interest": "sustainability entrepreneurship",
+        "source": "reviews",
+        "keys": [
+          "P29",
+          "P30",
+          "P31",
+          "P43",
+          "P44"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Business & Money > Economics",
+          "Books > Business & Money > Business Culture"
+        ],
+        "examples": [
+          "Freakonomics: A Rogue Economist Explores the Hidden Side of Everything",
+          "Richistan: A Journey Through the American Wealth Boom and the Lives of the New R",
+          "Street Smart Sustainability: The Entrepreneur's Guide to Profitably Greening You"
+        ],
+        "merged": [
+          "sustainability"
+        ]
+      },
+      {
+        "interest": "environmentalism",
+        "source": "reviews",
+        "keys": [
+          "P32",
+          "P33",
+          "P34"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Science & Math > Biological Sciences"
+        ],
+        "examples": [
+          "No Impact Man: The Adventures of a Guilty Liberal Who Attempts to Save the Plane",
+          "The Man Who Planted Trees: Lost Groves, Champion Trees, and an Urgent Plan to Sa",
+          "The Mushroom Hunters: On the Trail of an Underground America"
+        ]
+      },
+      {
+        "interest": "Social Justice",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36",
+          "P37"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Politics & Social Sciences > Sociology"
+        ],
+        "examples": [
+          "The Abundant Community: Awakening the Power of Families and Neighborhoods",
+          "Race, Class, and Gender in the United States: An Integrated Study, Eighth editio",
+          "Readings for Diversity and Social Justice, Second Edition"
+        ]
+      },
+      {
+        "interest": "project management",
+        "source": "reviews",
+        "keys": [
+          "P38",
+          "P39",
+          "P40"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Business & Money > Management & Leadership"
+        ],
+        "examples": [
+          "Blink: The Power of Thinking Without Thinking",
+          "Managing for People Who Hate Managing: Be a Success by Being Yourself",
+          "Mastering the Leadership Role in Project Management: Practices That Deliver Rema"
+        ]
+      },
+      {
+        "interest": "sustainable communities",
+        "source": "reviews",
+        "keys": [
+          "P41",
+          "P42"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Travel > United States"
+        ],
+        "examples": [
+          "Toward Sustainable Communities: Resources for Citizens and Their Governments",
+          "It's a Sprawl World After All: The Human Cost of Unplanned Growth -- and Visions"
+        ]
+      },
+      {
+        "interest": "writing and storytelling",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "Story -> Writer -> Book -> Library"
+        ]
+      },
+      {
+        "interest": "local community and social interactions",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "People -> Town -> Drive -> Store -> Shop -> Food -> Burger -> Fries -> Fat -> Diet -> Clothes -> Sweater"
+        ]
+      },
+      {
+        "interest": "environmental issues",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "environmental concern: very high (86th percentile)"
+        ]
+      },
+      {
+        "interest": "fairness and generosity",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "be fair; Don’t be greedy; do unto others as you would have them do to you; They were giving so you should give; it’s mon"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Best travel destinations for summer": "news",
+      "Off the beaten path travel ideas": "news",
+      "Budget travel hacks": "news",
+      "Real estate market updates": "news",
+      "Retirement planning tips": "news",
+      "Thriller movie review": "movies",
+      "Drama film analysis": "movies",
+      "War director interview": "movies",
+      "Crime movie review": "movies",
+      "Mystery film analysis": "movies",
+      "Action director interview": "movies",
+      "GIS technology trends": "reviews",
+      "social and economic issues": "reviews",
+      "Sustainable architecture designs": "reviews",
+      "Top dog care tips": "reviews",
+      "sustainability entrepreneurship": "reviews",
+      "environmentalism": "reviews",
+      "Social justice updates": "reviews",
+      "Top project management tools": "reviews",
+      "Sustainable business practices": "reviews",
+      "Top writing and storytelling tips": "twin",
+      "Sustainable community projects": "twin",
+      "Top environmental issues": "twin",
+      "Fairness and generosity in action": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "brief and simple material",
+    "informative and straightforward",
+    "casual and conversational tone",
+    "praise for practical solutions and real-world applications",
+    "focus on actionable tips and advice"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "high",
+    "extraversion": "high",
+    "conscientiousness": "low"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness high (curious about new, unusual and artistic experiences); extraversion high (outgoing, lively and energetic); conscientiousness low (spontaneous, less concerned with order).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1308",
+    "additional_context": "Age 50-64; Part-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 12,
+      "openness": 95,
+      "extraversion": 79,
+      "conscientiousness": 7
+    },
+    "twin_interests": [
+      "writing and storytelling",
+      "local community and social interactions",
+      "environmental issues",
+      "fairness and generosity"
+    ],
+    "twin_background_knowledge": "This person likely has a strong interest in local community issues and environmental sustainability, and enjoys writing and storytelling."
+  }
+}

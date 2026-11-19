@@ -1,0 +1,610 @@
+{
+  "user_id": "twin_final_612",
+  "interests": [
+    "TV stars",
+    "Personal finance",
+    "US news",
+    "Lifestyle buzz",
+    "Animated films",
+    "Family and kids' movies",
+    "Fantasy films",
+    "Adventure films",
+    "Mystery films",
+    "Crime films",
+    "Science fiction films",
+    "DC Comics",
+    "fantasy literature",
+    "relaxing piano music",
+    "Calculus",
+    "superman",
+    "collectible figures",
+    "hiking",
+    "TV Shows and Movies",
+    "Love Comes Softly series",
+    "Superman and Star Trek movies",
+    "romantic time travel novels",
+    "Investing and personal finance",
+    "Family and grandkids",
+    "Animated movies and entertainment",
+    "Superhero themes and stories"
+  ],
+  "preferred_topics": [
+    "Investing strategies for beginners",
+    "Family-friendly animated movies",
+    "Superhero origin stories and character development",
+    "Kelly Ripa",
+    "TobyMac",
+    "McDonald's promotions",
+    "Heidi Klum",
+    "Jersey Shore",
+    "Halloween",
+    "Property Brothers",
+    "Superman",
+    "DC Comics",
+    "Laura Sullivan",
+    "Piano music",
+    "Investing"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Curious about new and unusual angles",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "Kelly Ripa",
+    "TobyMac",
+    "McDonald's",
+    "Heidi Klum",
+    "Jersey Shore",
+    "Halloween",
+    "Property Brothers",
+    "Superman",
+    "DC Comics",
+    "Laura Sullivan",
+    "Piano music",
+    "Investing"
+  ],
+  "recommended_news_queries": [
+    "Kelly Ripa's latest TV appearances",
+    "Latest news on investing and personal finance",
+    "US news news",
+    "Lifestyle buzz news",
+    "Animated movie review",
+    "Family and kids' film analysis",
+    "Fantasy director interview",
+    "Adventure movie review",
+    "Mystery film analysis",
+    "Crime director interview",
+    "Science fiction movie review",
+    "Latest news on DC Comics films",
+    "Latest news on fantasy literature",
+    "Latest news on relaxing piano music",
+    "Latest news on calculus education",
+    "Latest news on Superman",
+    "Latest news on collectible figures",
+    "Latest news on hiking",
+    "film analysis",
+    "Love Comes Softly showrunner interview",
+    "Superman and Star Trek movie review",
+    "Latest news on romantic time travel novels",
+    "Top investing tips for beginners",
+    "Latest news on family and grandkids",
+    "Animated and entertainment film analysis",
+    "Latest news on superhero themes and stories"
+  ],
+  "youtube_search_queries": [
+    "Kelly Ripa's most recent TV interviews",
+    "Best personal finance advice for young adults",
+    "US news",
+    "Lifestyle buzz",
+    "Animated movie review",
+    "Family and kids' film analysis",
+    "Fantasy director interview",
+    "Adventure movie review",
+    "Mystery film analysis",
+    "Crime director interview",
+    "Science fiction movie review",
+    "Top DC Comics movies and series",
+    "Top fantasy films of the year",
+    "Top relaxing piano music artists",
+    "Top calculus tutorials",
+    "Top Superman movies and series",
+    "Top collectible figures of the year",
+    "Top hiking destinations",
+    "film analysis",
+    "Love Comes Softly showrunner interview",
+    "Superman and Star Trek movie review",
+    "Top romantic time travel novels of the year",
+    "Top personal finance advice",
+    "Best family movies for kids",
+    "Animated and entertainment film analysis",
+    "Top superhero themes and stories"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "sports"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "The listener is familiar with Kelly Ripa, TobyMac, McDonald's promotions, Heidi Klum, Jersey Shore, Halloween, Property Brothers, Superman, DC Comics, Laura Sullivan, relaxing piano music, and investing.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U12761",
+    "movielens_user": "37504",
+    "amazon_user": "AFW4XOXE6A2J4FLDS7ONEJZEUAHA",
+    "interests_by_source": {
+      "news": 4,
+      "movies": 7,
+      "reviews": 11,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "TV stars",
+        "source": "news",
+        "keys": [
+          "tv-celebrity"
+        ],
+        "count": 7,
+        "examples": [
+          "Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge",
+          "Kim Kardashian's Most Iconic Moments"
+        ]
+      },
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 3,
+        "examples": [
+          "My late sister stole my inheritance and swindled our mother",
+          "Why President Trump's kids are probably celebrating his move to Florida"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 2,
+        "examples": [
+          "Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 2,
+        "examples": [
+          "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 14,
+        "lift": 2.59,
+        "examples": [
+          "Spider-Man: Into the Spider-Verse (2018)",
+          "Inside Out (2015)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 12,
+        "lift": 1.8,
+        "examples": [
+          "Inside Out (2015)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 15,
+        "lift": 1.65,
+        "examples": [
+          "Spider-Man: No Way Home (2021)",
+          "Harry Potter and the Prisoner of Azkaban (2004)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 27,
+        "lift": 1.45,
+        "examples": [
+          "Spider-Man: No Way Home (2021)",
+          "Harry Potter and the Prisoner of Azkaban (2004)"
+        ]
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 8,
+        "lift": 1.27,
+        "examples": [
+          "Man on Fire (2004)",
+          "Prestige, The (2006)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 15,
+        "lift": 1.17,
+        "examples": [
+          "Fun with Dick and Jane (2005)",
+          "Man on Fire (2004)"
+        ]
+      },
+      {
+        "interest": "Science fiction films",
+        "source": "movies",
+        "keys": [
+          "Sci-Fi"
+        ],
+        "count": 16,
+        "lift": 1.14,
+        "examples": [
+          "Spider-Man: No Way Home (2021)",
+          "Spider-Man: Into the Spider-Verse (2018)"
+        ]
+      },
+      {
+        "interest": "DC Comics",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 20,
+        "categories": [
+          "Books > Comics & Graphic Novels > Graphic Novels"
+        ],
+        "examples": [
+          "DC Universe Origins",
+          "Superman Returns",
+          "Star Trek: Countdown"
+        ]
+      },
+      {
+        "interest": "fantasy literature",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Science Fiction & Fantasy > Fantasy"
+        ],
+        "examples": [
+          "The Time Traveler's Wife",
+          "Under a Velvet Cloak (Incarnations of Immortality, Book 8)",
+          "The Moon Is a Harsh Mistress"
+        ]
+      },
+      {
+        "interest": "relaxing piano music",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 6,
+        "categories": [
+          "CDs & Vinyl > New Age"
+        ],
+        "examples": [
+          "Feast of Joy & Love",
+          "Pianoscapes for the Trails of North America",
+          "Calm Within: Music for Relaxation of Body and Mind - Perfect for Massage, Spa, Y"
+        ]
+      },
+      {
+        "interest": "Calculus",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Science & Math > Mathematics"
+        ],
+        "examples": [
+          "Calculus With Analytic Geometry (2nd Edition) (Prentice-Hall Series in Technical",
+          "Algebra & Trigonometry",
+          "Calculus (Briggs/Cochran Calculus)"
+        ]
+      },
+      {
+        "interest": "superman",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 5,
+        "categories": [
+          "Movies & TV > Genre for Featured Categories > Action & Adventure"
+        ],
+        "examples": [
+          "Superman 5 Film Collection (DVD)",
+          "Gotham City Serials - Batman/Batman And Robin: The Complete 1940s Movie Serials ",
+          "Superboy - The Complete First Season"
+        ]
+      },
+      {
+        "interest": "collectible figures",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 5,
+        "categories": [
+          "Toys & Games > Toy Figures & Playsets > Action Figures"
+        ],
+        "examples": [
+          "Marvel Avengers Infinite Series Beta Ray Bill Figure - 3.75 Inches",
+          "Marvel Avengers Infinite Series Thor Figure - 3.75 Inches",
+          "Safari Ltd Mythical Realms Phoenix"
+        ]
+      },
+      {
+        "interest": "hiking",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34"
+        ],
+        "count": 4,
+        "categories": [
+          "Sports & Outdoors > Outdoor Recreation > Camping & Hiking"
+        ],
+        "examples": [
+          "SE Wooden Hiking/Walking Stick with Hand-Carved Flower Design, 60\" - WS629-60",
+          "SE Survivor Series Heavy Duty Wooden Walking/Hiking Stick, 60\" - WS632-60",
+          "Reliance Products Hassock Portable Lightweight Self-Contained Toilet, Brown, 14."
+        ]
+      },
+      {
+        "interest": "TV Shows and Movies",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36",
+          "P37",
+          "P38"
+        ],
+        "count": 4,
+        "categories": [
+          "Movies & TV > Genre for Featured Categories > Comedy"
+        ],
+        "examples": [
+          "Bruce Almighty (Widescreen Edition)",
+          "Getting Personal",
+          "The Big Bang Theory: Season 7"
+        ]
+      },
+      {
+        "interest": "Love Comes Softly series",
+        "source": "reviews",
+        "keys": [
+          "P39",
+          "P40",
+          "P41",
+          "P42"
+        ],
+        "count": 4,
+        "categories": [
+          "Movies & TV > Genre for Featured Categories > Romance"
+        ],
+        "examples": [
+          "Love's Abiding Joy / Love Come's Softly / Love's Enduring Promise",
+          "Janette Oke The Love Comes Softly Series: (Set of 4 DVDs) LOVE COMES SOFTLY; LOV",
+          "Love Comes Softly Boxed Sets Volume 1&2 and Love Takes Wing DVD"
+        ]
+      },
+      {
+        "interest": "Superman and Star Trek movies",
+        "source": "reviews",
+        "keys": [
+          "P43",
+          "P44",
+          "P45"
+        ],
+        "count": 3,
+        "categories": [
+          "Movies & TV > Science Fiction & Fantasy > Science Fiction"
+        ],
+        "examples": [
+          "Superman - The Movie (Four-Disc Special Edition)",
+          "Superman Returns (Widescreen Edition)",
+          "Star Trek IV: The Voyage Home (Two-Disc Collector's Edition)"
+        ]
+      },
+      {
+        "interest": "romantic time travel novels",
+        "source": "reviews",
+        "keys": [
+          "P46",
+          "P47",
+          "P48"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "Touched by an Angel",
+          "The Secret Garden",
+          "The Christmas Eve Daughter - A Time Travel Romance: (Book 2) (The Christmas Eve "
+        ]
+      },
+      {
+        "interest": "Investing and personal finance",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "Money is multiplied; Best to send; Doesn't increase to keep; Help the other person; Create bigger pool; Rely on other pe"
+        ]
+      },
+      {
+        "interest": "Family and grandkids",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "grandkids -> family"
+        ]
+      },
+      {
+        "interest": "Animated movies and entertainment",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "movies -> animated -> voices -> funny"
+        ]
+      },
+      {
+        "interest": "Superhero themes and stories",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "superhero -> save -> invest -> earn -> money -> million -> rich -> famous -> celebrity"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Kelly Ripa's most recent TV interviews": "news",
+      "Best personal finance advice for young adults": "news",
+      "US news": "news",
+      "Lifestyle buzz": "news",
+      "Animated movie review": "movies",
+      "Family and kids' film analysis": "movies",
+      "Fantasy director interview": "movies",
+      "Adventure movie review": "movies",
+      "Mystery film analysis": "movies",
+      "Crime director interview": "movies",
+      "Science fiction movie review": "movies",
+      "Top DC Comics movies and series": "reviews",
+      "Top fantasy films of the year": "reviews",
+      "Top relaxing piano music artists": "reviews",
+      "Top calculus tutorials": "reviews",
+      "Top Superman movies and series": "reviews",
+      "Top collectible figures of the year": "reviews",
+      "Top hiking destinations": "reviews",
+      "film analysis": "reviews",
+      "Love Comes Softly showrunner interview": "reviews",
+      "Superman and Star Trek movie review": "reviews",
+      "Top romantic time travel novels of the year": "reviews",
+      "Top personal finance advice": "twin",
+      "Best family movies for kids": "twin",
+      "Animated and entertainment film analysis": "twin",
+      "Top superhero themes and stories": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Detailed and analytical reviews",
+    "Personal anecdotes in reviews",
+    "Complex and thought-provoking news articles",
+    "Engaging and emotional headlines",
+    "In-depth analysis of movies and books",
+    "Relaxed and conversational tone"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "high",
+    "extraversion": "high",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness high (curious about new, unusual and artistic experiences); extraversion high (outgoing, lively and energetic); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "612",
+    "additional_context": "Age 65+; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 98,
+      "openness": 97,
+      "extraversion": 100,
+      "conscientiousness": 72
+    },
+    "twin_interests": [
+      "Investing and personal finance",
+      "Family and grandkids",
+      "Animated movies and entertainment",
+      "Superhero themes and stories"
+    ],
+    "twin_background_knowledge": "This person likely has a strong interest in financial literacy and enjoys stories that involve helping others and achieving success, possibly through heroic or entertaining means."
+  }
+}

@@ -1,0 +1,586 @@
+{
+  "user_id": "twin_final_7",
+  "interests": [
+    "Home and garden",
+    "Political news",
+    "Recipes and cooking",
+    "Food news",
+    "Tips and life hacks",
+    "Music stars",
+    "US news",
+    "Animated films",
+    "Fantasy films",
+    "Family and kids' movies",
+    "Musicals",
+    "Documentaries",
+    "Adventure films",
+    "Comedy films",
+    "Flavored Tea",
+    "English Country House Architecture",
+    "quilting",
+    "garden decor",
+    "baking",
+    "pizza and baking",
+    "architecture history",
+    "classical music",
+    "craft painting",
+    "Education and learning",
+    "Crafts and DIY",
+    "Minimalism",
+    "Environmentalism"
+  ],
+  "preferred_topics": [
+    "Educational techniques and tools",
+    "DIY projects and crafts",
+    "Minimalist living and organizing",
+    "Environmental conservation and sustainability",
+    "home improvement",
+    "crafting",
+    "architecture",
+    "cooking",
+    "baking",
+    "quilting",
+    "garden design",
+    "minimalist living",
+    "environmental sustainability",
+    "documentaries",
+    "classical music",
+    "fantasy films"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Curious about new and unusual angles"
+  ],
+  "podcast_focus_keywords": [
+    "crafting tips",
+    "architecture history",
+    "cooking techniques",
+    "minimalist lifestyle",
+    "environmentalism",
+    "documentaries",
+    "classical music",
+    "fantasy films"
+  ],
+  "recommended_news_queries": [
+    "latest home improvement trends",
+    "US political news today",
+    "new cooking techniques",
+    "Food news news",
+    "life hacks for home",
+    "classical music concerts",
+    "latest US news",
+    "Animated movie review",
+    "Fantasy film analysis",
+    "Family and kids' director interview",
+    "Musical movie review",
+    "Documentary film analysis",
+    "Adventure director interview",
+    "Comedy movie review",
+    "new flavored teas",
+    "English country house architecture",
+    "quilting techniques",
+    "garden decor ideas",
+    "baking techniques",
+    "pizza baking techniques",
+    "architecture history",
+    "classical music news",
+    "craft painting techniques",
+    "learning techniques",
+    "DIY projects",
+    "Minimalism news",
+    "Environmentalism news"
+  ],
+  "youtube_search_queries": [
+    "top garden design ideas",
+    "US political debates",
+    "top cooking shows",
+    "Food news",
+    "best life hacks",
+    "classical music performances",
+    "US political news",
+    "Animated movie review",
+    "Fantasy film analysis",
+    "Family and kids' director interview",
+    "Musical movie review",
+    "Documentary film analysis",
+    "Adventure director interview",
+    "Comedy movie review",
+    "best flavored teas",
+    "English country house tours",
+    "quilting tutorials",
+    "garden decor inspiration",
+    "baking tutorials",
+    "best pizza recipes",
+    "architecture history tours",
+    "classical music",
+    "craft painting tutorials",
+    "Education and learning",
+    "DIY tutorials",
+    "Minimalism",
+    "Environmentalism"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like religion and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from.",
+    "Political news is kept only because this listener's own news clicks show it."
+  ],
+  "background_knowledge": "The listener is familiar with home improvement, crafting, architecture, cooking, baking, quilting, garden design, minimalist living, and environmentalism.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U59830",
+    "movielens_user": "144258",
+    "amazon_user": "AHIQK6CJH4J5FTZRLVPWNLP44LDA",
+    "interests_by_source": {
+      "news": 7,
+      "movies": 7,
+      "reviews": 9,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 8,
+        "examples": [
+          "80 Old Items Fantastically Fit for Repurposing",
+          "10 ways the average American home is different today than it was in the '60s"
+        ]
+      },
+      {
+        "interest": "Political news",
+        "source": "news",
+        "keys": [
+          "newspolitics"
+        ],
+        "count": 5,
+        "examples": [
+          "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony"
+        ]
+      },
+      {
+        "interest": "Recipes and cooking",
+        "source": "news",
+        "keys": [
+          "recipes"
+        ],
+        "count": 4,
+        "examples": [
+          "Lemon Meringue Pie Is the Only Thing on the Thanksgiving Table I Care About"
+        ]
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 3,
+        "examples": []
+      },
+      {
+        "interest": "Tips and life hacks",
+        "source": "news",
+        "keys": [
+          "tipsandtricks"
+        ],
+        "count": 3,
+        "examples": [
+          "The No. 1 Most Essential Kitchen Item, According To Rachael",
+          "How to Clean an Oven the Right Way"
+        ]
+      },
+      {
+        "interest": "Music stars",
+        "source": "news",
+        "keys": [
+          "music-celebrity"
+        ],
+        "count": 2,
+        "examples": [
+          "Garth Brooks Got Called Out by Jimmy Carter for Taking Break During Habitat for Humanity Build"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 64,
+        "lift": 2.91,
+        "examples": [
+          "Suzume (2022)",
+          "Coraline (2009)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 81,
+        "lift": 2.19,
+        "examples": [
+          "Suzume (2022)",
+          "About Time (2013)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 54,
+        "lift": 1.99,
+        "examples": []
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 19,
+        "lift": 1.66,
+        "examples": []
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 6,
+        "lift": 1.61,
+        "examples": [
+          "David Attenborough: A Life on Our Planet (2020)",
+          "Blue Planet II (2017)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 98,
+        "lift": 1.3,
+        "examples": [
+          "Suzume (2022)"
+        ]
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 112,
+        "lift": 1.02,
+        "examples": [
+          "Everything Everywhere All at Once (2022)",
+          "Knives Out (2019)"
+        ]
+      },
+      {
+        "interest": "Flavored Tea",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 7,
+        "categories": [
+          "Grocery & Gourmet Food > Beverages > Tea"
+        ],
+        "examples": [
+          "Twinings - Cherry & Cinnamon - 40g",
+          "Bigelow Cranberry Apple Herbal Tea Bags 28-Count Box (Pack of 1) Cranberry Apple",
+          "Twinings Strawberry & Raspberry Tea Bags, 40 g"
+        ]
+      },
+      {
+        "interest": "English Country House Architecture",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Arts & Photography > Architecture",
+          "Books > Crafts, Hobbies & Home > Home Improvement & Design"
+        ],
+        "examples": [
+          "An Exuberant Catalogue of Dreams: The Americans Who Revived the Country House in",
+          "The Rebirth of an English Country House: St Giles House",
+          "The English Country House : A Grand Tour by Gervase Jackson-Stops, James Pipkin "
+        ],
+        "merged": [
+          "English Country Houses"
+        ]
+      },
+      {
+        "interest": "quilting",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Crafts & Hobbies"
+        ],
+        "examples": [
+          "Yoko Saito's Strolling Along Paths of Green",
+          "Artful Album Quilts: Applique Inspirations from Traditional Blocks",
+          "Japanese Quilting Piece by Piece: 29 Stitched Projects from Yoko Saito"
+        ]
+      },
+      {
+        "interest": "garden decor",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23"
+        ],
+        "count": 3,
+        "categories": [
+          "Gardening"
+        ],
+        "examples": [
+          "Exhart 18-Inch Travelocity Gnome",
+          "GardenMate 25-Pack Weatherproof Banner Copper Metal Plant Labels, Height 10.5\", ",
+          "Bond Manufacturing 659 3pcs 15-Inch Tree Staking Kit, Black"
+        ]
+      },
+      {
+        "interest": "baking",
+        "source": "reviews",
+        "keys": [
+          "P24",
+          "P25",
+          "P26"
+        ],
+        "count": 3,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Cooking & Baking"
+        ],
+        "examples": [
+          "Navitas Organics Raw Cacao Nibs, 4 oz. Bag, 38 Servings — Organic, Non-GMO, Fair",
+          "COOL MOM SPRINKLES Rose Gold Sprinkles Medley (6 oz.) – Themed Sprinkles for Dec",
+          "Saf Instant Yeast, 1 Pound Pouch"
+        ]
+      },
+      {
+        "interest": "pizza and baking",
+        "source": "reviews",
+        "keys": [
+          "P27",
+          "P28",
+          "P29"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Regional & International"
+        ],
+        "examples": [
+          "The Elements of Pizza: Unlocking the Secrets to World-Class Pies at Home [A Cook",
+          "French Patisserie: Master Recipes and Techniques from the Ferrandi School of Cul",
+          "The Staub Cookbook: Modern Recipes for Classic Cast Iron"
+        ]
+      },
+      {
+        "interest": "architecture history",
+        "source": "reviews",
+        "keys": [
+          "P30",
+          "P31"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Arts & Photography > Photography & Video"
+        ],
+        "examples": [
+          "Irish Country Houses: A Chronicle of Change",
+          "Bell Rock Lighthouse: An Illustrated History"
+        ]
+      },
+      {
+        "interest": "classical music",
+        "source": "reviews",
+        "keys": [
+          "P32",
+          "P33"
+        ],
+        "count": 2,
+        "categories": [
+          "CDs & Vinyl > Classical"
+        ],
+        "examples": [
+          "Beethoven Pathetique/Moonlight/Appassionata",
+          "Einaudi: In A Time Lapse"
+        ]
+      },
+      {
+        "interest": "craft painting",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37"
+        ],
+        "count": 2,
+        "categories": [
+          "Arts, Crafts & Sewing > Painting, Drawing & Art Supplies"
+        ],
+        "examples": [
+          "Elmer's Painters Opaque Paint Marker, Fine Point, Black, 1 Count",
+          "PRO ART 30-Inch Wood T-Square"
+        ]
+      },
+      {
+        "interest": "Education and learning",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "school -> classroom -> teacher -> principal -> janitor -> playground -> slide -> swings -> sandbox -> sandcastle -> beac"
+        ]
+      },
+      {
+        "interest": "Crafts and DIY",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "pen -> pencil -> eraser -> stapler -> scissors"
+        ]
+      },
+      {
+        "interest": "Minimalism",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "preference for minimalism: low (26th percentile)"
+        ]
+      },
+      {
+        "interest": "Environmentalism",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "environmental concern: very high (93th percentile)"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "top garden design ideas": "news",
+      "US political debates": "news",
+      "top cooking shows": "news",
+      "Food news": "news",
+      "best life hacks": "news",
+      "classical music performances": "news",
+      "US political news": "news",
+      "Animated movie review": "movies",
+      "Fantasy film analysis": "movies",
+      "Family and kids' director interview": "movies",
+      "Musical movie review": "movies",
+      "Documentary film analysis": "movies",
+      "Adventure director interview": "movies",
+      "Comedy movie review": "movies",
+      "best flavored teas": "reviews",
+      "English country house tours": "reviews",
+      "quilting tutorials": "reviews",
+      "garden decor inspiration": "reviews",
+      "baking tutorials": "reviews",
+      "best pizza recipes": "reviews",
+      "architecture history tours": "reviews",
+      "classical music": "reviews",
+      "craft painting tutorials": "reviews",
+      "Education and learning": "twin",
+      "DIY tutorials": "twin",
+      "Minimalism": "twin",
+      "Environmentalism": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "informative and educational",
+    "engaging and conversational",
+    "detailed and descriptive",
+    "thought-provoking",
+    "witty and humorous"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "high",
+    "extraversion": "high",
+    "conscientiousness": "low"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness high (curious about new, unusual and artistic experiences); extraversion high (outgoing, lively and energetic); conscientiousness low (spontaneous, less concerned with order).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "7",
+    "additional_context": "Age 18-29; Unemployed; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 86,
+      "openness": 92,
+      "extraversion": 87,
+      "conscientiousness": 12
+    },
+    "twin_interests": [
+      "Education and learning",
+      "Crafts and DIY",
+      "Minimalism",
+      "Environmentalism"
+    ],
+    "twin_background_knowledge": "This person likely has a strong interest in educational tools and methods, enjoys hands-on activities, and values environmental conservation."
+  }
+}

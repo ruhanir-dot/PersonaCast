@@ -1,0 +1,579 @@
+{
+  "user_id": "twin_final_1875",
+  "interests": [
+    "Nutrition",
+    "Home and garden",
+    "Lifestyle buzz",
+    "Wellness",
+    "Cleaning and organizing",
+    "Real estate",
+    "Food news",
+    "Documentaries",
+    "Film noir",
+    "Animated films",
+    "Drama films",
+    "Adventure films",
+    "War films",
+    "Outdoor Survival",
+    "miniature pinscher care",
+    "conscious eating",
+    "raw foodism",
+    "vegan cooking",
+    "menopause management",
+    "financial freedom",
+    "Sashiko Embroidery",
+    "energy healing",
+    "financial management",
+    "minimalist lifestyle",
+    "environmental sustainability",
+    "healthy eating"
+  ],
+  "preferred_topics": [
+    "personal finance",
+    "minimalist living",
+    "sustainable living",
+    "healthy eating and nutrition",
+    "vegan recipes",
+    "menopause management",
+    "raw foodism",
+    "financial freedom",
+    "minimalist lifestyle",
+    "conscious eating",
+    "environmental sustainability",
+    "wellness",
+    "documentaries",
+    "home organization",
+    "real estate",
+    "healthy eating"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms"
+  ],
+  "podcast_focus_keywords": [
+    "vegan",
+    "menopause",
+    "raw food",
+    "financial",
+    "minimalism",
+    "conscious",
+    "environmental",
+    "wellness",
+    "documentary",
+    "organization",
+    "real estate",
+    "healthy"
+  ],
+  "recommended_news_queries": [
+    "Nutrition news",
+    "best home organization tips",
+    "minimalist lifestyle tips",
+    "Wellness news",
+    "top cleaning hacks",
+    "real estate market trends",
+    "vegan food trends",
+    "Documentary movie review",
+    "noir film analysis",
+    "Animated director interview",
+    "Drama movie review",
+    "Adventure film analysis",
+    "War director interview",
+    "survival tips",
+    "miniature pinscher care tips",
+    "conscious eating practices",
+    "raw food recipes",
+    "vegan cooking techniques",
+    "menopause symptoms and management",
+    "financial freedom strategies",
+    "Sashiko embroidery techniques",
+    "energy healing techniques",
+    "financial management tips",
+    "minimalist living trends",
+    "environmental sustainability practices",
+    "healthy eating habits"
+  ],
+  "youtube_search_queries": [
+    "Nutrition",
+    "minimalist home decor ideas",
+    "minimalist lifestyle challenges",
+    "Wellness",
+    "organizing your home",
+    "real estate investing tips",
+    "raw food cooking tips",
+    "Documentary movie review",
+    "noir film analysis",
+    "Animated director interview",
+    "Drama movie review",
+    "Adventure film analysis",
+    "War director interview",
+    "outdoor survival skills",
+    "miniature pinscher care guide",
+    "conscious eating tips",
+    "raw foodism",
+    "vegan cooking challenges",
+    "menopause management tips",
+    "financial freedom tips",
+    "Sashiko embroidery tutorials",
+    "energy healing practices",
+    "financial management strategies",
+    "minimalist living ideas",
+    "documentaries on sustainability",
+    "healthy eating tips"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "sports",
+    "music"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Understands the basics of veganism, menopause management, financial freedom, minimalist lifestyle, environmental sustainability, and healthy eating.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U68543",
+    "movielens_user": "49420",
+    "amazon_user": "AGRG73BF27YBBS2AW6TRPLY5WVHA",
+    "interests_by_source": {
+      "news": 7,
+      "movies": 6,
+      "reviews": 9,
+      "twin": 4
+    },
+    "interest_evidence": [
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 7,
+        "examples": [
+          "9 Best Snacks for When You're Trying to Cut Back on Sodium",
+          "30 Foods That Are Never Worth The Calories"
+        ]
+      },
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 7,
+        "examples": [
+          "27 Essential Home Security Measures You're Not Doing"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 4,
+        "examples": [
+          "This Is the Single Best Way to Keep Track of All Your Passwords",
+          "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs"
+        ]
+      },
+      {
+        "interest": "Wellness",
+        "source": "news",
+        "keys": [
+          "wellness"
+        ],
+        "count": 3,
+        "examples": [
+          "Fitbit's Lead Sleep Research Scientist Shares His Nighttime Routine"
+        ]
+      },
+      {
+        "interest": "Cleaning and organizing",
+        "source": "news",
+        "keys": [
+          "lifestylecleaningandorganizing"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 2,
+        "examples": [
+          "Oprah Winfrey bought her next-door neighbor's California ranch for $6.85 million   take a look inside",
+          "Climate change could end mortgages as we know them"
+        ]
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 32,
+        "lift": 5.44,
+        "examples": [
+          "David Attenborough: A Life on Our Planet (2020)",
+          "Planet Earth (2006)"
+        ]
+      },
+      {
+        "interest": "Film noir",
+        "source": "movies",
+        "keys": [
+          "Film-Noir"
+        ],
+        "count": 8,
+        "lift": 1.7,
+        "examples": []
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 56,
+        "lift": 1.61,
+        "examples": [
+          "Imbued Life (2019)",
+          "Spider-Man: Into the Spider-Verse (2018)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 263,
+        "lift": 1.24,
+        "examples": [
+          "The Man of the Future (2019)",
+          "Three Billboards Outside Ebbing, Missouri (2017)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 132,
+        "lift": 1.11,
+        "examples": [
+          "Spider-Man: Into the Spider-Verse (2018)",
+          "Ninja Scroll (Jûbei ninpûchô) (1995)"
+        ]
+      },
+      {
+        "interest": "War films",
+        "source": "movies",
+        "keys": [
+          "War"
+        ],
+        "count": 27,
+        "lift": 1.1,
+        "examples": [
+          "Lincoln (2012)"
+        ]
+      },
+      {
+        "interest": "Outdoor Survival",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 9,
+        "categories": [
+          "Sports & Outdoors > Outdoor Recreation > Camping & Hiking"
+        ],
+        "examples": [
+          "Maxpedition Thermite Versipack",
+          "PackTowl Nano Towel, Sunset Mesa, 19\" x 19\"",
+          "Light my Fire Titanium Spork"
+        ]
+      },
+      {
+        "interest": "miniature pinscher care",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 9,
+        "categories": [
+          "Dogs"
+        ],
+        "examples": [
+          "Guyot Designs Squishy Pet Bowls, Tahoe Blue, 24 Oz",
+          "Pet Gear I-GO2 Roller Backpack, Travel Carrier, Car Seat for Cats/Dogs, Mesh Ven",
+          "Primal Freeze Dried Nuggets for Dogs Lamb, Complete Meal Freeze Dried Dog Food H"
+        ]
+      },
+      {
+        "interest": "conscious eating",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Special Diet"
+        ],
+        "examples": [
+          "Suzanne Somers' Eat, Cheat, and Melt the Fat Away: *Feast on Real Foods--Includi",
+          "The Whole30: The 30-Day Guide to Total Health and Food Freedom",
+          "The Whole30 Day By Day: Your Daily Guide to Whole30 Success"
+        ]
+      },
+      {
+        "interest": "raw foodism",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Cooking by Ingredient"
+        ],
+        "examples": [
+          "Everyday Raw",
+          "Practically Raw: Flexible Raw Recipes Anyone Can Make",
+          "Entertaining in the Raw"
+        ]
+      },
+      {
+        "interest": "vegan cooking",
+        "source": "reviews",
+        "keys": [
+          "P33",
+          "P34",
+          "P35"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Cooking Methods"
+        ],
+        "examples": [
+          "Raw Vegan Recipes: For Everyone (not just for raw vegans)",
+          "Rawmazing Easy Raw Food",
+          "The Skinny Steamer Recipe Book: Delicious Healthy, Low Calorie, Low Fat Steam Co"
+        ]
+      },
+      {
+        "interest": "menopause management",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37",
+          "P38"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Health, Fitness & Dieting > Women's Health"
+        ],
+        "examples": [
+          "The Fatigue Solution: Increase Your Energy in Eight Easy Steps",
+          "Next Level: Your Guide to Kicking Ass, Feeling Great, and Crushing Goals Through",
+          "What to Expect Before You're Expecting"
+        ]
+      },
+      {
+        "interest": "financial freedom",
+        "source": "reviews",
+        "keys": [
+          "P39",
+          "P40",
+          "P41"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Business & Money > Business Culture"
+        ],
+        "examples": [
+          "Start Late, Finish Rich: A No-Fail Plan for Achieving Financial Freedom at Any A",
+          "8 Ways to Great: Peak Performance on the Job and in Your Life",
+          "The Automatic Millionaire, Expanded and Updated: A Powerful One-Step Plan to Liv"
+        ]
+      },
+      {
+        "interest": "Sashiko Embroidery",
+        "source": "reviews",
+        "keys": [
+          "P42",
+          "P43",
+          "P44"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Crafts & Hobbies"
+        ],
+        "examples": [
+          "Bella Beaded Jewelry",
+          "Sashiko Handy Pocket Guide: 27 Designs, Tips & Tricks for Successful Stitching",
+          "Make and Mend: Sashiko-Inspired Embroidery Projects to Customize and Repair Text"
+        ]
+      },
+      {
+        "interest": "energy healing",
+        "source": "reviews",
+        "keys": [
+          "P45",
+          "P46",
+          "P47"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Health, Fitness & Dieting > Alternative Medicine"
+        ],
+        "examples": [
+          "Living Clay Nature's Own Miracle Cure",
+          "The Little Book of Energy Healing Techniques: Simple Practices to Heal Body, Min",
+          "Mudras of Yoga: 72 Hand Gestures for Healing and Spiritual Growth"
+        ]
+      },
+      {
+        "interest": "financial management",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "I want to match their investment; I want to profit from the investment"
+        ]
+      },
+      {
+        "interest": "minimalist lifestyle",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "preference for minimalism: very high (87th percentile)"
+        ]
+      },
+      {
+        "interest": "environmental sustainability",
+        "source": "twin",
+        "keys": [
+          "trait"
+        ],
+        "count": 1,
+        "examples": [
+          "environmental concern: high (68th percentile)"
+        ]
+      },
+      {
+        "interest": "healthy eating",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "fruit -> banana -> apple -> avocado"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Nutrition": "news",
+      "minimalist home decor ideas": "news",
+      "minimalist lifestyle challenges": "news",
+      "Wellness": "news",
+      "organizing your home": "news",
+      "real estate investing tips": "news",
+      "raw food cooking tips": "news",
+      "Documentary movie review": "movies",
+      "noir film analysis": "movies",
+      "Animated director interview": "movies",
+      "Drama movie review": "movies",
+      "Adventure film analysis": "movies",
+      "War director interview": "movies",
+      "outdoor survival skills": "reviews",
+      "miniature pinscher care guide": "reviews",
+      "conscious eating tips": "reviews",
+      "raw foodism": "reviews",
+      "vegan cooking challenges": "reviews",
+      "menopause management tips": "reviews",
+      "financial freedom tips": "reviews",
+      "Sashiko embroidery tutorials": "reviews",
+      "energy healing practices": "reviews",
+      "financial management strategies": "twin",
+      "minimalist living ideas": "twin",
+      "documentaries on sustainability": "twin",
+      "healthy eating tips": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "simple and straightforward",
+    "light-hearted and humorous",
+    "practical and actionable",
+    "informative and educational"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "low",
+    "extraversion": "low",
+    "conscientiousness": "low"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness low (prefers the familiar and conventional); extraversion low (reserved and quiet); conscientiousness low (spontaneous, less concerned with order).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "1875",
+    "additional_context": "Age 18-29; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 2,
+      "openness": 15,
+      "extraversion": 10,
+      "conscientiousness": 32
+    },
+    "twin_interests": [
+      "financial management",
+      "minimalist lifestyle",
+      "environmental sustainability",
+      "healthy eating"
+    ],
+    "twin_background_knowledge": "This person likely follows topics related to personal finance, minimalism, sustainability, and healthy eating, given their high interest in financial management, minimalism, environmental concern, and healthy eating habits."
+  }
+}

@@ -1,0 +1,604 @@
+{
+  "user_id": "twin_final_36",
+  "interests": [
+    "British royal family",
+    "Home and garden",
+    "Personal finance",
+    "TV news",
+    "Real estate",
+    "Film noir",
+    "Romantic films",
+    "Crime films",
+    "Drama films",
+    "Fantasy films",
+    "Animated films",
+    "Mystery films",
+    "Comedy films",
+    "Adventure films",
+    "woodcarving",
+    "garden gnomes and fairy gardens",
+    "medieval history",
+    "garden crafts",
+    "Cooking History",
+    "camping",
+    "historical textiles",
+    "Western Historical Fiction",
+    "historical reenactment",
+    "Victorian Folk Art",
+    "romantic candlelight ambiance",
+    "fairness and sharing",
+    "ancient history and culture"
+  ],
+  "preferred_topics": [
+    "romantic candlelight dinners",
+    "fairness in society",
+    "ancient candle-making techniques",
+    "British royal family",
+    "Home and garden",
+    "Personal finance",
+    "TV news",
+    "Real estate",
+    "Film noir",
+    "Romantic films",
+    "Crime films",
+    "Drama films",
+    "Fantasy films",
+    "Animated films",
+    "Mystery films"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Curious about new and unusual angles",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "royal",
+    "garden",
+    "finance",
+    "news",
+    "real estate",
+    "film noir",
+    "romance",
+    "crime",
+    "drama",
+    "fantasy",
+    "animation",
+    "mystery"
+  ],
+  "recommended_news_queries": [
+    "latest royal family news",
+    "latest home and garden trends",
+    "personal finance tips and tricks",
+    "latest TV news headlines",
+    "real estate market updates",
+    "noir movie review",
+    "Romantic film analysis",
+    "Crime director interview",
+    "Drama movie review",
+    "Fantasy film analysis",
+    "Animated director interview",
+    "Mystery movie review",
+    "Comedy film analysis",
+    "Adventure director interview",
+    "woodcarving techniques",
+    "garden gnome trends",
+    "medieval history facts",
+    "garden craft ideas",
+    "cooking history",
+    "camping tips",
+    "historical textiles",
+    "Western historical fiction",
+    "historical reenactment events",
+    "Victorian folk art",
+    "romantic candlelight ambiance",
+    "fairness and sharing news",
+    "ancient history and culture"
+  ],
+  "youtube_search_queries": [
+    "royal family updates",
+    "best garden design ideas",
+    "Personal finance",
+    "top TV news stories",
+    "real estate investment tips",
+    "noir movie review",
+    "Romantic film analysis",
+    "Crime director interview",
+    "Drama movie review",
+    "Fantasy film analysis",
+    "Animated director interview",
+    "Mystery movie review",
+    "Comedy film analysis",
+    "Adventure director interview",
+    "woodcarving projects",
+    "fairy garden ideas",
+    "medieval history documentaries",
+    "garden craft tutorials",
+    "historical cooking techniques",
+    "camping gear reviews",
+    "textile history documentaries",
+    "best Western historical fiction",
+    "historical reenactment videos",
+    "Victorian folk art tutorials",
+    "candlelight ambiance ideas",
+    "fairness and sharing",
+    "ancient history documentaries"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with British royal family, home and garden trends, personal finance, TV news, real estate, film noir, romantic films, crime films, drama films, fantasy films, animated films, mystery films, woodcarving, garden gnome and fairy garden trends, medieval history, garden crafts, cooking history, camping, historical textiles, Western historical fiction, historical reenactment, Victorian folk art, romantic candlelight ambiance, and ancient history and culture.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U2379",
+    "movielens_user": "154573",
+    "amazon_user": "AHYDUEF55ZROKP4DMGOFAYSCGMUQ",
+    "interests_by_source": {
+      "news": 5,
+      "movies": 9,
+      "reviews": 10,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "British royal family",
+        "source": "news",
+        "keys": [
+          "lifestyleroyals"
+        ],
+        "count": 6,
+        "examples": [
+          "Duchess Meghan Describes 'Really Challenging' Life as New Royal: I'm Not OK",
+          "The Best Photos from Kate Middleton and Prince William's Royal Tour of Pakistan"
+        ]
+      },
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 4,
+        "examples": [
+          "Time capsule homes of famous people",
+          "19 Mysterious Old Home Features That Aren't Useful Anymore"
+        ]
+      },
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 2,
+        "examples": [
+          "Man left his wife nothing, and her stepchildren told her to scram"
+        ]
+      },
+      {
+        "interest": "TV news",
+        "source": "news",
+        "keys": [
+          "tvnews"
+        ],
+        "count": 2,
+        "examples": [
+          "Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion",
+          "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'"
+        ]
+      },
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 2,
+        "examples": [
+          "A Florida mansion designed to look like the former home of the Romanov Tsars just hit the market for $13.5 million. Here's a look inside Fort Lauderdale's 'Golden Palace.'",
+          "Gingerbread houses for sale that are good enough to eat"
+        ]
+      },
+      {
+        "interest": "Film noir",
+        "source": "movies",
+        "keys": [
+          "Film-Noir"
+        ],
+        "count": 11,
+        "lift": 3.14,
+        "examples": []
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 85,
+        "lift": 1.34,
+        "examples": [
+          "Hidden Blade, The (Kakushi ken oni no tsume) (2004)",
+          "Twilight Samurai, The (Tasogare Seibei) (2002)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 74,
+        "lift": 1.2,
+        "examples": [
+          "Lupin III: The Castle Of Cagliostro (Rupan sansei: Kariosutoro no shiro) (1979)",
+          "No Country for Old Men (2007)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 188,
+        "lift": 1.18,
+        "examples": [
+          "Hidden Blade, The (Kakushi ken oni no tsume) (2004)",
+          "Twilight Samurai, The (Tasogare Seibei) (2002)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 50,
+        "lift": 1.15,
+        "examples": [
+          "Kiki's Delivery Service (Majo no takkyûbin) (1989)",
+          "Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 28,
+        "lift": 1.08,
+        "examples": [
+          "Lupin III: The Castle Of Cagliostro (Rupan sansei: Kariosutoro no shiro) (1979)",
+          "Grave of the Fireflies (Hotaru no haka) (1988)"
+        ]
+      },
+      {
+        "interest": "Mystery films",
+        "source": "movies",
+        "keys": [
+          "Mystery"
+        ],
+        "count": 32,
+        "lift": 1.06,
+        "examples": [
+          "Lupin III: The Castle Of Cagliostro (Rupan sansei: Kariosutoro no shiro) (1979)"
+        ]
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 135,
+        "lift": 1.05,
+        "examples": [
+          "Lupin III: The Castle Of Cagliostro (Rupan sansei: Kariosutoro no shiro) (1979)",
+          "Juno (2007)"
+        ]
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 92,
+        "lift": 1.03,
+        "examples": [
+          "Lupin III: The Castle Of Cagliostro (Rupan sansei: Kariosutoro no shiro) (1979)",
+          "Little Miss Sunshine (2006)"
+        ]
+      },
+      {
+        "interest": "woodcarving",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 7,
+        "categories": [
+          "Arts, Crafts & Sewing > Crafting"
+        ],
+        "examples": [
+          "PHYHOO Wax Carvers Set Double Ended Dental Wax Modeling Sculpting Tools Dental P",
+          "Hanperal Leather Craft Tools Half-Round Cutter Punch Strap Belt Wallet End DIY 1",
+          "BeaverCraft Draw Knife DK1-4,3\" Straight Shave Wood Carving Tools Woodworking Ha"
+        ]
+      },
+      {
+        "interest": "garden gnomes and fairy gardens",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 7,
+        "categories": [
+          "Patio, Lawn & Garden > Outdoor Décor > Garden Sculptures & Statues"
+        ],
+        "examples": [
+          "Solid Rock Stoneworks Baby Otter with Fish Stone Statue 7in Tall Graphite Color",
+          "Cast Iron Hanging Bearded Leaf Man Garden Face",
+          "Funny Guy Mugs Cat On A Throne Garden Gnome Statue- Indoor/Outdoor Garden Gnome "
+        ]
+      },
+      {
+        "interest": "medieval history",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 5,
+        "categories": [
+          "Books > History > Europe"
+        ],
+        "examples": [
+          "A Social History of Ancient Ireland",
+          "A History of the Vikings",
+          "Viking Age Headcoverings from Dublin"
+        ]
+      },
+      {
+        "interest": "garden crafts",
+        "source": "reviews",
+        "keys": [
+          "P20",
+          "P21",
+          "P22"
+        ],
+        "count": 3,
+        "categories": [
+          "Gardening"
+        ],
+        "examples": [
+          "Sweet Woodruff Plant - Galium-Herb/Groundcover - 4 Plants - 1 3/4\" Pots",
+          "ROMISS Folding Wagon Cart Heavy Duty Collapsible Utility Wagon Outdoor Camping G",
+          "4pc Soil Sieve Set, 12\" diameter - Stainless Steel Frame Three Interchangeable S"
+        ]
+      },
+      {
+        "interest": "Cooking History",
+        "source": "reviews",
+        "keys": [
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Regional & International"
+        ],
+        "examples": [
+          "America Eats: Forms of Edible Folk Art",
+          "A Taste of Scotland",
+          "The original Fannie Farmer 1896 cook book"
+        ]
+      },
+      {
+        "interest": "camping",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28"
+        ],
+        "count": 3,
+        "categories": [
+          "Sports & Outdoors > Outdoor Recreation > Camping & Hiking"
+        ],
+        "examples": [
+          "Hesanzol Portable Telescoping Stool, 2nd Gen Retractable Stool for Camping Garde",
+          "Ivation Portable Outdoor Shower, Battery Powered - Compact Handheld Rechargeable",
+          "OuterEQ Camping Cookware Outdoor Mess Kit Lightweight Backpacking Cooking Set Pi"
+        ]
+      },
+      {
+        "interest": "historical textiles",
+        "source": "reviews",
+        "keys": [
+          "P29",
+          "P30",
+          "P31"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Crafts, Hobbies & Home > Crafts & Hobbies"
+        ],
+        "examples": [
+          "Archaeological Footwear: Development of Shoe Patterns and Styles from Prehistory",
+          "Norwegian Pick-Up Bandweaving",
+          "Celtic, Medieval and Tudor Wall Hangings in 1/12 Scale Needlepoint"
+        ]
+      },
+      {
+        "interest": "Western Historical Fiction",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36",
+          "P37"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > History > Americas"
+        ],
+        "examples": [
+          "Becoming",
+          "Women of the West",
+          "STORM CENTURY"
+        ]
+      },
+      {
+        "interest": "historical reenactment",
+        "source": "reviews",
+        "keys": [
+          "P38",
+          "P39"
+        ],
+        "count": 2,
+        "categories": [
+          "Arts, Crafts & Sewing > Sewing"
+        ],
+        "examples": [
+          "Realistic Standing Female 33\"-24\"-34\" Mannequin + Base & 2 Free Wigs (F-05+2)",
+          "PH PandaHall 3 Styles Jacquard Ribbon, 21 Yard Embroideried Lace Trim 1.3 Inch W"
+        ]
+      },
+      {
+        "interest": "Victorian Folk Art",
+        "source": "reviews",
+        "keys": [
+          "P40",
+          "P41"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Arts & Photography > Decorative Arts & Design"
+        ],
+        "examples": [
+          "The Decorative Arts and Crafts of Nantucket",
+          "200 Victorian Fretwork Designs: Borders, Panels, Medallions and Other Patterns ("
+        ]
+      },
+      {
+        "interest": "romantic candlelight ambiance",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "candle -> light -> flame -> warmth -> glow -> romantic -> comfort -> love -> soothing -> valentine"
+        ]
+      },
+      {
+        "interest": "fairness and sharing",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "they may need it more than I do; being fair is who I am; sharing is caring"
+        ]
+      },
+      {
+        "interest": "ancient history and culture",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "candle -> ancient"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "royal family updates": "news",
+      "best garden design ideas": "news",
+      "Personal finance": "news",
+      "top TV news stories": "news",
+      "real estate investment tips": "news",
+      "noir movie review": "movies",
+      "Romantic film analysis": "movies",
+      "Crime director interview": "movies",
+      "Drama movie review": "movies",
+      "Fantasy film analysis": "movies",
+      "Animated director interview": "movies",
+      "Mystery movie review": "movies",
+      "Comedy film analysis": "movies",
+      "Adventure director interview": "movies",
+      "woodcarving projects": "reviews",
+      "fairy garden ideas": "reviews",
+      "medieval history documentaries": "reviews",
+      "garden craft tutorials": "reviews",
+      "historical cooking techniques": "reviews",
+      "camping gear reviews": "reviews",
+      "textile history documentaries": "reviews",
+      "best Western historical fiction": "reviews",
+      "historical reenactment videos": "reviews",
+      "Victorian folk art tutorials": "reviews",
+      "candlelight ambiance ideas": "twin",
+      "fairness and sharing": "twin",
+      "ancient history documentaries": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Detailed and insightful analysis",
+    "Personal anecdotes and experiences",
+    "Historical context and background",
+    "Cultural and artistic significance"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "high",
+    "extraversion": "high",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness high (curious about new, unusual and artistic experiences); extraversion high (outgoing, lively and energetic); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "36",
+    "additional_context": "Age 65+; Retired; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 98,
+      "openness": 78,
+      "extraversion": 100,
+      "conscientiousness": 100
+    },
+    "twin_interests": [
+      "romantic candlelight ambiance",
+      "fairness and sharing",
+      "ancient history and culture"
+    ],
+    "twin_background_knowledge": "This person likely enjoys creating a romantic atmosphere and values fairness and sharing in their interactions with others."
+  }
+}

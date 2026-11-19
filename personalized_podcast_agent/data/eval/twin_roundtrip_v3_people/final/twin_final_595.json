@@ -1,0 +1,621 @@
+{
+  "user_id": "twin_final_595",
+  "interests": [
+    "Nutrition",
+    "Health news",
+    "Food news",
+    "Wellness",
+    "US news",
+    "Music stars",
+    "Soccer",
+    "TV stars",
+    "NFL football",
+    "College football",
+    "Documentaries",
+    "Musicals",
+    "Fantasy films",
+    "Comedy films",
+    "Drama films",
+    "Romantic films",
+    "psychological thriller",
+    "plant-based cooking",
+    "espresso",
+    "history of new york",
+    "dog care",
+    "seasoning",
+    "green tea",
+    "memoir",
+    "Biographies of Wealthy Women",
+    "Italian cuisine history",
+    "Fairness in distribution",
+    "Educational practices",
+    "Food and taste"
+  ],
+  "preferred_topics": [
+    "Fairness in resource allocation",
+    "Educational reform and classroom dynamics",
+    "Food science and sensory evaluation",
+    "Demi Moore",
+    "Katie Holmes",
+    "Medical education",
+    "Clean fasting",
+    "Cabbage soup diet",
+    "Nick Saban",
+    "Dean Martin",
+    "John Legend",
+    "Infant deaths",
+    "Tigres UANL",
+    "New England Patriots",
+    "Donald Trump"
+  ],
+  "style_preferences": [
+    "Detailed explanations with concrete examples",
+    "Curious about new and unusual angles",
+    "Well-organized, structured summaries"
+  ],
+  "podcast_focus_keywords": [
+    "addiction",
+    "health",
+    "seasoning",
+    "seasoning blends",
+    "seasoning tips",
+    "seasoning recipes",
+    "seasoning history",
+    "seasoning science",
+    "seasoning techniques",
+    "seasoning reviews",
+    "seasoning brands",
+    "seasoning trends"
+  ],
+  "recommended_news_queries": [
+    "Top nutrition trends",
+    "Top health news",
+    "Top food and taste trends",
+    "Top wellness trends",
+    "US news news",
+    "Top music stars",
+    "Top soccer players",
+    "Top TV stars",
+    "Top NFL players",
+    "Top college football teams",
+    "Documentary movie review",
+    "Musical film analysis",
+    "Fantasy director interview",
+    "Comedy movie review",
+    "Drama film analysis",
+    "Romantic director interview",
+    "Top psychological thriller films",
+    "Top plant-based cooking trends",
+    "Top espresso machines",
+    "Top historical events in New York",
+    "Top dog care tips",
+    "Top seasoning brands",
+    "Top green tea brands",
+    "Top memoirs",
+    "Top biographies of wealthy women",
+    "Top Italian cuisine history books",
+    "Top issues of fairness in distribution",
+    "Top educational practices",
+    "Top food news"
+  ],
+  "youtube_search_queries": [
+    "Top nutrition trends",
+    "Top health news",
+    "Top food and taste trends",
+    "Top wellness trends",
+    "US news",
+    "Top music stars",
+    "Top soccer players",
+    "Top TV stars",
+    "Top NFL players",
+    "Top college football teams",
+    "Documentary movie review",
+    "Musical film analysis",
+    "Fantasy director interview",
+    "Comedy movie review",
+    "Drama film analysis",
+    "Romantic director interview",
+    "Top psychological thriller films",
+    "Top plant-based cooking trends",
+    "Top espresso machines",
+    "Top historical events in New York",
+    "Top dog care tips",
+    "Top seasoning brands",
+    "Top green tea brands",
+    "Top memoirs",
+    "Top biographies of wealthy women",
+    "Top Italian cuisine history books",
+    "Top issues of fairness in distribution",
+    "Top educational practices",
+    "Top food news"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "The listener is familiar with topics such as nutrition, health news, food news, wellness, US news, music stars, soccer, TV stars, NFL football, college football, documentaries, musicals, fantasy films, comedy films, drama films, romantic films, psychological thrillers, plant-based cooking, espresso, history of New York, dog care, seasoning, green tea, memoirs, biographies of wealthy women, Italian cuisine history, fairness in distribution, educational practices, and food and taste.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U57776",
+    "movielens_user": "189945",
+    "amazon_user": "AFL5ZD63NXPDQH22U53LKWON6USQ",
+    "interests_by_source": {
+      "news": 10,
+      "movies": 6,
+      "reviews": 10,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 7,
+        "examples": [
+          "Yes, You Can Totally Order A Keto-Friendly Meal Off The Panera Menu",
+          "What Is Clean Fasting, and How Will It Help You Speed Up Weight Loss?"
+        ]
+      },
+      {
+        "interest": "Health news",
+        "source": "news",
+        "keys": [
+          "health-news"
+        ],
+        "count": 3,
+        "examples": [
+          "This health system is offering free tuition to its medical students",
+          "3 infant deaths at hospital linked to tainted donor breast milk"
+        ]
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 3,
+        "examples": []
+      },
+      {
+        "interest": "Wellness",
+        "source": "news",
+        "keys": [
+          "wellness"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 2,
+        "examples": [
+          "Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged"
+        ]
+      },
+      {
+        "interest": "Music stars",
+        "source": "news",
+        "keys": [
+          "music-celebrity"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Soccer",
+        "source": "news",
+        "keys": [
+          "soccer"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "TV stars",
+        "source": "news",
+        "keys": [
+          "tv-celebrity"
+        ],
+        "count": 2,
+        "examples": [
+          "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'"
+        ]
+      },
+      {
+        "interest": "NFL football",
+        "source": "news",
+        "keys": [
+          "football_nfl"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "College football",
+        "source": "news",
+        "keys": [
+          "football_ncaa"
+        ],
+        "count": 2,
+        "examples": [
+          "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come"
+        ]
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 19,
+        "lift": 5.76,
+        "examples": [
+          "Enron: The Smartest Guys in the Room (2005)",
+          "Microcosmos (Microcosmos: Le peuple de l'herbe) (1996)"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 17,
+        "lift": 1.68,
+        "examples": [
+          "Yellow Submarine (1968)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 52,
+        "lift": 1.59,
+        "examples": [
+          "Yellow Submarine (1968)",
+          "Waking Life (2001)"
+        ]
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 145,
+        "lift": 1.5,
+        "examples": [
+          "Graduate, The (1967)",
+          "In the Soup (1992)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 135,
+        "lift": 1.13,
+        "examples": [
+          "Gladiator (2000)",
+          "Graduate, The (1967)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 48,
+        "lift": 1.0,
+        "examples": [
+          "Graduate, The (1967)",
+          "Quills (2000)"
+        ]
+      },
+      {
+        "interest": "psychological thriller",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 10,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Thrillers & Suspense"
+        ],
+        "examples": [
+          "The Ink Black Heart (A Cormoran Strike Novel)",
+          "The Sister: A psychological thriller with a brilliant twist you won't see coming",
+          "Missing, Presumed: A Novel (Manon Bradshaw Book 1)"
+        ]
+      },
+      {
+        "interest": "plant-based cooking",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 8,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Cooking & Baking"
+        ],
+        "examples": [
+          "Meyenberg Evaporated Goat Milk, Vitamin D, 12 Fl Oz (Pack of 6)",
+          "Farmer's Market Foods Canned Organic Pumpkin Puree, 15 Ounce (Pack of 12)",
+          "BetterBody Foods Organic Cacao Powder, Non-GMO, Gluten-Free Superfood, Cocoa, 16"
+        ]
+      },
+      {
+        "interest": "espresso",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 5,
+        "categories": [
+          "Grocery & Gourmet Food > Beverages > Coffee"
+        ],
+        "examples": [
+          "San Francisco Bay Compostable Coffee Pods - Fog Chaser (12 Ct) K Cup Compatible ",
+          "Donut House Collection Donut House Coffee, Single-Serve Keurig K-Cup Pods, Light",
+          "illy Decaffeinated Ground Espresso Coffee, Classic Medium Roast with Notes of To"
+        ]
+      },
+      {
+        "interest": "history of new york",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > History > Americas"
+        ],
+        "examples": [
+          "Palm Beach Babylon: Sins, Scams, and Scandals",
+          "A Nation by Design: Immigration Policy in the Fashioning of America",
+          "A Season of Splendor: The Court of Mrs. Astor in Gilded Age New York"
+        ]
+      },
+      {
+        "interest": "dog care",
+        "source": "reviews",
+        "keys": [
+          "P20",
+          "P21",
+          "P22",
+          "P23"
+        ],
+        "count": 4,
+        "categories": [
+          "Dogs"
+        ],
+        "examples": [
+          "2 Pieces Dog Diaper Suspenders Suspenders for Female Dog Diapers PET Diaper Susp",
+          "ORIJEN Freeze-Dried Dog Treats, Grass-Fed Lamb, Biologically Appropriate & Grain",
+          "GREENIES Original Petite Natural Dental Care Dog Treats, 18 oz. Pack (30 Treats)"
+        ]
+      },
+      {
+        "interest": "seasoning",
+        "source": "reviews",
+        "keys": [
+          "P24",
+          "P25",
+          "P26",
+          "P27"
+        ],
+        "count": 4,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Herbs, Spices & Seasonings"
+        ],
+        "examples": [
+          "Jane's Krazy Mixed-Up Original Salt Blend 9.5 oz (Pack of 3)",
+          "Jane's Krazy Seasonings Mixed Up Salt Canister, 9.5 Ounce",
+          "Frontier Organic Chopped Onion, 1 Pound, Dried & Chopped Sweet Organic White Oni"
+        ]
+      },
+      {
+        "interest": "green tea",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33"
+        ],
+        "count": 3,
+        "categories": [
+          "Grocery & Gourmet Food > Beverages > Tea"
+        ],
+        "examples": [
+          "Argo Tea Iced Tea, Green Tea Ginger Twist, 13.5 Ounce (Pack of 12)",
+          "KENKO Matcha Green Tea Powder [USDA Organic] Highest Ceremonial Grade, Authentic",
+          "Taylors of Harrogate Yorkshire Gold, 160 Teabags"
+        ]
+      },
+      {
+        "interest": "memoir",
+        "source": "reviews",
+        "keys": [
+          "P36",
+          "P37"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Literature & Fiction > Essays & Correspondence"
+        ],
+        "examples": [
+          "Things Seen (French Voices)",
+          "84, Charing Cross Road"
+        ]
+      },
+      {
+        "interest": "Biographies of Wealthy Women",
+        "source": "reviews",
+        "keys": [
+          "P38",
+          "P39"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Biographies & Memoirs > Community & Culture"
+        ],
+        "examples": [
+          "Gilded Lily: Lily Safra: The Making of One of the World's Wealthiest Widows",
+          "Anais Nin: The Last Days, a memoir"
+        ]
+      },
+      {
+        "interest": "Italian cuisine history",
+        "source": "reviews",
+        "keys": [
+          "P40",
+          "P41"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Regional & International"
+        ],
+        "examples": [
+          "Nigellissima: Easy Italian-Inspired Recipes: A Cookbook",
+          "97 Orchard: An Edible History of Five Immigrant Families in One New York Tenemen"
+        ]
+      },
+      {
+        "interest": "Fairness in distribution",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "Equal; Fair; Close; Similar; Unselfish; Same; dictator game: fair; sharing; honest; equal; amount"
+        ]
+      },
+      {
+        "interest": "Educational practices",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "school; classroom; teacher"
+        ]
+      },
+      {
+        "interest": "Food and taste",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "fruit; juicy; sweet; ripe; unripe; nasty; taste; good; bad"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Top nutrition trends": "news",
+      "Top health news": "news",
+      "Top food and taste trends": "news",
+      "Top wellness trends": "news",
+      "US news": "news",
+      "Top music stars": "news",
+      "Top soccer players": "news",
+      "Top TV stars": "news",
+      "Top NFL players": "news",
+      "Top college football teams": "news",
+      "Documentary movie review": "movies",
+      "Musical film analysis": "movies",
+      "Fantasy director interview": "movies",
+      "Comedy movie review": "movies",
+      "Drama film analysis": "movies",
+      "Romantic director interview": "movies",
+      "Top psychological thriller films": "reviews",
+      "Top plant-based cooking trends": "reviews",
+      "Top espresso machines": "reviews",
+      "Top historical events in New York": "reviews",
+      "Top dog care tips": "reviews",
+      "Top seasoning brands": "reviews",
+      "Top green tea brands": "reviews",
+      "Top memoirs": "reviews",
+      "Top biographies of wealthy women": "reviews",
+      "Top Italian cuisine history books": "reviews",
+      "Top issues of fairness in distribution": "twin",
+      "Top educational practices": "twin",
+      "Top food news": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Detailed and informative",
+    "Personal anecdotes",
+    "Engaging storytelling",
+    "Humorous and light-hearted",
+    "In-depth analysis"
+  ],
+  "preferred_detail": "detailed",
+  "tone": "Lively and upbeat",
+  "personality": {
+    "need_for_cognition": "high",
+    "openness": "high",
+    "extraversion": "high",
+    "conscientiousness": "high"
+  },
+  "personality_summary": "Compared with US adults: need for cognition high (enjoys effortful thinking and complex material); openness high (curious about new, unusual and artistic experiences); extraversion high (outgoing, lively and energetic); conscientiousness high (organized, careful and disciplined).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "595",
+    "additional_context": "Age 50-64; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 98,
+      "openness": 78,
+      "extraversion": 100,
+      "conscientiousness": 100
+    },
+    "twin_interests": [
+      "Fairness in distribution",
+      "Educational practices",
+      "Food and taste"
+    ],
+    "twin_background_knowledge": "This person likely values fairness and has a keen interest in the distribution of resources and educational practices. They also have a strong interest in the sensory aspects of food."
+  }
+}

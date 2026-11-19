@@ -1,0 +1,507 @@
+{
+  "user_id": "twin_final_168",
+  "interests": [
+    "Personal finance",
+    "Crime news",
+    "Nutrition",
+    "Weight loss",
+    "Personal essays",
+    "World news",
+    "Documentaries",
+    "Drama films",
+    "Romantic films",
+    "Crime films",
+    "Comedy films",
+    "Animated films",
+    "middle age humor",
+    "history",
+    "sci-fi comedy",
+    "American History and Culture",
+    "science fiction",
+    "Thriller",
+    "travel writing",
+    "economics blogs",
+    "Financial decision-making",
+    "Nature and environment"
+  ],
+  "preferred_topics": [
+    "Personal finance decision-making",
+    "Financial ethics",
+    "Nature and environment documentaries",
+    "Personal finance",
+    "Crime news",
+    "Nutrition",
+    "Weight loss",
+    "Personal essays",
+    "World news",
+    "Documentaries",
+    "Drama films",
+    "Romantic films",
+    "Crime films",
+    "Comedy films",
+    "Animated films"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms"
+  ],
+  "podcast_focus_keywords": [
+    "finance",
+    "investing",
+    "economics",
+    "strategy",
+    "investing tips",
+    "personal growth",
+    "history",
+    "science fiction",
+    "thriller",
+    "travel",
+    "environment",
+    "weight loss"
+  ],
+  "recommended_news_queries": [
+    "Top personal finance tips for the month",
+    "Latest crime news headlines",
+    "New nutrition trends to follow",
+    "Effective weight loss methods",
+    "Latest personal essays",
+    "Top world news stories",
+    "Documentary movie review",
+    "Drama film analysis",
+    "Romantic director interview",
+    "Crime movie review",
+    "Comedy film analysis",
+    "Animated director interview",
+    "Humorous stories for middle-aged adults",
+    "American history and culture news",
+    "Top sci-fi comedy films",
+    "American History and Culture news",
+    "Top science fiction news",
+    "Top thriller films",
+    "Travel writing of the week",
+    "Top economics blogs",
+    "Top financial decision-making tips",
+    "Nature and environment news"
+  ],
+  "youtube_search_queries": [
+    "Best personal finance strategies for beginners",
+    "Crimes that shocked the world this week",
+    "Nutrition",
+    "Weight loss success stories",
+    "Inspiring personal stories",
+    "Documentaries that changed the world",
+    "Documentary movie review",
+    "Drama film analysis",
+    "Romantic director interview",
+    "Crime movie review",
+    "Comedy film analysis",
+    "Animated director interview",
+    "Comedy for middle-aged adults",
+    "American history documentaries",
+    "Best sci-fi comedy films to watch",
+    "American History and Culture",
+    "Best science fiction films to watch",
+    "Best thriller films to watch",
+    "Travel documentaries",
+    "Economics news and analysis",
+    "Best financial decision-making strategies",
+    "Nature documentaries"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with personal finance, crime news, nutrition, weight loss, personal essays, world news, documentaries, drama films, romantic films, crime films, comedy films, animated films, middle age humor, history, science fiction, American history and culture, science fiction, thrillers, travel writing, economics blogs, financial decision-making, and nature and environment.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U39061",
+    "movielens_user": "112923",
+    "amazon_user": "AFKKUJOM4K3WN7MYDEMXADL3M5VQ",
+    "interests_by_source": {
+      "news": 6,
+      "movies": 6,
+      "reviews": 8,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Personal finance",
+        "source": "news",
+        "keys": [
+          "personalfinance"
+        ],
+        "count": 6,
+        "examples": [
+          "When a breakup leaves you broke, this is how to get back on your feet",
+          "Your Student Debt Doesn't Always Die With You"
+        ]
+      },
+      {
+        "interest": "Crime news",
+        "source": "news",
+        "keys": [
+          "newscrime"
+        ],
+        "count": 3,
+        "examples": [
+          "Body of missing Alabama girl found; 2 being charged",
+          "Woman accused of embezzling from Camp Fire victim surrenders"
+        ]
+      },
+      {
+        "interest": "Nutrition",
+        "source": "news",
+        "keys": [
+          "nutrition"
+        ],
+        "count": 2,
+        "examples": [
+          "There's a scientific reason you crave junk food when you don't get enough sleep",
+          "Here's Exactly What Kristen Bell Eats in a Day to Make 39 Look Like 29"
+        ]
+      },
+      {
+        "interest": "Weight loss",
+        "source": "news",
+        "keys": [
+          "weightloss"
+        ],
+        "count": 2,
+        "examples": [
+          "What No One Tells You About Weight Loss Surgery",
+          "After being bullied for her weight, woman loses 200 pounds with mindful changes"
+        ]
+      },
+      {
+        "interest": "Personal essays",
+        "source": "news",
+        "keys": [
+          "voices"
+        ],
+        "count": 2,
+        "examples": [
+          "'I Stayed Off Social Media Entirely Because Of My Weight. Then I Discovered Intermittent Fasting And Lost 109 Lbs.'"
+        ]
+      },
+      {
+        "interest": "World news",
+        "source": "news",
+        "keys": [
+          "newsworld"
+        ],
+        "count": 2,
+        "examples": [
+          "There were never more women in UK Parliament. Now there's an exodus"
+        ]
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 9,
+        "lift": 11.7,
+        "examples": [
+          "Blue Planet II (2017)",
+          "Planet Earth II (2016)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 52,
+        "lift": 1.87,
+        "examples": [
+          "Up (2009)",
+          "Twin Peaks (1989)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 19,
+        "lift": 1.71,
+        "examples": [
+          "Eternal Sunshine of the Spotless Mind (2004)",
+          "Good Will Hunting (1997)"
+        ]
+      },
+      {
+        "interest": "Crime films",
+        "source": "movies",
+        "keys": [
+          "Crime"
+        ],
+        "count": 15,
+        "lift": 1.39,
+        "examples": [
+          "City of God (Cidade de Deus) (2002)",
+          "Shawshank Redemption, The (1994)"
+        ]
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 28,
+        "lift": 1.24,
+        "examples": [
+          "Monty Python and the Holy Grail (1975)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 5,
+        "lift": 1.1,
+        "examples": [
+          "Up (2009)"
+        ]
+      },
+      {
+        "interest": "middle age humor",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Humor & Entertainment > Humor"
+        ],
+        "examples": [
+          "Red Green's Duct Tape Is Not Enough: A Humorous Guide to Midlife",
+          "Blueprint for Disaster: A Get Fuzzy Collection (Volume 5)",
+          "The Island of Dr. Moreau (Bantam Classics)"
+        ]
+      },
+      {
+        "interest": "history",
+        "source": "reviews",
+        "keys": [
+          "P10",
+          "P11",
+          "P12",
+          "P13"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Biographies & Memoirs > Leaders & Notable People"
+        ],
+        "examples": [
+          "When Character Was King: A Story of Ronald Reagan",
+          "The First Heroes: The Extraordinary Story of the Doolittle Raid--America's First",
+          "Drudge Manifesto"
+        ]
+      },
+      {
+        "interest": "sci-fi comedy",
+        "source": "reviews",
+        "keys": [
+          "P14",
+          "P15",
+          "P16"
+        ],
+        "count": 3,
+        "categories": [
+          "Movies & TV > Science Fiction & Fantasy > Science Fiction"
+        ],
+        "examples": [
+          "Ghostbusters",
+          "Mystery Science Theater 3000 - The Crawling Hand",
+          "Stargate Atlantis - Rising (Pilot Episode)"
+        ]
+      },
+      {
+        "interest": "American History and Culture",
+        "source": "reviews",
+        "keys": [
+          "P17",
+          "P18",
+          "P19"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > History > Americas"
+        ],
+        "examples": [
+          "Easy Field Guide to Rock Art Symbols of the Southwest (Easy Field Guides)",
+          "1776",
+          "A Personal Odyssey"
+        ]
+      },
+      {
+        "interest": "science fiction",
+        "source": "reviews",
+        "keys": [
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction"
+        ],
+        "examples": [
+          "The Long Dark Tea-Time of the Soul",
+          "Forever War, The",
+          "Poker: The Real Deal : 2006 Day to Day Calendar"
+        ]
+      },
+      {
+        "interest": "Thriller",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Thrillers & Suspense"
+        ],
+        "examples": [
+          "According To The Evidence (Henry Cecil Mysteries)",
+          "Act of Treason (9) (A Mitch Rapp Novel)",
+          "Invisible Prey"
+        ]
+      },
+      {
+        "interest": "travel writing",
+        "source": "reviews",
+        "keys": [
+          "P29",
+          "P30"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Reference > Writing, Research & Publishing Guides"
+        ],
+        "examples": [
+          "Some Thoughts about Writing (Hoover Essays, No. 24) (Volume 24)",
+          "Holidays in Hell: In Which Our Intrepid Reporter Travels to the World's Worst Pl"
+        ]
+      },
+      {
+        "interest": "economics blogs",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36"
+        ],
+        "count": 2,
+        "categories": [
+          "Books > Business & Money > Economics"
+        ],
+        "examples": [
+          "The Transfer Society: Economic Expenditures on Transfer Activity",
+          "The Best of Captain Capitalism: Top Shelf"
+        ]
+      },
+      {
+        "interest": "Financial decision-making",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "own_words (dictator game): Is there a right choice; What is the fair way to split; will my partner okay with my share; h"
+        ]
+      },
+      {
+        "interest": "Nature and environment",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "bear -> tree -> leaf -> sky -> cloud -> rain"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Best personal finance strategies for beginners": "news",
+      "Crimes that shocked the world this week": "news",
+      "Nutrition": "news",
+      "Weight loss success stories": "news",
+      "Inspiring personal stories": "news",
+      "Documentaries that changed the world": "news",
+      "Documentary movie review": "movies",
+      "Drama film analysis": "movies",
+      "Romantic director interview": "movies",
+      "Crime movie review": "movies",
+      "Comedy film analysis": "movies",
+      "Animated director interview": "movies",
+      "Comedy for middle-aged adults": "reviews",
+      "American history documentaries": "reviews",
+      "Best sci-fi comedy films to watch": "reviews",
+      "American History and Culture": "reviews",
+      "Best science fiction films to watch": "reviews",
+      "Best thriller films to watch": "reviews",
+      "Travel documentaries": "reviews",
+      "Economics news and analysis": "reviews",
+      "Best financial decision-making strategies": "twin",
+      "Nature documentaries": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Brief and simple material",
+    "Calm delivery",
+    "Focus on practical advice",
+    "Informative and entertaining",
+    "Light-hearted and humorous",
+    "Engaging storytelling"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Friendly and conversational",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "low",
+    "extraversion": "average",
+    "conscientiousness": "low"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness low (prefers the familiar and conventional); extraversion average (neither especially outgoing nor reserved); conscientiousness low (spontaneous, less concerned with order).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "168",
+    "additional_context": "Age 65+; Full-time employment; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 30,
+      "openness": 6,
+      "extraversion": 57,
+      "conscientiousness": 21
+    },
+    "twin_interests": [
+      "Financial decision-making",
+      "Nature and environment",
+      "Personal finance"
+    ],
+    "twin_background_knowledge": "This person likely has an average understanding of financial matters and may be interested in making fair and ethical financial decisions."
+  }
+}

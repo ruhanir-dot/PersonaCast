@@ -1,0 +1,789 @@
+{
+  "user_id": "twin_final_269",
+  "interests": [
+    "Travel ideas",
+    "US news",
+    "Weather news",
+    "Crime news",
+    "Animal stories",
+    "Lifestyle buzz",
+    "Restaurant news",
+    "Science",
+    "Real estate",
+    "Pets and animals",
+    "Travel news",
+    "Food news",
+    "Westerns",
+    "Family and kids' movies",
+    "Musicals",
+    "Animated films",
+    "Romantic films",
+    "Fantasy films",
+    "Film noir",
+    "Comedy films",
+    "Documentaries",
+    "Adventure films",
+    "Drama films",
+    "painting",
+    "dog care",
+    "strength training",
+    "camping",
+    "Pickleball",
+    "jewelry making",
+    "garden decor",
+    "tie dye and neon crafts",
+    "Nintendo Switch Gaming",
+    "DIY Crafts",
+    "crafts for kids",
+    "scooters and inline skates",
+    "summer clothing",
+    "nature and outdoor activities",
+    "art and creativity"
+  ],
+  "preferred_topics": [
+    "summer fashion trends",
+    "outdoor summer activities",
+    "nature and wildlife",
+    "child-friendly art projects",
+    "creative drawing and painting techniques",
+    "travel destinations",
+    "weather forecasts",
+    "crime reports",
+    "animal welfare",
+    "lifestyle tips",
+    "restaurant recommendations",
+    "real estate trends",
+    "pet care",
+    "science discoveries",
+    "art projects",
+    "craft ideas",
+    "video game reviews"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms"
+  ],
+  "podcast_focus_keywords": [
+    "travel",
+    "weather",
+    "crime",
+    "animals",
+    "lifestyle",
+    "restaurants",
+    "real estate",
+    "pets",
+    "science",
+    "crafts",
+    "games",
+    "art"
+  ],
+  "recommended_news_queries": [
+    "top travel destinations for summer",
+    "forecast for upcoming storms in the US",
+    "latest weather updates in California",
+    "latest crime reports in Florida",
+    "interesting animal stories of the week",
+    "trending lifestyle tips and trends",
+    "new restaurant openings in California",
+    "Science news",
+    "real estate trends in California",
+    "pet care tips and animal news",
+    "travel news and updates",
+    "latest food trends and news",
+    "Western movie review",
+    "Family and kids' film analysis",
+    "Musical director interview",
+    "Animated movie review",
+    "Romantic film analysis",
+    "Fantasy director interview",
+    "noir movie review",
+    "Comedy film analysis",
+    "Documentary director interview",
+    "Adventure movie review",
+    "Drama film analysis",
+    "latest painting trends and news",
+    "dog care tips and news",
+    "latest strength training tips and trends",
+    "latest camping tips and trends",
+    "latest pickleball news and trends",
+    "latest jewelry making trends and tips",
+    "latest garden decor trends and tips",
+    "latest tie dye and neon craft trends",
+    "latest Nintendo Switch gaming news",
+    "latest DIY craft projects",
+    "crafts for kids and families",
+    "latest scooters and inline skate trends",
+    "latest summer clothing trends",
+    "nature and outdoor activities tips",
+    "latest art and creativity trends"
+  ],
+  "youtube_search_queries": [
+    "best travel destinations for summer",
+    "upcoming weather patterns in the US",
+    "current weather conditions in California",
+    "recent crime news in Florida",
+    "fun animal stories of the week",
+    "top lifestyle tips and trends",
+    "new restaurant openings in California",
+    "Science",
+    "real estate market updates in California",
+    "pet care tips and animal news",
+    "travel news and updates",
+    "latest food trends and news",
+    "Western movie review",
+    "Family and kids' film analysis",
+    "Musical director interview",
+    "Animated movie review",
+    "Romantic film analysis",
+    "Fantasy director interview",
+    "noir movie review",
+    "Comedy film analysis",
+    "Documentary director interview",
+    "Adventure movie review",
+    "Drama film analysis",
+    "latest painting trends and news",
+    "dog care tips and news",
+    "latest strength training tips and trends",
+    "latest camping tips and trends",
+    "latest pickleball news and trends",
+    "latest jewelry making trends and tips",
+    "latest garden decor trends and tips",
+    "latest tie dye and neon craft trends",
+    "latest Nintendo Switch gaming news",
+    "latest DIY craft projects",
+    "crafts for kids and families",
+    "latest scooters and inline skate trends",
+    "latest summer clothing trends",
+    "nature and outdoor activities tips",
+    "latest art and creativity trends"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with travel destinations, weather patterns, crime reports, animal welfare, lifestyle tips, restaurant recommendations, real estate trends, pet care, science discoveries, and art projects.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U10916",
+    "movielens_user": "130297",
+    "amazon_user": "AGQINWGQVZAEVOWX53EULJRN7NZQ",
+    "interests_by_source": {
+      "news": 12,
+      "movies": 11,
+      "reviews": 12,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Travel ideas",
+        "source": "news",
+        "keys": [
+          "traveltripideas"
+        ],
+        "count": 9,
+        "examples": [
+          "Inside the creepy, abandoned villages deep in the New Jersey Pine Barrens that were once bustling towns and are now home to something much more mysterious",
+          "The Most Beautiful Natural Wonder in Every State"
+        ]
+      },
+      {
+        "interest": "US news",
+        "source": "news",
+        "keys": [
+          "newsus"
+        ],
+        "count": 7,
+        "examples": [
+          "1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef",
+          "A man dies in Hawaii after falling into a lava tube in his yard"
+        ]
+      },
+      {
+        "interest": "Weather news",
+        "source": "news",
+        "keys": [
+          "weathertopstories"
+        ],
+        "count": 7,
+        "examples": [
+          "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+          "Far-reaching snowstorm may take shape over US"
+        ]
+      },
+      {
+        "interest": "Crime news",
+        "source": "news",
+        "keys": [
+          "newscrime"
+        ],
+        "count": 6,
+        "examples": [
+          "2 murder suspects escape from jail, still on the run"
+        ]
+      },
+      {
+        "interest": "Animal stories",
+        "source": "news",
+        "keys": [
+          "animals"
+        ],
+        "count": 5,
+        "examples": [
+          "Baby elephants take part in adorable \"play fight\"",
+          "Bobcat wrong-footed by flock of turkeys"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 4,
+        "examples": [
+          "Hidden Camera Captures Cat And Baby Having The Cutest Conversation"
+        ]
+      },
+      {
+        "interest": "Restaurant news",
+        "source": "news",
+        "keys": [
+          "restaurantsandnews"
+        ],
+        "count": 3,
+        "examples": [
+          "Everyday heroes step up to help lone Waffle House employee"
+        ]
+      },
+      {
+        "interest": "Science",
+        "source": "news",
+        "keys": [
+          "science"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Real estate",
+        "source": "news",
+        "keys": [
+          "finance-real-estate"
+        ],
+        "count": 2,
+        "examples": [
+          "Oprah Winfrey bought her next-door neighbor's California ranch for $6.85 million   take a look inside"
+        ]
+      },
+      {
+        "interest": "Pets and animals",
+        "source": "news",
+        "keys": [
+          "lifestylepetsanimals"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Travel news",
+        "source": "news",
+        "keys": [
+          "travelnews"
+        ],
+        "count": 2,
+        "examples": [
+          "17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job"
+        ]
+      },
+      {
+        "interest": "Food news",
+        "source": "news",
+        "keys": [
+          "foodnews"
+        ],
+        "count": 2,
+        "examples": [
+          "Snow crab sells for record price in Japan"
+        ]
+      },
+      {
+        "interest": "Westerns",
+        "source": "movies",
+        "keys": [
+          "Western"
+        ],
+        "count": 27,
+        "lift": 1.86,
+        "examples": []
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 126,
+        "lift": 1.83,
+        "examples": [
+          "Megamind (2010)",
+          "Brave (2012)"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 51,
+        "lift": 1.76,
+        "examples": []
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 97,
+        "lift": 1.74,
+        "examples": [
+          "Wreck-It Ralph (2012)",
+          "The Lego Batman Movie (2017)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 180,
+        "lift": 1.32,
+        "examples": [
+          "(500) Days of Summer (2009)",
+          "Big (1988)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 118,
+        "lift": 1.26,
+        "examples": [
+          "The Lego Movie (2014)",
+          "Cloudy with a Chance of Meatballs (2009)"
+        ]
+      },
+      {
+        "interest": "Film noir",
+        "source": "movies",
+        "keys": [
+          "Film-Noir"
+        ],
+        "count": 9,
+        "lift": 1.19,
+        "examples": []
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 326,
+        "lift": 1.17,
+        "examples": [
+          "(500) Days of Summer (2009)",
+          "Wreck-It Ralph (2012)"
+        ]
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 11,
+        "lift": 1.16,
+        "examples": []
+      },
+      {
+        "interest": "Adventure films",
+        "source": "movies",
+        "keys": [
+          "Adventure"
+        ],
+        "count": 208,
+        "lift": 1.09,
+        "examples": [
+          "Brave (2012)",
+          "Madagascar (2005)"
+        ]
+      },
+      {
+        "interest": "Drama films",
+        "source": "movies",
+        "keys": [
+          "Drama"
+        ],
+        "count": 350,
+        "lift": 1.02,
+        "examples": [
+          "(500) Days of Summer (2009)",
+          "Life of Pi (2012)"
+        ]
+      },
+      {
+        "interest": "painting",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "count": 7,
+        "categories": [
+          "Arts, Crafts & Sewing > Painting, Drawing & Art Supplies"
+        ],
+        "examples": [
+          "XPCARE Paint by Number Kits Canvas DIY Oil Painting 16 x 20 inch Animal Pattern ",
+          "AROIC Paint Pens Paint Markers, 16 colors Oil-Based Waterproof Paint Marker Pen ",
+          "Nicpro 72 PCS Professional Painting Set with Easel, with Premium Nylon Brushes, "
+        ]
+      },
+      {
+        "interest": "dog care",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 5,
+        "categories": [
+          "Dogs"
+        ],
+        "examples": [
+          "Authentic Puppia RiteFit Harness with Adjustable Neck, Sky Blue, Small",
+          "Akapola Dog Training Collar, Shock Collar Dogs Upgraded Remote Control 1200'-Rec",
+          "Yacolife Dog Toothbrush Stick-Puppy Dental Care Brushing Stick Effective Natural"
+        ]
+      },
+      {
+        "interest": "strength training",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 5,
+        "categories": [
+          "Sports & Outdoors > Exercise & Fitness > Strength Training Equipment"
+        ],
+        "examples": [
+          "Ironmaster 75 lb Quick-Lock Adjustable Dumbbell System with Stand",
+          "WODFitters Pull Up Assistance Band for Stretching, Mobility Workouts, Warm Up, R",
+          "MURTISOL Power Tower Dip Station Pull Up Bar for Home Gym Strength Training Work"
+        ]
+      },
+      {
+        "interest": "camping",
+        "source": "reviews",
+        "keys": [
+          "P16",
+          "P17",
+          "P18",
+          "P19",
+          "P20"
+        ],
+        "count": 5,
+        "categories": [
+          "Sports & Outdoors > Outdoor Recreation > Camping & Hiking"
+        ],
+        "examples": [
+          "Tangkula Loveseat Camping Chair with Adjustable Shade Canopy, Portable Beach Cha",
+          "Autocastle Electric Heated Socks Rechargeable Battery Heat Sox Kit for Men Women",
+          "Autocastle 7.4V Heated Gloves Rechargeable Electric Battery Heated Gloves for Me"
+        ]
+      },
+      {
+        "interest": "Pickleball",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 5,
+        "categories": [
+          "Sports & Outdoors > Sports > Leisure Sports & Game Room"
+        ],
+        "examples": [
+          "Goplus Inflatable Water Trampoline, 10FT/12FT/15FT Recreational Water Bouncer w/",
+          "PELLOR Pickleball Paddles, Pickleball Set of 2 Pickleball Racquet, 4 Pickleball ",
+          "Misayar ARIZZ 12 Pcs Soft Tip Darts 17 Grams with 8 Style 24 Flights and 24 Soft"
+        ]
+      },
+      {
+        "interest": "jewelry making",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 5,
+        "categories": [
+          "Arts, Crafts & Sewing > Beading & Jewelry Making"
+        ],
+        "examples": [
+          "MODDA Glass Seed Beads - 2mm Small Colorful Craft Pony Waist Beads for Bracelets",
+          "Beads for Bracelets, Cridoz 2800 Pcs 4mm Small Pony Beads with 1200 Pcs Alphabet",
+          "Oumoda Pop Beads Girls Toys 580 PCS DIY Jewelry Making Kit- Kids Snap Beads Jewe"
+        ]
+      },
+      {
+        "interest": "garden decor",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34"
+        ],
+        "count": 4,
+        "categories": [
+          "Gardening"
+        ],
+        "examples": [
+          "Garden Tools Set 10 Pieces Gardening Tools Durable Kit Garden Hand Tools with Tr",
+          "Gifts for Women,2.5 Inch Owl Succulent Plants Pots,Office Decor,Plant Pots Pack ",
+          "YAPASPT Gardening Tools - 4 Piece Heavy Duty Garden Hand Kit - Rust Resistant Ga"
+        ]
+      },
+      {
+        "interest": "tie dye and neon crafts",
+        "source": "reviews",
+        "keys": [
+          "P35",
+          "P36",
+          "P37",
+          "P38"
+        ],
+        "count": 4,
+        "categories": [
+          "Arts, Crafts & Sewing > Fabric Decorating"
+        ],
+        "examples": [
+          "Tie Dye Kit, 32 Colors Fabric Dye Art Kit for Kids, Adults and Groups with Rubbe",
+          "CRAFT Neon Body Paint UV - 8 x 20 ml / 0.7 fl oz - Blacklight Neon Make-Up - Bod",
+          "individuall Craft Textile & Fabric UV Paint - Set of 8 Fabric Neon Black Light P"
+        ]
+      },
+      {
+        "interest": "Nintendo Switch Gaming",
+        "source": "reviews",
+        "keys": [
+          "P39",
+          "P40",
+          "P41",
+          "P42"
+        ],
+        "count": 4,
+        "categories": [
+          "Video Games > Nintendo Switch"
+        ],
+        "examples": [
+          "WIWU Carry Case for Nintendo Switch with 15 Games Cartridges, Military Level Sho",
+          "KINVOCA Wireless Controller for Nintendo Switch/Switch Lite, Cute Pro Controller",
+          "UYIYE Case for Switch - Protective Hard Case for Switch- Dockable TPU Shell Cove"
+        ]
+      },
+      {
+        "interest": "DIY Crafts",
+        "source": "reviews",
+        "keys": [
+          "P43",
+          "P44",
+          "P45"
+        ],
+        "count": 3,
+        "categories": [
+          "Arts, Crafts & Sewing > Crafting"
+        ],
+        "examples": [
+          "18 Color Bath Bomb Soap Dye with Shrink Wrap Bags - Food Grade Skin Safe Colorin",
+          "Memory Foam Seat/Chair Cushion for Hip Shaping",
+          "Face Paint Kit, Bowitzki 12 Vibrant Colors 2 Glitter 2 Brushes 40 Stencils 2 spo"
+        ]
+      },
+      {
+        "interest": "crafts for kids",
+        "source": "reviews",
+        "keys": [
+          "P46",
+          "P47",
+          "P48"
+        ],
+        "count": 3,
+        "categories": [
+          "Toys & Games > Arts & Crafts > Craft Kits"
+        ],
+        "examples": [
+          "THREE BEARS Decorate Your Own,Ready-to-Paint Dinosaur Figurines Bank Craft Kit M",
+          "Alritz Fairy Lantern Craft Kit for Kids -DIY Fairy Jar Toys Gift for Girls Ages ",
+          "11270pc Rainbow Rubber Bands Refill Kit,10500 Loom Bands,600 S Clips,67 Beads,24"
+        ]
+      },
+      {
+        "interest": "scooters and inline skates",
+        "source": "reviews",
+        "keys": [
+          "P49",
+          "P50",
+          "P51"
+        ],
+        "count": 3,
+        "categories": [
+          "Sports & Outdoors > Sports > Skates, Skateboards & Scooters"
+        ],
+        "examples": [
+          "Hikole Scooters for Adults Teens, Kick Scooter with Adjustable Height Dual Suspe",
+          "Weskate Adjustable Inline Skates for Kids and Adults Roller Women Blades with Li",
+          "Kick Scooter Kids Scooter 3 Wheel Scooter, 4 Height Adjustable Pu Wheels Extra W"
+        ]
+      },
+      {
+        "interest": "summer clothing",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "clothes -> pants -> black -> Dress"
+        ]
+      },
+      {
+        "interest": "nature and outdoor activities",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "Flower -> bugs -> caterpiller -> branch -> leaves -> tree -> green"
+        ]
+      },
+      {
+        "interest": "art and creativity",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "crayon -> kids -> drawing -> painting"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "best travel destinations for summer": "news",
+      "upcoming weather patterns in the US": "news",
+      "current weather conditions in California": "news",
+      "recent crime news in Florida": "news",
+      "fun animal stories of the week": "news",
+      "top lifestyle tips and trends": "news",
+      "new restaurant openings in California": "news",
+      "Science": "news",
+      "real estate market updates in California": "news",
+      "pet care tips and animal news": "news",
+      "travel news and updates": "news",
+      "latest food trends and news": "news",
+      "Western movie review": "movies",
+      "Family and kids' film analysis": "movies",
+      "Musical director interview": "movies",
+      "Animated movie review": "movies",
+      "Romantic film analysis": "movies",
+      "Fantasy director interview": "movies",
+      "noir movie review": "movies",
+      "Comedy film analysis": "movies",
+      "Documentary director interview": "movies",
+      "Adventure movie review": "movies",
+      "Drama film analysis": "movies",
+      "latest painting trends and news": "reviews",
+      "dog care tips and news": "reviews",
+      "latest strength training tips and trends": "reviews",
+      "latest camping tips and trends": "reviews",
+      "latest pickleball news and trends": "reviews",
+      "latest jewelry making trends and tips": "reviews",
+      "latest garden decor trends and tips": "reviews",
+      "latest tie dye and neon craft trends": "reviews",
+      "latest Nintendo Switch gaming news": "reviews",
+      "latest DIY craft projects": "reviews",
+      "crafts for kids and families": "reviews",
+      "latest scooters and inline skate trends": "reviews",
+      "latest summer clothing trends": "twin",
+      "nature and outdoor activities tips": "twin",
+      "latest art and creativity trends": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "brief and simple headlines",
+    "positive and uplifting tone",
+    "praise for quality and design",
+    "casual and conversational",
+    "focus on practical benefits"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "low",
+    "extraversion": "low",
+    "conscientiousness": "low"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness low (prefers the familiar and conventional); extraversion low (reserved and quiet); conscientiousness low (spontaneous, less concerned with order).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "269",
+    "additional_context": "Age 18-29; Student; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 2,
+      "openness": 1,
+      "extraversion": 5,
+      "conscientiousness": 17
+    },
+    "twin_interests": [
+      "summer clothing",
+      "nature and outdoor activities",
+      "art and creativity"
+    ],
+    "twin_background_knowledge": "This person likely enjoys outdoor activities and creative pursuits, especially during the summer months."
+  }
+}

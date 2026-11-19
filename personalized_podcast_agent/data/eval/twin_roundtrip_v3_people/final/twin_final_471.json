@@ -1,0 +1,603 @@
+{
+  "user_id": "twin_final_471",
+  "interests": [
+    "Recipes and cooking",
+    "TV stars",
+    "Home and garden",
+    "Travel ideas",
+    "Lifestyle buzz",
+    "Fun facts and trivia",
+    "Celebrity news",
+    "Documentaries",
+    "Animated films",
+    "Musicals",
+    "Family and kids' movies",
+    "Romantic films",
+    "Comedy films",
+    "Fantasy films",
+    "historical romance",
+    "Galveston History",
+    "Greek and Italian Cooking",
+    "spy novels",
+    "Texas romance novels",
+    "Nora Roberts and Diana Palmer Romance",
+    "baking",
+    "Scottish and Coastal Romantic Novels",
+    "seafood recipes",
+    "Greek mythology",
+    "food and parties",
+    "ice cream and desserts"
+  ],
+  "preferred_topics": [
+    "Greek mythology stories and characters",
+    "ice cream recipes and desserts",
+    "food festivals and party planning",
+    "Christmas traditions",
+    "Home renovation",
+    "Travel destinations",
+    "Celebrity gossip",
+    "Cooking techniques",
+    "Historical romance novels",
+    "Family-friendly movies",
+    "Fantasy films",
+    "Greek and Italian cuisine",
+    "Texas history",
+    "Romantic comedies",
+    "Documentaries about history"
+  ],
+  "style_preferences": [
+    "Simple explanations of unfamiliar terms",
+    "Curious about new and unusual angles"
+  ],
+  "podcast_focus_keywords": [
+    "Christmas",
+    "cooking",
+    "travel",
+    "celebrity",
+    "romance",
+    "history",
+    "food",
+    "recipes",
+    "movies",
+    "novels",
+    "ice cream",
+    "desserts"
+  ],
+  "recommended_news_queries": [
+    "Top holiday recipes to try this season",
+    "TV stars news",
+    "DIY home renovation ideas",
+    "Top travel destinations for the holidays",
+    "Trending lifestyle trends",
+    "Interesting facts about holidays",
+    "Celebrity news and gossip",
+    "Documentary movie review",
+    "Animated film analysis",
+    "Musical director interview",
+    "Family and kids' movie review",
+    "Romantic film analysis",
+    "Comedy director interview",
+    "Fantasy movie review",
+    "Top historical romance novels",
+    "Documentaries about history and culture",
+    "Top Greek and Italian recipes",
+    "Top spy novels",
+    "Top Texas romance novels",
+    "Top Nora Roberts and Diana Palmer romance novels",
+    "Top baking recipes",
+    "Top Scottish and coastal romantic novels",
+    "Top seafood recipes",
+    "Top stories from Greek mythology",
+    "food and parties news",
+    "Top dessert recipes"
+  ],
+  "youtube_search_queries": [
+    "Best Christmas cookie recipes",
+    "TV stars",
+    "Home improvement tips and tricks",
+    "Travel vlogs and destination guides",
+    "Lifestyle and fashion hauls",
+    "Trivia challenges and fun facts",
+    "Celebrity interviews and behind-the-scenes",
+    "Documentary movie review",
+    "Animated film analysis",
+    "Musical director interview",
+    "Family and kids' movie review",
+    "Romantic film analysis",
+    "Comedy director interview",
+    "Fantasy movie review",
+    "Historical romance book reviews",
+    "Galveston history and culture",
+    "Greek and Italian cooking tutorials",
+    "Spy novel reviews and analysis",
+    "Texas romance novel reviews",
+    "Nora Roberts and Diana Palmer romance novel reviews",
+    "Baking tutorials and tips",
+    "Scottish and coastal romantic novel reviews",
+    "Seafood cooking tutorials",
+    "Greek mythology stories and analysis",
+    "Party food and drink ideas",
+    "Dessert making tutorials"
+  ],
+  "topics_to_avoid": [
+    "private personal data",
+    "political views",
+    "religion",
+    "personal medical details",
+    "sports"
+  ],
+  "privacy_notes": [
+    "No private personal data such as email, phone number, exact location, or device information is used.",
+    "Sensitive topics like political views, religion, and personal medical details are excluded.",
+    "Synthetic listener merged from three anonymized research datasets (MIND, MovieLens, Amazon Reviews 2023); each interest cites the source behavior it comes from."
+  ],
+  "background_knowledge": "Familiar with tapas, Austrian desserts, Long Tall Texans, The Hart Brothers, The Duke's Christmas Promise, early Nova Scotia history, Galveston's African American community, Louisiana seafood, oyster recipes, Helen McInnes' writing, and various Christmas and holiday recipes.",
+  "inference": {
+    "source": "Synthetic merge of MIND-small (Microsoft Research License), MovieLens ml-32m (GroupLens) and Amazon Reviews 2023 (McAuley Lab); research use only",
+    "mind_user": "U39468",
+    "movielens_user": "157911",
+    "amazon_user": "AG46B2DSUTJJOMPBPFUUNAAPCNPQ",
+    "interests_by_source": {
+      "news": 7,
+      "movies": 7,
+      "reviews": 9,
+      "twin": 3
+    },
+    "interest_evidence": [
+      {
+        "interest": "Recipes and cooking",
+        "source": "news",
+        "keys": [
+          "recipes"
+        ],
+        "count": 7,
+        "examples": [
+          "20 Easy Baking Recipes Your Kids Can (Almost) Make All by Themselves",
+          "The Best Casserole Recipe from Every State"
+        ]
+      },
+      {
+        "interest": "TV stars",
+        "source": "news",
+        "keys": [
+          "tv-celebrity"
+        ],
+        "count": 5,
+        "examples": [
+          "James Van Der Beek and Wife Kimberly on Expecting Baby No. 6: It Often Requires an 'Explanation'",
+          "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding"
+        ]
+      },
+      {
+        "interest": "Home and garden",
+        "source": "news",
+        "keys": [
+          "lifestylehomeandgarden"
+        ],
+        "count": 5,
+        "examples": [
+          "200 Shocking Home Photos You Have to See",
+          "What It Was Like Inside the Homes of the Pilgrims"
+        ]
+      },
+      {
+        "interest": "Travel ideas",
+        "source": "news",
+        "keys": [
+          "traveltripideas"
+        ],
+        "count": 3,
+        "examples": [
+          "Inside the creepy, abandoned villages deep in the New Jersey Pine Barrens that were once bustling towns and are now home to something much more mysterious",
+          "50 Best Christmas Towns to Visit for the Holidays"
+        ]
+      },
+      {
+        "interest": "Lifestyle buzz",
+        "source": "news",
+        "keys": [
+          "lifestylebuzz"
+        ],
+        "count": 2,
+        "examples": []
+      },
+      {
+        "interest": "Fun facts and trivia",
+        "source": "news",
+        "keys": [
+          "lifestyledidyouknow"
+        ],
+        "count": 2,
+        "examples": [
+          "9 Abandoned Mansions That Will Make Your Toes Curl"
+        ]
+      },
+      {
+        "interest": "Celebrity news",
+        "source": "news",
+        "keys": [
+          "entertainment-celebrity"
+        ],
+        "count": 2,
+        "examples": [
+          "Celebrity kids then and now: See how they've grown"
+        ]
+      },
+      {
+        "interest": "Documentaries",
+        "source": "movies",
+        "keys": [
+          "Documentary"
+        ],
+        "count": 27,
+        "lift": 4.04,
+        "examples": [
+          "Tesla: Master of Lightning (2000)",
+          "Other F Word, The (2011)"
+        ]
+      },
+      {
+        "interest": "Animated films",
+        "source": "movies",
+        "keys": [
+          "Animation"
+        ],
+        "count": 101,
+        "lift": 2.56,
+        "examples": [
+          "The Lego Movie (2014)",
+          "'Twas the Night Before Christmas (1974)"
+        ]
+      },
+      {
+        "interest": "Musicals",
+        "source": "movies",
+        "keys": [
+          "Musical"
+        ],
+        "count": 45,
+        "lift": 2.19,
+        "examples": [
+          "Mulan (1998)",
+          "Beauty and the Beast (1991)"
+        ]
+      },
+      {
+        "interest": "Family and kids' movies",
+        "source": "movies",
+        "keys": [
+          "Children"
+        ],
+        "count": 93,
+        "lift": 1.91,
+        "examples": [
+          "The Lego Movie (2014)",
+          "'Twas the Night Before Christmas (1974)"
+        ]
+      },
+      {
+        "interest": "Romantic films",
+        "source": "movies",
+        "keys": [
+          "Romance"
+        ],
+        "count": 142,
+        "lift": 1.47,
+        "examples": [
+          "My Big Fat Greek Wedding (2002)",
+          "Mulan (1998)"
+        ]
+      },
+      {
+        "interest": "Comedy films",
+        "source": "movies",
+        "keys": [
+          "Comedy"
+        ],
+        "count": 265,
+        "lift": 1.35,
+        "examples": [
+          "The Lego Movie (2014)",
+          "Chef (2014)"
+        ]
+      },
+      {
+        "interest": "Fantasy films",
+        "source": "movies",
+        "keys": [
+          "Fantasy"
+        ],
+        "count": 83,
+        "lift": 1.25,
+        "examples": [
+          "The Lego Movie (2014)",
+          "'Twas the Night Before Christmas (1974)"
+        ]
+      },
+      {
+        "interest": "historical romance",
+        "source": "reviews",
+        "keys": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5",
+          "P35",
+          "P36",
+          "P37",
+          "P38",
+          "P42",
+          "P43",
+          "P44"
+        ],
+        "count": 21,
+        "categories": [
+          "Books > Literature & Fiction > Genre Fiction",
+          "Books > Romance > Contemporary",
+          "Books > Literature & Fiction > Short Stories & Anthologies"
+        ],
+        "examples": [
+          "Love, Come to Me",
+          "Born in Ice (Irish Born Trilogy)",
+          "Wilde in Love: The Wildes of Lindow Castle"
+        ],
+        "merged": [
+          "romance novels",
+          "romance"
+        ]
+      },
+      {
+        "interest": "Galveston History",
+        "source": "reviews",
+        "keys": [
+          "P6",
+          "P7",
+          "P8",
+          "P9",
+          "P10"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > History > Americas"
+        ],
+        "examples": [
+          "William Pitt Ballinger: Texas Lawyer, Southern Statesman, 1825-1888 (Barker Texa",
+          "Bill Cherry's Galveston Memories",
+          "The Samuel May Williams Home: The Life and Neighborhood of an Early Galveston En"
+        ]
+      },
+      {
+        "interest": "Greek and Italian Cooking",
+        "source": "reviews",
+        "keys": [
+          "P11",
+          "P12",
+          "P13",
+          "P14",
+          "P15"
+        ],
+        "count": 8,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Regional & International"
+        ],
+        "examples": [
+          "A Vegan Taste of Greece (Vegan Cookbooks)",
+          "500 Tapas: The Only Tapas Compendium You'll Ever Need (500 Series Cookbooks) (50",
+          "A Greek Feast: A Book of Greek Recipes"
+        ]
+      },
+      {
+        "interest": "spy novels",
+        "source": "reviews",
+        "keys": [
+          "P21",
+          "P22",
+          "P23",
+          "P24",
+          "P25"
+        ],
+        "count": 7,
+        "categories": [
+          "Books > Mystery, Thriller & Suspense > Thrillers & Suspense"
+        ],
+        "examples": [
+          "The Confessor (Gabriel Allon)",
+          "A Death in Vienna (Gabriel Allon, Bk 4)",
+          "While Still We Live"
+        ]
+      },
+      {
+        "interest": "Texas romance novels",
+        "source": "reviews",
+        "keys": [
+          "P26",
+          "P27",
+          "P28",
+          "P29",
+          "P30"
+        ],
+        "count": 6,
+        "categories": [
+          "Books > Literature & Fiction > United States"
+        ],
+        "examples": [
+          "Enticing (Casey / Caught in the Act)",
+          "Scandal in Spring",
+          "The Hart Brothers Rey & Leo: An Anthology"
+        ]
+      },
+      {
+        "interest": "Nora Roberts and Diana Palmer Romance",
+        "source": "reviews",
+        "keys": [
+          "P31",
+          "P32",
+          "P33",
+          "P34"
+        ],
+        "count": 4,
+        "categories": [
+          "Books > Literature & Fiction > Women's Fiction"
+        ],
+        "examples": [
+          "Born in Fire (Irish Born Trilogy)",
+          "When a Scot Ties the Knot: Castles Ever After (Castles Ever After, 3)",
+          "Irish Thoroughbred (Silhouette Romance, #81)"
+        ]
+      },
+      {
+        "interest": "baking",
+        "source": "reviews",
+        "keys": [
+          "P39",
+          "P40",
+          "P41"
+        ],
+        "count": 3,
+        "categories": [
+          "Grocery & Gourmet Food > Pantry Staples > Cooking & Baking"
+        ],
+        "examples": [
+          "Organic Coconut Oil - Unrefined and Cold-Pressed, Natural Hair Oil, Skin Oil and",
+          "Solo Filling Cherry, 12 Ounce (Pack of 2)",
+          "Pearlescent Egg Coloring Kit"
+        ]
+      },
+      {
+        "interest": "Scottish and Coastal Romantic Novels",
+        "source": "reviews",
+        "keys": [
+          "P45",
+          "P46",
+          "P47"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Literature & Fiction > Literary"
+        ],
+        "examples": [
+          "That Autumn in Edinburgh (Four Seasons Quartet)",
+          "Buzz Books 2017: Spring/Summer: Exclusive Excerpts from 40 Top New Titles",
+          "That Summer in Cornwall (Four Seasons Quartet)"
+        ]
+      },
+      {
+        "interest": "seafood recipes",
+        "source": "reviews",
+        "keys": [
+          "P48",
+          "P49",
+          "P50"
+        ],
+        "count": 3,
+        "categories": [
+          "Books > Cookbooks, Food & Wine > Cooking by Ingredient"
+        ],
+        "examples": [
+          "Gluten-Free Pasta: More than 100 Fast and Flavorful Recipes with Low- and No-Car",
+          "The Ultimate Shrimp Book: More than 650 Recipes for Everyone's Favorite Seafood ",
+          "The Grand Central Oyster Bar and Restaurant Cookbook"
+        ]
+      },
+      {
+        "interest": "Greek mythology",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "mythology -> Greece -> dragons -> quests"
+        ]
+      },
+      {
+        "interest": "food and parties",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "party -> food"
+        ]
+      },
+      {
+        "interest": "ice cream and desserts",
+        "source": "twin",
+        "keys": [
+          "own_words"
+        ],
+        "count": 1,
+        "examples": [
+          "ice cream -> chocolate -> cold -> winter"
+        ]
+      }
+    ],
+    "youtube_query_sources": {
+      "Best Christmas cookie recipes": "news",
+      "TV stars": "news",
+      "Home improvement tips and tricks": "news",
+      "Travel vlogs and destination guides": "news",
+      "Lifestyle and fashion hauls": "news",
+      "Trivia challenges and fun facts": "news",
+      "Celebrity interviews and behind-the-scenes": "news",
+      "Documentary movie review": "movies",
+      "Animated film analysis": "movies",
+      "Musical director interview": "movies",
+      "Family and kids' movie review": "movies",
+      "Romantic film analysis": "movies",
+      "Comedy director interview": "movies",
+      "Fantasy movie review": "movies",
+      "Historical romance book reviews": "reviews",
+      "Galveston history and culture": "reviews",
+      "Greek and Italian cooking tutorials": "reviews",
+      "Spy novel reviews and analysis": "reviews",
+      "Texas romance novel reviews": "reviews",
+      "Nora Roberts and Diana Palmer romance novel reviews": "reviews",
+      "Baking tutorials and tips": "reviews",
+      "Scottish and coastal romantic novel reviews": "reviews",
+      "Seafood cooking tutorials": "reviews",
+      "Greek mythology stories and analysis": "twin",
+      "Party food and drink ideas": "twin",
+      "Dessert making tutorials": "twin"
+    },
+    "interest_rule": "News: most-clicked subcategories (>= 2 clicks). Movies: genres with the highest rating share relative to the sampled users, rated >= 5 times and not below the user's mean. Reviews: named by the LLM, citing product ids.",
+    "avoid_rule": "Defaults, MIND categories shown >= 8 times and never clicked, and movie genres rated at least 1 star below the user's mean.",
+    "note": "The three source users are different people; this is a synthetic listener. Final persona: personality, style, detail and tone from the Twin-2K-500 survey; interests from the Twin profile and the matched users' behavior.",
+    "matched_condition": "twin_split"
+  },
+  "style_preferences_from_behavior": [
+    "Simple and straightforward headlines",
+    "Brief reviews with personal anecdotes",
+    "Casual and conversational tone",
+    "Focus on practical tips and recommendations",
+    "Light-hearted and humorous"
+  ],
+  "preferred_detail": "brief",
+  "tone": "Calm and low-key",
+  "personality": {
+    "need_for_cognition": "low",
+    "openness": "high",
+    "extraversion": "low",
+    "conscientiousness": "average"
+  },
+  "personality_summary": "Compared with US adults: need for cognition low (prefers simple, light material over effortful thinking); openness high (curious about new, unusual and artistic experiences); extraversion low (reserved and quiet); conscientiousness average (reasonably organized).",
+  "anchor": {
+    "source": "Twin-2K-500 (Toubia et al., 2025, arXiv:2505.17479, CC BY 4.0)",
+    "pid": "471",
+    "additional_context": "Age 18-29; Self-employed; US resident.",
+    "score_percentiles": {
+      "need_for_cognition": 11,
+      "openness": 83,
+      "extraversion": 10,
+      "conscientiousness": 37
+    },
+    "twin_interests": [
+      "Greek mythology",
+      "food and parties",
+      "ice cream and desserts"
+    ],
+    "twin_background_knowledge": "The person likely enjoys stories and quests related to Greek mythology and has a sweet tooth for ice cream and desserts."
+  }
+}
